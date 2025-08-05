@@ -482,3 +482,54 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+/* Discord Button /*
+
+.wrapper-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+.wrapper-buttons > * {
+  margin-bottom: 10px;
+}
+
+.wrapper-buttons > *:first-child {
+  margin-top: 10px;
+}
+
+.wrapper-buttons > *:last-child {
+  margin-bottom: 0px;
+}
+
+.discordInvite {
+  display: inline-block;
+  font-family: Whitney, "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 45px;
+  width: 250px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.discordInvite {
+  background-color: #7289da;
+  border: 2px solid #7289da;
+  color: #fff;
+}
+
+.discordInvite:hover {
+  transform: translateY(1px);
+}
+
+.discordInvite:active {
+  transform: translateY(2px);
+}
+
+.discordInvite {
+  outline: transparent !important;
+}
