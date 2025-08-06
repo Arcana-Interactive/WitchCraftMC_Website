@@ -489,3 +489,8 @@ footer .footer-below {
     background-color: rgb(163, 163, 163); /* Add a background color for visibility */
     border-radius: 50%; /* This is the key property to make it circular */
 }
+
+.ip-button {
+    background-color: rgb(101, 22, 74);
+    border-radius: 90%;
+}
