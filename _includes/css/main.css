@@ -565,6 +565,11 @@ footer .footer-below {
 
 .voteBox-Wrapper {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+    padding: 20px;
 }
 
 .voteBox {
