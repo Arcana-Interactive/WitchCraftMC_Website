@@ -491,6 +491,10 @@ footer .footer-below {
 }
 
 .ip-button {
-    background-color: rgb(101, 22, 74);
-    border-radius: 90%;
+    background-color: rgb(196, 115, 168);
+    border-radius: 10px;
+}
+
+.ip-text {
+    color: #fff;
 }
