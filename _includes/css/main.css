@@ -506,3 +506,45 @@ footer .footer-below {
 .nav-spaces {
     margin: 10px;
 }
+
+/* Modal Markdown Stuff */
+.modalMarkdown {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px 0;
+}
+
+/* Headings */
+.modalMarkdown h1,
+.modalMarkdown h2,
+.modalMarkdown h3 {
+    text-align: center;
+    color: #5a2a83;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+/* Lists */
+.modalMarkdown ul {
+    padding-left: 20px;
+    margin-bottom: 1em;
+}
+
+.modalMarkdown li {
+    margin-bottom: 0.5em;
+}
+
+/* Emphasize important rules */
+.modalMarkdown li::marker {
+    color: #5a2a83;
+}
+
+/* Optional: Add a subtle border or background */
+.modalMarkdown {
+    background-color: #e7e4e6;
+    border-radius: 8px;
+    padding: 20px;
+}
