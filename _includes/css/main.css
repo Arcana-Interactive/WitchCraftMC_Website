@@ -491,7 +491,7 @@ footer .footer-below {
 }
 
 .ip-button {
-    background-color: rgb(196, 115, 168);
+    background-color: #{{ site.color.secondary }};
     border-radius: 10px;
 }
 
