@@ -1,11 +1,8 @@
 # Site settings
 title: WitchCraftMC
-email: dadaniel3032@gmail.com
 url: https://github.com/jeromelachaud/freelancer-theme
 description: "A website for WitchCraftMC!"
 keywords: "WitchCraftMC, Witchcraft, Minecraft"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: Daniel Sau
 
 # Google webmaster tools
 google_verify:
@@ -32,31 +29,17 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
-  social: Around the Web
-  credits: Credits
+  copyright: WitchCraftMC 2025. All rights reserved.<br>We are not affiliated with Mojang AB or Microsoft.
+  social: Social Links
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
+    url: http://twitter.com/PROFILE
+  - title: discord
+    url: http://discord.gg/5gHJtxrMZS
   - title: github
-    url: http://github.com/jekyll
-
-# Postal address (add as many lines as necessary)
-address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
-
-# Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+    url: https://github.com/Arcana-Interactive
 
 # Build settings
 markdown: kramdown
