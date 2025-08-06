@@ -573,7 +573,7 @@ footer .footer-below {
     padding: 15px;
     margin: 20px 10px;
     background-color: #{{ site.color.primary }};
-    border-left: 5px solid #{{ site.color.secondary }};
+    border-bottom: 5px solid #{{ site.color.secondary }};
     border-radius: 10px;
     transition: background-color 0.3s ease;
     vertical-align: bottom;
