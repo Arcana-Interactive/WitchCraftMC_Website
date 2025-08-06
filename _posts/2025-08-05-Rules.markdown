@@ -37,7 +37,9 @@ description: WitchCraftMC Rules
 ### Gameplay rules:
 -   Do not exploit glitches. Vanilla glitches and exploits also fall under this.
 -   Automatic farms where you do not need to actively interact with it are not permitted. Ask staff if you are unsure.
+
 ___
+
 ## - Mods -
 This is not a comprehensive list of mods, if you are unsure if a specific mod is allowed, contact a staff member.
 ### Blacklisted Mods:
