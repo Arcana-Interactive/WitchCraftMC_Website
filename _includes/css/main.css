@@ -573,25 +573,13 @@ footer .footer-below {
     padding: 15px;
     margin: 20px 10px;
     background-color: #{{ site.color.primary }};
-    border-bottom: 5px solid #{{ site.color.secondary }};
     border-radius: 10px;
     transition: background-color 0.3s ease;
     vertical-align: bottom;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.voteBox a {
     text-decoration: none;
     color: #{{ site.color.secondary }};
 }
 
 .voteBox:hover {
     background-color: #ba8ad4;
-}
-
-.voteBox:hover a {
-    text-decoration: none;
-    color: #{{ site.color.secondary }};
 }
