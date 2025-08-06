@@ -521,7 +521,7 @@ footer .footer-below {
 .modalMarkdown h2,
 .modalMarkdown h3 {
     text-align: center;
-    color: #5a2a83;
+    color: #{{ site.color.secondary }};
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     font-weight: bold;
@@ -539,7 +539,13 @@ footer .footer-below {
 
 /* Emphasize important rules */
 .modalMarkdown li::marker {
-    color: #5a2a83;
+    color: #{{ site.color.secondary }};
+}
+
+.modal-rules-content hr {
+    border: none;
+    border-top: 2px solid #{{ site.color.secondary }};
+    margin: 30px 0;
 }
 
 /* Optional: Add a subtle border or background */

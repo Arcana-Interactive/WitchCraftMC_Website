@@ -4,7 +4,7 @@ caption: Rules
 modal-id: 1
 img: cabin.png
 alt: image-alt
-description: WitchCraftMC Rules
+description: 
 ---
 # WitchCraftMC Rules
 ### Be a (generally) respectful and good person:
