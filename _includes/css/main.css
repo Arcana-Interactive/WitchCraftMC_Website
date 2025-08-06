@@ -543,7 +543,7 @@ footer .footer-below {
     color: #{{ site.color.secondary }};
 }
 
-.modal-rules-content hr {
+.modalMarkdown hr {
     border: none;
     border-top: 2px solid #{{ site.color.secondary }};
     margin: 30px 0;
@@ -558,21 +558,25 @@ footer .footer-below {
 
 /* Vote Buttons */
 
+.voteBox-Wrapper {
+    text-align: center;
+}
+
 .voteBox {
-  display: block;
-  padding: 15px;
-  margin: 20px 0;
-  background-color: #{{ site.color.primary }};
-  border-left: 5px solid #{{ site.color.secondary }};
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px 10px;
+    background-color: #{{ site.color.primary }};
+    border-left: 5px solid #{{ site.color.secondary }};
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .voteBox a {
-  text-decoration: none;
-  color: #{{ site.color.secondary }};
+    text-decoration: none;
+    color: #{{ site.color.secondary }};
 }
 
 .voteBox:hover {
-  background-color: #ba8ad4;
+    background-color: #ba8ad4;
 }
