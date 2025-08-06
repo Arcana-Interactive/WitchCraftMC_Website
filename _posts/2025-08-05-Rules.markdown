@@ -1,0 +1,51 @@
+---
+layout: default
+caption: Rules
+modal-id: 1
+img: cabin.png
+alt: image-alt
+description: # WitchCraftMC Rules
+### Be a (generally) respectful and good person:
+-   Do not harass or discriminate against other players.
+-   Do not impersonate staff or other players.
+-   Do not share inappropriate content in any chat.
+-   Do not discuss inflammatory topics, such as Religion, Politics, etc.
+-   Do not dox (Share personal or private information regarding other people)
+-   Do not TP or Trap kill players.
+-   Do not scam
+### Do not grief:
+-   Do not break, or otherwise alter, other players’ builds without their permission.
+-   Only deform the Main world’s terrain for building purposes. Collecting resources should be done in the resource world.
+-   Do not build, or deform the terrain near other players’ claims without their permission.
+-   Killing mobs that are clearly owned by another player is considered grief.
+### Be appropriate in chats:
+-   Do not spam or use excessive caps.
+-   Only speak English in global chats.
+-   No inappropriate nicknames or usernames.
+-   Do not advertise or discuss other servers.
+### No ALT Accounts:
+-   You may only use one account per person. If you have multiple people in your household that are playing, contact a staff member.
+### Towny Rules:
+-   If a resident is inactive for over 7 days, the Mayor has the right to remove them from the town.
+-   Mayors may remove players’ builds at their discretion if 1. The player has left the town, or 2. They have not been online for over 7 days. However, the Mayor must give them a 2 day notice before hand, and allow the player to remove it if they want.
+-   Mayors are permitted to set town rules. If residents do not follow these, Mayors are allowed to enforce them by 1. Banning them from the town, and/or 2. Evicting.
+### Market Rules:
+-   If you purchase a shop to rent, and do not alter/make changes to it within 7 days, staff may forcibly unrent it for a new owner to take over.
+-   It is your responsibility to keep it rented. If you don’t, and another player rents it, they are permitted to claim all the shops content and are not required to return it to the original owner.
+### Gameplay rules:
+-   Do not exploit glitches. Vanilla glitches and exploits also fall under this.
+-   Automatic farms where you do not need to actively interact with it are not permitted. Ask staff if you are unsure.
+----------
+## - Mods -
+This is not a comprehensive list of mods, if you are unsure if a specific mod is allowed, contact a staff member.
+### Blacklisted Mods:
+-   Xray, actions or modifications that allow for seeing through textures a normal player can not.
+-   Auto clickers or macros that give a gameplay advantage.
+### Approved Mods:
+-   Minimaps, as long as cave mode or similar is disabled.
+-   Optifine or other performance enhancing mods.
+-   Shaders or other aesthetic changes.
+-   Litematica (easyplace is also allowed).
+-   Inventory Tweaks
+-   Macros that do not give a direct gameplay advantage, such as chat macros.
+---
