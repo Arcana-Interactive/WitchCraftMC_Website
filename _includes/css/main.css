@@ -496,7 +496,12 @@ footer .footer-below {
 
 .ip-button {
     background-color: #{{ site.color.primary }};
+    transition: background-color 0.3s ease;
     border-radius: 10px;
+}
+
+.ip-button:hover {
+    background-color: #ba8ad4;
 }
 
 .ip-text {
