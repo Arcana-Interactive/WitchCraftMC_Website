@@ -565,10 +565,14 @@ footer .footer-below {
 
 .voteBox-Wrapper {
     text-align: center;
+    position: relative;
 }
 
 .voteBox {
+    position:absolute;
     display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 15px;
     margin: 20px 10px;
     background-color: #{{ site.color.primary }};
