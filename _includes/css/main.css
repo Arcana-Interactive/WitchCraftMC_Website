@@ -490,6 +490,10 @@ footer .footer-below {
     border-radius: 50%; /* This is the key property to make it circular */
 }
 
+.rounded {
+    border-radius: 5px;
+}
+
 .ip-button {
     background-color: #{{ site.color.primary }};
     border-radius: 10px;
