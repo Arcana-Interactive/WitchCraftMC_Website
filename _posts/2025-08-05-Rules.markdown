@@ -40,7 +40,7 @@ description:
 
 ___
 
-## - Mods -
+## Mods
 This is not a comprehensive list of mods, if you are unsure if a specific mod is allowed, contact a staff member.
 ### Blacklisted Mods:
 -   Xray, actions or modifications that allow for seeing through textures a normal player can not.

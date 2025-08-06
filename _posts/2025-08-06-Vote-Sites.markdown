@@ -4,5 +4,41 @@ caption: Vote Sites
 modal-id: 2
 img: circus.png
 alt: image-alt
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description:
 ---
+## Why Vote?
+[info about why to vote]
+
+___
+
+## Vote Sites:
+<div class="voteBox">
+  <a href="https://example.com" target="_blank">
+    <strong>Vote Site 1</strong>
+  </a>
+</div>
+<div class="voteBox">
+  <a href="https://example.com" target="_blank">
+    <strong>Vote Site 2</strong>
+  </a>
+</div>
+<div class="voteBox">
+  <a href="https://example.com" target="_blank">
+    <strong>Vote Site 3</strong>
+  </a>
+</div>
+<div class="voteBox">
+  <a href="https://example.com" target="_blank">
+    <strong>Vote Site 4</strong>
+  </a>
+</div>
+<div class="voteBox">
+  <a href="https://example.com" target="_blank">
+    <strong>Vote Site 5</strong>
+  </a>
+</div>
+
+___
+
+## Rewards:
+[info about rewards]
