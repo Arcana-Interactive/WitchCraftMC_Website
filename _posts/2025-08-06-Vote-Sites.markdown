@@ -13,18 +13,18 @@ ___
 
 ### Vote Sites:
 <div class="voteBox-Wrapper">
-  <div class="voteBox">
-    <a href="https://example.com" target="_blank">
+  <div>
+    <a href="https://example.com" target="_blank" class="voteBox">
       <strong>Vote Site 1</strong>
     </a>
   </div>
-  <div class="voteBox">
-    <a href="https://example.com" target="_blank">
+  <div>
+    <a href="https://example.com" target="_blank" class="voteBox">
       <strong>Vote Site 2</strong>
     </a>
   </div>
-  <div class="voteBox">
-    <a href="https://example.com" target="_blank">
+  <div>
+    <a href="https://example.com" target="_blank" class="voteBox">
       <strong>Vote Site 3</strong>
     </a>
   </div>

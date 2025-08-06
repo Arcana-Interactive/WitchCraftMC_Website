@@ -582,4 +582,6 @@ footer .footer-below {
 
 .voteBox:hover {
     background-color: #ba8ad4;
+    text-decoration: none;
+    color: #{{ site.color.secondary }};
 }
