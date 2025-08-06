@@ -4,7 +4,8 @@ caption: Rules
 modal-id: 1
 img: cabin.png
 alt: image-alt
-description: 
+description: WitchCraftMC Rules
+---
 # WitchCraftMC Rules
 ### Be a (generally) respectful and good person:
 -   Do not harass or discriminate against other players.
@@ -49,4 +50,3 @@ This is not a comprehensive list of mods, if you are unsure if a specific mod is
 -   Litematica (easyplace is also allowed).
 -   Inventory Tweaks
 -   Macros that do not give a direct gameplay advantage, such as chat macros.
----
