@@ -484,8 +484,8 @@ footer .footer-below {
 }
 
 .circular {
-    width: 50%; /* Set a fixed width */
-    height: 50%; /* Set the same fixed height as the width */
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set the same fixed height as the width */
     background-color: rgb(163, 163, 163); /* Add a background color for visibility */
     border-radius: 50%; /* This is the key property to make it circular */
 }
