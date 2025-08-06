@@ -1,0 +1,7 @@
+---
+layout: default
+caption: Store
+redirect: https://witchcraftmc.tebex.io/?action=preview&signature=82ed673022731c4406c7ea36e5f5ccf7439b4e51fcede4c41c6335e8cface4ad&expires=1754706094
+img: cake.png
+alt: image-alt
+---
