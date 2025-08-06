@@ -1,31 +1,31 @@
-<!-- pages Grid Section -->
-<section id="pages">
-  <div class="container pages-flex-grid">
+<!-- portfolio Grid Section -->
+<section id="portfolio">
+  <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2>Pages<br></h2>
+        <h2>portfolio<br></h2>
       </div>
     </div>
-    <div class="pages-flex-row">
+    <div class="portfolio-flex-row">
       {% for post in site.posts %}
-      <div class="pages-flex-item pages-item">
+      <div class="portfolio-flex-item portfolio-item">
         {% if post.modal-id %}
-          <a href="#pagesModal-{{ post.modal-id }}" class="pages-link" data-toggle="modal">
+          <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
             <div class="caption">
               <div class="caption-content">
                 <h3>{{ post.caption }}</h3>
               </div>
             </div>
-            <img src="img/pages/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
           </a>
         {% else %}
-          <a href="{{ post.redirect }}" class="pages-link">
+          <a href="{{ post.redirect }}" class="portfolio-link">
             <div class="caption">
               <div class="caption-content">
                 <h3>{{ post.caption }}</h3>
               </div>
             </div>
-            <img src="img/pages/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
           </a>
         {% endif %}
       </div>
