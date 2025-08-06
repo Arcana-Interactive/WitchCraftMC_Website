@@ -6,12 +6,12 @@ img: circus.png
 alt: image-alt
 description:
 ---
-## Why Vote?
+### Why Vote?
 [info about why to vote]
 
 ___
 
-## Vote Sites:
+### Vote Sites:
 <div class="voteBox">
   <a href="https://example.com" target="_blank">
     <strong>Vote Site 1</strong>
@@ -40,5 +40,5 @@ ___
 
 ___
 
-## Rewards:
+### Rewards:
 [info about rewards]
