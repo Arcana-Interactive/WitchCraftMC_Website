@@ -569,7 +569,7 @@ footer .footer-below {
 
 .voteBox {
     display: block;
-    background-size: contain;
+    width: fit-content;
     padding: 15px;
     margin: 20px 10px;
     background-color: #{{ site.color.primary }};
