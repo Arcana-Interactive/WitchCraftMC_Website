@@ -577,6 +577,9 @@ footer .footer-below {
     border-radius: 10px;
     transition: background-color 0.3s ease;
     vertical-align: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .voteBox a {
