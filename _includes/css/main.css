@@ -587,3 +587,7 @@ footer .footer-below {
     text-decoration: none;
     color: #{{ site.color.secondary }};
 }
+
+subtitle {
+    color: #b1b1b1;
+}
