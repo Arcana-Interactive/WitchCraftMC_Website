@@ -30,7 +30,7 @@ color:
 # Footer settings
 footer:
   copyright: WitchCraftMC 2025. All rights reserved.
-  copyright2: We are not affiliated with Mojang AB or Microsoft.
+  subtitle: We are not affiliated with Mojang AB or Microsoft.
   social: Social Links
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
