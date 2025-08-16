@@ -8,6 +8,7 @@ description:
 ---
 ### When you vote for WitchCraftMC ✨
  You’re helping more players discover our world, which means more friends to team up with, and a richer, friendlier community for everyone.
+ 
  Every single click helps us make WitchCraftMC an even friendlier, more exciting place to play, one where new and veteran players alike feel at home the second they join
  
 ___
