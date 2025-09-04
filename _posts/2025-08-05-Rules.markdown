@@ -1,7 +1,7 @@
 ---
 layout: default
 caption: Rules
-modal-id: 1
+modal-id: rules
 img: cabin.png
 alt: image-alt
 description: 

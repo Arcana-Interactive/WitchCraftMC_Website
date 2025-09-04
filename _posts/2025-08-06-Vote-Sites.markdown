@@ -1,7 +1,7 @@
 ---
 layout: default
 caption: Vote Sites
-modal-id: 2
+modal-id: votes
 img: circus.png
 alt: image-alt
 description:
