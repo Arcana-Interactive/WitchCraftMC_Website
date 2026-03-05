@@ -24,7 +24,7 @@ description:
 -   Do not spam or use excessive caps.
 -   Only speak English in global chats.
 -   No inappropriate nicknames or usernames.
-###
+### Advertising
 -   Do not share other server-ips or have a main discussion around another server. Mentioning another server in passing is fine however.
 -   Do not advertise social media accounts unless it has content related to WitchCraftMC.
 ### No ALT Accounts:
