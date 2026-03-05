@@ -24,7 +24,9 @@ description:
 -   Do not spam or use excessive caps.
 -   Only speak English in global chats.
 -   No inappropriate nicknames or usernames.
--   Do not advertise or discuss other servers.
+###
+-   Do not share other server-ips or have a main discussion around another server. Mentioning another server in passing is fine however.
+-   Do not advertise social media accounts unless it has content related to WitchCraftMC.
 ### No ALT Accounts:
 -   You may only use one account per person. If you have multiple people in your household that are playing, contact a staff member.
 ### Towny Rules:
