@@ -33,15 +33,22 @@ footer:
   subtitle: We are not affiliated with Mojang AB or Microsoft.
   social: Social Links
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social networks usernames (Going to add reddit later)
 social:
-  - title: twitter
-    url: http://twitter.com/PROFILE
-  - title: discord
+  - title: Discord
     url: http://discord.gg/5gHJtxrMZS
-  - title: github
-    url: https://github.com/Arcana-Interactive
-
+  - title: Youtube
+    url: https://youtube.com/@witchcraftserver
+  - title: Tiktok
+    url: https://www.tiktok.com/@thewitchcraftserver
+  - title: Twitch
+    url: https://www.twitch.tv/witchcraftmc
+  - title: Kick
+    url: https://kick.com/witchcraftmc
+  - title: Instagram
+    url: https://www.instagram.com/witchcraftserver/
+  - title: Twitter
+    url: https://x.com/WitchCraftMC
 # Build settings
 markdown: kramdown
 permalink: pretty
