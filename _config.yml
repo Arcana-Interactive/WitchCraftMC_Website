@@ -29,25 +29,25 @@ color:
 
 # Footer settings
 footer:
-  copyright: WitchCraftMC 2025. All rights reserved.
+  copyright: WitchCraftMC 2026. All rights reserved.
   subtitle: We are not affiliated with Mojang AB or Microsoft.
   social: Social Links
 
 # Social networks usernames (Going to add reddit later)
 social:
-  - title: Discord
+  - title: discord
     url: http://discord.gg/5gHJtxrMZS
-  - title: Youtube
+  - title: youtube
     url: https://youtube.com/@witchcraftserver
-  - title: Tiktok
+  - title: tiktok
     url: https://www.tiktok.com/@thewitchcraftserver
-  - title: Twitch
+  - title: twitch
     url: https://www.twitch.tv/witchcraftmc
-  - title: Kick
+  - title: kick
     url: https://kick.com/witchcraftmc
-  - title: Instagram
+  - title: instagram
     url: https://www.instagram.com/witchcraftserver/
-  - title: Twitter
+  - title: twitter
     url: https://x.com/WitchCraftMC
 # Build settings
 markdown: kramdown
