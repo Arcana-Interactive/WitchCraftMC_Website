@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg version="1.1" width="355" height="400" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<rect x="0" y="0" width="1" height="1" fill="#FFFFFF" opacity="0.062745" />
+<rect x="1" y="0" width="134" height="1" fill="#FFFFFF" opacity="0.250980" />
+<rect x="222" y="0" width="1" height="1" fill="#FFFFFF" opacity="0.062745" />
+<rect x="223" y="0" width="132" height="1" fill="#FFFFFF" opacity="0.250980" />
+<rect x="0" y="1" width="1" height="399" fill="#FFFFFF" opacity="0.250980" />
+<rect x="1" y="1" width="134" height="399" fill="#FFFFFF" />
+<rect x="222" y="1" width="1" height="45" fill="#FFFFFF" opacity="0.250980" />
+<rect x="223" y="1" width="132" height="134" fill="#FFFFFF" />
+<rect x="179" y="46" width="44" height="310" fill="#FFFFFF" />
+<rect x="135" y="90" width="44" height="222" fill="#FFFFFF" />
+<rect x="223" y="135" width="88" height="44" fill="#FFFFFF" />
+<rect x="311" y="135" width="1" height="44" fill="#FFFFFF" opacity="0.501961" />
+<rect x="223" y="179" width="44" height="221" fill="#FFFFFF" />
+<rect x="267" y="179" width="1" height="44" fill="#FFFFFF" opacity="0.752941" />
+<rect x="267" y="223" width="1" height="1" fill="#FFFFFF" opacity="0.815686" />
+<rect x="268" y="223" width="43" height="1" fill="#FFFFFF" opacity="0.250980" />
+<rect x="311" y="223" width="1" height="1" fill="#FFFFFF" opacity="0.125490" />
+<rect x="267" y="224" width="44" height="176" fill="#FFFFFF" />
+<rect x="311" y="224" width="1" height="43" fill="#FFFFFF" opacity="0.501961" />
+<rect x="311" y="267" width="1" height="1" fill="#FFFFFF" opacity="0.752941" />
+<rect x="312" y="267" width="43" height="1" fill="#FFFFFF" opacity="0.501961" />
+<rect x="311" y="268" width="44" height="132" fill="#FFFFFF" />
+<rect x="179" y="356" width="43" height="1" fill="#FFFFFF" opacity="0.250980" />
+<rect x="222" y="356" width="1" height="1" fill="#FFFFFF" opacity="0.439216" />
+<rect x="222" y="357" width="1" height="43" fill="#FFFFFF" opacity="0.250980" />
+</svg>
