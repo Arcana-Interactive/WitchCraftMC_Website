@@ -27,18 +27,6 @@ color:
   secondary: 26162e #FD6E8A
   secondary-dark: 26162e #A2122F
   
-# ── Wiki settings ──────────────────────────────────────────
-wiki:
-  title: "WitchCraftMC Wiki"
-  description: "The complete knowledge base for WitchCraftMC players."
-
-defaults:
-  - scope:
-      path: "wiki"
-      type: "pages"
-    values:
-      layout: "wiki-page"
-      
 # Footer settings
 footer:
   copyright: WitchCraftMC 2026. All rights reserved.
@@ -61,14 +49,19 @@ social:
     url: https://www.instagram.com/witchcraftserver/
   - title: twitter
     url: https://x.com/WitchCraftMC
+    
 # Build settings
 markdown: kramdown
 permalink: pretty
 
-#for posts
+# ── Wiki settings ──────────────────────────────────────────
+wiki:
+  title: "WitchCraftMC Wiki"
+  description: "The complete knowledge base for WitchCraftMC players."
+
 defaults:
   - scope:
-      path: ""
-      type: "posts"
+      path: "wiki"
+      type: "pages"
     values:
-      permalink: ""
+      layout: "wiki-page"
