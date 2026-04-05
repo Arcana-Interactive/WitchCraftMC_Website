@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ page.title }} — Wiki | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/freelancer.min.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg:#12111a; --surface:#1a1927; --surface-2:#211f31; --surface-3:#28263c;
+      --border:rgba(255,255,255,.07); --border-gold:rgba(201,162,39,.3);
+      --text:#e2ddd6; --text-muted:#8b8599; --text-dim:#5c5772;
+      --gold:#c9a227; --gold-bright:#f0c93a;
+      --violet:#6d4fc2; --violet-soft:#9575d9; --teal:#4ab8b8;
+      --font-body:'Nunito',sans-serif; --font-title:'Cinzel',serif; --font-mono:'JetBrains Mono',monospace;
+      --radius:6px;
+
+      /* ── Minecraft rarity colours ── */
+      --rarity-common:    #aaaaaa;
+      --rarity-uncommon:  #55ff55;
+      --rarity-rare:      #5555ff;
+      --rarity-epic:      #aa00aa;
+      --rarity-legendary: #ffaa00;
+      --rarity-mythic:    #ff55ff;
+      --rarity-divine:    #55ffff;
+      --rarity-special:   #ff5555;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6}
+    a{color:var(--teal);text-decoration:none} a:hover{color:#6dd4d4;text-decoration:underline}
+
+    /* NAVBAR */
+    #mainNav{background:var(--surface)!important;border-bottom:1px solid var(--border);padding:.6rem 0}
+    .navbar-brand{font-family:var(--font-title);font-weight:700;font-size:1.1rem;color:var(--text)!important;letter-spacing:.04em}
+    .nav-link{font-weight:600;font-size:.85rem;color:var(--text-muted)!important;padding:.35rem .8rem!important;border-radius:4px;transition:color .15s,background .15s}
+    .nav-link:hover,.nav-link.active{color:var(--text)!important;background:var(--surface-3)}
+    .nav-link.wiki-active{color:var(--gold)!important;background:rgba(201,162,39,.1)}
+
+    /* PAGE HEADER */
+    .page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:2.5rem 0 1.75rem;margin-top:56px;position:relative;overflow:hidden}
+    .page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 0% 50%,rgba(109,79,194,.15) 0%,transparent 60%);pointer-events:none}
+    .page-header .inner{position:relative}
+    .page-header .breadcrumb-line{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--text-dim);margin-bottom:.8rem}
+    .page-header .breadcrumb-line a{color:var(--text-muted)} .page-header .breadcrumb-line a:hover{color:var(--text)}
+    .page-header .breadcrumb-line .sep{opacity:.35}
+    .page-header h1{font-family:var(--font-title);font-weight:700;font-size:clamp(1.6rem,4vw,2.4rem);color:#fff;letter-spacing:.02em}
+    .page-header .desc{color:var(--text-muted);font-size:.9rem;margin-top:.35rem}
+    .page-header .page-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+    .page-tag{background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:.2rem .7rem;font-size:.7rem;color:var(--text-dim);font-weight:600}
+    .page-tag.active{border-color:rgba(201,162,39,.3);color:var(--gold)}
+
+    /* LAYOUT */
+    .wiki-layout{display:grid;grid-template-columns:240px 1fr;gap:0;padding:0;min-height:calc(100vh - 200px)}
+    @media(max-width:860px){.wiki-layout{grid-template-columns:1fr}}
+
+    /* SIDEBAR */
+    .wiki-sidebar{background:var(--surface);border-right:1px solid var(--border);padding:1.5rem 0;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto}
+    .wiki-sidebar::-webkit-scrollbar{width:3px} .wiki-sidebar::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:2px}
+    .sb-section{margin-bottom:.25rem}
+    .sb-section-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;cursor:pointer;user-select:none;font-family:var(--font-title);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);transition:background .12s}
+    .sb-section-head:hover{background:var(--surface-2)}
+    .sb-section-head .chevron{font-size:.6rem;transition:transform .2s;color:var(--text-dim)}
+    .sb-section-head.collapsed .chevron{transform:rotate(-90deg)}
+    .sb-links{list-style:none;padding:0 0 .5rem;overflow:hidden;transition:max-height .25s ease}
+    .sb-links.collapsed{max-height:0!important;overflow:hidden}
+    .sb-link{display:flex;align-items:center;gap:.6rem;padding:.38rem 1.25rem .38rem 1.5rem;color:var(--text-muted);font-size:.82rem;transition:background .12s,color .12s;position:relative}
+    .sb-link:hover{background:var(--surface-2);color:var(--text);text-decoration:none}
+    .sb-link.active{color:var(--teal);background:rgba(74,184,184,.08)}
+    .sb-link.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--teal)}
+    .sb-link i{width:14px;text-align:center;font-size:.75rem;flex-shrink:0}
+    .sb-divider{height:1px;background:var(--border);margin:.5rem 0}
+
+    /* ARTICLE */
+    .wiki-article-wrap{padding:2rem 2.5rem 4rem;min-width:0}
+    @media(max-width:860px){.wiki-article-wrap{padding:1.5rem 1rem 3rem}}
+
+    /* Article content styles */
+    .wiki-content h2{font-family:var(--font-title);font-weight:700;font-size:1.2rem;color:#fff;margin:2.25rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;scroll-margin-top:80px}
+    .wiki-content h2:first-child{margin-top:0}
+    .wiki-content h3{font-family:var(--font-title);font-size:.95rem;color:var(--gold);margin:1.5rem 0 .6rem;scroll-margin-top:80px}
+    .wiki-content p{color:var(--text);line-height:1.75;margin-bottom:1rem}
+    .wiki-content ul,.wiki-content ol{color:var(--text);padding-left:1.5rem;line-height:1.75;margin-bottom:1rem}
+    .wiki-content li{margin-bottom:.3rem}
+    .wiki-content a{color:var(--teal)} .wiki-content a:hover{color:#6dd4d4}
+    .wiki-content hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+
+    /* Inline code & pre */
+    .wiki-content code{background:rgba(109,79,194,.15);border:1px solid rgba(109,79,194,.25);border-radius:3px;padding:.12em .42em;font-size:.85em;color:#b09ef0;font-family:var(--font-mono)}
+    .wiki-content pre{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;overflow-x:auto;margin-bottom:1.25rem}
+    .wiki-content pre code{background:none;border:none;padding:0;font-size:.83rem;line-height:1.6;color:var(--text-muted)}
+
+    /* Tables */
+    .wiki-content table{width:100%;border-collapse:collapse;margin-bottom:1.25rem;font-size:.875rem}
+    .wiki-content thead th{background:var(--surface-2);border:1px solid var(--border);padding:.55rem .9rem;font-family:var(--font-title);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:left}
+    .wiki-content tbody td{border:1px solid rgba(255,255,255,.05);padding:.5rem .9rem;color:var(--text);vertical-align:top}
+    .wiki-content tbody tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+    .wiki-content tbody td:first-child code{color:var(--teal)}
+
+    /* ── Callout boxes (Hypixel-style notices) ── */
+    .wiki-notice{display:flex;gap:.9rem;align-items:flex-start;border-radius:var(--radius);padding:.9rem 1.1rem;margin:1.25rem 0;font-size:.875rem;line-height:1.6}
+    .wiki-notice .ni{font-size:1rem;flex-shrink:0;margin-top:.1rem}
+    .wiki-notice.info{background:rgba(52,152,219,.1);border-left:3px solid #3498db}.wiki-notice.info .ni{color:#5dade2}
+    .wiki-notice.tip{background:rgba(39,174,96,.1);border-left:3px solid #27ae60}.wiki-notice.tip .ni{color:#2ecc71}
+    .wiki-notice.warning{background:rgba(230,126,34,.1);border-left:3px solid #e67e22}.wiki-notice.warning .ni{color:#f39c12}
+    .wiki-notice.danger{background:rgba(192,57,43,.1);border-left:3px solid #c0392b}.wiki-notice.danger .ni{color:#e74c3c}
+
+    /* ── INFOBOX (Hypixel item card style) ── */
+    .infobox{float:right;clear:right;margin:0 0 1.5rem 1.5rem;width:260px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;font-size:.82rem}
+    @media(max-width:640px){.infobox{float:none;width:100%;margin:0 0 1.5rem}}
+    .infobox-title{background:var(--surface-3);padding:.6rem .85rem;font-family:var(--font-title);font-size:.75rem;font-weight:700;color:#fff;text-align:center;border-bottom:1px solid var(--border)}
+    .infobox-img{background:var(--bg);padding:1rem;text-align:center;border-bottom:1px solid var(--border)}
+    .infobox-img img{max-width:80px;image-rendering:pixelated}
+    .infobox-img .mc-icon{font-size:3rem;line-height:1}
+    .infobox-rows{}
+    .infobox-row{display:flex;justify-content:space-between;padding:.45rem .85rem;border-bottom:1px solid rgba(255,255,255,.04)}
+    .infobox-row:last-child{border-bottom:none}
+    .infobox-row .label{color:var(--text-dim)}
+    .infobox-row .value{color:var(--text);text-align:right;font-weight:600;max-width:140px;word-break:break-word}
+    /* Rarity values */
+    .r-common{color:var(--rarity-common)!important}
+    .r-uncommon{color:var(--rarity-uncommon)!important}
+    .r-rare{color:var(--rarity-rare)!important}
+    .r-epic{color:var(--rarity-epic)!important}
+    .r-legendary{color:var(--rarity-legendary)!important}
+    .r-mythic{color:var(--rarity-mythic)!important}
+    .r-divine{color:var(--rarity-divine)!important}
+    .r-special{color:var(--rarity-special)!important}
+
+    /* ── RANK badge ── */
+    .rank-badge{display:inline-block;padding:.2rem .65rem;border-radius:3px;font-family:var(--font-mono);font-size:.75rem;font-weight:700;letter-spacing:.05em}
+    .rank-wanderer{background:rgba(255,255,255,.08);color:#aaa}
+    .rank-settler{background:rgba(39,174,96,.15);color:#2ecc71}
+    .rank-villager{background:rgba(52,152,219,.15);color:#3498db}
+    .rank-elder{background:rgba(241,196,15,.15);color:#f1c40f}
+    .rank-patron{background:rgba(201,162,39,.15);color:var(--gold)}
+    .rank-arcane{background:rgba(109,79,194,.2);color:var(--violet-soft)}
+    .rank-helper{background:rgba(39,174,96,.12);color:#2ecc71}
+    .rank-mod{background:rgba(52,152,219,.15);color:#3498db}
+    .rank-admin{background:rgba(201,162,39,.15);color:var(--gold)}
+    .rank-owner{background:rgba(192,57,43,.15);color:#e74c3c}
+
+    /* PREV / NEXT */
+    .wiki-nav{display:flex;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+    .wiki-nav-btn{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;color:var(--text-muted);font-size:.82rem;transition:border-color .15s,color .15s}
+    .wiki-nav-btn:hover{border-color:rgba(74,184,184,.4);color:var(--text);text-decoration:none}
+    .wiki-nav-btn .nav-label{font-family:var(--font-title);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.3rem}
+    .wiki-nav-btn.right{text-align:right}
+
+    /* FOOTER */
+    .wiki-footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 0}
+    .wiki-footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .wiki-footer-links{display:flex;gap:1.25rem}
+    .wiki-footer-links a{color:var(--text-muted);font-size:.8rem}
+    .wiki-footer-links a:hover{color:var(--text);text-decoration:none}
+    .copy{font-size:.78rem;color:var(--text-dim)}
+    .rune{font-family:var(--font-mono);font-size:.7rem;color:var(--text-dim);opacity:.4}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container-fluid" style="padding:0 1.5rem">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}"><i class="fas fa-hat-wizard" style="color:var(--gold);margin-right:.5rem;font-size:.9rem"></i>{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navN"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navN">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="nav-item"><a class="nav-link wiki-active" href="{{ '/wiki/' | relative_url }}"><i class="fas fa-book fa-sm" style="margin-right:.35rem"></i>Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="inner">
+      <div class="breadcrumb-line">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <span class="sep">›</span>
+        <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
+        <span class="sep">›</span>
+        <span style="color:var(--text)">{{ page.title }}</span>
+      </div>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p class="desc">{{ page.description }}</p>{% endif %}
+      {% if page.tags %}
+      <div class="page-tags">
+        {% for tag in page.tags %}
+        <span class="page-tag {% if forloop.first %}active{% endif %}">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+<!-- TWO COLUMN LAYOUT -->
+<div class="wiki-layout">
+
+  <!-- SIDEBAR -->
+  <nav class="wiki-sidebar" id="wikiSidebar">
+
+    <!-- Navigation section -->
+    <div class="sb-section">
+      <div class="sb-section-head" onclick="toggleSection(this)">
+        Navigation <i class="fas fa-chevron-down chevron"></i>
+      </div>
+      <ul class="sb-links" style="max-height:500px">
+        <li><a href="{{ '/wiki/' | relative_url }}" class="sb-link"><i class="fas fa-house"></i>Wiki Home</a></li>
+        <li><a href="{{ '/wiki/getting-started' | relative_url }}" class="sb-link {% if page.url contains 'getting-started' %}active{% endif %}"><i class="fas fa-compass"></i>Getting Started</a></li>
+        <li><a href="{{ '/wiki/rules' | relative_url }}" class="sb-link {% if page.url contains 'rules' %}active{% endif %}"><i class="fas fa-scroll"></i>Rules</a></li>
+        <li><a href="{{ '/wiki/claims' | relative_url }}" class="sb-link {% if page.url contains 'claims' %}active{% endif %}"><i class="fas fa-shield-halved"></i>Land Claims</a></li>
+        <li><a href="{{ '/wiki/crafting' | relative_url }}" class="sb-link {% if page.url contains 'crafting' %}active{% endif %}"><i class="fas fa-flask-vial"></i>Crafting & Items</a></li>
+        <li><a href="{{ '/wiki/world-lore' | relative_url }}" class="sb-link {% if page.url contains 'world-lore' %}active{% endif %}"><i class="fas fa-earth-americas"></i>World & Lore</a></li>
+        <li><a href="{{ '/wiki/staff-ranks' | relative_url }}" class="sb-link {% if page.url contains 'staff-ranks' %}active{% endif %}"><i class="fas fa-hat-wizard"></i>Staff & Ranks</a></li>
+        <li><a href="{{ '/wiki/commands' | relative_url }}" class="sb-link {% if page.url contains 'commands' %}active{% endif %}"><i class="fas fa-terminal"></i>Commands</a></li>
+      </ul>
+    </div>
+
+    <div class="sb-divider"></div>
+
+    <!-- On This Page (ToC) — filled by JS -->
+    <div class="sb-section" id="tocSection" style="display:none">
+      <div class="sb-section-head" onclick="toggleSection(this)">
+        On This Page <i class="fas fa-chevron-down chevron"></i>
+      </div>
+      <ul class="sb-links" id="tocList" style="max-height:9999px"></ul>
+    </div>
+
+    <div class="sb-divider" id="tocDivider" style="display:none"></div>
+
+    <!-- Useful links -->
+    <div class="sb-section">
+      <div class="sb-section-head" onclick="toggleSection(this)">
+        Useful Links <i class="fas fa-chevron-down chevron"></i>
+      </div>
+      <ul class="sb-links" style="max-height:500px">
+        <li><a href="#" class="sb-link"><i class="fab fa-discord"></i>Discord</a></li>
+        <li><a href="#" class="sb-link"><i class="fas fa-store"></i>Store</a></li>
+        <li><a href="#" class="sb-link"><i class="fas fa-vote-yea"></i>Vote</a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- ARTICLE -->
+  <article class="wiki-article-wrap">
+    <div class="wiki-content">
+      {{ content }}
+    </div>
+
+    <!-- Prev / Next -->
+    <div class="wiki-nav">
+      {% if page.prev_page %}
+      <a href="{{ page.prev_page.url | relative_url }}" class="wiki-nav-btn">
+        <div class="nav-label">← Previous</div>
+        {{ page.prev_page.title }}
+      </a>
+      {% else %}<div></div>{% endif %}
+      {% if page.next_page %}
+      <a href="{{ page.next_page.url | relative_url }}" class="wiki-nav-btn right">
+        <div class="nav-label">Next →</div>
+        {{ page.next_page.title }}
+      </a>
+      {% endif %}
+    </div>
+  </article>
+</div>
+
+<!-- FOOTER -->
+<footer class="wiki-footer">
+  <div class="container">
+    <div class="wiki-footer-inner">
+      <div>
+        <div class="copy">© {{ site.time | date: "%Y" }} WitchCraftMC · All rights reserved</div>
+        <div class="rune" style="margin-top:.25rem">ᚹᛁᛏᚳᚻᚳᚱᚪᚠᛏ</div>
+      </div>
+      <div class="wiki-footer-links">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
+        <a href="#">Discord</a>
+        <a href="#">Store</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+<script>
+  // Collapsible sidebar sections
+  function toggleSection(head) {
+    const list = head.nextElementSibling;
+    const expanded = !head.classList.contains('collapsed');
+    head.classList.toggle('collapsed', expanded);
+    list.classList.toggle('collapsed', expanded);
+    if (!expanded) list.style.maxHeight = list.scrollHeight + 'px';
+  }
+
+  // Auto-build Table of Contents from article headings
+  const headings = document.querySelectorAll('.wiki-content h2, .wiki-content h3');
+  if (headings.length > 2) {
+    const tocSection = document.getElementById('tocSection');
+    const tocDivider = document.getElementById('tocDivider');
+    const tocList    = document.getElementById('tocList');
+    tocSection.style.display = '';
+    tocDivider.style.display = '';
+    headings.forEach(h => {
+      if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
+      const li = document.createElement('li');
+      const a  = document.createElement('a');
+      a.href        = '#' + h.id;
+      a.className   = 'sb-link';
+      a.style.paddingLeft = h.tagName === 'H3' ? '2.25rem' : '1.5rem';
+      a.style.fontSize = '.78rem';
+      a.innerHTML   = `<i class="fas fa-${h.tagName==='H3'?'minus':'grip-lines'}" style="font-size:.55rem;color:var(--text-dim)"></i>${h.textContent}`;
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+    tocList.style.maxHeight = '9999px';
+  }
+
+  // Highlight active ToC item on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const link = tocList && tocList.querySelector(`a[href="#${e.target.id}"]`);
+      if (link) link.classList.toggle('active', e.isIntersecting);
+    });
+  }, { rootMargin: '-56px 0px -70% 0px' });
+  headings.forEach(h => observer.observe(h));
+</script>
+</body>
+</html>
