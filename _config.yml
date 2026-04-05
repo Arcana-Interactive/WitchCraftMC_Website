@@ -26,7 +26,19 @@ color:
   primary-rgb: "159,108,186" #"128,179,255"
   secondary: 26162e #FD6E8A
   secondary-dark: 26162e #A2122F
+  
+# ── Wiki settings ──────────────────────────────────────────
+wiki:
+  title: "WitchCraftMC Wiki"
+  description: "The complete knowledge base for WitchCraftMC players."
 
+defaults:
+  - scope:
+      path: "wiki"
+      type: "pages"
+    values:
+      layout: "wiki-page"
+      
 # Footer settings
 footer:
   copyright: WitchCraftMC 2026. All rights reserved.
