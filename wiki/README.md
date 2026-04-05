@@ -146,10 +146,3 @@ All colours are CSS custom properties at the top of each layout:
 Change these to match your server's brand colours.
 
 ---
-
-## 💡 Tips for the .gg wiki application
-
-- Fill in **all** sections before applying, even with placeholder lore.
-- Add **screenshots** of your server to `world-lore.md`.
-- A wiki with 7+ pages with genuine content reads as an established server.
-- Keep the tone consistent — WitchCraftMC has a witchy/mystical brand, lean into it!
