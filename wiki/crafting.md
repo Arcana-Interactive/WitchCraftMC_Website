@@ -10,7 +10,7 @@ prev_page:
   url: /wiki/claims/
 next_page:
   title: World & Lore
-  url: /wiki/world-lore/
+  url: /wiki/worlds/
 see_also:
   - title: Commands & Plugins
     url: /wiki/commands/
@@ -213,7 +213,7 @@ Keys can be obtained through voting, events, and the store. There are three tier
 | **Adept Key** | Store / Events | Enchanted gear, rare materials |
 | **Arcane Key** | Special Events | Custom items, cosmetics, large cash |
 
-Use a key at the crates near spawn. See [World & Lore → Spawn Town](/wiki/world-lore/#spawn-town) for the crate plaza location.
+Use a key at the crates near spawn. See [World & Lore → Spawn Town](/wiki/worlds/#spawn-town) for the crate plaza location.
 
 ### Vote Rewards
 

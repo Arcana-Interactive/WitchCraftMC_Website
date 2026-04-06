@@ -17,7 +17,7 @@ wiki/
   rules.md           ← /wiki/rules/
   claims.md          ← /wiki/claims/
   crafting.md        ← /wiki/crafting/
-  world-lore.md      ← /wiki/world-lore/
+  worlds.md      ← /wiki/worlds/
   staff-ranks.md     ← /wiki/staff-ranks/
   commands.md        ← /wiki/commands/
 ```
@@ -96,11 +96,11 @@ Fill in the placeholder sections in each page:
 | File | What to fill in |
 |---|---|
 | `crafting.md` | Your actual custom recipes / server IP |
-| `world-lore.md` | Your server's landmarks, lore, map size |
+| `worlds.md` | Your server's landmarks, lore, map size |
 | `staff-ranks.md` | Real rank names, perks, and staff names |
 | `commands.md` | Verify each command works on your setup |
 | `getting-started.md` | Replace `play.witchcraftmc.gg` with your real IP |
-| `world-lore.md` | Add your actual world border size |
+| `worlds.md` | Add your actual world border size |
 
 ---
 

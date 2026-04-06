@@ -9,7 +9,7 @@ see_also:
   - title: Wiki Home
     url: /wiki/
   - title: World & Lore
-    url: /wiki/world-lore/
+    url: /wiki/worlds/
   - title: Staff & Ranks
     url: /wiki/staff-ranks/
 ---
@@ -41,7 +41,7 @@ Each entry below follows the format:
   <span style="font-family:var(--font-mono);font-size:.78rem;color:var(--text-dim)">2025 · Pre-Launch</span>
 </div>
 
-- **Wiki launched** — this very knowledge base went live, covering [Getting Started](/wiki/getting-started/), [Rules](/wiki/rules/), [Land Claims](/wiki/claims/), [Crafting & Items](/wiki/crafting/), [World & Lore](/wiki/world-lore/), [Staff & Ranks](/wiki/staff-ranks/), and [Commands](/wiki/commands/).
+- **Wiki launched** — this very knowledge base went live, covering [Getting Started](/wiki/getting-started/), [Rules](/wiki/rules/), [Land Claims](/wiki/claims/), [Crafting & Items](/wiki/crafting/), [World & Lore](/wiki/worlds/), [Staff & Ranks](/wiki/staff-ranks/), and [Commands](/wiki/commands/).
 - **Website published** — the WitchCraftMC homepage and wiki are now publicly accessible.
 
 </div>
@@ -84,7 +84,7 @@ Each entry below follows the format:
 - Player market expansion — additional auction house features
 - Seasonal event content (holidays, special crates)
 - Additional [custom crafting recipes](/wiki/crafting/)
-- Expanded lore content — see [World & Lore](/wiki/world-lore/)
+- Expanded lore content — see [World & Lore](/wiki/worlds/)
 
 </div>
 

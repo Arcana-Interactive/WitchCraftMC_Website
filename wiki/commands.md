@@ -79,7 +79,7 @@ This page lists every command available to players on WitchCraftMC. Commands mar
     <tr><td>/money</td><td>Check your balance</td></tr>
     <tr><td>/pay &lt;player&gt; &lt;amount&gt;</td><td>Send money to another player</td></tr>
     <tr><td>/baltop</td><td>View the richest players on the server</td></tr>
-    <tr><td>/shop</td><td>Open the server buy/sell shop (at <a href="/wiki/world-lore/#spawn-town">Spawn Town</a>)</td></tr>
+    <tr><td>/shop</td><td>Open the server buy/sell shop (at <a href="/wiki/worlds/#spawn-town">Spawn Town</a>)</td></tr>
     <tr><td>/market</td><td>Open the player auction house</td></tr>
     <tr><td>/ah sell &lt;price&gt;</td><td>List the item in hand on the auction house</td></tr>
     <tr><td>/trade &lt;player&gt;</td><td>Initiate a safe face-to-face trade</td></tr>

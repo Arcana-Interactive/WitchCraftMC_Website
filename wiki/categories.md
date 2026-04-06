@@ -75,7 +75,7 @@ see_also:
 <p>Maps, dimensions, biomes, and notable locations.</p>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;margin:1rem 0 1.5rem">
-  <a href="/wiki/world-lore/" class="see-also-link" style="display:flex;flex-direction:column;gap:.3rem;padding:.85rem 1rem;align-items:flex-start">
+  <a href="/wiki/worlds/" class="see-also-link" style="display:flex;flex-direction:column;gap:.3rem;padding:.85rem 1rem;align-items:flex-start">
     <span style="font-weight:700;color:#fff"><i class="fas fa-earth-americas" style="color:#2ecc71;margin-right:.4rem"></i>World &amp; Lore</span>
     <span style="font-size:.78rem;color:var(--text-muted)">Map, borders, notable locations, seasons.</span>
   </a>
@@ -88,7 +88,7 @@ see_also:
 <p>Server history, player stories, and the world's narrative.</p>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;margin:1rem 0 1.5rem">
-  <a href="/wiki/world-lore/" class="see-also-link" style="display:flex;flex-direction:column;gap:.3rem;padding:.85rem 1rem;align-items:flex-start">
+  <a href="/wiki/worlds/" class="see-also-link" style="display:flex;flex-direction:column;gap:.3rem;padding:.85rem 1rem;align-items:flex-start">
     <span style="font-weight:700;color:#fff"><i class="fas fa-earth-americas" style="color:#2ecc71;margin-right:.4rem"></i>World &amp; Lore</span>
     <span style="font-size:.78rem;color:var(--text-muted)">The living history written by the community.</span>
   </a>

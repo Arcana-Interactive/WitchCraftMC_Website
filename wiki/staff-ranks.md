@@ -7,7 +7,7 @@ toc: true
 categories: [Community, Ranks]
 prev_page:
   title: World & Lore
-  url: /wiki/world-lore/
+  url: /wiki/worlds/
 next_page:
   title: Commands & Plugins
   url: /wiki/commands/
