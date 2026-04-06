@@ -4,12 +4,20 @@ title: World & Lore
 description: "The history, geography, and hidden secrets of the WitchCraftMC world."
 permalink: /wiki/world-lore/
 toc: true
+categories: [World, Lore]
 prev_page:
   title: Crafting & Items
   url: /wiki/crafting/
 next_page:
   title: Staff & Ranks
   url: /wiki/staff-ranks/
+see_also:
+  - title: Getting Started
+    url: /wiki/getting-started/
+  - title: Changelog & History
+    url: /wiki/changelog/
+  - title: Crafting & Items
+    url: /wiki/crafting/
 ---
 
 ## The World of WitchCraftMC
@@ -29,7 +37,7 @@ The WitchCraftMC world is a hand-seeded, vanilla-terrain survival map with custo
 | Nether | ±1,250 blocks (1:8 scale) |
 | The End | Standard — central island only at main portal |
 
-The border is occasionally **expanded** when a new season begins or the server population grows significantly.
+The border is occasionally **expanded** when a new season begins or the server population grows significantly. Check [Changelog & History](/wiki/changelog/) for border expansion notes.
 
 ## Notable Locations
 
@@ -37,20 +45,20 @@ The border is occasionally **expanded** when a new season begins or the server p
 
 The hub of WitchCraftMC. Spawn contains:
 
-- The **Welcome Hall** — rules, info boards, and a starter kit station
-- The **Server Shop** — buy and sell common resources
-- The **Crate Plaza** — use your vote and event keys here
+- The **Welcome Hall** — rules, info boards, and a starter kit station (use `/kit starter`)
+- The **Server Shop** — buy and sell common resources (`/shop`)
+- The **Crate Plaza** — use your [vote and event keys](/wiki/crafting/#server-crate-keys) here
 - The **Notice Board** — community events and staff announcements
 
 Coordinates: `0, 64, 0`
 
 ### The Wandering Market
 
-A player-built trading district roughly 500 blocks from spawn. Home to dozens of chest shops. Great place to spend your first earnings.
+A player-built trading district roughly 500 blocks from spawn. Home to dozens of chest shops. Great place to spend your first earnings from [voting](/wiki/commands/#server-misc).
 
 ### *(Your server's landmarks here)*
 
-Add dungeons, hidden shrines, player towns, and seasonal locations as your server develops. This section is meant to grow organically with the community.
+Add dungeons, hidden shrines, player towns, and seasonal locations as your server develops. This section grows organically with the community.
 
 ## Seasons & World Resets
 
@@ -58,9 +66,9 @@ WitchCraftMC runs **seasonal maps**. Each season has a defined lifespan (typical
 
 1. The current map is **archived** and made available for download.
 2. A fresh map is generated with a new seed.
-3. Player ranks and economy progress carry over. Builds do not.
+3. Player [ranks](/wiki/staff-ranks/#player-ranks) and economy progress carry over. Builds do not.
 
-Season resets are announced at least **two weeks in advance** on Discord.
+Season resets are announced at least **two weeks in advance** on Discord. Previous season highlights are recorded in the [Changelog & History](/wiki/changelog/).
 
 ## Lore
 
@@ -68,7 +76,7 @@ Season resets are announced at least **two weeks in advance** on Discord.
 
 This section will grow as your server's story unfolds. Consider adding:
 
-- A **timeline of major events** (wars, alliances, big builds)
+- A **timeline of major events** (wars, alliances, big builds) — use the [Changelog](/wiki/changelog/) for milestone entries
 - **Notable player factions** and their territories
 - **Seasonal highlights** and screenshots
 

@@ -4,17 +4,25 @@ title: Rules
 description: "The code of conduct every WitchCraftMC player must follow."
 permalink: /wiki/rules/
 toc: true
+categories: [Guides, Community]
 prev_page:
   title: Getting Started
   url: /wiki/getting-started/
 next_page:
   title: Land Claims
   url: /wiki/claims/
+see_also:
+  - title: Getting Started
+    url: /wiki/getting-started/
+  - title: Land Claims
+    url: /wiki/claims/
+  - title: Staff & Ranks
+    url: /wiki/staff-ranks/
 ---
 
 ## The Golden Rule
 
-**Treat every player with the same respect you'd want yourself.** All other rules flow from this. If you're unsure whether something is acceptable, ask a staff member before doing it.
+**Treat every player with the same respect you'd want yourself.** All other rules flow from this. If you're unsure whether something is acceptable, ask a [staff member](/wiki/staff-ranks/#staff-ranks) before doing it.
 
 <div class="wiki-callout warning">
   <span class="callout-icon"><i class="fas fa-exclamation-triangle"></i></span>
@@ -24,7 +32,7 @@ next_page:
 ## General Conduct
 
 - **No harassment, hate speech, or discrimination** of any kind. This includes slurs, targeted bullying, or repeated unwanted contact.
-- **No impersonating staff** or other players.
+- **No impersonating staff** or other players. See the [Staff & Ranks](/wiki/staff-ranks/) page to identify real staff tags.
 - **No cheating or hacking.** This includes x-ray texture packs, fly hacks, kill aura, speed hacks, or any client-side mod that gives an unfair advantage. Optifine and minimaps are allowed.
 - **No exploiting bugs.** If you find a dupe glitch or other exploit, report it to staff immediately via a Discord ticket. Abusing it will result in a permanent ban.
 - **No advertising** other servers or Discord servers in chat.
@@ -52,7 +60,7 @@ next_page:
 
 - PvP is **opt-in** only. You cannot attack a player who has not agreed to fight.
 - **Spawn killing** is never permitted, even in PvP-enabled areas.
-- **Scamming in trades or duels** is against the rules. All agreements must be honoured.
+- **Scamming in trades or duels** is against the rules. All agreements must be honoured. Use `/trade <player>` for safe face-to-face trades — see [Commands](/wiki/commands/#economy).
 
 ## Builds & Structures
 
@@ -71,4 +79,4 @@ Violations are handled at staff discretion based on severity and history. The ge
 
 Severe violations (hacking, doxxing, CSAM, etc.) result in an immediate permanent ban with no appeal.
 
-To appeal a punishment, open a ticket in our Discord.
+To appeal a punishment, open a ticket in our Discord. See [Staff & Ranks](/wiki/staff-ranks/) to understand who handles appeals at each level.

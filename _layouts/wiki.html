@@ -134,11 +134,11 @@
       <div class="eyebrow"><i class="fas fa-book-sparkles fa-sm"></i> Knowledge Base</div>
       <h1>WitchCraft<em>MC</em> Wiki</h1>
       <p class="tagline">Your complete guide to spells, land claims, commands, and everything in between.</p>
-      <div class="wiki-search">
+      <form class="wiki-search" action="{{ '/wiki/search/' | relative_url }}" method="get" id="wikiSearchForm">
         <i class="fas fa-search si"></i>
-        <input type="text" id="wikiSearch" placeholder="Search the wiki…" autocomplete="off" spellcheck="false">
+        <input type="text" id="wikiSearch" name="q" placeholder="Search the wiki…" autocomplete="off" spellcheck="false">
         <span class="sh">↵ Search</span>
-      </div>
+      </form>
     </div>
   </div>
 </header>
@@ -146,7 +146,7 @@
 <div class="wiki-stats-bar">
   <div class="container">
     <div class="stats-inner">
-      <div class="stat-item"><i class="fas fa-file-lines"></i><span class="num">7</span>&nbsp;Articles</div>
+      <div class="stat-item"><i class="fas fa-file-lines"></i><span class="num">10</span>&nbsp;Articles</div>
       <div class="stat-item"><i class="fas fa-users"></i>Growing community</div>
       <div class="stat-item"><i class="fas fa-calendar"></i>Updated&nbsp;<span class="num">{{ site.time | date: "%b %Y" }}</span></div>
       <div class="stat-item">
@@ -210,6 +210,18 @@
             <div class="cat-desc">Every player command organised by plugin. The full cheat sheet.</div>
             <div class="cat-count">→ <span>Teleport</span> · Economy · Claims</div>
           </a>
+          <a href="{{ '/wiki/changelog' | relative_url }}" class="cat-card" data-s="changelog history patch update version season">
+            <div class="cat-icon" style="background:rgba(201,162,39,.12);color:var(--gold)"><i class="fas fa-clock-rotate-left"></i></div>
+            <div class="cat-name">Changelog</div>
+            <div class="cat-desc">Server update history, patch notes, and season milestones.</div>
+            <div class="cat-count">→ <span>Updates</span> · Seasons · History</div>
+          </a>
+          <a href="{{ '/wiki/categories' | relative_url }}" class="cat-card" data-s="categories browse index all pages list">
+            <div class="cat-icon" style="background:rgba(74,184,184,.12);color:var(--teal)"><i class="fas fa-layer-group"></i></div>
+            <div class="cat-name">Categories</div>
+            <div class="cat-desc">Browse all wiki pages grouped by topic — Guides, Gameplay, Lore, and more.</div>
+            <div class="cat-count">→ <span>Guides</span> · Gameplay · Reference</div>
+          </a>
           <div class="no-results" id="noRes"><i class="fas fa-search"></i>No results for "<span id="noResQ"></span>"</div>
         </div>
 
@@ -247,7 +259,10 @@
               <a href="{{ '/wiki/rules' | relative_url }}" class="quick-link"><i class="fas fa-scroll"></i>Server Rules</a>
               <a href="{{ '/wiki/commands' | relative_url }}" class="quick-link"><i class="fas fa-terminal"></i>Command Reference</a>
               <a href="{{ '/wiki/claims' | relative_url }}" class="quick-link"><i class="fas fa-shield-halved"></i>Claiming Land</a>
-              <a href="#" class="quick-link"><i class="fab fa-discord"></i>Discord Server</a>
+              <a href="{{ '/wiki/categories' | relative_url }}" class="quick-link"><i class="fas fa-layer-group"></i>All Categories</a>
+              <a href="{{ '/wiki/changelog' | relative_url }}" class="quick-link"><i class="fas fa-clock-rotate-left"></i>Changelog</a>
+              <a href="{{ '/wiki/search' | relative_url }}" class="quick-link"><i class="fas fa-magnifying-glass"></i>Search</a>
+              <a href="http://discord.gg/5gHJtxrMZS" class="quick-link" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Discord Server</a>
               <a href="#" class="quick-link"><i class="fas fa-store"></i>Store</a>
               <a href="#" class="quick-link"><i class="fas fa-vote-yea"></i>Vote for Us</a>
             </div>
@@ -268,7 +283,9 @@
       <div class="wiki-footer-links">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
-        <a href="#">Discord</a>
+        <a href="{{ '/wiki/categories/' | relative_url }}">Categories</a>
+        <a href="{{ '/wiki/changelog/' | relative_url }}">Changelog</a>
+        <a href="http://discord.gg/5gHJtxrMZS" target="_blank" rel="noopener">Discord</a>
         <a href="#">Store</a>
       </div>
     </div>
@@ -277,8 +294,11 @@
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script>
-  const el=document.getElementById('wikiSearch'),cards=document.querySelectorAll('.cat-card'),noRes=document.getElementById('noRes'),noResQ=document.getElementById('noResQ');
+  const el=document.getElementById('wikiSearch'),cards=document.querySelectorAll('.cat-card'),noRes=document.getElementById('noRes'),noResQ=document.getElementById('noResQ'),form=document.getElementById('wikiSearchForm');
+  // Live filter on category cards
   el.addEventListener('input',()=>{const q=el.value.trim().toLowerCase();let v=0;cards.forEach(c=>{const m=!q||(c.dataset.s+' '+c.querySelector('.cat-name').textContent+' '+c.querySelector('.cat-desc').textContent).toLowerCase().includes(q);c.style.display=m?'':'none';if(m)v++;});noRes.style.display=(v===0&&q)?'block':'none';noResQ.textContent=q;});
+  // On submit, navigate to the full search page
+  form.addEventListener('submit', e => { if (!el.value.trim()) e.preventDefault(); });
 </script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+---
+layout: null
+---
+[{% assign wiki_pages = site.pages | where: "layout", "wiki-page" | sort: "title" %}{% for page in wiki_pages %}
+  {"title":{{ page.title | jsonify }},"url":{{ page.url | jsonify }},"description":{{ page.description | default: "" | jsonify }},"categories":{{ page.categories | default: "" | join: ", " | jsonify }},"content":{{ page.content | strip_html | normalize_whitespace | truncate: 1200 | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}
+]

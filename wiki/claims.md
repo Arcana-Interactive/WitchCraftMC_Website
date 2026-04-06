@@ -4,12 +4,20 @@ title: Land Claims
 description: "How to protect your builds and manage your territory using GriefPrevention."
 permalink: /wiki/claims/
 toc: true
+categories: [Gameplay, Guides]
 prev_page:
   title: Rules
   url: /wiki/rules/
 next_page:
   title: Crafting & Items
   url: /wiki/crafting/
+see_also:
+  - title: Commands & Plugins
+    url: /wiki/commands/
+  - title: Rules
+    url: /wiki/rules/
+  - title: Getting Started
+    url: /wiki/getting-started/
 ---
 
 ## Overview
@@ -18,7 +26,7 @@ WitchCraftMC uses **GriefPrevention** to let players protect their land. A claim
 
 <div class="wiki-callout tip">
   <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>
-  <div>Claim your land <strong>before</strong> you start building, not after. Anything you build on unclaimed land is at risk.</div>
+  <div>Claim your land <strong>before</strong> you start building, not after. Anything you build on unclaimed land is at risk — see the <a href="/wiki/rules/#griefing--theft">Rules on Griefing</a>.</div>
 </div>
 
 ## Earning Claim Blocks
@@ -26,8 +34,8 @@ WitchCraftMC uses **GriefPrevention** to let players protect their land. A claim
 Every new player starts with **100 claim blocks**. You earn more over time just by playing:
 
 - **+100 blocks** per hour of active playtime (approx.)
-- Purchased via the store *(link here if applicable)*
-- Earned through server events and votes
+- Purchased via the store
+- Earned through server events and [votes](/wiki/commands/#server-misc)
 
 One claim block = one block of surface area in your claim.
 
@@ -53,6 +61,8 @@ One claim block = one block of surface area in your claim.
 | `/abandonclaim` | Remove the claim you're standing in |
 | `/abandonallclaims` | Remove **all** your claims (cannot be undone) |
 | `/claimlist` | See all your claims and remaining block count |
+
+See the complete land claim command reference on the [Commands page](/wiki/commands/#land-claims).
 
 ## Trusting Other Players
 
@@ -81,17 +91,20 @@ You can divide a large claim into sub-claims with different trust settings — u
 
 Run `/claiminfo` while standing in your claim to see its details. Some useful flags (if ClaimManager is installed):
 
-- `pvp` — enable/disable PvP inside your claim
+- `pvp` — enable/disable PvP inside your claim *(see [PvP rules](/wiki/rules/#pvp))*
 - `mob-spawning` — control whether mobs spawn in your claim
 - `fire-spread` — prevent fire from spreading inside your claim
 
 ## Common Questions
 
 **Q: Someone griefed my unclaimed build. Can staff help?**
-Yes — staff have rollback tools and will investigate. But always claim your builds to prevent it.
+Yes — staff have rollback tools and will investigate. But always claim your builds to prevent it in the first place.
 
 **Q: Can I trust someone with only a specific chest?**
 Yes. Place a sign on the chest with `[Trust]` and their name, or use a sub-claim around it.
 
 **Q: My claim blocks ran out, what do I do?**
-Vote for the server, play more, or check the store for a top-up.
+[Vote](/wiki/commands/#server-misc) for the server (+50 blocks per vote), play more (+100/hr), or check the store for a top-up.
+
+**Q: Can I check how many claim blocks I have?**
+Yes — `/claimlist` shows your total block count and all active claims.

@@ -49,17 +49,29 @@
     .page-header .breadcrumb-line .sep{opacity:.35}
     .page-header h1{font-family:var(--font-title);font-weight:700;font-size:clamp(1.6rem,4vw,2.4rem);color:#fff;letter-spacing:.02em}
     .page-header .desc{color:var(--text-muted);font-size:.9rem;margin-top:.35rem}
-    .page-header .page-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
-    .page-tag{background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:.2rem .7rem;font-size:.7rem;color:var(--text-dim);font-weight:600}
-    .page-tag.active{border-color:rgba(201,162,39,.3);color:var(--gold)}
+    .page-header .page-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:.9rem}
+
+    /* Category tags */
+    .cat-tag{display:inline-flex;align-items:center;gap:.35rem;background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:.2rem .75rem;font-size:.7rem;color:var(--text-dim);font-weight:600;transition:border-color .15s,color .15s,background .15s;text-decoration:none!important}
+    .cat-tag:hover{border-color:rgba(201,162,39,.4);color:var(--gold);background:rgba(201,162,39,.06);text-decoration:none!important}
+    .cat-tag i{font-size:.6rem}
 
     /* LAYOUT */
     .wiki-layout{display:grid;grid-template-columns:240px 1fr;gap:0;padding:0;min-height:calc(100vh - 200px)}
     @media(max-width:860px){.wiki-layout{grid-template-columns:1fr}}
 
     /* SIDEBAR */
-    .wiki-sidebar{background:var(--surface);border-right:1px solid var(--border);padding:1.5rem 0;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto}
+    .wiki-sidebar{background:var(--surface);border-right:1px solid var(--border);padding:1rem 0 1.5rem;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto}
     .wiki-sidebar::-webkit-scrollbar{width:3px} .wiki-sidebar::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:2px}
+
+    /* Sidebar search */
+    .sb-search{padding:.75rem 1rem;border-bottom:1px solid var(--border);margin-bottom:.25rem}
+    .sb-search-wrap{position:relative}
+    .sb-search-wrap input{width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);font-family:var(--font-body);font-size:.8rem;padding:.45rem .75rem .45rem 2rem;outline:none;transition:border-color .2s,box-shadow .2s}
+    .sb-search-wrap input:focus{border-color:var(--violet);box-shadow:0 0 0 2px rgba(109,79,194,.2)}
+    .sb-search-wrap input::placeholder{color:var(--text-dim)}
+    .sb-search-wrap .si{position:absolute;left:.6rem;top:50%;transform:translateY(-50%);color:var(--text-dim);font-size:.7rem;pointer-events:none}
+
     .sb-section{margin-bottom:.25rem}
     .sb-section-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;cursor:pointer;user-select:none;font-family:var(--font-title);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);transition:background .12s}
     .sb-section-head:hover{background:var(--surface-2)}
@@ -78,6 +90,12 @@
     .wiki-article-wrap{padding:2rem 2.5rem 4rem;min-width:0}
     @media(max-width:860px){.wiki-article-wrap{padding:1.5rem 1rem 3rem}}
 
+    /* ── WIKI LINKS (internal cross-references) ── */
+    .wiki-content a{color:var(--teal);border-bottom:1px solid rgba(74,184,184,.25);padding-bottom:1px;transition:color .15s,border-color .15s}
+    .wiki-content a:hover{color:#6dd4d4;border-bottom-color:rgba(74,184,184,.7);text-decoration:none}
+    /* Wiki-internal links get a subtle arrow indicator */
+    .wiki-content a[href^="/wiki/"]:not(.no-arrow)::after{content:' ↗';font-size:.65em;opacity:.55;vertical-align:super}
+
     /* Article content styles */
     .wiki-content h2{font-family:var(--font-title);font-weight:700;font-size:1.2rem;color:#fff;margin:2.25rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;scroll-margin-top:80px}
     .wiki-content h2:first-child{margin-top:0}
@@ -85,7 +103,6 @@
     .wiki-content p{color:var(--text);line-height:1.75;margin-bottom:1rem}
     .wiki-content ul,.wiki-content ol{color:var(--text);padding-left:1.5rem;line-height:1.75;margin-bottom:1rem}
     .wiki-content li{margin-bottom:.3rem}
-    .wiki-content a{color:var(--teal)} .wiki-content a:hover{color:#6dd4d4}
     .wiki-content hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
 
     /* Inline code & pre */
@@ -100,26 +117,25 @@
     .wiki-content tbody tr:nth-child(even) td{background:rgba(255,255,255,.02)}
     .wiki-content tbody td:first-child code{color:var(--teal)}
 
-    /* ── Callout boxes (Hypixel-style notices) ── */
-    .wiki-notice{display:flex;gap:.9rem;align-items:flex-start;border-radius:var(--radius);padding:.9rem 1.1rem;margin:1.25rem 0;font-size:.875rem;line-height:1.6}
-    .wiki-notice .ni{font-size:1rem;flex-shrink:0;margin-top:.1rem}
-    .wiki-notice.info{background:rgba(52,152,219,.1);border-left:3px solid #3498db}.wiki-notice.info .ni{color:#5dade2}
-    .wiki-notice.tip{background:rgba(39,174,96,.1);border-left:3px solid #27ae60}.wiki-notice.tip .ni{color:#2ecc71}
-    .wiki-notice.warning{background:rgba(230,126,34,.1);border-left:3px solid #e67e22}.wiki-notice.warning .ni{color:#f39c12}
-    .wiki-notice.danger{background:rgba(192,57,43,.1);border-left:3px solid #c0392b}.wiki-notice.danger .ni{color:#e74c3c}
+    /* ── Callout boxes ── */
+    .wiki-notice,.wiki-callout{display:flex;gap:.9rem;align-items:flex-start;border-radius:var(--radius);padding:.9rem 1.1rem;margin:1.25rem 0;font-size:.875rem;line-height:1.6}
+    .wiki-notice .ni,.wiki-callout .callout-icon{font-size:1rem;flex-shrink:0;margin-top:.1rem}
+    .wiki-notice.info,.wiki-callout.info{background:rgba(52,152,219,.1);border-left:3px solid #3498db}.wiki-notice.info .ni,.wiki-callout.info .callout-icon{color:#5dade2}
+    .wiki-notice.tip,.wiki-callout.tip{background:rgba(39,174,96,.1);border-left:3px solid #27ae60}.wiki-notice.tip .ni,.wiki-callout.tip .callout-icon{color:#2ecc71}
+    .wiki-notice.warning,.wiki-callout.warning{background:rgba(230,126,34,.1);border-left:3px solid #e67e22}.wiki-notice.warning .ni,.wiki-callout.warning .callout-icon{color:#f39c12}
+    .wiki-notice.danger,.wiki-callout.danger{background:rgba(192,57,43,.1);border-left:3px solid #c0392b}.wiki-notice.danger .ni,.wiki-callout.danger .callout-icon{color:#e74c3c}
 
     /* ── INFOBOX (Hypixel item card style) ── */
-    .infobox{float:right;clear:right;margin:0 0 1.5rem 1.5rem;width:260px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;font-size:.82rem}
+    .infobox{float:right;clear:right;margin:0 0 1.5rem 1.5rem;width:270px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;font-size:.82rem}
     @media(max-width:640px){.infobox{float:none;width:100%;margin:0 0 1.5rem}}
-    .infobox-title{background:var(--surface-3);padding:.6rem .85rem;font-family:var(--font-title);font-size:.75rem;font-weight:700;color:#fff;text-align:center;border-bottom:1px solid var(--border)}
+    .infobox-title{background:var(--surface-3);padding:.65rem .85rem;font-family:var(--font-title);font-size:.76rem;font-weight:700;color:#fff;text-align:center;border-bottom:1px solid var(--border);letter-spacing:.04em}
     .infobox-img{background:var(--bg);padding:1rem;text-align:center;border-bottom:1px solid var(--border)}
     .infobox-img img{max-width:80px;image-rendering:pixelated}
     .infobox-img .mc-icon{font-size:3rem;line-height:1}
-    .infobox-rows{}
-    .infobox-row{display:flex;justify-content:space-between;padding:.45rem .85rem;border-bottom:1px solid rgba(255,255,255,.04)}
+    .infobox-row{display:flex;justify-content:space-between;align-items:flex-start;padding:.45rem .85rem;border-bottom:1px solid rgba(255,255,255,.04);gap:.5rem}
     .infobox-row:last-child{border-bottom:none}
-    .infobox-row .label{color:var(--text-dim)}
-    .infobox-row .value{color:var(--text);text-align:right;font-weight:600;max-width:140px;word-break:break-word}
+    .infobox-row .label{color:var(--text-dim);flex-shrink:0;padding-top:.05rem}
+    .infobox-row .value{color:var(--text);text-align:right;font-weight:600;max-width:160px;word-break:break-word}
     /* Rarity values */
     .r-common{color:var(--rarity-common)!important}
     .r-uncommon{color:var(--rarity-uncommon)!important}
@@ -129,6 +145,8 @@
     .r-mythic{color:var(--rarity-mythic)!important}
     .r-divine{color:var(--rarity-divine)!important}
     .r-special{color:var(--rarity-special)!important}
+    /* Infobox section divider */
+    .infobox-section{background:var(--surface-3);padding:.3rem .85rem;font-family:var(--font-title);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);border-bottom:1px solid var(--border)}
 
     /* ── RANK badge ── */
     .rank-badge{display:inline-block;padding:.2rem .65rem;border-radius:3px;font-family:var(--font-mono);font-size:.75rem;font-weight:700;letter-spacing:.05em}
@@ -142,6 +160,14 @@
     .rank-mod{background:rgba(52,152,219,.15);color:#3498db}
     .rank-admin{background:rgba(201,162,39,.15);color:var(--gold)}
     .rank-owner{background:rgba(192,57,43,.15);color:#e74c3c}
+
+    /* ── SEE ALSO box ── */
+    .see-also{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;margin:2rem 0 1rem}
+    .see-also-head{font-family:var(--font-title);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+    .see-also-links{display:flex;flex-wrap:wrap;gap:.5rem}
+    .see-also-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.3rem .75rem;font-size:.82rem;color:var(--teal);transition:border-color .15s,background .15s}
+    .see-also-link:hover{border-color:rgba(74,184,184,.4);background:rgba(74,184,184,.06);color:#6dd4d4;text-decoration:none}
+    .see-also-link i{font-size:.7rem}
 
     /* PREV / NEXT */
     .wiki-nav{display:flex;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
@@ -184,15 +210,19 @@
         <a href="{{ '/' | relative_url }}">Home</a>
         <span class="sep">›</span>
         <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
+        {% if page.categories %}
+        <span class="sep">›</span>
+        <a href="{{ '/wiki/categories/' | relative_url }}">{{ page.categories | first }}</a>
+        {% endif %}
         <span class="sep">›</span>
         <span style="color:var(--text)">{{ page.title }}</span>
       </div>
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p class="desc">{{ page.description }}</p>{% endif %}
-      {% if page.tags %}
-      <div class="page-tags">
-        {% for tag in page.tags %}
-        <span class="page-tag {% if forloop.first %}active{% endif %}">{{ tag }}</span>
+      {% if page.categories %}
+      <div class="page-meta">
+        {% for cat in page.categories %}
+        <a href="{{ '/wiki/categories/' | relative_url }}#{{ cat | downcase | replace: ' ', '-' }}" class="cat-tag"><i class="fas fa-tag"></i>{{ cat }}</a>
         {% endfor %}
       </div>
       {% endif %}
@@ -205,6 +235,16 @@
 
   <!-- SIDEBAR -->
   <nav class="wiki-sidebar" id="wikiSidebar">
+
+    <!-- Search -->
+    <div class="sb-search">
+      <form action="{{ '/wiki/search/' | relative_url }}" method="get">
+        <div class="sb-search-wrap">
+          <i class="fas fa-search si"></i>
+          <input type="text" name="q" placeholder="Search wiki…" autocomplete="off" spellcheck="false" aria-label="Search wiki">
+        </div>
+      </form>
+    </div>
 
     <!-- Navigation section -->
     <div class="sb-section">
@@ -220,6 +260,7 @@
         <li><a href="{{ '/wiki/world-lore' | relative_url }}" class="sb-link {% if page.url contains 'world-lore' %}active{% endif %}"><i class="fas fa-earth-americas"></i>World & Lore</a></li>
         <li><a href="{{ '/wiki/staff-ranks' | relative_url }}" class="sb-link {% if page.url contains 'staff-ranks' %}active{% endif %}"><i class="fas fa-hat-wizard"></i>Staff & Ranks</a></li>
         <li><a href="{{ '/wiki/commands' | relative_url }}" class="sb-link {% if page.url contains 'commands' %}active{% endif %}"><i class="fas fa-terminal"></i>Commands</a></li>
+        <li><a href="{{ '/wiki/changelog' | relative_url }}" class="sb-link {% if page.url contains 'changelog' %}active{% endif %}"><i class="fas fa-clock-rotate-left"></i>Changelog</a></li>
       </ul>
     </div>
 
@@ -235,13 +276,29 @@
 
     <div class="sb-divider" id="tocDivider" style="display:none"></div>
 
+    <!-- Categories -->
+    {% if page.categories %}
+    <div class="sb-section">
+      <div class="sb-section-head" onclick="toggleSection(this)">
+        Categories <i class="fas fa-chevron-down chevron"></i>
+      </div>
+      <ul class="sb-links" style="max-height:500px">
+        {% for cat in page.categories %}
+        <li><a href="{{ '/wiki/categories/' | relative_url }}#{{ cat | downcase | replace: ' ', '-' }}" class="sb-link"><i class="fas fa-tag"></i>{{ cat }}</a></li>
+        {% endfor %}
+        <li><a href="{{ '/wiki/categories/' | relative_url }}" class="sb-link"><i class="fas fa-layer-group"></i>All Categories</a></li>
+      </ul>
+    </div>
+    <div class="sb-divider"></div>
+    {% endif %}
+
     <!-- Useful links -->
     <div class="sb-section">
       <div class="sb-section-head" onclick="toggleSection(this)">
         Useful Links <i class="fas fa-chevron-down chevron"></i>
       </div>
       <ul class="sb-links" style="max-height:500px">
-        <li><a href="#" class="sb-link"><i class="fab fa-discord"></i>Discord</a></li>
+        <li><a href="http://discord.gg/5gHJtxrMZS" class="sb-link" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Discord</a></li>
         <li><a href="#" class="sb-link"><i class="fas fa-store"></i>Store</a></li>
         <li><a href="#" class="sb-link"><i class="fas fa-vote-yea"></i>Vote</a></li>
       </ul>
@@ -254,6 +311,18 @@
     <div class="wiki-content">
       {{ content }}
     </div>
+
+    <!-- See Also -->
+    {% if page.see_also %}
+    <div class="see-also">
+      <div class="see-also-head"><i class="fas fa-arrow-right-arrow-left"></i>See Also</div>
+      <div class="see-also-links">
+        {% for item in page.see_also %}
+        <a href="{{ item.url | relative_url }}" class="see-also-link"><i class="fas fa-book-open"></i>{{ item.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
 
     <!-- Prev / Next -->
     <div class="wiki-nav">
@@ -284,7 +353,9 @@
       <div class="wiki-footer-links">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
-        <a href="#">Discord</a>
+        <a href="{{ '/wiki/categories/' | relative_url }}">Categories</a>
+        <a href="{{ '/wiki/changelog/' | relative_url }}">Changelog</a>
+        <a href="http://discord.gg/5gHJtxrMZS" target="_blank" rel="noopener">Discord</a>
         <a href="#">Store</a>
       </div>
     </div>
