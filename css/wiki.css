@@ -1849,19 +1849,52 @@ a:hover {
 }
 
 /*****************************
-*          MINETIPS          *
+*      CRAFTING RECIPE UI    *
+*                            *
+*  To use your own resource  *
+*  pack textures, drop PNGs  *
+*  into /img/ui/ and update  *
+*  the background-image      *
+*  paths below.              *
+*                            *
+*  Textures needed:          *
+*  ┌──────────────────────┐  *
+*  │ crafting_bg.png      │  *
+*  │   outer container    │  *
+*  │                      │  *
+*  │ crafting_grid.png    │  *
+*  │   3×3 grid area      │  *
+*  │                      │  *
+*  │ inv_slot.png         │  *
+*  │   single slot bg     │  *
+*  │                      │  *
+*  │ inv_slot_item.png    │  *
+*  │   inner item cell    │  *
+*  │                      │  *
+*  │ crafting_arrow.png   │  *
+*  │   result arrow       │  *
+*  └──────────────────────┘  *
 ******************************/
+
 .mc-recipe {
   display: inline-flex;
   flex-direction: column;
   gap: .5rem;
-  background: #C6C6C6;
-  border: 2px solid;
-  border-color: #FFF #555 #555 #FFF;
   padding: .85rem 1.1rem 1rem;
   margin: 1.25rem 0;
   user-select: none;
   border-radius: 2px;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/crafting_bg.png');
+   *  Then remove the colour + border fallbacks below.
+   */
+  background-color: #C6C6C6;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-color: #FFF #555 #555 #FFF;
 }
 
 .mc-recipe-label {
@@ -1886,20 +1919,37 @@ a:hover {
   grid-template-columns: repeat(3, 40px);
   grid-template-rows: repeat(3, 40px);
   gap: 2px;
-  background: #8B8B8B;
-  border: 2px solid #373737;
   padding: 2px;
   flex-shrink: 0;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/crafting_grid.png');
+   *  Then remove the colour + border fallbacks below.
+   */
+  background-color: #8B8B8B;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #373737;
 }
 
 /* Inventory slot outer shell */
 .invslot {
   width: 40px;
   height: 40px;
-  background: #8B8B8B;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/inv_slot.png');
+   *  background-size: cover;
+   *  Then remove the colour fallback below.
+   */
+  background-color: #8B8B8B;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Item cell — hover-able, tooltip-triggering */
@@ -1911,12 +1961,21 @@ a:hover {
   justify-content: center;
   cursor: default;
   position: relative;
-  background: #3C3C3C;
+  overflow: hidden;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/inv_slot_item.png');
+   *  background-size: cover;
+   *  Then remove the colour + border fallbacks below.
+   */
+  background-color: #3C3C3C;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-top: 2px solid #555;
   border-left: 2px solid #555;
   border-bottom: 2px solid #1A1A1A;
   border-right: 2px solid #1A1A1A;
-  overflow: hidden;
 }
 
 .invslot-item:hover::after {
@@ -1953,7 +2012,11 @@ a:hover {
       height:36px;
 }
 
-/* Arrow */
+/* Arrow — replace the SVG with an image if you prefer ──
+ *  Drop /img/ui/crafting_arrow.png and use:
+ *    <img src="/img/ui/crafting_arrow.png" alt="→">
+ *  instead of the <svg> in the HTML.
+ */
 .mc-arrow-wrap {
   display: flex;
   align-items: center;
