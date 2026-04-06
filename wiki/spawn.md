@@ -16,25 +16,44 @@ history:
   - version: "Survival Release"
     date: "2026-01-01"
     changes: "Spawn Island added"
----
 
-<div class="infobox">
-  <div class="infobox-title">Spawn</div>
-    <div class="infobox-img"><img src="/img/icons/spawn.png" alt="The Spawn Island"></div>
-  <div class="infobox-section">NPCs</div>
-    <!--<div class="infobox-column"><span class="label">NPCS</span></div>-->
-    <div class="infobox-column">
-      <span class="value"><a href="{{ '/wiki/npc/Auctioneer' | relative_url }}" class="quick-link">Auctioneer</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Blacksmith' | relative_url }}" class="quick-link">Blacksmith</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Furniture Merchant' | relative_url }}" class="quick-link">Furniture Merchant</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Cosmeticist' | relative_url }}" class="quick-link">Cosmeticist</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Farmer' | relative_url }}" class="quick-link">Farmer</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Mob Merchant' | relative_url }}" class="quick-link">Mob Merchant</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Lumberjack' | relative_url }}" class="quick-link">Lumberjack</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Fish Merchant' | relative_url }}" class="quick-link">Fish Merchant</a></span>
-      <span class="value"><a href="{{ '/wiki/npc/Rex Timberland' | relative_url }}" class="quick-link">Rex Timberland</a></span>
-    </div>
-</div>
+# ── Infobox (rendered automatically by the layout) ──
+# Add an icon per NPC by setting: icon: "/img/icons/npc/name.png"
+Infobox:
+  Enabled: true
+  title: "Spawn"
+  image: "/img/resources/spawn.png"
+  Sections:
+    - heading: "NPCs"
+      links:
+        - text: "Auctioneer"
+          link: "/wiki/npc/Auctioneer"
+          # icon: "/img/icons/npc/auctioneer.png"
+        - text: "Blacksmith"
+          link: "/wiki/npc/Blacksmith"
+          # icon: "/img/icons/npc/blacksmith.png"
+        - text: "Furniture Merchant"
+          link: "/wiki/npc/Furniture Merchant"
+          # icon: "/img/icons/npc/furniture_merchant.png"
+        - text: "Cosmeticist"
+          link: "/wiki/npc/Cosmeticist"
+          # icon: "/img/icons/npc/cosmeticist.png"
+        - text: "Farmer"
+          link: "/wiki/npc/Farmer"
+          # icon: "/img/icons/npc/farmer.png"
+        - text: "Mob Merchant"
+          link: "/wiki/npc/Mob Merchant"
+          # icon: "/img/icons/npc/mob_merchant.png"
+        - text: "Lumberjack"
+          link: "/wiki/npc/Lumberjack"
+          # icon: "/img/icons/npc/lumberjack.png"
+        - text: "Fish Merchant"
+          link: "/wiki/npc/Fish Merchant"
+          # icon: "/img/icons/npc/fish_merchant.png"
+        - text: "Rex Timberland"
+          link: "/wiki/npc/Rex Timberland"
+          # icon: "/img/icons/npc/rex_timberland.png"
+---
 
 ## Notable Locations
 

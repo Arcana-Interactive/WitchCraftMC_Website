@@ -136,6 +136,76 @@
 
   <!-- ARTICLE -->
   <article class="wiki-article-wrap">
+
+    <!-- ── YAML-DRIVEN INFOBOX ──
+         Add an Infobox block to any page's frontmatter to auto-generate
+         an infobox sidebar. Set  Infobox.Enabled: false  to opt out.
+
+         Example YAML:
+           Infobox:
+             title: "Backpack"
+             image: "/img/items/backpack.png"
+             Sections:
+               - heading: "Item Info"
+                 rows:
+                   - label: "Type"
+                     value: "Custom Item"
+                   - label: "Rarity"
+                     value: "Uncommon"
+                     rarity: "uncommon"
+               - heading: "NPCs"
+                 links:
+                   - text: "Auctioneer"
+                     link: "/wiki/npc/Auctioneer"
+                     icon: "/img/icons/npc/auctioneer.png"
+    -->
+    {% if page.Infobox and page.Infobox.Enabled != false %}
+    <div class="infobox">
+      {% if page.Infobox.title %}
+        <div class="infobox-title">{{ page.Infobox.title }}</div>
+      {% endif %}
+      {% if page.Infobox.image %}
+        <div class="infobox-img">
+          <img src="{{ page.Infobox.image }}" alt="{{ page.Infobox.title | default: 'Infobox image' }}" class="mc-icon-lg">
+        </div>
+      {% endif %}
+      {% for section in page.Infobox.Sections %}
+        {% if section.heading %}
+          <div class="infobox-section">{{ section.heading }}</div>
+        {% endif %}
+
+        {% comment %} ── Key-value rows ── {% endcomment %}
+        {% if section.rows %}
+          {% for row in section.rows %}
+            <div class="infobox-row">
+              <span class="label">{{ row.label }}</span>
+              <span class="value{% if row.rarity %} r-{{ row.rarity }}{% endif %}">{{ row.value }}</span>
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        {% comment %} ── Link list (with optional icons) ── {% endcomment %}
+        {% if section.links %}
+          <div class="infobox-column">
+            {% for item in section.links %}
+              {% if item.link %}
+                <span class="value">
+                  <a href="{{ item.link | relative_url }}" class="infobox-link">
+                    {% if item.icon %}<img src="{{ item.icon }}" alt="" class="infobox-link-icon">{% endif %}{{ item.text }}
+                  </a>
+                </span>
+              {% else %}
+                <span class="value">
+                  {% if item.icon %}<img src="{{ item.icon }}" alt="" class="infobox-link-icon">{% endif %}{{ item.text }}
+                </span>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
     <div class="wiki-content">
       {{ content }}
     </div>

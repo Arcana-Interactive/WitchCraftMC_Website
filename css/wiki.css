@@ -368,12 +368,6 @@ a:hover {
   max-width: 1300px
 }
 
-@media (min-width:1600px) {
-      .wiki-body>.container{
-            margin-left:3rem
-      }
-}
-
 .wiki-two-col {
       display:grid;
       grid-template-columns:1fr auto;
@@ -390,7 +384,9 @@ a:hover {
       display:grid;
       grid-template-columns:240px 1fr;
       gap:0;padding:0;
-      min-height:calc(100vh - 200px)
+      min-height:calc(100vh - 200px);
+      max-width:1600px;
+      margin:0 auto
 }
 
 @media (max-width:860px) {
@@ -578,7 +574,7 @@ a:hover {
 .side-panel-parent {
       display:flex;
       flex-direction:column;
-      align-items: flex-end;
+      align-items:stretch;
       gap:1rem
 }
 
@@ -690,10 +686,42 @@ a:hover {
       background: none;
       transition: background 0.3s ease;
       border: none;
+      position: relative;
+      cursor: pointer
 }
 
 .wiki-ip-button:hover {
-      background:var(--surface-2);
+      background:var(--surface-2)
+}
+
+/* "Copy to clipboard" tooltip */
+.wiki-ip-button::after {
+      content: 'Click to copy';
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--surface-3);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: .68rem;
+      padding: .25rem .55rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .15s ease;
+      border: 1px solid var(--border)
+}
+
+.wiki-ip-button:hover::after {
+      opacity: 1
+}
+
+/* Swap text to "Copied!" after click — toggled by JS */
+.wiki-ip-button.copied::after {
+      content: 'Copied!';
+      color: var(--teal)
 }
 
 
@@ -1251,6 +1279,42 @@ a:hover {
       background:var(--surface-2);
       color:var(--text);
       text-decoration:none
+}
+
+/* ── Infobox link with optional icon (Hypixel-style) ── */
+.infobox-link {
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      color:var(--teal);
+      font-size:.82rem;
+      transition:color .12s;
+      border-bottom:none!important
+}
+
+.infobox-link:hover {
+      color:#6dd4d4;
+      text-decoration:none!important
+}
+
+.infobox-link-icon {
+      width:16px;
+      height:16px;
+      image-rendering:pixelated;
+      image-rendering:crisp-edges;
+      flex-shrink:0;
+      vertical-align:middle
+}
+
+/* Inline icon next to any text — use class .wiki-icon in content */
+.wiki-icon {
+      width:16px;
+      height:16px;
+      image-rendering:pixelated;
+      image-rendering:crisp-edges;
+      display:inline-block;
+      vertical-align:text-bottom;
+      margin-right:.2rem
 }
 
 
@@ -1897,115 +1961,48 @@ a:hover {
   flex-shrink: 0;
 }
 
-/* ── Item icon pixel-blocks (CSS-only, no images needed) ── */
-.mc-icon {
+/* ── Item icons ──
+ *  Drop your Minecraft textures into /img/items/ as PNGs.
+ *  Use <img> tags inside .invslot-item elements:
+ *    <img src="/img/items/leather.png" alt="Leather">
+ *
+ *  For infobox hero icons, use .mc-icon-lg:
+ *    <img src="/img/items/backpack.png" alt="Backpack" class="mc-icon-lg">
+ *
+ *  All item images use pixelated rendering for that
+ *  crisp Minecraft look at any size.
+ */
+
+.mc-icon-lg {
+  width: 48px;
+  height: 48px;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  flex-shrink: 0
+}
+
+/* Fallback coloured squares — shown while textures are missing */
+.mc-icon-fallback {
   width: 28px;
   height: 28px;
   display: block;
-  image-rendering: pixelated;
   flex-shrink: 0;
+  border-radius: 2px;
+  border: 2px solid rgba(255,255,255,.12)
 }
 
-/* Leather — saddle-brown with bevel */
-.mc-icon-leather {
-  background: #8B4513;
-  box-shadow:
-    inset 2px 2px 0 #A0552A,
-    inset -2px -2px 0 #6B340E,
-    inset 4px 4px 0 0px #9B4A1A;
-}
-
-/* Chest — oak plank coloured */
-.mc-icon-chest {
-  background: #96742A;
-  box-shadow:
-    inset 2px 2px 0 #B08A38,
-    inset -2px -2px 0 #7A5C1E,
-    inset 8px 8px 0 -6px #6B4F18,
-    inset -8px -8px 0 -6px #B08A38;
-}
-
-/* Iron Ingot — silver-gray */
-.mc-icon-iron {
-  background: #BEBEBE;
-  box-shadow:
-    inset 2px 2px 0 #D4D4D4,
-    inset -2px -2px 0 #9A9A9A,
-    inset 5px 0 0 0 #C8C8C8,
-    inset 0 14px 0 0 #AAAAAA;
-}
-
-/* String — off-white */
-.mc-icon-string {
-  background: #DCDCDC;
-  box-shadow:
-    inset 0 0 0 2px #C0C0C0,
-    inset 12px 0 0 10px #E8E8E8,
-    inset 0 12px 0 10px #E8E8E8;
-}
-
-/* Diamond — cyan */
-.mc-icon-diamond {
-  background: #44E6E6;
-  box-shadow:
-    inset 2px 2px 0 #7AF0F0,
-    inset -2px -2px 0 #26B8B8,
-    inset 6px 6px 0 -4px #5AEAEA;
-}
-
-/* Stick — wood brown */
-.mc-icon-stick {
-  background: #8B6914;
-  box-shadow:
-    inset 2px 0 0 0 #A07820,
-    inset -2px 0 0 0 #6B4F0E,
-    inset 0 14px 0 0 #7A5C10;
-}
-
-/* Backpack (custom) — dark tan with strap hint */
-.mc-icon-backpack {
-  background: #7A5230;
-  box-shadow:
-    inset 2px 2px 0 #9B6A40,
-    inset -2px -2px 0 #5C3A1C,
-    inset 4px 4px 0 -2px #8B5C35,
-    inset 12px 2px 0 -10px #5C3A1C;
-}
-
-/* Repair Kit (custom) — silver + gold clasp */
-.mc-icon-repair-kit {
-  background: #C8C8C8;
-  box-shadow:
-    inset 2px 2px 0 #E0E0E0,
-    inset -2px -2px 0 #909090,
-    inset 8px 8px 0 -6px #FFD700;
-}
-
-/* Gold Ingot */
-.mc-icon-gold {
-  background: #FFD700;
-  box-shadow:
-    inset 2px 2px 0 #FFE84D,
-    inset -2px -2px 0 #C8A800,
-    inset 5px 0 0 0 #FFD700;
-}
-
-/* Wood Planks */
-.mc-icon-planks {
-  background: #A0744E;
-  box-shadow:
-    inset 2px 2px 0 #BA8A60,
-    inset -2px -2px 0 #7A5535,
-    inset 0 10px 0 0 #8B6240;
-}
-
-/* Stone */
-.mc-icon-stone {
-  background: #808080;
-  box-shadow:
-    inset 2px 2px 0 #969696,
-    inset -2px -2px 0 #606060;
-}
+.mc-icon-fallback[data-item="leather"]     { background: #8B4513 }
+.mc-icon-fallback[data-item="chest"]       { background: #96742A }
+.mc-icon-fallback[data-item="iron_ingot"]  { background: #BEBEBE }
+.mc-icon-fallback[data-item="string"]      { background: #DCDCDC }
+.mc-icon-fallback[data-item="diamond"]     { background: #44E6E6 }
+.mc-icon-fallback[data-item="stick"]       { background: #8B6914 }
+.mc-icon-fallback[data-item="backpack"]    { background: #7A5230 }
+.mc-icon-fallback[data-item="repair_kit"]  { background: #C8C8C8 }
+.mc-icon-fallback[data-item="gold_ingot"]  { background: #FFD700 }
+.mc-icon-fallback[data-item="planks"]      { background: #A0744E }
+.mc-icon-fallback[data-item="stone"]       { background: #808080 }
 
 
 /*****************************

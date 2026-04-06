@@ -51,7 +51,7 @@ WitchCraftMC keeps vanilla crafting intact but adds a handful of **custom recipe
 
 <div class="infobox">
   <div class="infobox-title">Backpack</div>
-  <div class="infobox-img"><i class="fas fa-bag-shopping mc-icon" style="color:var(--gold)"></i></div>
+  <div class="infobox-img"><img src="/img/items/backpack.png" alt="Backpack" class="mc-icon-lg"></div>
   <div class="infobox-section">Item Info</div>
   <div class="infobox-row"><span class="label">Type</span><span class="value">Custom Item</span></div>
   <div class="infobox-row"><span class="label">Rarity</span><span class="value r-uncommon">Uncommon</span></div>
@@ -72,31 +72,31 @@ Store extra items without returning to base. Craft it with leather surrounding a
     <div class="mc-grid">
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by &ecows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by &ecows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Chest"
-        data-minetip-text="&7A storage container./&7Holds up to 27 stacks of items."><div class="mc-icon mc-icon-chest"></div></div></div>
+        data-minetip-text="&7A storage container./&7Holds up to 27 stacks of items."><img src="/img/items/chest.png" alt="Chest"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
     </div>
     <div class="mc-arrow-wrap">
       <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +107,7 @@ Store extra items without returning to base. Craft it with leather surrounding a
     <div class="mc-result-slot">
       <div class="invslot"><div class="invslot-item"
         title="Backpack"
-        data-minetip-text="&eWitchCraftMC Custom Item/&7Right-click to open./&7Stores up to &f27 &7items./&cDoes not work in off-hand."><div class="mc-icon mc-icon-backpack"></div></div></div>
+        data-minetip-text="&eWitchCraftMC Custom Item/&7Right-click to open./&7Stores up to &f27 &7items./&cDoes not work in off-hand."><img src="/img/items/backpack.png" alt="Backpack"></div></div>
     </div>
   </div>
 </div>
@@ -120,7 +120,7 @@ Store extra items without returning to base. Craft it with leather surrounding a
 
 <div class="infobox">
   <div class="infobox-title">Repair Kit</div>
-  <div class="infobox-img"><i class="fas fa-screwdriver-wrench mc-icon" style="color:var(--teal)"></i></div>
+  <div class="infobox-img"><img src="/img/items/repair_kit.png" alt="Repair Kit" class="mc-icon-lg"></div>
   <div class="infobox-section">Item Info</div>
   <div class="infobox-row"><span class="label">Type</span><span class="value">Consumable</span></div>
   <div class="infobox-row"><span class="label">Rarity</span><span class="value r-uncommon">Uncommon</span></div>
@@ -141,31 +141,31 @@ Repair tools and weapons without an anvil or XP — especially useful early-game
     <div class="mc-grid">
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="String"
-        data-minetip-text="&7Dropped by spiders./&7Used in bows, fishing rods, and more."><div class="mc-icon mc-icon-string"></div></div></div>
+        data-minetip-text="&7Dropped by spiders./&7Used in bows, fishing rods, and more."><img src="/img/items/string.png" alt="String"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><div class="mc-icon mc-icon-iron"></div></div></div>
+        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
     </div>
     <div class="mc-arrow-wrap">
       <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +176,7 @@ Repair tools and weapons without an anvil or XP — especially useful early-game
     <div class="mc-result-slot">
       <div class="invslot"><div class="invslot-item"
         title="Repair Kit"
-        data-minetip-text="&eWitchCraftMC Custom Item/&7Right-click a damaged tool to repair it./&aRestores &f50% &adurability./&7No XP or anvil required."><div class="mc-icon mc-icon-repair-kit"></div></div></div>
+        data-minetip-text="&eWitchCraftMC Custom Item/&7Right-click a damaged tool to repair it./&aRestores &f50% &adurability./&7No XP or anvil required."><img src="/img/items/repair_kit.png" alt="Repair Kit"></div></div>
     </div>
   </div>
 </div>
@@ -187,7 +187,7 @@ Repair tools and weapons without an anvil or XP — especially useful early-game
 
 ### *(Add your custom recipes here)*
 
-Copy either recipe block above and swap in your items. To add a custom item icon, add a `.mc-icon-youritem` CSS class in the wiki-page layout, or drop a `16×16` PNG into `/img/items/` and use `<img src="/img/items/youritem.png">` inside the `.invslot-item`.
+Copy either recipe block above and swap in your items. Drop a `16×16` or `32×32` PNG texture into `/img/items/` and use `<img src="/img/items/youritem.png" alt="Your Item">` inside each `.invslot-item`. All item images auto-scale to 28px with pixelated rendering.
 
 ## Special Items
 
@@ -197,7 +197,7 @@ Keys can be obtained through voting, events, and the store. There are three tier
 
 <div class="infobox">
   <div class="infobox-title">Arcane Key</div>
-  <div class="infobox-img"><i class="fas fa-key mc-icon" style="color:var(--rarity-legendary)"></i></div>
+  <div class="infobox-img"><img src="/img/items/arcane_key.png" alt="Arcane Key" class="mc-icon-lg"></div>
   <div class="infobox-section">Key Info</div>
   <div class="infobox-row"><span class="label">Rarity</span><span class="value r-legendary">Legendary</span></div>
   <div class="infobox-row"><span class="label">Source</span><span class="value">Special Events</span></div>
