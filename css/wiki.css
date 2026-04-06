@@ -1143,14 +1143,13 @@ a:hover {
 }
 
 .infobox-img {
-      background:var(--bg);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      text-align:center;
-      padding:.45rem .85rem;
-      border-bottom:1px solid var(--border);
-      gap:.5rem
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .45rem .85rem;
+    border-bottom: 1px solid var(--border);
+    gap: .5rem;
 }
 
 .infobox-img img {
@@ -1166,10 +1165,10 @@ a:hover {
       background:var(--surface-3);
       padding:.3rem .85rem;
       font-family:var(--font-title);
-      font-size:.8rem;
+      font-size:.9rem;
       font-weight:700;
       text-align:center;
-      letter-spacing:.14em;
+      letter-spacing:.10em;
       text-transform:uppercase;
       color:var(--gold);
       border-bottom:1px solid var(--border)
