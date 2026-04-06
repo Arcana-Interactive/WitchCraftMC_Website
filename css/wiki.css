@@ -566,6 +566,34 @@ a:hover {
       color:var(--text-dim)
 }
 
+/* Article count — sits below the category grid */
+.wiki-article-count {
+      display:flex;
+      align-items:center;
+      gap:.5rem;
+      margin-top:1rem;
+      padding:.5rem .85rem;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      font-size:.78rem;
+      color:var(--text-muted)
+}
+
+.wiki-article-count i {
+      color:var(--gold);
+      font-size:.7rem
+}
+
+.wiki-article-count strong {
+      color:var(--text);
+      font-weight:700
+}
+
+.wiki-article-count-sep {
+      color:var(--text-dim)
+}
+
 
 /*****************************
 *        SIDE PANEL          *

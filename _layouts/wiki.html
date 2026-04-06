@@ -32,18 +32,6 @@
   </div>
 </header>
 
-<div class="wiki-stats-bar">
-  <div class="container">
-    <div class="stats-inner">
-      <div class="stat-item"><i class="fas fa-file-lines"></i><span class="num">10</span>&nbsp;Articles</div>
-      <div class="stat-item"><i class="fas fa-calendar"></i>Updated&nbsp;<span class="num">{{ site.time | date: "%b %Y" }}</span></div>
-      <div class="stat-item">
-        <div class="status-dot"></div>&nbsp;Server Online&nbsp;·&nbsp;<span style="color:var(--text-dim);font-family:var(--font-mono);font-size:.75rem">play.witchcraftmc.com</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <main class="wiki-body">
   <div class="container">
     <div class="wiki-two-col">
@@ -113,6 +101,13 @@
           <div class="no-results" id="noRes"><i class="fas fa-search"></i>No results for "<span id="noResQ"></span>"</div>
         </div>
 
+        <div class="wiki-article-count">
+          <i class="fas fa-file-lines"></i>
+          <span><strong>{{ site.pages | where: 'layout', 'wiki-page' | size }}</strong> articles</span>
+          <span class="wiki-article-count-sep">·</span>
+          <span>Updated {{ site.time | date: "%b %Y" }}</span>
+        </div>
+
         {% if content != '' %}<div style="margin-top:2.5rem">{{ content }}</div>{% endif %}
       </div>
 
@@ -121,12 +116,12 @@
           <div class="side-box">
             <div class="side-box-head"><i class="fas fa-server"></i> Server Info</div>
             <div class="side-box-body" style="display:flex;flex-direction:column;gap:.6rem">
-              <div style="display:flex;justify-content:space-between;font-size:.82rem">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.82rem">
                 <span style="color:var(--text-muted)">Server-ip</span>
-                  <button class="wiki-ip-button" id="ipCopyBtn"><span style="color:var(--teal);font-family:var(--font-mono);font-size:.78rem">play.witchcraftmc.com</span></button></div>
+                <button class="wiki-ip-button" id="ipCopyBtn"><span style="color:var(--teal);font-family:var(--font-mono);font-size:.78rem">play.witchcraftmc.com</span></button>
+              </div>
               <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Version</span><span>1.21.11</span></div>
               <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Type</span><span>Survival SMP</span></div>
-              <div style="display:flex;justify-content:space-between;font-size:.82rem;align-items:center"><span style="color:var(--text-muted)">Status</span><div style="display:flex;align-items:center;gap:.5rem"><div class="status-dot"></div><span>Online</span></div></div>
               <a href="http://discord.gg/5gHJtxrMZS" style="margin-top:.25rem;display:block;background:var(--violet);color:#fff;text-align:center;padding:.55rem;border-radius:4px;font-size:.82rem;font-weight:600"><i class="fab fa-discord" style="margin-right:.4rem"></i>Join Discord</a>
             </div>
           </div>
