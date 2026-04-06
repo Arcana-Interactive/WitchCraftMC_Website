@@ -678,6 +678,16 @@ a:hover {
       font-size:.8rem
 }
 
+.wiki-ip-button {
+      background: none;
+      transition: background 0.3s ease;
+      border-radius: 10px;
+}
+
+.wiki-ip-button:hover {
+      background:var(--surface-2);
+}
+
 
 /*****************************
 *        PAGE SIDEBAR        *
