@@ -583,6 +583,9 @@ a:hover {
 }
 
 .side-box {
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
       background:var(--surface);
       border:1px solid var(--border);
       border-radius:var(--radius);
@@ -1118,7 +1121,6 @@ a:hover {
       flex-direction:column;
       justify-content:center;
       margin:0 0 1.5rem 1.5rem;
-      width:270px;
       background:var(--surface-2);
       border:1px solid var(--border);
       border-radius:var(--radius);
@@ -1193,6 +1195,7 @@ a:hover {
 
 .infobox-row .label {
       color:var(--text);
+      font-size:.8rem;
       flex-shrink:0;
       padding-top:.05rem
 }
@@ -1217,6 +1220,7 @@ a:hover {
 
 .infobox-column .label {
       color:var(--text);
+      font-size:.8rem;
       flex-shrink:0;
       padding-top:.05rem
 }

@@ -24,15 +24,15 @@ history:
   <div class="infobox-section">Creatures</div>
     <div class="infobox-column"><span class="label">NPCS</span></div>
     <div class="infobox-column">
-      <span class="value">Auctioneer</span>
-      <span class="value">Blacksmith</span>
-      <span class="value">Furniture Merchant</span>
-      <span class="value">Cosmeticist</span>
-      <span class="value">Farmer</span>
-      <span class="value">Mob Merchant</span>
-      <span class="value">Lumberjack</span>
-      <span class="value">Fish Merchant</span>
-      <span class="value">Rex Timberland</span>
+      <span class="value"><a href="{{ '/wiki/npc/Auctioneer' | relative_url }}" class="quick-link">Auctioneer</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Blacksmith' | relative_url }}" class="quick-link">Blacksmith</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Furniture Merchant' | relative_url }}" class="quick-link">Furniture Merchant</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Cosmeticist' | relative_url }}" class="quick-link">Cosmeticist</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Farmer' | relative_url }}" class="quick-link">Farmer</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Mob Merchant' | relative_url }}" class="quick-link">Mob Merchant</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Lumberjack' | relative_url }}" class="quick-link">Lumberjack</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Fish Merchant' | relative_url }}" class="quick-link">Fish Merchant</a></span>
+      <span class="value"><a href="{{ '/wiki/npc/Rex Timberland' | relative_url }}" class="quick-link">Rex Timberland</a></span>
     </div>
 </div>
 
