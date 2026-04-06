@@ -1147,7 +1147,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .45rem .85rem;
+    padding: .65rem .2rem;
     border-bottom: 1px solid var(--border);
     gap: .5rem;
 }
@@ -1168,7 +1168,6 @@ a:hover {
       font-size:.9rem;
       font-weight:700;
       text-align:center;
-      letter-spacing:.10em;
       text-transform:uppercase;
       color:var(--gold);
       border-bottom:1px solid var(--border)
