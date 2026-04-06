@@ -42,19 +42,31 @@ $('.navbar-collapse ul li a').click(function() {
     }
 });
 
-// Fix mobile hamburger toggle - take over from Bootstrap to ensure open/close both work
+// Fix mobile hamburger toggle - bypass Bootstrap's collapse API entirely for reliability
 $(document).ready(function() {
+    // Prevent Bootstrap's own data-toggle handler from conflicting
+    $('[data-toggle="collapse"][data-target="#bs-example-navbar-collapse-1"]').removeAttr('data-toggle');
+
     $('.navbar-toggle').on('click', function(e) {
-        // Stop Bootstrap's document-delegated handler from double-firing
         e.stopPropagation();
-        var $navCollapse = $('#bs-example-navbar-collapse-1');
-        $navCollapse.collapse('toggle');
+        e.preventDefault();
+        $('#bs-example-navbar-collapse-1').toggleClass('in');
     });
 
-    // Close menu when tapping outside the navbar on mobile
+    // Close menu when tapping/clicking outside the navbar on mobile
     $(document).on('click touchstart', function(e) {
         if (!$(e.target).closest('.navbar').length) {
-            $('#bs-example-navbar-collapse-1').collapse('hide');
+            $('#bs-example-navbar-collapse-1').removeClass('in');
         }
+    });
+
+    // Fix navbar brand link: scroll to top without pushing /#page-top into the URL
+    $('.navbar-brand').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+        $('html, body').stop(true, true).animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
     });
 });

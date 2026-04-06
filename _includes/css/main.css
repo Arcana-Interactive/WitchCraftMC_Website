@@ -605,7 +605,11 @@ subtitle {
     }
 
     .portfolio-modal .modal-content h2 {
-        font-size: 1.8em;
+        font-size: 1.4em;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        padding: 0 10px;
     }
 
     /* Scale down close button so it doesn't overlap content */
@@ -649,5 +653,26 @@ subtitle {
     /* Player counter fits on one line */
     p.small {
         font-size: 13px;
+    }
+
+    /* Fix portfolio card caption text overflowing on mobile */
+    #portfolio .portfolio-item .portfolio-link .caption .caption-content {
+        height: auto;
+        top: 50%;
+        margin-top: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 0 8px;
+        box-sizing: border-box;
+    }
+
+    #portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+    #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+        font-size: 14px;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.3;
     }
 }
