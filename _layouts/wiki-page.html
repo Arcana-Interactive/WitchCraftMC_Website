@@ -201,6 +201,56 @@
     .see-also-link:hover{border-color:rgba(74,184,184,.4);background:rgba(74,184,184,.06);color:#6dd4d4;text-decoration:none}
     .see-also-link i{font-size:.7rem}
 
+    /* ── PAGE HISTORY MODULE ── */
+    .wiki-history{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:2.5rem 0 1rem;font-size:.82rem}
+    .wiki-history-head{
+      display:flex;align-items:center;gap:.75rem;
+      background:var(--surface-2);padding:.55rem .9rem;
+      cursor:pointer;user-select:none;border-bottom:1px solid transparent;
+      transition:background .15s;
+    }
+    .wiki-history-head:hover{background:var(--surface-3)}
+    .wiki-history-head.open{border-bottom-color:var(--border)}
+    .wiki-history-head .wh-icon{color:var(--gold);font-size:.7rem;flex-shrink:0}
+    .wiki-history-head .wh-label{
+      font-family:var(--font-title);font-size:.65rem;font-weight:700;
+      letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+    }
+    .wiki-history-head .wh-chevron{
+      margin-left:auto;font-size:.6rem;color:var(--text-dim);
+      transition:transform .2s;
+    }
+    .wiki-history-head.open .wh-chevron{transform:rotate(180deg)}
+    .wiki-history-body{display:none}
+    .wiki-history-body.open{display:block}
+    .wh-table{width:100%;border-collapse:collapse}
+    .wh-table thead th{
+      background:var(--surface-3);border-bottom:1px solid var(--border);
+      padding:.4rem .85rem;font-family:var(--font-title);font-size:.6rem;
+      font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--text-dim);text-align:left;white-space:nowrap;
+    }
+    .wh-table tbody tr{border-bottom:1px solid rgba(255,255,255,.035)}
+    .wh-table tbody tr:last-child{border-bottom:none}
+    .wh-table tbody tr:nth-child(even) td{background:rgba(255,255,255,.018)}
+    .wh-table td{padding:.45rem .85rem;vertical-align:top;color:var(--text)}
+    .wh-table td.wh-ver{
+      white-space:nowrap;font-family:var(--font-mono);font-size:.78rem;
+      color:var(--teal);min-width:80px;
+    }
+    .wh-table td.wh-date{
+      white-space:nowrap;color:var(--text-muted);font-size:.78rem;min-width:110px;
+    }
+    .wh-table td.wh-changes{color:var(--text);line-height:1.55}
+    /* On mobile, version+date stack above changes */
+    @media(max-width:540px){
+      .wh-table thead{display:none}
+      .wh-table tbody tr{display:block;padding:.6rem .85rem;border-bottom:1px solid rgba(255,255,255,.06)}
+      .wh-table td{display:block;padding:.1rem 0;border:none}
+      .wh-table td.wh-ver::before{content:'Version: ';color:var(--text-dim)}
+      .wh-table td.wh-date::before{content:'Date: ';color:var(--text-dim)}
+    }
+
     /* PREV / NEXT */
     .wiki-nav{display:flex;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
     .wiki-nav-btn{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;color:var(--text-muted);font-size:.82rem;transition:border-color .15s,color .15s}
@@ -634,6 +684,37 @@
       {{ content }}
     </div>
 
+    <!-- History Module -->
+    {% if page.history %}
+    <div class="wiki-history" id="pageHistory">
+      <div class="wiki-history-head" onclick="toggleHistory(this)" aria-expanded="false">
+        <i class="fas fa-clock-rotate-left wh-icon"></i>
+        <span class="wh-label">History</span>
+        <i class="fas fa-chevron-down wh-chevron"></i>
+      </div>
+      <div class="wiki-history-body" aria-hidden="true">
+        <table class="wh-table">
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Date</th>
+              <th>Changes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for entry in page.history reversed %}
+            <tr>
+              <td class="wh-ver">{{ entry.version }}</td>
+              <td class="wh-date">{{ entry.date }}</td>
+              <td class="wh-changes">{{ entry.changes }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
     <!-- See Also -->
     {% if page.see_also %}
     <div class="see-also">
@@ -721,6 +802,15 @@
       });
     });
   })();
+
+  // History module toggle
+  function toggleHistory(head) {
+    var body = head.nextElementSibling;
+    var open = head.classList.toggle('open');
+    body.classList.toggle('open', open);
+    head.setAttribute('aria-expanded', open);
+    body.setAttribute('aria-hidden', !open);
+  }
 
   // Collapsible sidebar sections
   function toggleSection(head) {

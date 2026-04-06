@@ -18,6 +18,22 @@ see_also:
     url: /wiki/getting-started/
   - title: Staff & Ranks
     url: /wiki/staff-ranks/
+history:
+  - version: "Pre-Launch"
+    date: "2024-01-01"
+    changes: "Crafting & Items page created in preparation for server launch."
+  - version: "v1.0"
+    date: "2024-03-15"
+    changes: "Backpack recipe added. Crafting cost set to 8× Leather + 1× Chest."
+  - version: "v1.1"
+    date: "2024-05-02"
+    changes: "Repair Kit introduced. Recipe requires 8× Iron Ingot + 1× String."
+  - version: "v1.2"
+    date: "2024-08-20"
+    changes: "Backpack durability increased. Repair Kit now restores 50% durability instead of 25%."
+  - version: "v1.3"
+    date: "2025-01-10"
+    changes: "Interactive crafting grid widgets added to this page. Hover tooltips enabled for all recipe slots."
 ---
 
 ## Overview

@@ -17,6 +17,19 @@ see_also:
     url: /wiki/commands/
   - title: Staff & Ranks
     url: /wiki/staff-ranks/
+history:
+  - version: "Pre-Launch"
+    date: "2024-01-01"
+    changes: "Getting Started guide created."
+  - version: "v1.0"
+    date: "2024-03-15"
+    changes: "Page published at server launch. Covers joining, basic survival, and first steps."
+  - version: "v1.1"
+    date: "2024-06-08"
+    changes: "Added section on the /kit starter command and Discord verification steps."
+  - version: "v1.2"
+    date: "2025-02-14"
+    changes: "Rewritten to reflect Season 2 spawn layout and updated starter kit contents."
 ---
 
 ## Welcome to WitchCraftMC
