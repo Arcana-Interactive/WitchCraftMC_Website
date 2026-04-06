@@ -117,49 +117,51 @@
         {% if content != '' %}<div style="margin-top:2.5rem">{{ content }}</div>{% endif %}
       </div>
 
-      <aside class="side-panel">
-        <div class="side-box">
-          <div class="side-box-head"><i class="fas fa-server"></i> Server Info</div>
-          <div class="side-box-body" style="display:flex;flex-direction:column;gap:.6rem">
-            <div style="display:flex;justify-content:space-between;font-size:.82rem">
-              <span style="color:var(--text-muted)">Server-ip</span><code style="color:var(--teal);font-family:var(--font-mono);font-size:.78rem">
-                <button onclick="navigator.clipboard.writeText('play.witchcraftmc.com')" class="wiki-ip-button"><span style="color:var(--teal);font-family:var(--font-mono);font-size:.78rem">play.witchcraftmc.com</span></button></code></div>
-            <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Version</span><span>1.21.11</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Type</span><span>Survival SMP</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:.82rem;align-items:center"><span style="color:var(--text-muted)">Status</span><div style="display:flex;align-items:center;gap:.5rem"><div class="status-dot"></div><span>Online</span></div></div>
-            <a href="http://discord.gg/5gHJtxrMZS" style="margin-top:.25rem;display:block;background:var(--violet);color:#fff;text-align:center;padding:.55rem;border-radius:4px;font-size:.82rem;font-weight:600"><i class="fab fa-discord" style="margin-right:.4rem"></i>Join Discord</a>
-          </div>
-        </div>
-
-        <div class="side-box">
-          <div class="side-box-head"><i class="fas fa-newspaper"></i> Latest Updates</div>
-          <div class="side-box-body" style="padding:.5rem .75rem">
-            <ul class="patch-list">
-              <li><a href="#"><div class="pdot"></div><div><div>Wiki launched 🎉</div><span class="pdate">Server pre-launch</span></div></a></li>
-              <li><a href="#"><div class="pdot"></div><div><div>Claims guide published</div><span class="pdate">GriefPrevention docs</span></div></a></li>
-              <li><a href="#"><div class="pdot"></div><div><div>Commands page live</div><span class="pdate">Full command reference</span></div></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="side-box">
-          <div class="side-box-head"><i class="fas fa-link"></i> Quick Links</div>
-          <div class="side-box-body" style="padding:.5rem .75rem">
-            <div class="quick-links">
-              <a href="{{ '/wiki/getting-started' | relative_url }}" class="quick-link"><i class="fas fa-play"></i>New Player Guide</a>
-              <a href="{{ '/wiki/rules' | relative_url }}" class="quick-link"><i class="fas fa-scroll"></i>Server Rules</a>
-              <a href="{{ '/wiki/commands' | relative_url }}" class="quick-link"><i class="fas fa-terminal"></i>Command Reference</a>
-              <a href="{{ '/wiki/claims' | relative_url }}" class="quick-link"><i class="fas fa-shield-halved"></i>Claiming Land</a>
-              <a href="{{ '/wiki/categories' | relative_url }}" class="quick-link"><i class="fas fa-layer-group"></i>All Categories</a>
-              <a href="{{ '/wiki/changelog' | relative_url }}" class="quick-link"><i class="fas fa-clock-rotate-left"></i>Changelog</a>
-              <a href="{{ '/wiki/search' | relative_url }}" class="quick-link"><i class="fas fa-magnifying-glass"></i>Search</a>
-              <a href="http://discord.gg/5gHJtxrMZS" class="quick-link" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Discord Server</a>
-              <a href="#" class="quick-link"><i class="fas fa-store"></i>Store</a>
-              <a href="#" class="quick-link"><i class="fas fa-vote-yea"></i>Vote for Us</a>
+      <div class ="side-panel-parent">
+        <aside class="side-panel">
+          <div class="side-box">
+            <div class="side-box-head"><i class="fas fa-server"></i> Server Info</div>
+            <div class="side-box-body" style="display:flex;flex-direction:column;gap:.6rem">
+              <div style="display:flex;justify-content:space-between;font-size:.82rem">
+                <span style="color:var(--text-muted)">Server-ip</span><code style="color:var(--teal);font-family:var(--font-mono);font-size:.78rem">
+                  <button onclick="navigator.clipboard.writeText('play.witchcraftmc.com')" class="wiki-ip-button"><span style="color:var(--teal);font-family:var(--font-mono);font-size:.78rem">play.witchcraftmc.com</span></button></code></div>
+              <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Version</span><span>1.21.11</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Type</span><span>Survival SMP</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:.82rem;align-items:center"><span style="color:var(--text-muted)">Status</span><div style="display:flex;align-items:center;gap:.5rem"><div class="status-dot"></div><span>Online</span></div></div>
+              <a href="http://discord.gg/5gHJtxrMZS" style="margin-top:.25rem;display:block;background:var(--violet);color:#fff;text-align:center;padding:.55rem;border-radius:4px;font-size:.82rem;font-weight:600"><i class="fab fa-discord" style="margin-right:.4rem"></i>Join Discord</a>
             </div>
           </div>
-        </div>
-      </aside>
+
+          <div class="side-box">
+            <div class="side-box-head"><i class="fas fa-newspaper"></i> Latest Updates</div>
+            <div class="side-box-body" style="padding:.5rem .75rem">
+              <ul class="patch-list">
+                <li><a href="#"><div class="pdot"></div><div><div>Wiki launched 🎉</div><span class="pdate">Server pre-launch</span></div></a></li>
+                <li><a href="#"><div class="pdot"></div><div><div>Claims guide published</div><span class="pdate">GriefPrevention docs</span></div></a></li>
+                <li><a href="#"><div class="pdot"></div><div><div>Commands page live</div><span class="pdate">Full command reference</span></div></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="side-box">
+            <div class="side-box-head"><i class="fas fa-link"></i> Quick Links</div>
+            <div class="side-box-body" style="padding:.5rem .75rem">
+              <div class="quick-links">
+                <a href="{{ '/wiki/getting-started' | relative_url }}" class="quick-link"><i class="fas fa-play"></i>New Player Guide</a>
+                <a href="{{ '/wiki/rules' | relative_url }}" class="quick-link"><i class="fas fa-scroll"></i>Server Rules</a>
+                <a href="{{ '/wiki/commands' | relative_url }}" class="quick-link"><i class="fas fa-terminal"></i>Command Reference</a>
+                <a href="{{ '/wiki/claims' | relative_url }}" class="quick-link"><i class="fas fa-shield-halved"></i>Claiming Land</a>
+                <a href="{{ '/wiki/categories' | relative_url }}" class="quick-link"><i class="fas fa-layer-group"></i>All Categories</a>
+                <a href="{{ '/wiki/changelog' | relative_url }}" class="quick-link"><i class="fas fa-clock-rotate-left"></i>Changelog</a>
+                <a href="{{ '/wiki/search' | relative_url }}" class="quick-link"><i class="fas fa-magnifying-glass"></i>Search</a>
+                <a href="http://discord.gg/5gHJtxrMZS" class="quick-link" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Discord Server</a>
+                <a href="#" class="quick-link"><i class="fas fa-store"></i>Store</a>
+                <a href="#" class="quick-link"><i class="fas fa-vote-yea"></i>Vote for Us</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
   </div>
 </main>

@@ -575,10 +575,18 @@ a:hover {
 *        SIDE PANEL          *
 ******************************/
 
+.side-panel-parent {
+      display:flex;
+      flex-direction:column;
+      align-items: flex-end;
+      gap:1rem
+}
+
 .side-panel {
       display:flex;
-      justify-content:flex-end;
-      gap:1rem;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:1rem
 }
 
 .side-box {
