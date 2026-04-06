@@ -1152,7 +1152,9 @@ a:hover {
 }
 
 .infobox-img img {
-      max-width:300px
+      max-width:300px;
+      width: auto;
+      flex: 0 0 auto
 }
 
 .infobox-img .mc-icon {

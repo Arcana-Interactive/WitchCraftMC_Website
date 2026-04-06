@@ -24,9 +24,15 @@ history:
   <div class="infobox-section">Creatures</div>
     <div class="infobox-column"><span class="label">NPCS</span></div>
     <div class="infobox-column">
-      <span class="value">Custom Item</span>
-      <span class="value">Custom Item2</span>
-      <span class="value">Custom Item3</span>
+      <span class="value">Auctioneer</span>
+      <span class="value">Blacksmith</span>
+      <span class="value">Furniture Merchant</span>
+      <span class="value">Cosmeticist</span>
+      <span class="value">Farmer</span>
+      <span class="value">Mob Merchant</span>
+      <span class="value">Lumberjack</span>
+      <span class="value">Fish Merchant</span>
+      <span class="value">Rex Timberland</span>
     </div>
 </div>
 
