@@ -251,13 +251,6 @@
       .wh-table td.wh-date::before{content:'Date: ';color:var(--text-dim)}
     }
 
-    /* PREV / NEXT */
-    .wiki-nav{display:flex;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-    .wiki-nav-btn{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;color:var(--text-muted);font-size:.82rem;transition:border-color .15s,color .15s}
-    .wiki-nav-btn:hover{border-color:rgba(74,184,184,.4);color:var(--text);text-decoration:none}
-    .wiki-nav-btn .nav-label{font-family:var(--font-title);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.3rem}
-    .wiki-nav-btn.right{text-align:right}
-
     /* FOOTER */
     .wiki-footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 0}
     .wiki-footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
@@ -271,11 +264,6 @@
     /* Tables scroll horizontally on small screens */
     @media(max-width:860px){
       .wiki-content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
-    }
-    /* Prev/Next nav: stack on very small screens */
-    @media(max-width:540px){
-      .wiki-nav{flex-direction:column}
-      .wiki-nav-btn.right{text-align:left}
     }
     /* Footer: stack on small screens */
     @media(max-width:540px){
@@ -727,21 +715,6 @@
     </div>
     {% endif %}
 
-    <!-- Prev / Next -->
-    <div class="wiki-nav">
-      {% if page.prev_page %}
-      <a href="{{ page.prev_page.url | relative_url }}" class="wiki-nav-btn">
-        <div class="nav-label">← Previous</div>
-        {{ page.prev_page.title }}
-      </a>
-      {% else %}<div></div>{% endif %}
-      {% if page.next_page %}
-      <a href="{{ page.next_page.url | relative_url }}" class="wiki-nav-btn right">
-        <div class="nav-label">Next →</div>
-        {{ page.next_page.title }}
-      </a>
-      {% endif %}
-    </div>
   </article>
   </div><!-- end article column -->
 </div>
