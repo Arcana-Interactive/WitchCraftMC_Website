@@ -1177,12 +1177,36 @@ a:hover {
       padding-top:.05rem
 }
 
+.infobox-row .label-center {
+      color:var(--text-dim);
+      flex-shrink:0;
+      padding-top:.05rem
+}
+
 .infobox-row .value {
       color:var(--text);
       text-align:right;
       font-weight:600;
       max-width:160px;
       word-break:break-word
+}
+
+.infobox-column .center {
+      color:var(--text);
+      text-align:center;
+      font-weight:600;
+      max-width:160px;
+      word-break:break-word
+}
+
+.infobox-column .center {
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:center;
+      padding:.45rem .85rem;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      gap:.5rem
 }
 
 /* Rarity values */

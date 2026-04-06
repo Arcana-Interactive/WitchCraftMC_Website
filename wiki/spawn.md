@@ -21,16 +21,13 @@ history:
 <div class="infobox">
   <div class="infobox-title">Spawn</div>
     <div class="infobox-img"><img class="fas fa-bag-shopping mc-icon" src="/img/icons/spawn.png alt="The Spawn Island"></div>
-  <div class="infobox-section">Item Info</div>
-  <div class="infobox-row"><span class="label">Type</span><span class="value">Custom Item</span></div>
-  <div class="infobox-row"><span class="label">Rarity</span><span class="value r-uncommon">Uncommon</span></div>
-  <div class="infobox-row"><span class="label">Stackable</span><span class="value">No</span></div>
-  <div class="infobox-section">Craft</div>
-  <div class="infobox-row"><span class="label">Leather (L)</span><span class="value">× 8</span></div>
-  <div class="infobox-row"><span class="label">Chest (C)</span><span class="value">× 1 (centre)</span></div>
-  <div class="infobox-section">Usage</div>
-  <div class="infobox-row"><span class="label">Activate</span><span class="value">Right-click</span></div>
-  <div class="infobox-row"><span class="label">Off-hand</span><span class="value r-special">✘ Not supported</span></div>
+  <div class="infobox-section">Creatures</div>
+    <div class="infobox-row"><span class="label-center">NPCS</span></div>
+    <div class="infobox-column">
+      <span class="value">Custom Item</span>
+      <span class="value">Custom Item2</span>
+      <span class="value">Custom Item3</span>
+    </div>
 </div>
 
 ## Notable Locations
