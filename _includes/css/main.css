@@ -612,6 +612,16 @@ subtitle {
         padding: 0 10px;
     }
 
+    /* Fix large headings inside modal markdown content overflowing on mobile */
+    .modalMarkdown h1,
+    .modalMarkdown h2,
+    .modalMarkdown h3 {
+        font-size: 1.2em;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
     /* Scale down close button so it doesn't overlap content */
     .portfolio-modal .close-modal {
         top: 10px;
