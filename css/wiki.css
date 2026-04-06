@@ -981,137 +981,380 @@ a:hover{
       image-rendering:pixelated
 }
 .infobox-img .mc-icon{
-      font-size:3rem;line-height:1}
+      font-size:3rem;
+      line-height:1
+}
 .infobox-row{
-      display:flex;justify-content:space-between;align-items:flex-start;padding:.45rem .85rem;border-bottom:1px solid rgba(255,255,255,.04);gap:.5rem}
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      padding:.45rem .85rem;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      gap:.5rem
+}
 .infobox-row:last-child{
-      border-bottom:none}
+      border-bottom:none
+}
 .infobox-row .label{
-      color:var(--text-dim);flex-shrink:0;padding-top:.05rem}
+      color:var(--text-dim);
+      flex-shrink:0;
+      padding-top:.05rem
+}
 .infobox-row .value{
-      color:var(--text);text-align:right;font-weight:600;max-width:160px;word-break:break-word
+      color:var(--text);
+      text-align:right;
+      font-weight:600;
+      max-width:160px;
+      word-break:break-word
 }
 
 /* Rarity values */
-.r-common{color:var(--rarity-common)!important}
-.r-uncommon{color:var(--rarity-uncommon)!important}
-.r-rare{color:var(--rarity-rare)!important}
-.r-epic{color:var(--rarity-epic)!important}
-.r-legendary{color:var(--rarity-legendary)!important}
-.r-mythic{color:var(--rarity-mythic)!important}
-.r-divine{color:var(--rarity-divine)!important}
-.r-special{color:var(--rarity-special)!important}
+.r-common{
+      color:var(--rarity-common)!important
+}
+.r-uncommon{
+      color:var(--rarity-uncommon)!important
+}
+.r-rare{
+      color:var(--rarity-rare)!important
+}
+.r-epic{
+      color:var(--rarity-epic)!important
+}
+.r-legendary{
+      color:var(--rarity-legendary)!important
+}
+.r-mythic{
+      color:var(--rarity-mythic)!important
+}
+.r-divine{
+      color:var(--rarity-divine)!important
+}
+.r-special{
+      color:var(--rarity-special)!important
+}
+
 /* Infobox section divider */
-.infobox-section{background:var(--surface-3);padding:.3rem .85rem;font-family:var(--font-title);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);border-bottom:1px solid var(--border)}
+.infobox-section{
+      background:var(--surface-3);
+      padding:.3rem .85rem;
+      font-family:var(--font-title);
+      font-size:.6rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--text-dim);
+      border-bottom:1px solid var(--border)
+}
 
 /* ── RANK badge ── */
-.rank-badge{display:inline-block;padding:.2rem .65rem;border-radius:3px;font-family:var(--font-mono);font-size:.75rem;font-weight:700;letter-spacing:.05em}
-.rank-wanderer{background:rgba(255,255,255,.08);color:#aaa}
-.rank-settler{background:rgba(39,174,96,.15);color:#2ecc71}
-.rank-villager{background:rgba(52,152,219,.15);color:#3498db}
-.rank-elder{background:rgba(241,196,15,.15);color:#f1c40f}
-.rank-patron{background:rgba(201,162,39,.15);color:var(--gold)}
-.rank-arcane{background:rgba(109,79,194,.2);color:var(--violet-soft)}
-.rank-helper{background:rgba(39,174,96,.12);color:#2ecc71}
-.rank-mod{background:rgba(52,152,219,.15);color:#3498db}
-.rank-admin{background:rgba(201,162,39,.15);color:var(--gold)}
-.rank-owner{background:rgba(192,57,43,.15);color:#e74c3c}
+.rank-badge{
+      display:inline-block;
+      padding:.2rem .65rem;
+      border-radius:3px;
+      font-family:var(--font-mono);
+      font-size:.75rem;
+      font-weight:700;
+      letter-spacing:.05em
+}
+.rank-wanderer{
+      background:rgba(255,255,255,.08);
+      color:#aaa
+}
+.rank-settler{
+      background:rgba(39,174,96,.15);
+      color:#2ecc71
+}
+.rank-villager{
+      background:rgba(52,152,219,.15);
+      color:#3498db
+}
+.rank-elder{
+      background:rgba(241,196,15,.15);
+      color:#f1c40f
+}
+.rank-patron{
+      background:rgba(201,162,39,.15);
+      color:var(--gold)
+}
+.rank-arcane{
+      background:rgba(109,79,194,.2);
+      color:var(--violet-soft)
+}
+.rank-helper{
+      background:rgba(39,174,96,.12);
+      color:#2ecc71
+}
+.rank-mod{
+      background:rgba(52,152,219,.15);
+      color:#3498db
+}
+.rank-admin{
+      background:rgba(201,162,39,.15);
+      color:var(--gold)
+}
+.rank-owner{
+      background:rgba(192,57,43,.15);
+      color:#e74c3c
+}
 
 /* ── SEE ALSO box ── */
-.see-also{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;margin:2rem 0 1rem}
-.see-also-head{font-family:var(--font-title);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
-.see-also-links{display:flex;flex-wrap:wrap;gap:.5rem}
-.see-also-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.3rem .75rem;font-size:.82rem;color:var(--teal);transition:border-color .15s,background .15s}
-.see-also-link:hover{border-color:rgba(74,184,184,.4);background:rgba(74,184,184,.06);color:#6dd4d4;text-decoration:none}
-.see-also-link i{font-size:.7rem}
+.see-also{
+      background:var(--surface-2);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:1rem 1.25rem;
+      margin:2rem 0 1rem
+}
+.see-also-head{
+      font-family:var(--font-title);
+      font-size:.65rem;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--gold);
+      margin-bottom:.7rem;
+      display:flex;
+      align-items:center;
+      gap:.5rem
+}
+.see-also-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem
+}
+.see-also-link{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:4px;
+      padding:.3rem .75rem;
+      font-size:.82rem;color:var(--teal);
+      transition:border-color .15s,background .15s
+}
+.see-also-link:hover{
+      border-color:rgba(74,184,184,.4);
+      background:rgba(74,184,184,.06);
+      color:#6dd4d4;
+      text-decoration:none
+}
+.see-also-link i{
+      font-size:.7rem
+}
 
 /* ── PAGE HISTORY MODULE ── */
-.wiki-history{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:2.5rem 0 1rem;font-size:.82rem}
+.wiki-history{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      margin:2.5rem 0 1rem;
+      font-size:.82rem
+}
 .wiki-history-head{
-  display:flex;align-items:center;gap:.75rem;
-  background:var(--surface-2);padding:.55rem .9rem;
-  cursor:pointer;user-select:none;border-bottom:1px solid transparent;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  background:var(--surface-2);
+  padding:.55rem .9rem;
+  cursor:pointer;user-select:none;
+  border-bottom:1px solid transparent;
   transition:background .15s;
 }
-.wiki-history-head:hover{background:var(--surface-3)}
-.wiki-history-head.open{border-bottom-color:var(--border)}
-.wiki-history-head .wh-icon{color:var(--gold);font-size:.7rem;flex-shrink:0}
+.wiki-history-head:hover{
+      background:var(--surface-3)
+}
+.wiki-history-head.open{
+      border-bottom-color:var(--border)
+}
+.wiki-history-head .wh-icon{
+      color:var(--gold);
+      font-size:.7rem;
+      flex-shrink:0
+}
 .wiki-history-head .wh-label{
-  font-family:var(--font-title);font-size:.65rem;font-weight:700;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+  font-family:var(--font-title);
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
 }
 .wiki-history-head .wh-chevron{
-  margin-left:auto;font-size:.6rem;color:var(--text-dim);
+  margin-left:auto;
+  font-size:.6rem;
+  color:var(--text-dim);
   transition:transform .2s;
 }
-.wiki-history-head.open .wh-chevron{transform:rotate(180deg)}
-.wiki-history-body{display:none}
-.wiki-history-body.open{display:block}
-.wh-table{width:100%;border-collapse:collapse}
-.wh-table thead th{
-  background:var(--surface-3);border-bottom:1px solid var(--border);
-  padding:.4rem .85rem;font-family:var(--font-title);font-size:.6rem;
-  font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--text-dim);text-align:left;white-space:nowrap;
+.wiki-history-head.open .wh-chevron{
+      transform:rotate(180deg)
 }
-.wh-table tbody tr{border-bottom:1px solid rgba(255,255,255,.035)}
-.wh-table tbody tr:last-child{border-bottom:none}
-.wh-table tbody tr:nth-child(even) td{background:rgba(255,255,255,.018)}
-.wh-table td{padding:.45rem .85rem;vertical-align:top;color:var(--text)}
+.wiki-history-body{
+      display:none
+}
+.wiki-history-body.open{
+      display:block
+}
+.wh-table{
+      width:100%;
+      border-collapse:collapse
+}
+.wh-table thead th{
+  background:var(--surface-3);
+  border-bottom:1px solid var(--border);
+  padding:.4rem .85rem;
+  font-family:var(--font-title);
+  font-size:.6rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--text-dim);
+  text-align:left;
+  white-space:nowrap;
+}
+.wh-table tbody tr{
+      border-bottom:1px solid rgba(255,255,255,.035)
+}
+.wh-table tbody tr:last-child{
+      border-bottom:none
+}
+.wh-table tbody tr:nth-child(even) td{
+      background:rgba(255,255,255,.018)
+}
+.wh-table td{
+      padding:.45rem .85rem;
+      vertical-align:top;
+      color:var(--text)
+}
 .wh-table td.wh-ver{
-  white-space:nowrap;font-family:var(--font-mono);font-size:.78rem;
-  color:var(--teal);min-width:80px;
+  white-space:nowrap;
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  color:var(--teal);
+  min-width:80px;
 }
 .wh-table td.wh-date{
-  white-space:nowrap;color:var(--text-muted);font-size:.78rem;min-width:110px;
+  white-space:nowrap;
+  color:var(--text-muted);
+  font-size:.78rem;
+  min-width:110px;
 }
-.wh-table td.wh-changes{color:var(--text);line-height:1.55}
+.wh-table td.wh-changes{
+      color:var(--text);
+      line-height:1.55
+}
+
 /* On mobile, version+date stack above changes */
 @media(max-width:540px){
-  .wh-table thead{display:none}
-  .wh-table tbody tr{display:block;padding:.6rem .85rem;border-bottom:1px solid rgba(255,255,255,.06)}
-  .wh-table td{display:block;padding:.1rem 0;border:none}
-  .wh-table td.wh-ver::before{content:'Version: ';color:var(--text-dim)}
-  .wh-table td.wh-date::before{content:'Date: ';color:var(--text-dim)}
+      .wh-table thead{
+            display:none
+      }
+      .wh-table tbody tr{
+            display:block;
+            padding:.6rem .85rem;
+            border-bottom:1px solid rgba(255,255,255,.06)
+      }
+      .wh-table td{
+            display:block;
+            padding:.1rem 0;
+            border:none
+      }
+      .wh-table td.wh-ver::before{
+            content:'Version: ';
+            color:var(--text-dim)
+      }
+      .wh-table td.wh-date::before{
+            content:'Date: ';
+            color:var(--text-dim)
+      }
 }
 
 /* FOOTER */
-.wiki-footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5rem 0}
-.wiki-footer-inner{display:flex;flex-direction:column;align-items:center;gap:1.25rem;text-align:center}
-.wiki-footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.5rem}
-.wiki-footer-links a{color:var(--text-muted);font-size:.82rem}
-.wiki-footer-links a:hover{color:var(--text);text-decoration:none}
-.copy{font-size:.78rem;color:var(--text-dim)}
-.rune{font-family:var(--font-mono);font-size:.7rem;color:var(--text-dim);opacity:.4}
+.wiki-footer{background:var(--surface);
+      border-top:1px solid var(--border);
+      padding:2.5rem 0
+}
+.wiki-footer-inner{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1.25rem;
+      text-align:center
+}
+.wiki-footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:.5rem 1.5rem
+}
+.wiki-footer-links a{
+      color:var(--text-muted);
+      font-size:.82rem
+}
+.wiki-footer-links a:hover{
+      color:var(--text);
+      text-decoration:none
+}
+.copy{
+      font-size:.78rem;
+      color:var(--text-dim)
+}
+.rune{
+      font-family:var(--font-mono);
+      font-size:.7rem;
+      color:var(--text-dim);
+      opacity:.4
+}
 
 /* ── MOBILE MISC ── */
 /* Tables scroll horizontally on small screens */
 @media(max-width:860px){
-  .wiki-content table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+      .wiki-content table{
+            display:block;
+            overflow-x:auto;
+            -webkit-overflow-scrolling:touch;
+            max-width:100%
+      }
 }
 /* Footer: stack on small screens */
 @media(max-width:540px){
-  .wiki-footer-links{gap:.75rem}
+      .wiki-footer-links{
+            gap:.75rem
+      }
 }
 /* Crafting recipe: ensure it fits narrow screens */
 @media(max-width:480px){
-  .mc-recipe{width:100%;overflow-x:auto}
-  .mc-recipe-row{gap:.5rem}
+      .mc-recipe{
+            width:100%;
+            overflow-x:auto
+      }
+      .mc-recipe-row{
+            gap:.5rem
+      }
 }
 /* Infobox stacks below content on mobile (already float:none but ensure width) */
 @media(max-width:540px){
-  .infobox{width:100%;margin-left:0}
+      .infobox{
+            width:100%;
+            margin-left:0
+      }
 }
 /* Increase tap targets in sidebar */
 @media(max-width:860px){
-  .sb-link{padding:.55rem 1.25rem .55rem 1.5rem;font-size:.88rem}
-  .sb-section-head{padding:.65rem 1.25rem}
+      .sb-link{
+            padding:.55rem 1.25rem .55rem 1.5rem;
+            font-size:.88rem
+      }
+      .sb-section-head{
+            padding:.65rem 1.25rem
+      }
 }
 
-    /* ════════════════════════════════════════
-       MINECRAFT-STYLE TOOLTIPS  (minetip)
-    ════════════════════════════════════════ */
-    #minetip-tooltip {
+/*****************************
+*          MINETIPS          *
+******************************/
+#minetip-tooltip {
       position: fixed;
       background: rgba(16,0,16,.94);
       padding: .375em .5em;
@@ -1124,238 +1367,238 @@ a:hover{
       z-index: 99999;
       color: #FBFBFB;
       text-shadow: .125em .125em 0 #3E3E3E;
-    }
-    /* Outer dark border strips */
-    #minetip-tooltip::before {
-      content:'';
-      position:absolute;
-      top:.125em; right:-.125em; bottom:.125em; left:-.125em;
-      border:.15em solid rgba(16,0,16,.94);
-      border-style:none solid;
-    }
-    /* Inner purple gradient border */
-    #minetip-tooltip::after {
-      content:'';
-      position:absolute;
-      top:.125em; right:0; bottom:.125em; left:0;
-      border:.125em solid transparent;
-      border-image: linear-gradient(rgba(80,0,255,.31), rgba(40,0,127,.31)) 1;
-    }
-    .minetip-title       { display:block; }
-    .minetip-description { display:block; margin-top:.3em; color:#AAAAAA; text-shadow:.125em .125em 0 #2A2A2A; }
+}
+/* Outer dark border strips */
+#minetip-tooltip::before {
+  content:'';
+  position:absolute;
+  top:.125em; right:-.125em; bottom:.125em; left:-.125em;
+  border:.15em solid rgba(16,0,16,.94);
+  border-style:none solid;
+}
+/* Inner purple gradient border */
+#minetip-tooltip::after {
+  content:'';
+  position:absolute;
+  top:.125em; right:0; bottom:.125em; left:0;
+  border:.125em solid transparent;
+  border-image: linear-gradient(rgba(80,0,255,.31), rgba(40,0,127,.31)) 1;
+}
+.minetip-title       { display:block; }
+.minetip-description { display:block; margin-top:.3em; color:#AAAAAA; text-shadow:.125em .125em 0 #2A2A2A; }
 
-    /* Minecraft colour codes */
-    .mc-fmt-0{color:#000;text-shadow:.125em .125em 0 #000}
-    .mc-fmt-1{color:#0000AA;text-shadow:.125em .125em 0 #00002A}
-    .mc-fmt-2{color:#00AA00;text-shadow:.125em .125em 0 #002A00}
-    .mc-fmt-3{color:#00AAAA;text-shadow:.125em .125em 0 #002A2A}
-    .mc-fmt-4{color:#AA0000;text-shadow:.125em .125em 0 #2A0000}
-    .mc-fmt-5{color:#AA00AA;text-shadow:.125em .125em 0 #2A002A}
-    .mc-fmt-6{color:#FFAA00;text-shadow:.125em .125em 0 #2A2A00}
-    .mc-fmt-7{color:#AAAAAA;text-shadow:.125em .125em 0 #2A2A2A}
-    .mc-fmt-8{color:#555;text-shadow:.125em .125em 0 #151515}
-    .mc-fmt-9{color:#5555FF;text-shadow:.125em .125em 0 #15153F}
-    .mc-fmt-a{color:#55FF55;text-shadow:.125em .125em 0 #153F15}
-    .mc-fmt-b{color:#55FFFF;text-shadow:.125em .125em 0 #153F3F}
-    .mc-fmt-c{color:#FF5555;text-shadow:.125em .125em 0 #3F1515}
-    .mc-fmt-d{color:#FF55FF;text-shadow:.125em .125em 0 #3F153F}
-    .mc-fmt-e{color:#FFFF55;text-shadow:.125em .125em 0 #3F3F15}
-    .mc-fmt-f{color:#FFF;text-shadow:.125em .125em 0 #3E3E3E}
-    .mc-fmt-l{font-weight:bold}
-    .mc-fmt-o{font-style:italic}
-    .mc-fmt-n{text-decoration:underline}
-    .mc-fmt-m{text-decoration:line-through}
+/* Minecraft colour codes */
+.mc-fmt-0{color:#000;text-shadow:.125em .125em 0 #000}
+.mc-fmt-1{color:#0000AA;text-shadow:.125em .125em 0 #00002A}
+.mc-fmt-2{color:#00AA00;text-shadow:.125em .125em 0 #002A00}
+.mc-fmt-3{color:#00AAAA;text-shadow:.125em .125em 0 #002A2A}
+.mc-fmt-4{color:#AA0000;text-shadow:.125em .125em 0 #2A0000}
+.mc-fmt-5{color:#AA00AA;text-shadow:.125em .125em 0 #2A002A}
+.mc-fmt-6{color:#FFAA00;text-shadow:.125em .125em 0 #2A2A00}
+.mc-fmt-7{color:#AAAAAA;text-shadow:.125em .125em 0 #2A2A2A}
+.mc-fmt-8{color:#555;text-shadow:.125em .125em 0 #151515}
+.mc-fmt-9{color:#5555FF;text-shadow:.125em .125em 0 #15153F}
+.mc-fmt-a{color:#55FF55;text-shadow:.125em .125em 0 #153F15}
+.mc-fmt-b{color:#55FFFF;text-shadow:.125em .125em 0 #153F3F}
+.mc-fmt-c{color:#FF5555;text-shadow:.125em .125em 0 #3F1515}
+.mc-fmt-d{color:#FF55FF;text-shadow:.125em .125em 0 #3F153F}
+.mc-fmt-e{color:#FFFF55;text-shadow:.125em .125em 0 #3F3F15}
+.mc-fmt-f{color:#FFF;text-shadow:.125em .125em 0 #3E3E3E}
+.mc-fmt-l{font-weight:bold}
+.mc-fmt-o{font-style:italic}
+.mc-fmt-n{text-decoration:underline}
+.mc-fmt-m{text-decoration:line-through}
 
-    /* ════════════════════════════════════════
-       CRAFTING RECIPE WIDGET
-    ════════════════════════════════════════ */
-    .mc-recipe {
-      display: inline-flex;
-      flex-direction: column;
-      gap: .5rem;
-      background: #C6C6C6;
-      border: 2px solid;
-      border-color: #FFF #555 #555 #FFF;
-      padding: .85rem 1.1rem 1rem;
-      margin: 1.25rem 0;
-      user-select: none;
-      border-radius: 2px;
-    }
-    .mc-recipe-label {
-      font-family: var(--font-title);
-      font-size: .62rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #444;
-      margin-bottom: .2rem;
-    }
-    .mc-recipe-row {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-    }
-    /* 3×3 crafting grid */
-    .mc-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 40px);
-      grid-template-rows: repeat(3, 40px);
-      gap: 2px;
-      background: #8B8B8B;
-      border: 2px solid #373737;
-      padding: 2px;
-      flex-shrink: 0;
-    }
-    /* Inventory slot outer shell */
-    .invslot {
-      width: 40px;
-      height: 40px;
-      background: #8B8B8B;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* Item cell — hover-able, tooltip-triggering */
-    .invslot-item {
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: default;
-      position: relative;
-      background: #3C3C3C;
-      border-top:    2px solid #555;
-      border-left:   2px solid #555;
-      border-bottom: 2px solid #1A1A1A;
-      border-right:  2px solid #1A1A1A;
-      overflow: hidden;
-    }
-    .invslot-item:hover::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,.18);
-      pointer-events: none;
-      z-index: 1;
-    }
-    /* Item image — pixelated scaling */
-    .invslot-item img {
-      width: 28px;
-      height: 28px;
-      image-rendering: pixelated;
-      image-rendering: crisp-edges;
-      display: block;
-    }
-    /* Result slot — slightly larger */
-    .mc-result-slot .invslot { width:50px; height:50px; }
-    .mc-result-slot .invslot-item { width:46px; height:46px; }
-    .mc-result-slot .invslot-item img { width:36px; height:36px; }
-    /* Arrow */
-    .mc-arrow-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    /* ── Item icon pixel-blocks (CSS-only, no images needed) ── */
-    .mc-icon {
-      width: 28px;
-      height: 28px;
-      display: block;
-      image-rendering: pixelated;
-      flex-shrink: 0;
-    }
-    /* Leather — saddle-brown with bevel */
-    .mc-icon-leather {
-      background: #8B4513;
-      box-shadow:
-        inset  2px  2px 0 #A0552A,
-        inset -2px -2px 0 #6B340E,
-        inset  4px  4px 0 0px #9B4A1A;
-    }
-    /* Chest — oak plank coloured */
-    .mc-icon-chest {
-      background: #96742A;
-      box-shadow:
-        inset  2px  2px 0 #B08A38,
-        inset -2px -2px 0 #7A5C1E,
-        inset  8px  8px 0 -6px #6B4F18,
-        inset -8px -8px 0 -6px #B08A38;
-    }
-    /* Iron Ingot — silver-gray */
-    .mc-icon-iron {
-      background: #BEBEBE;
-      box-shadow:
-        inset  2px  2px 0 #D4D4D4,
-        inset -2px -2px 0 #9A9A9A,
-        inset  5px  0  0 0 #C8C8C8,
-        inset  0   14px 0 0 #AAAAAA;
-    }
-    /* String — off-white */
-    .mc-icon-string {
-      background: #DCDCDC;
-      box-shadow:
-        inset 0  0 0  2px #C0C0C0,
-        inset 12px 0 0 10px #E8E8E8,
-        inset 0 12px 0 10px #E8E8E8;
-    }
-    /* Diamond — cyan */
-    .mc-icon-diamond {
-      background: #44E6E6;
-      box-shadow:
-        inset  2px  2px 0 #7AF0F0,
-        inset -2px -2px 0 #26B8B8,
-        inset  6px  6px 0 -4px #5AEAEA;
-    }
-    /* Stick — wood brown */
-    .mc-icon-stick {
-      background: #8B6914;
-      box-shadow:
-        inset  2px 0 0 0 #A07820,
-        inset -2px 0 0 0 #6B4F0E,
-        inset  0 14px 0 0 #7A5C10;
-    }
-    /* Backpack (custom) — dark tan with strap hint */
-    .mc-icon-backpack {
-      background: #7A5230;
-      box-shadow:
-        inset  2px  2px 0 #9B6A40,
-        inset -2px -2px 0 #5C3A1C,
-        inset  4px  4px 0 -2px #8B5C35,
-        inset  12px 2px 0 -10px #5C3A1C;
-    }
-    /* Repair Kit (custom) — silver + gold clasp */
-    .mc-icon-repair-kit {
-      background: #C8C8C8;
-      box-shadow:
-        inset  2px  2px 0 #E0E0E0,
-        inset -2px -2px 0 #909090,
-        inset  8px  8px 0 -6px #FFD700;
-    }
-    /* Gold Ingot */
-    .mc-icon-gold {
-      background: #FFD700;
-      box-shadow:
-        inset  2px  2px 0 #FFE84D,
-        inset -2px -2px 0 #C8A800,
-        inset  5px  0 0 0 #FFD700;
-    }
-    /* Wood Planks */
-    .mc-icon-planks {
-      background: #A0744E;
-      box-shadow:
-        inset  2px  2px 0 #BA8A60,
-        inset -2px -2px 0 #7A5535,
-        inset  0  10px 0 0 #8B6240;
-    }
-    /* Stone */
-    .mc-icon-stone {
-      background: #808080;
-      box-shadow:
-        inset  2px  2px 0 #969696,
-        inset -2px -2px 0 #606060;
-    }
+/* ════════════════════════════════════════
+   CRAFTING RECIPE WIDGET
+════════════════════════════════════════ */
+.mc-recipe {
+  display: inline-flex;
+  flex-direction: column;
+  gap: .5rem;
+  background: #C6C6C6;
+  border: 2px solid;
+  border-color: #FFF #555 #555 #FFF;
+  padding: .85rem 1.1rem 1rem;
+  margin: 1.25rem 0;
+  user-select: none;
+  border-radius: 2px;
+}
+.mc-recipe-label {
+  font-family: var(--font-title);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: .2rem;
+}
+.mc-recipe-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+/* 3×3 crafting grid */
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  grid-template-rows: repeat(3, 40px);
+  gap: 2px;
+  background: #8B8B8B;
+  border: 2px solid #373737;
+  padding: 2px;
+  flex-shrink: 0;
+}
+/* Inventory slot outer shell */
+.invslot {
+  width: 40px;
+  height: 40px;
+  background: #8B8B8B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Item cell — hover-able, tooltip-triggering */
+.invslot-item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  position: relative;
+  background: #3C3C3C;
+  border-top:    2px solid #555;
+  border-left:   2px solid #555;
+  border-bottom: 2px solid #1A1A1A;
+  border-right:  2px solid #1A1A1A;
+  overflow: hidden;
+}
+.invslot-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.18);
+  pointer-events: none;
+  z-index: 1;
+}
+/* Item image — pixelated scaling */
+.invslot-item img {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+/* Result slot — slightly larger */
+.mc-result-slot .invslot { width:50px; height:50px; }
+.mc-result-slot .invslot-item { width:46px; height:46px; }
+.mc-result-slot .invslot-item img { width:36px; height:36px; }
+/* Arrow */
+.mc-arrow-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+/* ── Item icon pixel-blocks (CSS-only, no images needed) ── */
+.mc-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+/* Leather — saddle-brown with bevel */
+.mc-icon-leather {
+  background: #8B4513;
+  box-shadow:
+    inset  2px  2px 0 #A0552A,
+    inset -2px -2px 0 #6B340E,
+    inset  4px  4px 0 0px #9B4A1A;
+}
+/* Chest — oak plank coloured */
+.mc-icon-chest {
+  background: #96742A;
+  box-shadow:
+    inset  2px  2px 0 #B08A38,
+    inset -2px -2px 0 #7A5C1E,
+    inset  8px  8px 0 -6px #6B4F18,
+    inset -8px -8px 0 -6px #B08A38;
+}
+/* Iron Ingot — silver-gray */
+.mc-icon-iron {
+  background: #BEBEBE;
+  box-shadow:
+    inset  2px  2px 0 #D4D4D4,
+    inset -2px -2px 0 #9A9A9A,
+    inset  5px  0  0 0 #C8C8C8,
+    inset  0   14px 0 0 #AAAAAA;
+}
+/* String — off-white */
+.mc-icon-string {
+  background: #DCDCDC;
+  box-shadow:
+    inset 0  0 0  2px #C0C0C0,
+    inset 12px 0 0 10px #E8E8E8,
+    inset 0 12px 0 10px #E8E8E8;
+}
+/* Diamond — cyan */
+.mc-icon-diamond {
+  background: #44E6E6;
+  box-shadow:
+    inset  2px  2px 0 #7AF0F0,
+    inset -2px -2px 0 #26B8B8,
+    inset  6px  6px 0 -4px #5AEAEA;
+}
+/* Stick — wood brown */
+.mc-icon-stick {
+  background: #8B6914;
+  box-shadow:
+    inset  2px 0 0 0 #A07820,
+    inset -2px 0 0 0 #6B4F0E,
+    inset  0 14px 0 0 #7A5C10;
+}
+/* Backpack (custom) — dark tan with strap hint */
+.mc-icon-backpack {
+  background: #7A5230;
+  box-shadow:
+    inset  2px  2px 0 #9B6A40,
+    inset -2px -2px 0 #5C3A1C,
+    inset  4px  4px 0 -2px #8B5C35,
+    inset  12px 2px 0 -10px #5C3A1C;
+}
+/* Repair Kit (custom) — silver + gold clasp */
+.mc-icon-repair-kit {
+  background: #C8C8C8;
+  box-shadow:
+    inset  2px  2px 0 #E0E0E0,
+    inset -2px -2px 0 #909090,
+    inset  8px  8px 0 -6px #FFD700;
+}
+/* Gold Ingot */
+.mc-icon-gold {
+  background: #FFD700;
+  box-shadow:
+    inset  2px  2px 0 #FFE84D,
+    inset -2px -2px 0 #C8A800,
+    inset  5px  0 0 0 #FFD700;
+}
+/* Wood Planks */
+.mc-icon-planks {
+  background: #A0744E;
+  box-shadow:
+    inset  2px  2px 0 #BA8A60,
+    inset -2px -2px 0 #7A5535,
+    inset  0  10px 0 0 #8B6240;
+}
+/* Stone */
+.mc-icon-stone {
+  background: #808080;
+  box-shadow:
+    inset  2px  2px 0 #969696,
+    inset -2px -2px 0 #606060;
+}
 
 /*****************************
 *        ANNOUNCEMENT        *
