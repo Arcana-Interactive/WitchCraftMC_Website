@@ -681,7 +681,7 @@ a:hover {
 .wiki-ip-button {
       background: none;
       transition: background 0.3s ease;
-      border-radius: 10px;
+      border: none;
 }
 
 .wiki-ip-button:hover {
