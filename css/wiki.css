@@ -1,18 +1,45 @@
 :root {
-      --bg:        #12111a; --surface:#1a1927; --surface-2:#211f31; --surface-3:#28263c;
-      --border:    rgba(255,255,255,.07); --border-gold:rgba(201,162,39,.3);
-      --text:      #e2ddd6; --text-muted:#8b8599; --text-dim:#5c5772;
-      --gold:      #c9a227; --gold-bright:#f0c93a;
-      --violet:    #6d4fc2; --violet-soft:#9575d9; --teal:#4ab8b8;
-      --font-body: 'Nunito',sans-serif; --font-title:'Cinzel',serif; --font-mono:'JetBrains Mono',monospace;
+      --bg: #12111a;
+      --surface: #1a1927;
+      --surface-2:#211f31; 
+      --surface-3:#28263c;
+
+      --border: rgba(255,255,255,.07);
+      --border-gold: rgba(201,162,39,.3);
+
+      --text: #e2ddd6;
+      --text-muted: #8b8599;
+      --text-dim: #5c5772;
+
+      --gold: #c9a227;
+      --gold-bright: #f0c93a;
+      --violet: #6d4fc2;
+      --violet-soft: #9575d9;
+      --teal: #4ab8b8;
+
+      --font-body: 'Nunito',sans-serif;
+      --font-title: 'Cinzel',serif;
+      --font-mono: 'JetBrains Mono',monospace;
       --radius:6px;
+
+      /* ── Minecraft rarity colours ── */
+      --rarity-common: #aaaaaa;
+      --rarity-uncommon: #55ff55;
+      --rarity-rare: #5555ff;
+      --rarity-epic: #aa00aa;
+      --rarity-legendary: #ffaa00;
+      --rarity-mythic: #ff55ff;
+      --rarity-divine: #55ffff;
+      --rarity-special: #ff5555;
 }
-*,*::before,*::after{
+*,
+*::before,
+*::after {
       box-sizing:border-box;
       margin:0;
       padding:0
 }
-body{
+body {
       background:var(--bg);
       color:var(--text);
       font-family:var(--font-body);
@@ -28,7 +55,9 @@ a:hover{
       text-decoration:underline
 }
 
-/* NAVBAR */
+/*****************************
+*          NAVBAR            *
+******************************/
 #mainNav{
       background: var(--surface)!important;
       border-bottom: 1px solid var(--border);
@@ -53,7 +82,8 @@ a:hover{
       border-radius:4px;
       transition:color .15s,background .15s
 }
-.nav-link:hover,.nav-link.active{
+.nav-link:hover,
+.nav-link.active{
       color:var(--text)!important;
       background:var(--surface-3)
 }
@@ -62,7 +92,9 @@ a:hover{
       background:rgba(201,162,39,.1)
 }
 
-/* BANNER */
+/*****************************
+*          BANNER            *
+******************************/
 .wiki-banner{
       background:var(--surface);
       border-bottom:1px solid var(--border);
@@ -116,7 +148,48 @@ a:hover{
       margin:0 auto 2rem
 }
 
-/* SEARCH */
+/*****************************
+*        PAGE HEADER         *
+******************************/
+.page-header{
+      background:var(--surface);
+      border-bottom:1px solid var(--border);
+      padding:2rem 2.5rem 1.5rem;
+      position:relative;
+      overflow:hidden
+}
+@media(max-width:860px){
+      .page-header{
+            padding:1.5rem 1rem 1.25rem
+      }
+}
+.page-header::before{
+      content:'';
+      position:absolute;
+      inset:0;background:radial-gradient(ellipse 90% 80% at 0% 50%,rgba(109,79,194,.12) 0%,transparent 60%);
+      pointer-events:none
+}
+.page-header .inner{
+      position:relative
+}
+.page-header .breadcrumb-line{
+      display:flex;
+      align-items:center;
+      gap:.4rem;
+      font-size:.75rem;
+      color:var(--text-dim);
+      margin-bottom:.8rem;
+      flex-wrap:wrap
+}
+.page-header .breadcrumb-line a{color:var(--text-muted)} .page-header .breadcrumb-line a:hover{color:var(--text)}
+.page-header .breadcrumb-line .sep{opacity:.35}
+.page-header h1{font-family:var(--font-title);font-weight:700;font-size:clamp(1.5rem,3.5vw,2.2rem);color:#fff;letter-spacing:.02em}
+.page-header .desc{color:var(--text-muted);font-size:.9rem;margin-top:.35rem}
+.page-header .page-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:.9rem}
+
+/*****************************
+*          SEARCH            *
+******************************/
 .wiki-search{
       max-width:580px;
       margin:0 auto;
@@ -164,7 +237,9 @@ a:hover{
       pointer-events:none
 }
 
-/* STATS BAR */
+/*****************************
+*         STATS BAR          *
+******************************/
 .wiki-stats-bar{
       background:var(--surface-2);
       border-bottom:1px solid var(--border)

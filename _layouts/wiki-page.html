@@ -8,39 +8,10 @@
   <link rel="stylesheet" href="{{ '/css/freelancer.min.css' | relative_url }}">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="{{ '/css/wiki.css' | relative_url }}">
+  
   <style>
-    :root {
-      --bg:#12111a; --surface:#1a1927; --surface-2:#211f31; --surface-3:#28263c;
-      --border:rgba(255,255,255,.07); --border-gold:rgba(201,162,39,.3);
-      --text:#e2ddd6; --text-muted:#8b8599; --text-dim:#5c5772;
-      --gold:#c9a227; --gold-bright:#f0c93a;
-      --violet:#6d4fc2; --violet-soft:#9575d9; --teal:#4ab8b8;
-      --font-body:'Nunito',sans-serif; --font-title:'Cinzel',serif; --font-mono:'JetBrains Mono',monospace;
-      --radius:6px;
-
-      /* ── Minecraft rarity colours ── */
-      --rarity-common:    #aaaaaa;
-      --rarity-uncommon:  #55ff55;
-      --rarity-rare:      #5555ff;
-      --rarity-epic:      #aa00aa;
-      --rarity-legendary: #ffaa00;
-      --rarity-mythic:    #ff55ff;
-      --rarity-divine:    #55ffff;
-      --rarity-special:   #ff5555;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6}
-    a{color:var(--teal);text-decoration:none} a:hover{color:#6dd4d4;text-decoration:underline}
-
-    /* NAVBAR */
-    #mainNav{background:var(--surface)!important;border-bottom:1px solid var(--border);padding:.6rem 0}
-    .navbar-brand{font-family:var(--font-title);font-weight:700;font-size:1.1rem;color:var(--text)!important;letter-spacing:.04em}
-    .nav-link{font-weight:600;font-size:.85rem;color:var(--text-muted)!important;padding:.35rem .8rem!important;border-radius:4px;transition:color .15s,background .15s}
-    .nav-link:hover,.nav-link.active{color:var(--text)!important;background:var(--surface-3)}
-    .nav-link.wiki-active{color:var(--gold)!important;background:rgba(201,162,39,.1)}
-
-    /* PAGE HEADER — lives inside the article column */
+  /* PAGE HEADER — lives inside the article column */
     .page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:2rem 2.5rem 1.5rem;position:relative;overflow:hidden}
     @media(max-width:860px){.page-header{padding:1.5rem 1rem 1.25rem}}
     .page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 80% at 0% 50%,rgba(109,79,194,.12) 0%,transparent 60%);pointer-events:none}
