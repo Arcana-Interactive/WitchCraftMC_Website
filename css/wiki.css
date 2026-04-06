@@ -1355,11 +1355,12 @@ a:hover{
 *          MINETIPS          *
 ******************************/
 #minetip-tooltip {
+      font-family: 'MinecraftiaRegular';
+      font-weight: normal;
+      font-style: normal;
       position: fixed;
       background: rgba(16,0,16,.94);
       padding: .375em .5em;
-      font-family: 'Courier New', monospace;
-      font-size: 15px;
       word-spacing: 3px;
       white-space: nowrap;
       line-height: 1.3em;
