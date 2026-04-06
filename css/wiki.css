@@ -1354,55 +1354,6 @@ a:hover{
 /*****************************
 *          MINETIPS          *
 ******************************/
-/*#minetip-tooltip {
-      font-family: 'MinecraftiaRegular';
-      font-weight: normal;
-      font-style: normal;
-      position: fixed;
-      background: rgba(16,0,16,.94);
-      padding: .375em .5em;
-      word-spacing: 3px;
-      white-space: nowrap;
-      line-height: 1.3em;
-      pointer-events: none;
-      z-index: 99999;
-      color: #FBFBFB;
-      text-shadow: .125em .125em 0 #3E3E3E;
-}
-#minetip-tooltip::before {
-  content:'';
-  position:absolute;
-  top:.125em; right:-.125em; bottom:.125em; left:-.125em;
-  border:.15em solid rgba(16,0,16,.94);
-  border-style:none solid;
-}
-#minetip-tooltip::after {
-  content:'';
-  position:absolute;
-  top:.125em; right:0; bottom:.125em; left:0;
-  border:.125em solid transparent;
-  border-image: linear-gradient(rgba(80,0,255,.31), rgba(40,0,127,.31)) 1;
-}
-.minetip-title       { display:block; }
-.minetip-description { display:block; margin-top:.3em; color:#AAAAAA; text-shadow:.125em .125em 0 #2A2A2A; }
-
-.mc-fmt-0{color:#000;text-shadow:.125em .125em 0 #000}
-.mc-fmt-1{color:#0000AA;text-shadow:.125em .125em 0 #00002A}
-.mc-fmt-2{color:#00AA00;text-shadow:.125em .125em 0 #002A00}
-.mc-fmt-3{color:#00AAAA;text-shadow:.125em .125em 0 #002A2A}
-.mc-fmt-4{color:#AA0000;text-shadow:.125em .125em 0 #2A0000}
-.mc-fmt-5{color:#AA00AA;text-shadow:.125em .125em 0 #2A002A}
-.mc-fmt-6{color:#FFAA00;text-shadow:.125em .125em 0 #2A2A00}
-.mc-fmt-7{color:#AAAAAA;text-shadow:.125em .125em 0 #2A2A2A}
-.mc-fmt-8{color:#555;text-shadow:.125em .125em 0 #151515}
-.mc-fmt-9{color:#5555FF;text-shadow:.125em .125em 0 #15153F}
-.mc-fmt-a{color:#55FF55;text-shadow:.125em .125em 0 #153F15}
-.mc-fmt-b{color:#55FFFF;text-shadow:.125em .125em 0 #153F3F}
-.mc-fmt-c{color:#FF5555;text-shadow:.125em .125em 0 #3F1515}
-.mc-fmt-d{color:#FF55FF;text-shadow:.125em .125em 0 #3F153F}
-.mc-fmt-e{color:#FFFF55;text-shadow:.125em .125em 0 #3F3F15}
-.mc-fmt-f{color:#FFF;text-shadow:.125em .125em 0 #3E3E3E}
-*/
 @font-face {
     font-family: 'Minecraftia';
     src: url('/css/minecraftia/Minecraftia.ttf') format('truetype');
