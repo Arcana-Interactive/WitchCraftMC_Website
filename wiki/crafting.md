@@ -72,7 +72,7 @@ Store extra items without returning to base. Craft it with leather surrounding a
     <div class="mc-grid">
       <div class="invslot"><div class="invslot-item"
         title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
+        data-minetip-text="&7Dropped by &ecows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
       <div class="invslot"><div class="invslot-item"
         title="Leather"
         data-minetip-text="&7Dropped by cows, horses, and llamas."><div class="mc-icon mc-icon-leather"></div></div></div>
