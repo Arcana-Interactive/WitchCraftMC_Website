@@ -6,18 +6,33 @@
   <title>{{ page.title }} — Wiki | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/freelancer.min.css' | relative_url }}">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --bg:#12111a; --surface:#1a1927; --surface-2:#211f31; --surface-3:#28263c;
-      --border:rgba(255,255,255,.07); --border-gold:rgba(201,162,39,.3);
-      --text:#e2ddd6; --text-muted:#8b8599; --text-dim:#5c5772;
-      --gold:#c9a227; --gold-bright:#f0c93a;
-      --violet:#6d4fc2; --violet-soft:#9575d9; --teal:#4ab8b8;
-      --font-body:'Nunito',sans-serif; --font-title:'Cinzel',serif; --font-mono:'JetBrains Mono',monospace;
-      --radius:6px;
+      --bg:          #0d1117;
+      --surface:     #161b22;
+      --surface-2:   #1c2128;
+      --surface-3:   #22272e;
+      --border:      rgba(240,246,252,.1);
+      --border-y:    rgba(255,170,0,.35);
+      --text:        #e6edf3;
+      --text-muted:  #8b949e;
+      --text-dim:    #484f58;
+      --yellow:      #ffaa00;
+      --yellow-b:    #ffc107;
+      --yellow-glow: rgba(255,170,0,.18);
+      --orange:      #ff8c00;
+      --blue:        #388bfd;
+      --blue-soft:   #58a6ff;
+      --green:       #3fb950;
+      --red:         #f85149;
+      --font-body:   'Inter', system-ui, sans-serif;
+      --font-title:  'Outfit', 'Inter', sans-serif;
+      --font-mono:   'JetBrains Mono', monospace;
+      --radius:      8px;
+      --radius-lg:   12px;
 
       /* ── Minecraft rarity colours ── */
       --rarity-common:    #aaaaaa;
@@ -31,39 +46,42 @@
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6}
-    a{color:var(--teal);text-decoration:none} a:hover{color:#6dd4d4;text-decoration:underline}
+    a{color:var(--blue-soft);text-decoration:none}
+    a:hover{color:var(--yellow);text-decoration:none}
 
-    /* NAVBAR */
-    #mainNav{background:var(--surface)!important;border-bottom:1px solid var(--border);padding:.6rem 0}
-    .navbar-brand{font-family:var(--font-title);font-weight:700;font-size:1.1rem;color:var(--text)!important;letter-spacing:.04em}
-    .nav-link{font-weight:600;font-size:.85rem;color:var(--text-muted)!important;padding:.35rem .8rem!important;border-radius:4px;transition:color .15s,background .15s}
-    .nav-link:hover,.nav-link.active{color:var(--text)!important;background:var(--surface-3)}
-    .nav-link.wiki-active{color:var(--gold)!important;background:rgba(201,162,39,.1)}
+    /* ── NAVBAR ── */
+    #mainNav{background:rgba(13,17,23,.97)!important;border-bottom:1px solid var(--border);padding:.55rem 0;backdrop-filter:blur(12px)}
+    .navbar-brand{font-family:var(--font-title);font-weight:800;font-size:1.15rem;color:var(--yellow)!important;letter-spacing:-.01em}
+    .nav-link{font-family:var(--font-title);font-weight:600;font-size:.85rem;color:var(--text-muted)!important;padding:.3rem .85rem!important;border-radius:6px;transition:color .15s,background .15s}
+    .nav-link:hover,.nav-link.active{color:var(--text)!important;background:var(--surface-2)}
+    .nav-link.wiki-active{color:var(--yellow)!important;background:rgba(255,170,0,.1);border:1px solid rgba(255,170,0,.2)}
 
-    /* PAGE HEADER — lives inside the article column */
+    /* ── PAGE HEADER ── */
     .page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:2rem 2.5rem 1.5rem;position:relative;overflow:hidden}
     @media(max-width:860px){.page-header{padding:1.5rem 1rem 1.25rem}}
-    .page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 80% at 0% 50%,rgba(109,79,194,.12) 0%,transparent 60%);pointer-events:none}
+    .page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 0% 50%,rgba(255,170,0,.06) 0%,transparent 60%);pointer-events:none}
     .page-header .inner{position:relative}
     .page-header .breadcrumb-line{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--text-dim);margin-bottom:.8rem;flex-wrap:wrap}
-    .page-header .breadcrumb-line a{color:var(--text-muted)} .page-header .breadcrumb-line a:hover{color:var(--text)}
+    .page-header .breadcrumb-line a{color:var(--text-muted)}
+    .page-header .breadcrumb-line a:hover{color:var(--yellow)}
     .page-header .breadcrumb-line .sep{opacity:.35}
-    .page-header h1{font-family:var(--font-title);font-weight:700;font-size:clamp(1.5rem,3.5vw,2.2rem);color:#fff;letter-spacing:.02em}
+    .page-header h1{font-family:var(--font-title);font-weight:800;font-size:clamp(1.5rem,3.5vw,2.2rem);color:#fff;letter-spacing:-.02em}
     .page-header .desc{color:var(--text-muted);font-size:.9rem;margin-top:.35rem}
     .page-header .page-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:.9rem}
 
     /* Category tags */
     .cat-tag{display:inline-flex;align-items:center;gap:.35rem;background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:.2rem .75rem;font-size:.7rem;color:var(--text-dim);font-weight:600;transition:border-color .15s,color .15s,background .15s;text-decoration:none!important}
-    .cat-tag:hover{border-color:rgba(201,162,39,.4);color:var(--gold);background:rgba(201,162,39,.06);text-decoration:none!important}
+    .cat-tag:hover{border-color:rgba(255,170,0,.4);color:var(--yellow);background:rgba(255,170,0,.06);text-decoration:none!important}
     .cat-tag i{font-size:.6rem}
 
-    /* LAYOUT */
+    /* ── LAYOUT ── */
     .wiki-layout{display:grid;grid-template-columns:240px 1fr;gap:0;padding:0;min-height:calc(100vh - 200px)}
     @media(max-width:860px){.wiki-layout{grid-template-columns:1fr}}
 
-    /* SIDEBAR */
+    /* ── SIDEBAR ── */
     .wiki-sidebar{background:var(--surface);border-right:1px solid var(--border);padding:1rem 0 1.5rem;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;align-self:start}
-    .wiki-sidebar::-webkit-scrollbar{width:3px} .wiki-sidebar::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:2px}
+    .wiki-sidebar::-webkit-scrollbar{width:3px}
+    .wiki-sidebar::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:2px}
 
     /* ── MOBILE SIDEBAR DRAWER ── */
     @media(max-width:860px){
@@ -85,27 +103,26 @@
     .sidebar-overlay.vis{display:block}
     @media(min-width:861px){.sidebar-overlay{display:none!important}}
 
-    /* Mobile sidebar toggle button */
+    /* ── Mobile sidebar toggle ── */
     .mob-sb-btn{
       display:none;align-items:center;justify-content:center;
       background:none;border:1px solid var(--border);color:var(--text-muted);
-      border-radius:4px;width:34px;height:34px;font-size:.85rem;
-      cursor:pointer;transition:background .15s,color .15s;flex-shrink:0;
-      margin-right:.5rem;
+      border-radius:6px;width:34px;height:34px;font-size:.85rem;
+      cursor:pointer;transition:background .15s,color .15s;flex-shrink:0;margin-right:.5rem;
     }
-    .mob-sb-btn:hover{background:var(--surface-3);color:var(--text)}
+    .mob-sb-btn:hover{background:var(--surface-2);color:var(--text)}
     @media(max-width:860px){.mob-sb-btn{display:flex}}
 
-    /* Sidebar search */
+    /* ── Sidebar search ── */
     .sb-search{padding:.75rem 1rem;border-bottom:1px solid var(--border);margin-bottom:.25rem}
     .sb-search-wrap{position:relative}
     .sb-search-wrap input{width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);font-family:var(--font-body);font-size:.8rem;padding:.45rem .75rem .45rem 2rem;outline:none;transition:border-color .2s,box-shadow .2s}
-    .sb-search-wrap input:focus{border-color:var(--violet);box-shadow:0 0 0 2px rgba(109,79,194,.2)}
+    .sb-search-wrap input:focus{border-color:var(--yellow);box-shadow:0 0 0 2px rgba(255,170,0,.15)}
     .sb-search-wrap input::placeholder{color:var(--text-dim)}
     .sb-search-wrap .si{position:absolute;left:.6rem;top:50%;transform:translateY(-50%);color:var(--text-dim);font-size:.7rem;pointer-events:none}
 
     .sb-section{margin-bottom:.25rem}
-    .sb-section-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;cursor:pointer;user-select:none;font-family:var(--font-title);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);transition:background .12s}
+    .sb-section-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;cursor:pointer;user-select:none;font-family:var(--font-title);font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);transition:background .12s}
     .sb-section-head:hover{background:var(--surface-2)}
     .sb-section-head .chevron{font-size:.6rem;transition:transform .2s;color:var(--text-dim)}
     .sb-section-head.collapsed .chevron{transform:rotate(-90deg)}
@@ -113,54 +130,55 @@
     .sb-links.collapsed{max-height:0!important;overflow:hidden}
     .sb-link{display:flex;align-items:center;gap:.6rem;padding:.38rem 1.25rem .38rem 1.5rem;color:var(--text-muted);font-size:.82rem;transition:background .12s,color .12s;position:relative}
     .sb-link:hover{background:var(--surface-2);color:var(--text);text-decoration:none}
-    .sb-link.active{color:var(--teal);background:rgba(74,184,184,.08)}
-    .sb-link.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--teal)}
-    .sb-link i{width:14px;text-align:center;font-size:.75rem;flex-shrink:0}
+    .sb-link.active{color:var(--yellow);background:rgba(255,170,0,.08)}
+    .sb-link.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--yellow)}
+    .sb-link i{width:14px;text-align:center;font-size:.75rem;flex-shrink:0;color:var(--text-dim)}
+    .sb-link.active i{color:var(--yellow)}
     .sb-divider{height:1px;background:var(--border);margin:.5rem 0}
 
-    /* ARTICLE */
+    /* ── ARTICLE ── */
     .wiki-article-wrap{padding:2rem 2.5rem 4rem;min-width:0}
     @media(max-width:860px){.wiki-article-wrap{padding:1.5rem 1rem 3rem}}
 
-    /* ── WIKI LINKS (internal cross-references) ── */
-    .wiki-content a{color:var(--teal);border-bottom:1px solid rgba(74,184,184,.25);padding-bottom:1px;transition:color .15s,border-color .15s}
-    .wiki-content a:hover{color:#6dd4d4;border-bottom-color:rgba(74,184,184,.7);text-decoration:none}
-    /* Wiki-internal links get a subtle arrow indicator */
-    .wiki-content a[href^="/wiki/"]:not(.no-arrow)::after{content:' ↗';font-size:.65em;opacity:.55;vertical-align:super}
+    /* ── WIKI LINKS ── */
+    .wiki-content a{color:var(--blue-soft);border-bottom:1px solid rgba(88,166,255,.25);padding-bottom:1px;transition:color .15s,border-color .15s}
+    .wiki-content a:hover{color:var(--yellow);border-bottom-color:rgba(255,170,0,.5);text-decoration:none}
+    .wiki-content a[href^="/wiki/"]:not(.no-arrow)::after{content:' ↗';font-size:.65em;opacity:.5;vertical-align:super}
 
-    /* Article content styles */
-    .wiki-content h2{font-family:var(--font-title);font-weight:700;font-size:1.2rem;color:#fff;margin:2.25rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;scroll-margin-top:80px}
+    /* Article content */
+    .wiki-content h2{font-family:var(--font-title);font-weight:800;font-size:1.2rem;color:#fff;margin:2.25rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;scroll-margin-top:80px;letter-spacing:-.01em}
     .wiki-content h2:first-child{margin-top:0}
-    .wiki-content h3{font-family:var(--font-title);font-size:.95rem;color:var(--gold);margin:1.5rem 0 .6rem;scroll-margin-top:80px}
+    .wiki-content h2::before{content:'';display:inline-block;width:3px;height:1em;background:var(--yellow);border-radius:2px;flex-shrink:0}
+    .wiki-content h3{font-family:var(--font-title);font-size:.95rem;font-weight:700;color:var(--yellow);margin:1.5rem 0 .6rem;scroll-margin-top:80px}
     .wiki-content p{color:var(--text);line-height:1.75;margin-bottom:1rem}
     .wiki-content ul,.wiki-content ol{color:var(--text);padding-left:1.5rem;line-height:1.75;margin-bottom:1rem}
     .wiki-content li{margin-bottom:.3rem}
     .wiki-content hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
 
     /* Inline code & pre */
-    .wiki-content code{background:rgba(109,79,194,.15);border:1px solid rgba(109,79,194,.25);border-radius:3px;padding:.12em .42em;font-size:.85em;color:#b09ef0;font-family:var(--font-mono)}
+    .wiki-content code{background:rgba(255,170,0,.08);border:1px solid rgba(255,170,0,.18);border-radius:4px;padding:.12em .42em;font-size:.85em;color:#ffd26b;font-family:var(--font-mono)}
     .wiki-content pre{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;overflow-x:auto;margin-bottom:1.25rem}
     .wiki-content pre code{background:none;border:none;padding:0;font-size:.83rem;line-height:1.6;color:var(--text-muted)}
 
     /* Tables */
     .wiki-content table{width:100%;border-collapse:collapse;margin-bottom:1.25rem;font-size:.875rem}
-    .wiki-content thead th{background:var(--surface-2);border:1px solid var(--border);padding:.55rem .9rem;font-family:var(--font-title);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:left}
+    .wiki-content thead th{background:var(--surface-2);border:1px solid var(--border);padding:.55rem .9rem;font-family:var(--font-title);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);text-align:left;font-weight:700}
     .wiki-content tbody td{border:1px solid rgba(255,255,255,.05);padding:.5rem .9rem;color:var(--text);vertical-align:top}
     .wiki-content tbody tr:nth-child(even) td{background:rgba(255,255,255,.02)}
-    .wiki-content tbody td:first-child code{color:var(--teal)}
+    .wiki-content tbody td:first-child code{color:var(--blue-soft)}
 
     /* ── Callout boxes ── */
     .wiki-notice,.wiki-callout{display:flex;gap:.9rem;align-items:flex-start;border-radius:var(--radius);padding:.9rem 1.1rem;margin:1.25rem 0;font-size:.875rem;line-height:1.6}
     .wiki-notice .ni,.wiki-callout .callout-icon{font-size:1rem;flex-shrink:0;margin-top:.1rem}
-    .wiki-notice.info,.wiki-callout.info{background:rgba(52,152,219,.1);border-left:3px solid #3498db}.wiki-notice.info .ni,.wiki-callout.info .callout-icon{color:#5dade2}
-    .wiki-notice.tip,.wiki-callout.tip{background:rgba(39,174,96,.1);border-left:3px solid #27ae60}.wiki-notice.tip .ni,.wiki-callout.tip .callout-icon{color:#2ecc71}
-    .wiki-notice.warning,.wiki-callout.warning{background:rgba(230,126,34,.1);border-left:3px solid #e67e22}.wiki-notice.warning .ni,.wiki-callout.warning .callout-icon{color:#f39c12}
-    .wiki-notice.danger,.wiki-callout.danger{background:rgba(192,57,43,.1);border-left:3px solid #c0392b}.wiki-notice.danger .ni,.wiki-callout.danger .callout-icon{color:#e74c3c}
+    .wiki-notice.info,.wiki-callout.info{background:rgba(56,139,253,.1);border-left:3px solid var(--blue-soft)}.wiki-notice.info .ni,.wiki-callout.info .callout-icon{color:var(--blue-soft)}
+    .wiki-notice.tip,.wiki-callout.tip{background:rgba(63,185,80,.1);border-left:3px solid #3fb950}.wiki-notice.tip .ni,.wiki-callout.tip .callout-icon{color:#3fb950}
+    .wiki-notice.warning,.wiki-callout.warning{background:rgba(255,170,0,.1);border-left:3px solid var(--yellow)}.wiki-notice.warning .ni,.wiki-callout.warning .callout-icon{color:var(--yellow)}
+    .wiki-notice.danger,.wiki-callout.danger{background:rgba(248,81,73,.1);border-left:3px solid var(--red)}.wiki-notice.danger .ni,.wiki-callout.danger .callout-icon{color:var(--red)}
 
-    /* ── INFOBOX (Hypixel item card style) ── */
+    /* ── INFOBOX ── */
     .infobox{float:right;clear:right;margin:0 0 1.5rem 1.5rem;width:270px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;font-size:.82rem}
     @media(max-width:640px){.infobox{float:none;width:100%;margin:0 0 1.5rem}}
-    .infobox-title{background:var(--surface-3);padding:.65rem .85rem;font-family:var(--font-title);font-size:.76rem;font-weight:700;color:#fff;text-align:center;border-bottom:1px solid var(--border);letter-spacing:.04em}
+    .infobox-title{background:var(--surface-3);padding:.65rem .85rem;font-family:var(--font-title);font-size:.78rem;font-weight:800;color:#fff;text-align:center;border-bottom:1px solid var(--border);letter-spacing:-.01em}
     .infobox-img{background:var(--bg);padding:1rem;text-align:center;border-bottom:1px solid var(--border)}
     .infobox-img img{max-width:80px;image-rendering:pixelated}
     .infobox-img .mc-icon{font-size:3rem;line-height:1}
@@ -168,81 +186,50 @@
     .infobox-row:last-child{border-bottom:none}
     .infobox-row .label{color:var(--text-dim);flex-shrink:0;padding-top:.05rem}
     .infobox-row .value{color:var(--text);text-align:right;font-weight:600;max-width:160px;word-break:break-word}
-    /* Rarity values */
-    .r-common{color:var(--rarity-common)!important}
-    .r-uncommon{color:var(--rarity-uncommon)!important}
-    .r-rare{color:var(--rarity-rare)!important}
-    .r-epic{color:var(--rarity-epic)!important}
-    .r-legendary{color:var(--rarity-legendary)!important}
-    .r-mythic{color:var(--rarity-mythic)!important}
-    .r-divine{color:var(--rarity-divine)!important}
-    .r-special{color:var(--rarity-special)!important}
-    /* Infobox section divider */
+    .r-common{color:var(--rarity-common)!important}.r-uncommon{color:var(--rarity-uncommon)!important}.r-rare{color:var(--rarity-rare)!important}.r-epic{color:var(--rarity-epic)!important}.r-legendary{color:var(--rarity-legendary)!important}.r-mythic{color:var(--rarity-mythic)!important}.r-divine{color:var(--rarity-divine)!important}.r-special{color:var(--rarity-special)!important}
     .infobox-section{background:var(--surface-3);padding:.3rem .85rem;font-family:var(--font-title);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);border-bottom:1px solid var(--border)}
 
-    /* ── RANK badge ── */
-    .rank-badge{display:inline-block;padding:.2rem .65rem;border-radius:3px;font-family:var(--font-mono);font-size:.75rem;font-weight:700;letter-spacing:.05em}
-    .rank-wanderer{background:rgba(255,255,255,.08);color:#aaa}
-    .rank-settler{background:rgba(39,174,96,.15);color:#2ecc71}
-    .rank-villager{background:rgba(52,152,219,.15);color:#3498db}
-    .rank-elder{background:rgba(241,196,15,.15);color:#f1c40f}
-    .rank-patron{background:rgba(201,162,39,.15);color:var(--gold)}
-    .rank-arcane{background:rgba(109,79,194,.2);color:var(--violet-soft)}
-    .rank-helper{background:rgba(39,174,96,.12);color:#2ecc71}
-    .rank-mod{background:rgba(52,152,219,.15);color:#3498db}
-    .rank-admin{background:rgba(201,162,39,.15);color:var(--gold)}
-    .rank-owner{background:rgba(192,57,43,.15);color:#e74c3c}
+    /* ── RANK badges ── */
+    .rank-badge{display:inline-block;padding:.2rem .65rem;border-radius:4px;font-family:var(--font-mono);font-size:.75rem;font-weight:700;letter-spacing:.04em}
+    .rank-wanderer{background:rgba(255,255,255,.07);color:#8b949e}
+    .rank-settler{background:rgba(63,185,80,.15);color:#3fb950}
+    .rank-villager{background:rgba(56,139,253,.15);color:var(--blue-soft)}
+    .rank-elder{background:rgba(255,193,7,.15);color:#ffc107}
+    .rank-patron{background:rgba(255,170,0,.15);color:var(--yellow)}
+    .rank-arcane{background:rgba(188,140,255,.15);color:#bc8cff}
+    .rank-helper{background:rgba(63,185,80,.12);color:#3fb950}
+    .rank-mod{background:rgba(56,139,253,.15);color:var(--blue-soft)}
+    .rank-admin{background:rgba(255,170,0,.15);color:var(--yellow)}
+    .rank-owner{background:rgba(248,81,73,.15);color:var(--red)}
 
-    /* ── SEE ALSO box ── */
+    /* ── SEE ALSO ── */
     .see-also{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;margin:2rem 0 1rem}
-    .see-also-head{font-family:var(--font-title);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+    .see-also-head{font-family:var(--font-title);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
     .see-also-links{display:flex;flex-wrap:wrap;gap:.5rem}
-    .see-also-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.3rem .75rem;font-size:.82rem;color:var(--teal);transition:border-color .15s,background .15s}
-    .see-also-link:hover{border-color:rgba(74,184,184,.4);background:rgba(74,184,184,.06);color:#6dd4d4;text-decoration:none}
+    .see-also-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.3rem .75rem;font-size:.82rem;color:var(--blue-soft);transition:border-color .15s,background .15s,color .15s}
+    .see-also-link:hover{border-color:rgba(255,170,0,.4);background:rgba(255,170,0,.06);color:var(--yellow);text-decoration:none}
     .see-also-link i{font-size:.7rem}
 
-    /* ── PAGE HISTORY MODULE ── */
+    /* ── PAGE HISTORY ── */
     .wiki-history{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:2.5rem 0 1rem;font-size:.82rem}
-    .wiki-history-head{
-      display:flex;align-items:center;gap:.75rem;
-      background:var(--surface-2);padding:.55rem .9rem;
-      cursor:pointer;user-select:none;border-bottom:1px solid transparent;
-      transition:background .15s;
-    }
+    .wiki-history-head{display:flex;align-items:center;gap:.75rem;background:var(--surface-2);padding:.55rem .9rem;cursor:pointer;user-select:none;border-bottom:1px solid transparent;transition:background .15s}
     .wiki-history-head:hover{background:var(--surface-3)}
     .wiki-history-head.open{border-bottom-color:var(--border)}
-    .wiki-history-head .wh-icon{color:var(--gold);font-size:.7rem;flex-shrink:0}
-    .wiki-history-head .wh-label{
-      font-family:var(--font-title);font-size:.65rem;font-weight:700;
-      letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
-    }
-    .wiki-history-head .wh-chevron{
-      margin-left:auto;font-size:.6rem;color:var(--text-dim);
-      transition:transform .2s;
-    }
+    .wiki-history-head .wh-icon{color:var(--yellow);font-size:.7rem;flex-shrink:0}
+    .wiki-history-head .wh-label{font-family:var(--font-title);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
+    .wiki-history-head .wh-chevron{margin-left:auto;font-size:.6rem;color:var(--text-dim);transition:transform .2s}
     .wiki-history-head.open .wh-chevron{transform:rotate(180deg)}
     .wiki-history-body{display:none}
     .wiki-history-body.open{display:block}
     .wh-table{width:100%;border-collapse:collapse}
-    .wh-table thead th{
-      background:var(--surface-3);border-bottom:1px solid var(--border);
-      padding:.4rem .85rem;font-family:var(--font-title);font-size:.6rem;
-      font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-      color:var(--text-dim);text-align:left;white-space:nowrap;
-    }
+    .wh-table thead th{background:var(--surface-3);border-bottom:1px solid var(--border);padding:.4rem .85rem;font-family:var(--font-title);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);text-align:left;white-space:nowrap}
     .wh-table tbody tr{border-bottom:1px solid rgba(255,255,255,.035)}
     .wh-table tbody tr:last-child{border-bottom:none}
     .wh-table tbody tr:nth-child(even) td{background:rgba(255,255,255,.018)}
     .wh-table td{padding:.45rem .85rem;vertical-align:top;color:var(--text)}
-    .wh-table td.wh-ver{
-      white-space:nowrap;font-family:var(--font-mono);font-size:.78rem;
-      color:var(--teal);min-width:80px;
-    }
-    .wh-table td.wh-date{
-      white-space:nowrap;color:var(--text-muted);font-size:.78rem;min-width:110px;
-    }
+    .wh-table td.wh-ver{white-space:nowrap;font-family:var(--font-mono);font-size:.78rem;color:var(--blue-soft);min-width:80px}
+    .wh-table td.wh-date{white-space:nowrap;color:var(--text-muted);font-size:.78rem;min-width:110px}
     .wh-table td.wh-changes{color:var(--text);line-height:1.55}
-    /* On mobile, version+date stack above changes */
     @media(max-width:540px){
       .wh-table thead{display:none}
       .wh-table tbody tr{display:block;padding:.6rem .85rem;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -251,14 +238,14 @@
       .wh-table td.wh-date::before{content:'Date: ';color:var(--text-dim)}
     }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     .wiki-footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 0}
     .wiki-footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
     .wiki-footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
     .wiki-footer-links a{color:var(--text-muted);font-size:.8rem}
-    .wiki-footer-links a:hover{color:var(--text);text-decoration:none}
-    .copy{font-size:.78rem;color:var(--text-dim)}
-    .rune{font-family:var(--font-mono);font-size:.7rem;color:var(--text-dim);opacity:.4}
+    .wiki-footer-links a:hover{color:var(--yellow);text-decoration:none}
+    .copy{font-size:.78rem;color:var(--text-dim);font-family:var(--font-title)}
+    .copy strong{color:var(--yellow)}
 
     /* ── MOBILE MISC ── */
     /* Tables scroll horizontally on small screens */
@@ -545,7 +532,7 @@
       <i class="fas fa-bars"></i>
     </button>
     <a class="navbar-brand me-4" href="{{ '/' | relative_url }}">
-      <i class="fas fa-hat-wizard" style="color:var(--gold);margin-right:.5rem;font-size:.9rem"></i>{{ site.title }}
+      <i class="fas fa-hat-wizard" style="color:var(--yellow);margin-right:.5rem;font-size:.9rem"></i>{{ site.title }}
     </a>
     <span class="navbar-divider d-none d-lg-block" style="width:1px;height:1.4rem;background:var(--border);opacity:.6;margin-right:1rem;flex-shrink:0"></span>
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navN" aria-controls="navN" aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
@@ -724,8 +711,7 @@
   <div class="container">
     <div class="wiki-footer-inner">
       <div>
-        <div class="copy">© {{ site.time | date: "%Y" }} WitchCraftMC · All rights reserved</div>
-        <div class="rune" style="margin-top:.25rem">ᚹᛁᛏᚳᚻᚳᚱᚪᚠᛏ</div>
+        <div class="copy">© {{ site.time | date: "%Y" }} <strong>WitchCraftMC</strong> · All rights reserved</div>
       </div>
       <div class="wiki-footer-links">
         <a href="{{ '/' | relative_url }}">Home</a>
