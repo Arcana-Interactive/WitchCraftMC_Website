@@ -1158,6 +1158,19 @@ a:hover {
       font-size:3rem;
       line-height:1
 }
+
+.infobox-section {
+      background:var(--surface-3);
+      padding:.3rem .85rem;
+      font-family:var(--font-title);
+      font-size:.6rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--gold);
+      border-bottom:1px solid var(--border)
+}
+
 .infobox-row {
       display:flex;
       justify-content:space-between;
@@ -1172,13 +1185,13 @@ a:hover {
 }
 
 .infobox-row .label {
-      color:var(--text-dim);
+      color:var(--text);
       flex-shrink:0;
       padding-top:.05rem
 }
 
 .infobox-row .label-center {
-      color:var(--text-dim);
+      color:var(--text);
       flex-shrink:0;
       padding-top:.05rem
 }
@@ -1191,15 +1204,7 @@ a:hover {
       word-break:break-word
 }
 
-.infobox-column .center {
-      color:var(--text);
-      text-align:center;
-      font-weight:600;
-      max-width:160px;
-      word-break:break-word
-}
-
-.infobox-column .center {
+.infobox-column {
       display:flex;
       flex-direction:column;
       justify-content:space-between;
@@ -1208,6 +1213,15 @@ a:hover {
       border-bottom:1px solid rgba(255,255,255,.04);
       gap:.5rem
 }
+
+.infobox-column .center {
+      color:var(--text);
+      text-align:center;
+      font-weight:600;
+      max-width:160px;
+      word-break:break-word
+}
+
 
 /* Rarity values */
 .r-common {
@@ -1240,19 +1254,6 @@ a:hover {
 
 .r-special {
       color:var(--rarity-special)!important
-}
-
-/* Infobox section divider */
-.infobox-section {
-      background:var(--surface-3);
-      padding:.3rem .85rem;
-      font-family:var(--font-title);
-      font-size:.6rem;
-      font-weight:700;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:var(--text-dim);
-      border-bottom:1px solid var(--border)
 }
 
 /* ── RANK badge ── */

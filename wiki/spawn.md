@@ -20,7 +20,7 @@ history:
 
 <div class="infobox">
   <div class="infobox-title">Spawn</div>
-    <div class="infobox-img"><img class="fas fa-bag-shopping mc-icon" src="/img/icons/spawn.png alt="The Spawn Island"></div>
+    <div class="infobox-img"><img src="/img/icons/spawn.png" alt="The Spawn Island"></div>
   <div class="infobox-section">Creatures</div>
     <div class="infobox-row"><span class="label-center">NPCS</span></div>
     <div class="infobox-column">
