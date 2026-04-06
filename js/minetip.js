@@ -1,162 +1,134 @@
-/**
- * minetip.js — Minecraft-style item tooltips
- * Vanilla JS port of the wiki.gg Common.js minetip module.
- * Trigger: any element with class "minetip" or "invslot-item".
- *
- * Data attributes:
- *   title / data-minetip-title  — item name (supports &colour codes)
- *   data-minetip-text           — description; use "/" for line breaks
- *
- * Minecraft colour codes  (&0–&f, &l bold, &o italic, &n underline, &m strike)
- * Custom hex colour:  &#RRGGBB  or  &$RGB
- */
-( function () {
-  'use strict';
-
-  /* Skip entirely on touch-primary devices — no hover means no minetips */
-  if ( window.matchMedia( '(hover: none)' ).matches ) return;
-
-  /* ── helpers ───────────────────────────────────────────────────── */
-  var ESC = { '\\&': '&#38;', '<': '&#60;', '>': '&#62;' };
-
-  function esc( t ) {
-    return t
-      .replace( /\\\\/g, '&#92;' )
-      .replace( /\\&|[<>]/g, function ( c ) { return ESC[ c ]; } );
-  }
-
-  /* Iteratively wrap &X...&r spans. Safety-limited to avoid infinite loops. */
-  function parseCodes( html ) {
-    var n = 0;
-    while (
-      /&(?:[0-9a-jl-qs-vyz]|#[0-9a-fA-F]{6}|\$[0-9a-fA-F]{3})/.test( html )
-      && n++ < 30
-    ) {
-      html = html
-        .replace(
-          /&([0-9a-jl-qs-vyz])([\s\S]*?)(&r|$)/g,
-          '<span class="mc-fmt-$1">$2</span>&r'
-        )
-        .replace(
-          /&(?:#([0-9a-fA-F]{6})|\$([0-9a-fA-F]{3}))([\s\S]*?)(&r|$)/g,
-          '<span style="color:#$1$2">$3</span>&r'
-        );
-    }
-    return html.replace( /&r/g, '' );
-  }
-
-  /* ── tooltip state ─────────────────────────────────────────────── */
-  var tip     = null;
-  var wW, wH, tW, tH;
-
-  function create( el ) {
-    destroy();
-
-    /* ── resolve title ── */
-    var title = el.dataset.minetipTitle;
-
-    if ( title === undefined ) {
-      var attr = el.getAttribute( 'title' );
-      if ( attr !== null ) {
-        title = attr.trim().replace( /&/g, '\\&' );
-      } else {
-        /* Walk into children to find deepest title */
-        var child = el.firstChild, found;
-        while ( child ) {
-          if ( child.nodeType === 1 && child.hasAttribute( 'title' ) ) {
-            found = child.getAttribute( 'title' );
-          }
-          child = child.firstChild;
-        }
-        if ( found === undefined ) return;
-        title = found.trim().replace( /&/g, '\\&' );
-      }
-      el.dataset.minetipTitle = title;
-    }
-
-    /* Strip native title attrs so the browser tooltip doesn't appear */
-    if ( !el.dataset.minetipReady ) {
-      var titled = el.querySelectorAll( '[title]' );
-      for ( var i = 0; i < titled.length; i++ ) titled[ i ].removeAttribute( 'title' );
-      el.removeAttribute( 'title' );
-      el.dataset.minetipReady = '1';
-    }
-
-    if ( !title ) return;
-
-    /* ── build HTML ── */
-    var html = '<span class="minetip-title">' + esc( title ) + '&r</span>';
-
-    var desc = ( el.dataset.minetipText || '' ).trim();
-    if ( desc ) {
-      html +=
-        '<span class="minetip-description">' +
-        esc( desc ).replace( /\\\//g, '&#47;' ).replace( /\//g, '<br>' ) +
-        '&r</span>';
-    }
-
-    html = parseCodes( html );
-
-    /* ── mount ── */
-    tip = document.createElement( 'div' );
-    tip.id = 'minetip-tooltip';
-    tip.innerHTML = html;
-    document.body.appendChild( tip );
-
-    /* Cache sizes for position logic */
-    wW = window.innerWidth;
-    wH = window.innerHeight;
-    tW = tip.offsetWidth;
-    tH = tip.offsetHeight;
-  }
-
-  function position( x, y ) {
-    if ( !tip ) return;
-    var top  = y - 34;
-    var left = x + 14;
-
-    if ( left + tW > wW ) left -= tW + 36;
-    if ( left < 0 ) {
-      left = 0;
-      top -= tH - 22;
-      if ( top < 0 ) top += tH + 47;
-    } else if ( top < 0 ) {
-      top = 0;
-    } else if ( top + tH > wH ) {
-      top = wH - tH;
-    }
-
-    tip.style.top  = top  + 'px';
-    tip.style.left = left + 'px';
-  }
-
-  function destroy() {
-    if ( tip ) { tip.remove(); tip = null; }
-  }
-
-  /* ── event delegation ──────────────────────────────────────────── */
-  var SELECTOR = '.minetip, .invslot-item';
-
-  document.addEventListener( 'mouseover', function ( e ) {
-    var el = e.target.closest && e.target.closest( SELECTOR );
-    if ( el ) {
-      create( el );
-      position( e.clientX, e.clientY );
-    } else {
-      destroy();
-    }
-  } );
-
-  document.addEventListener( 'mousemove', function ( e ) {
-    if ( !tip ) return;
-    if ( e.target.closest && e.target.closest( SELECTOR ) ) {
-      position( e.clientX, e.clientY );
-    }
-  } );
-
-  document.addEventListener( 'mouseout', function ( e ) {
-    var el = e.target.closest && e.target.closest( SELECTOR );
-    if ( el && !el.contains( e.relatedTarget ) ) destroy();
-  } );
-
+( function() {
+	var escapeChars = { '\\&': '&#38;', '<': '&#60;', '>': '&#62;' };
+	var escape = function( text ) {
+		// "\" must be escaped first
+		return text.replace( /\\\\/g, '&#92;' )
+			.replace( /\\&|[<>]/g, function( char ) { return escapeChars[char]; } );
+	};
+	var $tooltip = $();
+	var $win = $( window ), winWidth, winHeight, width, height;
+	
+	$( '#mw-content-text' ).on( {
+		'mouseenter.minetip': function( e ) {
+			$tooltip.remove();
+			
+			var $elem = $( this ), title = $elem.attr( 'data-minetip-title' );
+			if ( title === undefined ) {
+				title = $elem.attr( 'title' );
+				if ( title !== undefined ) {
+					title = $.trim( title.replace( /&/g, '\\&' ) );
+					$elem.attr( 'data-minetip-title', title );
+				}
+			}
+			
+			// No title or title only contains formatting codes
+			if ( title === undefined || title !== '' && title.replace( /&([0-9a-jl-qs-vyzr]|#[0-9a-fA-F]{6}|\$[0-9a-fA-F]{3})/g, '' ) === '' ) {
+				// Find deepest child title
+				var childElem = $elem[0], childTitle;
+				do {
+					if ( childElem.hasAttribute( 'title' ) ) {
+						childTitle = childElem.title;
+					}
+					childElem = childElem.firstChild;
+				} while( childElem && childElem.nodeType === 1 );
+				if ( childTitle === undefined ) {
+					return;
+				}
+				
+				// Append child title as title may contain formatting codes
+				if ( !title ) {
+					title = '';
+				}
+				title += $.trim( childTitle.replace( /&/g, '\\&' ) );
+				
+				// Set the retrieved title as data for future use
+				$elem.attr( 'data-minetip-title', title );
+			}
+			
+			if ( !$elem.data( 'minetip-ready' ) ) {
+				// Remove title attributes so the native tooltip doesn't get in the way
+				$elem.find( '[title]' ).addBack().removeAttr( 'title' );
+				$elem.data( 'minetip-ready', true );
+			}
+			
+			if ( title === '' ) {
+				return;
+			}
+			
+			var content = '<span class="minetip-title">' + escape( title ) + '&r</span>';
+			
+			var description = $.trim( $elem.attr( 'data-minetip-text' ) );
+			if ( description ) {
+				// Apply normal escaping plus "/"
+				description = escape( description ).replace( /\\\//g, '&#47;' );
+				content += '<span class="minetip-description">' + description.replace( /\//g, '<br>' ) + '&r</span>';
+			}
+			
+			// Add classes for minecraft formatting codes
+			while ( content.search( /&(?:[0-9a-jl-qs-vyz]|#[0-9a-fA-F]{6}|\$[0-9a-fA-F]{3})/ ) > -1 ) {
+				content = content.replace( /&([0-9a-jl-qs-vyz])(.*?)(&r|$)/g, '<span class="format-$1">$2</span>&r' );
+				content = content.replace( /&(?:#([0-9a-fA-F]{6})|\$([0-9a-fA-F]{3}))(.*?)(&r|$)/g, '<span class="format-custom" style="color: #$1$2;">$3</span>&r' );
+			}
+			// Remove reset formatting
+			content = content.replace( /&r/g, '' );
+			
+			$tooltip = $( '<div id="minetip-tooltip">' );
+			$tooltip.html( content ).appendTo( 'body' );
+			
+			// Cache current window and tooltip size
+			winWidth = $win.width();
+			winHeight = $win.height();
+			width = $tooltip.outerWidth( true );
+			height = $tooltip.outerHeight( true );
+			
+			// Trigger a mouse movement to position the tooltip
+			$elem.trigger( 'mousemove', e );
+		},
+		'mousemove.minetip': function( e, trigger ) {
+			if ( !$tooltip.length ) {
+				$( this ).trigger( 'mouseenter' );
+				return;
+			}
+			
+			// Get event data from remote trigger
+			e = trigger || e;
+			
+			// Get mouse position and add default offsets
+			var top = e.clientY - 34;
+			var left = e.clientX + 14;
+			
+			// If going off the right of the screen, go to the left of the cursor
+			if ( left + width > winWidth ) {
+				left -= width + 36;
+			}
+			
+			// If now going off to the left of the screen, resort to going above the cursor
+			if ( left < 0 ) {
+				left = 0;
+				top -= height - 22;
+				
+				// Go below the cursor if too high
+				if ( top < 0 ) {
+					top += height + 47;
+				}
+			// Don't go off the top of the screen
+			} else if ( top < 0 ) {
+				top = 0;
+			// Don't go off the bottom of the screen
+			} else if ( top + height > winHeight ) {
+				top = winHeight - height;
+			}
+			
+			// Apply the positions
+			$tooltip.css( { top: top, left: left } );
+		},
+		'mouseleave.minetip': function() {
+			if ( !$tooltip.length ) {
+				return;
+			}
+			
+			$tooltip.remove();
+			$tooltip = $();
+		}
+	}, '.minetip, .invslot-item' );
 }() );
