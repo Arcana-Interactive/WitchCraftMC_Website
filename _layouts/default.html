@@ -19,29 +19,23 @@
   {% include footer.html %}
   {% include modals.html %}
   {% include js.html %}
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <!-- Your custom script -->
+    <!-- Deep-link: open a portfolio modal if the URL hash matches one on load or navigation -->
     <script>
-      $(document).ready(function () {
-        if (window.location.hash) {
-          var modalId = window.location.hash; // e.g. #portfolioModal-2
-          if ($(modalId).length) {
-            $(modalId).modal('show');
-          }
+      function tryOpenModal(hash) {
+        if (!hash) return;
+        var $el = $(hash);
+        // Only open elements that are actual portfolio modals, never #page-top / body
+        if ($el.length && $el.hasClass('portfolio-modal')) {
+          $el.modal('show');
         }
+      }
+      $(document).ready(function () {
+        tryOpenModal(window.location.hash);
       });
       $(window).on('hashchange', function () {
-        var modalId = window.location.hash;
-        if ($(modalId).length) {
-          $(modalId).modal('show');
-        }
+        tryOpenModal(window.location.hash);
       });
-
     </script>
 </body>
 
