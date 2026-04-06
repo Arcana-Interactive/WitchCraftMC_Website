@@ -1781,10 +1781,3 @@ a:hover{
       font-size:.78rem;
       color:var(--text-dim)
 }
-.rune{
-      font-family:var(--font-mono);
-      font-size:.7rem;
-      color:var(--text-dim);
-      opacity:.4;
-      margin-top:.2rem
-}
