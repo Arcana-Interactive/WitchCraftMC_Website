@@ -1134,12 +1134,11 @@ a:hover {
       background:var(--surface-3);
       padding:.65rem .85rem;
       font-family:var(--font-title);
-      font-size:.76rem;
+      font-size:1rem;
       font-weight:700;
       color:#fff;
       text-align:center;
       border-bottom:1px solid var(--border);
-      letter-spacing:.04em
 }
 
 .infobox-img {
@@ -1147,13 +1146,13 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .65rem .2rem;
+    padding: .65rem 2rem;
     border-bottom: 1px solid var(--border);
-    gap: .5rem;
+    gap: .5rem
 }
 
 .infobox-img img {
-      max-width:300px;
+      max-width:300px
 }
 
 .infobox-img .mc-icon {
