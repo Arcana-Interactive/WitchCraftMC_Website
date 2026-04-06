@@ -1402,10 +1402,6 @@ a:hover{
 .mc-fmt-d{color:#FF55FF;text-shadow:.125em .125em 0 #3F153F}
 .mc-fmt-e{color:#FFFF55;text-shadow:.125em .125em 0 #3F3F15}
 .mc-fmt-f{color:#FFF;text-shadow:.125em .125em 0 #3E3E3E}
-.mc-fmt-l{font-weight:bold}
-.mc-fmt-o{font-style:italic}
-.mc-fmt-n{text-decoration:underline}
-.mc-fmt-m{text-decoration:line-through}
 */
 .format-0 {
 	color: #000;
@@ -1467,6 +1463,18 @@ a:hover{
 	color: #FBFB54;
 	text-shadow: 0.125em 0.125em 0 #3E3E15;
 }
+.format-l{
+      font-weight:bold
+}
+.format-o{
+      font-style:italic
+}
+.format-n{
+      text-decoration:underline
+}
+.format-m{
+      text-decoration:line-through
+}
 .format-f,
 #minetip-tooltip {
 	color: #FBFBFB;
@@ -1481,7 +1489,7 @@ a:hover{
 	background-color: #100010;
 	background-color: rgba(16, 0, 16, 0.94);
 	padding: 0.375em;
-	font-family: 'MinecraftiaRegular', sans-serif;
+	font-family: 'MinecraftiaRegular';
       font-weight: normal;
       font-style: normal;
 	font-size: 16px;

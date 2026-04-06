@@ -35,7 +35,7 @@
       html = html
         .replace(
           /&([0-9a-jl-qs-vyz])([\s\S]*?)(&r|$)/g,
-          '<span class="mc-fmt-$1">$2</span>&r'
+          '<span class="format-$1">$2</span>&r'
         )
         .replace(
           /&(?:#([0-9a-fA-F]{6})|\$([0-9a-fA-F]{3}))([\s\S]*?)(&r|$)/g,
