@@ -1150,8 +1150,7 @@ a:hover {
 }
 
 .infobox-img img {
-      max-width:80px;
-      image-rendering:pixelated
+      max-width:300px;
 }
 
 .infobox-img .mc-icon {
@@ -1190,12 +1189,6 @@ a:hover {
       padding-top:.05rem
 }
 
-.infobox-row .label-center {
-      color:var(--text);
-      flex-shrink:0;
-      padding-top:.05rem
-}
-
 .infobox-row .value {
       color:var(--text);
       text-align:right;
@@ -1214,7 +1207,13 @@ a:hover {
       gap:.5rem
 }
 
-.infobox-column .center {
+.infobox-column .label {
+      color:var(--text);
+      flex-shrink:0;
+      padding-top:.05rem
+}
+
+.infobox-column .value {
       color:var(--text);
       text-align:center;
       font-weight:600;
