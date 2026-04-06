@@ -6,206 +6,118 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/freelancer.min.css' | relative_url }}">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --bg:          #0d1117;
-      --surface:     #161b22;
-      --surface-2:   #1c2128;
-      --surface-3:   #22272e;
-      --border:      rgba(240,246,252,.1);
-      --border-y:    rgba(255,170,0,.35);
-      --text:        #e6edf3;
-      --text-muted:  #8b949e;
-      --text-dim:    #484f58;
-      --yellow:      #ffaa00;
-      --yellow-b:    #ffc107;
-      --yellow-glow: rgba(255,170,0,.18);
-      --orange:      #ff8c00;
-      --blue:        #388bfd;
-      --blue-soft:   #58a6ff;
-      --green:       #3fb950;
-      --red:         #f85149;
-      --font-body:   'Inter', system-ui, sans-serif;
-      --font-title:  'Outfit', 'Inter', sans-serif;
-      --font-mono:   'JetBrains Mono', monospace;
-      --radius:      8px;
-      --radius-lg:   12px;
+      --bg:        #12111a; --surface:#1a1927; --surface-2:#211f31; --surface-3:#28263c;
+      --border:    rgba(255,255,255,.07); --border-gold:rgba(201,162,39,.3);
+      --text:      #e2ddd6; --text-muted:#8b8599; --text-dim:#5c5772;
+      --gold:      #c9a227; --gold-bright:#f0c93a;
+      --violet:    #6d4fc2; --violet-soft:#9575d9; --teal:#4ab8b8;
+      --font-body: 'Nunito',sans-serif; --font-title:'Cinzel',serif; --font-mono:'JetBrains Mono',monospace;
+      --radius:6px;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.6}
-    a{color:var(--blue-soft);text-decoration:none}
-    a:hover{color:var(--yellow);text-decoration:none}
+    a{color:var(--teal);text-decoration:none} a:hover{color:#6dd4d4;text-decoration:underline}
 
-    /* ── NAVBAR ── */
-    #mainNav{background:rgba(13,17,23,.97)!important;border-bottom:1px solid var(--border);padding:.55rem 0;backdrop-filter:blur(12px)}
-    .navbar-brand{font-family:var(--font-title);font-weight:800;font-size:1.15rem;color:var(--yellow)!important;letter-spacing:-.01em}
-    .navbar-brand .brand-icon{color:var(--yellow);margin-right:.5rem;font-size:.95rem;opacity:.9}
-    .nav-link{font-family:var(--font-title);font-weight:600;font-size:.85rem;color:var(--text-muted)!important;padding:.3rem .85rem!important;border-radius:6px;transition:color .15s,background .15s;letter-spacing:.01em}
-    .nav-link:hover{color:var(--text)!important;background:var(--surface-2)}
-    .nav-link.wiki-active{color:var(--yellow)!important;background:rgba(255,170,0,.1);border:1px solid rgba(255,170,0,.2)}
+    /* NAVBAR */
+    #mainNav{background:var(--surface)!important;border-bottom:1px solid var(--border);padding:.6rem 0}
+    .navbar-brand{font-family:var(--font-title);font-weight:700;font-size:1.1rem;color:var(--text)!important;letter-spacing:.04em}
+    .nav-link{font-weight:600;font-size:.85rem;color:var(--text-muted)!important;padding:.35rem .8rem!important;border-radius:4px;transition:color .15s,background .15s}
+    .nav-link:hover,.nav-link.active{color:var(--text)!important;background:var(--surface-3)}
+    .nav-link.wiki-active{color:var(--gold)!important;background:rgba(201,162,39,.1)}
 
-    /* ── BANNER ── */
-    .wiki-banner{background:var(--surface);border-bottom:1px solid var(--border);padding:3rem 0 2.5rem;margin-top:56px;position:relative;overflow:hidden}
-    .wiki-banner::before{content:'';position:absolute;inset:0;
-      background:
-        radial-gradient(ellipse 70% 60% at 50% -5%,rgba(255,170,0,.12) 0%,transparent 65%),
-        radial-gradient(ellipse 30% 25% at 85% 60%,rgba(56,139,253,.06) 0%,transparent 55%);
-      pointer-events:none}
+    /* BANNER */
+    .wiki-banner{background:var(--surface);border-bottom:1px solid var(--border);padding:3.5rem 0 2.5rem;margin-top:56px;position:relative;overflow:hidden}
+    .wiki-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(109,79,194,.25) 0%,transparent 70%),radial-gradient(ellipse 40% 30% at 80% 50%,rgba(74,184,184,.06) 0%,transparent 60%);pointer-events:none}
     .wiki-banner .inner{position:relative;text-align:center}
-    .wiki-banner .eyebrow{
-      display:inline-flex;align-items:center;gap:.5rem;
-      font-family:var(--font-title);font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-      color:var(--yellow);background:rgba(255,170,0,.1);
-      border:1px solid rgba(255,170,0,.25);border-radius:20px;padding:.3rem 1rem;margin-bottom:1.1rem
-    }
-    .wiki-banner h1{font-family:var(--font-title);font-weight:900;font-size:clamp(2rem,5.5vw,3.4rem);color:#fff;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.1}
-    .wiki-banner h1 em{font-style:normal;color:var(--yellow)}
-    .wiki-banner .tagline{color:var(--text-muted);font-size:.95rem;max-width:420px;margin:0 auto 2rem}
+    .wiki-banner .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.2);border-radius:20px;padding:.3rem .9rem;margin-bottom:1.25rem}
+    .wiki-banner h1{font-family:var(--font-title);font-weight:900;font-size:clamp(1.9rem,5vw,3.2rem);color:#fff;letter-spacing:.02em;margin-bottom:.6rem;text-shadow:0 0 60px rgba(109,79,194,.5)}
+    .wiki-banner h1 em{font-style:normal;color:var(--gold)}
+    .wiki-banner .tagline{color:var(--text-muted);font-size:.95rem;max-width:440px;margin:0 auto 2rem}
 
-    /* ── SEARCH ── */
-    .wiki-search{max-width:560px;margin:0 auto;position:relative}
-    .wiki-search input{
-      width:100%;background:var(--surface-2);
-      border:1px solid var(--border);
-      border-radius:var(--radius);color:var(--text);
-      font-family:var(--font-body);font-size:.95rem;
-      padding:.8rem 1rem .8rem 3rem;outline:none;
-      transition:border-color .2s,box-shadow .2s
-    }
-    .wiki-search input:focus{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,170,0,.15)}
+    /* SEARCH */
+    .wiki-search{max-width:580px;margin:0 auto;position:relative}
+    .wiki-search input{width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);font-family:var(--font-body);font-size:.95rem;padding:.8rem 1rem .8rem 3rem;outline:none;transition:border-color .2s,box-shadow .2s}
+    .wiki-search input:focus{border-color:var(--violet);box-shadow:0 0 0 3px rgba(109,79,194,.2)}
     .wiki-search input::placeholder{color:var(--text-dim)}
     .wiki-search .si{position:absolute;left:1.1rem;top:50%;transform:translateY(-50%);color:var(--text-dim);pointer-events:none;font-size:.9rem}
-    .wiki-search .sh{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.7rem;color:var(--text-dim);background:var(--surface-3);border:1px solid var(--border);border-radius:4px;padding:.15rem .45rem;pointer-events:none;font-family:var(--font-mono)}
+    .wiki-search .sh{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.7rem;color:var(--text-dim);background:var(--surface-3);border:1px solid var(--border);border-radius:3px;padding:.1rem .4rem;pointer-events:none}
 
-    /* ── STATS BAR ── */
+    /* STATS BAR */
     .wiki-stats-bar{background:var(--surface-2);border-bottom:1px solid var(--border)}
-    .stats-inner{display:flex;align-items:center;padding:.55rem 0;overflow-x:auto}
+    .stats-inner{display:flex;align-items:center;padding:.6rem 0;overflow-x:auto}
     .stat-item{display:flex;align-items:center;gap:.5rem;padding:0 1.25rem;border-right:1px solid var(--border);font-size:.8rem;color:var(--text-muted);white-space:nowrap}
     .stat-item:last-child{border-right:none;margin-left:auto}
-    .stat-item .num{font-weight:700;color:var(--yellow);font-family:var(--font-title)}
-    .stat-item i{color:var(--yellow);font-size:.72rem}
-    .status-dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 7px #3fb950;flex-shrink:0}
+    .stat-item .num{font-weight:700;color:var(--text)}
+    .stat-item i{color:var(--gold);font-size:.75rem}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 6px #2ecc71;flex-shrink:0}
 
-    /* ── BODY ── */
+    /* BODY */
     .wiki-body{padding:2.5rem 0 4rem}
-    .wiki-two-col{display:grid;grid-template-columns:1fr 290px;gap:1.5rem}
-    @media(max-width:920px){.wiki-two-col{grid-template-columns:1fr}}
+    .wiki-two-col{display:grid;grid-template-columns:1fr 300px;gap:1.5rem}
+    @media(max-width:900px){.wiki-two-col{grid-template-columns:1fr}}
 
-    /* ── SECTION HEADING ── */
-    .sec-head{
-      font-family:var(--font-title);font-size:.68rem;font-weight:700;
-      letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);
-      margin-bottom:1.1rem;display:flex;align-items:center;gap:.75rem
-    }
-    .sec-head::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border-y),transparent)}
+    /* SECTION HEADING */
+    .sec-head{font-family:var(--font-title);font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
+    .sec-head::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border-gold),transparent)}
 
-    /* ── CATEGORY GRID — Hypixel tile style ── */
-    .cat-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-      gap:2px;
-      background:var(--border);
-      border:1px solid var(--border);
-      border-radius:var(--radius-lg);
-      overflow:hidden
-    }
-    .cat-card{
-      background:var(--surface);
-      padding:0;
-      text-decoration:none;
-      color:var(--text);
-      display:flex;
-      flex-direction:column;
-      transition:background .15s;
-      position:relative;
-      overflow:hidden
-    }
+    /* CATEGORY GRID */
+    .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .cat-card{background:var(--surface);padding:1.4rem 1.25rem;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:.6rem;transition:background .15s}
     .cat-card:hover{background:var(--surface-2);color:var(--text);text-decoration:none}
-    .cat-card:hover .cat-arrow{opacity:1;transform:translateX(3px)}
-    /* top coloured band */
-    .cat-band{height:3px;width:100%;flex-shrink:0}
-    .cat-body{padding:1.2rem 1.25rem 1rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
-    .cat-icon-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.2rem}
-    .cat-icon{
-      width:36px;height:36px;border-radius:8px;
-      display:flex;align-items:center;justify-content:center;
-      font-size:1rem;flex-shrink:0
-    }
-    .cat-name{font-family:var(--font-title);font-size:.95rem;font-weight:700;color:#fff;letter-spacing:-.01em}
-    .cat-desc{font-size:.8rem;color:var(--text-muted);line-height:1.55}
-    .cat-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:.7rem;border-top:1px solid var(--border);font-size:.72rem;color:var(--text-dim)}
-    .cat-tags{display:flex;gap:.35rem;flex-wrap:wrap}
-    .cat-tag-pill{background:var(--surface-3);border:1px solid var(--border);border-radius:4px;padding:.08rem .4rem;font-size:.67rem;color:var(--text-dim)}
-    .cat-arrow{color:var(--yellow);font-size:.72rem;opacity:0;transition:opacity .15s,transform .2s;flex-shrink:0}
+    .cat-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+    .cat-name{font-family:var(--font-title);font-size:.85rem;font-weight:600;letter-spacing:.03em;color:#fff}
+    .cat-desc{font-size:.78rem;color:var(--text-muted);line-height:1.5}
+    .cat-count{font-size:.7rem;color:var(--text-dim);margin-top:auto;padding-top:.5rem;border-top:1px solid var(--border)}
+    .cat-count span{color:var(--teal);font-weight:600}
+    .ic-start{background:rgba(74,184,184,.15);color:var(--teal)}
+    .ic-rules{background:rgba(201,162,39,.12);color:var(--gold)}
+    .ic-claims{background:rgba(109,79,194,.15);color:var(--violet-soft)}
+    .ic-craft{background:rgba(192,57,43,.12);color:#e74c3c}
+    .ic-world{background:rgba(39,174,96,.12);color:#2ecc71}
+    .ic-staff{background:rgba(241,196,15,.12);color:#f1c40f}
+    .ic-cmd{background:rgba(52,152,219,.12);color:#3498db}
+    .no-results{display:none;text-align:center;padding:2rem;color:var(--text-muted);font-size:.9rem;grid-column:1/-1}
+    .no-results i{font-size:1.5rem;margin-bottom:.5rem;display:block;color:var(--text-dim)}
 
-    /* Per-category colours */
-    .cb-start  .cat-band{background:#3fb950}.cb-start  .cat-icon{background:rgba(63,185,80,.15);color:#3fb950}
-    .cb-rules  .cat-band{background:var(--yellow)}.cb-rules  .cat-icon{background:rgba(255,170,0,.12);color:var(--yellow)}
-    .cb-claims .cat-band{background:var(--blue-soft)}.cb-claims .cat-icon{background:rgba(56,139,253,.12);color:var(--blue-soft)}
-    .cb-craft  .cat-band{background:#f85149}.cb-craft  .cat-icon{background:rgba(248,81,73,.12);color:#f85149}
-    .cb-world  .cat-band{background:#3fb950}.cb-world  .cat-icon{background:rgba(63,185,80,.12);color:#3fb950}
-    .cb-staff  .cat-band{background:var(--yellow)}.cb-staff  .cat-icon{background:rgba(255,170,0,.12);color:var(--yellow)}
-    .cb-cmd    .cat-band{background:var(--blue-soft)}.cb-cmd    .cat-icon{background:rgba(88,166,255,.12);color:var(--blue-soft)}
-    .cb-log    .cat-band{background:#d2a679}.cb-log    .cat-icon{background:rgba(210,166,121,.1);color:#d2a679}
-    .cb-cat    .cat-band{background:#bc8cff}.cb-cat    .cat-icon{background:rgba(188,140,255,.1);color:#bc8cff}
-
-    .no-results{display:none;text-align:center;padding:2.5rem;color:var(--text-muted);font-size:.9rem;grid-column:1/-1;background:var(--surface)}
-    .no-results i{font-size:1.5rem;margin-bottom:.6rem;display:block;color:var(--text-dim)}
-
-    /* ── ANNOUNCEMENT ── */
-    .wiki-ann{
-      background:rgba(56,139,253,.08);
-      border:1px solid rgba(56,139,253,.2);
-      border-left:3px solid var(--blue-soft);
-      border-radius:var(--radius);
-      padding:.75rem 1.1rem;
-      display:flex;align-items:flex-start;gap:.8rem;
-      margin-bottom:1.5rem;font-size:.85rem;color:var(--text-muted)
-    }
-    .wiki-ann i{color:var(--blue-soft);flex-shrink:0;margin-top:.15rem}
-    .wiki-ann strong{color:var(--text)}
-    .wiki-ann a{color:var(--blue-soft)}
-
-    /* ── SIDE PANEL ── */
+    /* SIDE PANEL */
     .side-panel{display:flex;flex-direction:column;gap:1rem}
-    .side-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
-    .side-box-head{
-      background:var(--surface-2);border-bottom:1px solid var(--border);
-      padding:.65rem 1rem;
-      font-family:var(--font-title);font-size:.7rem;font-weight:700;
-      letter-spacing:.15em;text-transform:uppercase;color:var(--yellow);
-      display:flex;align-items:center;gap:.5rem
-    }
+    .side-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .side-box-head{background:var(--surface-2);border-bottom:1px solid var(--border);padding:.6rem 1rem;font-family:var(--font-title);font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem}
     .side-box-body{padding:1rem}
     .patch-list{list-style:none;display:flex;flex-direction:column;gap:.1rem}
-    .patch-list li a{display:flex;align-items:flex-start;gap:.6rem;padding:.45rem .5rem;border-radius:6px;color:var(--text-muted);font-size:.81rem;transition:background .12s,color .12s}
+    .patch-list li a{display:flex;align-items:flex-start;gap:.6rem;padding:.45rem .5rem;border-radius:4px;color:var(--text-muted);font-size:.8rem;transition:background .12s,color .12s}
     .patch-list li a:hover{background:var(--surface-2);color:var(--text);text-decoration:none}
-    .pdot{width:6px;height:6px;border-radius:50%;background:var(--yellow);flex-shrink:0;margin-top:.45rem;opacity:.8}
-    .pdate{font-size:.68rem;color:var(--text-dim);font-family:var(--font-mono);margin-top:.1rem;display:block}
-    .quick-links{display:flex;flex-direction:column;gap:.2rem}
-    .quick-link{display:flex;align-items:center;gap:.7rem;padding:.45rem .6rem;border-radius:6px;color:var(--text-muted);font-size:.83rem;transition:background .12s,color .12s}
+    .pdot{width:6px;height:6px;border-radius:50%;background:var(--violet-soft);flex-shrink:0;margin-top:.45rem}
+    .pdate{font-size:.68rem;color:var(--text-dim);font-family:var(--font-mono);margin-top:.15rem;display:block}
+    .quick-links{display:flex;flex-direction:column;gap:.25rem}
+    .quick-link{display:flex;align-items:center;gap:.7rem;padding:.5rem .6rem;border-radius:4px;color:var(--text-muted);font-size:.83rem;transition:background .12s,color .12s}
     .quick-link:hover{background:var(--surface-2);color:var(--text);text-decoration:none}
-    .quick-link i{width:15px;text-align:center;color:var(--yellow);font-size:.78rem;opacity:.85}
+    .quick-link i{width:16px;text-align:center;color:var(--teal);font-size:.8rem}
 
-    /* ── FOOTER ── */
+    /* ANNOUNCEMENT */
+    .wiki-ann{background:linear-gradient(90deg,rgba(109,79,194,.15),rgba(74,184,184,.08));border:1px solid rgba(109,79,194,.3);border-radius:var(--radius);padding:.75rem 1.1rem;display:flex;align-items:flex-start;gap:.8rem;margin-bottom:1.5rem;font-size:.85rem;color:var(--text-muted)}
+    .wiki-ann i{color:var(--violet-soft);flex-shrink:0;margin-top:.1rem}
+    .wiki-ann strong{color:var(--text)}
+
+    /* FOOTER */
     .wiki-footer{background:var(--surface);border-top:1px solid var(--border);padding:1.75rem 0}
     .wiki-footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-    .wiki-footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+    .wiki-footer-links{display:flex;gap:1.25rem}
     .wiki-footer-links a{color:var(--text-muted);font-size:.8rem}
     .wiki-footer-links a:hover{color:var(--text);text-decoration:none}
-    .copy{font-size:.78rem;color:var(--text-dim);font-family:var(--font-title)}
-    .copy strong{color:var(--yellow);font-weight:700}
+    .copy{font-size:.78rem;color:var(--text-dim)}
+    .rune{font-family:var(--font-mono);font-size:.7rem;color:var(--text-dim);opacity:.4}
   </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="{{ '/' | relative_url }}">
-      <i class="fas fa-hat-wizard brand-icon"></i>{{ site.title }}
-    </a>
+    <a class="navbar-brand" href="{{ '/' | relative_url }}"><i class="fas fa-hat-wizard" style="color:var(--gold);margin-right:.5rem;font-size:.9rem"></i>{{ site.title }}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navN"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navN">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
@@ -219,13 +131,13 @@
 <header class="wiki-banner">
   <div class="container">
     <div class="inner">
-      <div class="eyebrow"><i class="fas fa-book-open fa-sm"></i> Knowledge Base</div>
+      <div class="eyebrow"><i class="fas fa-book-sparkles fa-sm"></i> Knowledge Base</div>
       <h1>WitchCraft<em>MC</em> Wiki</h1>
       <p class="tagline">Your complete guide to spells, land claims, commands, and everything in between.</p>
       <form class="wiki-search" action="{{ '/wiki/search/' | relative_url }}" method="get" id="wikiSearchForm">
         <i class="fas fa-search si"></i>
         <input type="text" id="wikiSearch" name="q" placeholder="Search the wiki…" autocomplete="off" spellcheck="false">
-        <span class="sh">↵</span>
+        <span class="sh">↵ Search</span>
       </form>
     </div>
   </div>
@@ -236,9 +148,9 @@
     <div class="stats-inner">
       <div class="stat-item"><i class="fas fa-file-lines"></i><span class="num">10</span>&nbsp;Articles</div>
       <div class="stat-item"><i class="fas fa-users"></i>Growing community</div>
-      <div class="stat-item"><i class="fas fa-calendar-check"></i>Updated&nbsp;<span class="num">{{ site.time | date: "%b %Y" }}</span></div>
+      <div class="stat-item"><i class="fas fa-calendar"></i>Updated&nbsp;<span class="num">{{ site.time | date: "%b %Y" }}</span></div>
       <div class="stat-item">
-        <div class="status-dot"></div>&nbsp;Online&nbsp;<span style="color:var(--text-dim);font-family:var(--font-mono);font-size:.74rem;margin-left:.25rem">play.witchcraftmc.gg</span>
+        <div class="status-dot"></div>&nbsp;Server Online&nbsp;·&nbsp;<span style="color:var(--text-dim);font-family:var(--font-mono);font-size:.75rem">play.witchcraftmc.gg</span>
       </div>
     </div>
   </div>
@@ -256,171 +168,80 @@
         <div class="sec-head">Browse Categories</div>
 
         <div class="cat-grid" id="catGrid">
-
-          <a href="{{ '/wiki/getting-started' | relative_url }}" class="cat-card cb-start" data-s="getting started new player join how to beginner">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-compass"></i></div>
-                <div class="cat-name">Getting Started</div>
-              </div>
-              <div class="cat-desc">New to the server? Learn how to join, what to do first, and beginner tips.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">How to Join</span><span class="cat-tag-pill">First Steps</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/getting-started' | relative_url }}" class="cat-card" data-s="getting started new player join how to beginner">
+            <div class="cat-icon ic-start"><i class="fas fa-compass"></i></div>
+            <div class="cat-name">Getting Started</div>
+            <div class="cat-desc">New to the server? Learn how to join, what to do first, and beginner tips.</div>
+            <div class="cat-count">→ <span>How to Join</span> · First Steps · Tips</div>
           </a>
-
-          <a href="{{ '/wiki/rules' | relative_url }}" class="cat-card cb-rules" data-s="rules conduct chat pvp griefing banned punishment">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-scroll"></i></div>
-                <div class="cat-name">Rules</div>
-              </div>
-              <div class="cat-desc">The code of conduct. Read before playing to avoid accidental bans.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Conduct</span><span class="cat-tag-pill">Chat</span><span class="cat-tag-pill">PvP</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/rules' | relative_url }}" class="cat-card" data-s="rules conduct chat pvp griefing banned punishment">
+            <div class="cat-icon ic-rules"><i class="fas fa-scroll"></i></div>
+            <div class="cat-name">Rules</div>
+            <div class="cat-desc">The code of conduct. Read before playing to avoid accidental bans.</div>
+            <div class="cat-count">→ <span>Conduct</span> · Chat · PvP · Griefing</div>
           </a>
-
-          <a href="{{ '/wiki/claims' | relative_url }}" class="cat-card cb-claims" data-s="land claim protect build griefprevention territory">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-shield-halved"></i></div>
-                <div class="cat-name">Land Claims</div>
-              </div>
-              <div class="cat-desc">Protect your builds. Learn to claim land, trust players, and manage flags.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Claiming</span><span class="cat-tag-pill">Trust</span><span class="cat-tag-pill">Flags</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/claims' | relative_url }}" class="cat-card" data-s="land claim protect build griefprevention territory">
+            <div class="cat-icon ic-claims"><i class="fas fa-shield-halved"></i></div>
+            <div class="cat-name">Land Claims</div>
+            <div class="cat-desc">Protect your builds. Learn to claim land, trust players, and manage flags.</div>
+            <div class="cat-count">→ <span>Claiming</span> · Trust · Flags</div>
           </a>
-
-          <a href="{{ '/wiki/crafting' | relative_url }}" class="cat-card cb-craft" data-s="crafting recipe items custom shop economy trade">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-flask-vial"></i></div>
-                <div class="cat-name">Crafting &amp; Items</div>
-              </div>
-              <div class="cat-desc">Custom recipes, special items, vote crates, and the player economy.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Recipes</span><span class="cat-tag-pill">Crates</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/crafting' | relative_url }}" class="cat-card" data-s="crafting recipe items custom shop economy trade">
+            <div class="cat-icon ic-craft"><i class="fas fa-flask-vial"></i></div>
+            <div class="cat-name">Crafting & Items</div>
+            <div class="cat-desc">Custom recipes, special items, vote crates, and the player economy.</div>
+            <div class="cat-count">→ <span>Recipes</span> · Crates · Economy</div>
           </a>
-
-          <a href="{{ '/wiki/world-lore' | relative_url }}" class="cat-card cb-world" data-s="world lore map history biomes locations seasons reset">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-earth-americas"></i></div>
-                <div class="cat-name">World &amp; Lore</div>
-              </div>
-              <div class="cat-desc">Explore the map, understand world borders, seasons, and server history.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Map</span><span class="cat-tag-pill">Seasons</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/world-lore' | relative_url }}" class="cat-card" data-s="world lore map history biomes locations seasons reset">
+            <div class="cat-icon ic-world"><i class="fas fa-earth-americas"></i></div>
+            <div class="cat-name">World & Lore</div>
+            <div class="cat-desc">Explore the map, understand world borders, seasons, and server history.</div>
+            <div class="cat-count">→ <span>Map</span> · Locations · Seasons</div>
           </a>
-
-          <a href="{{ '/wiki/staff-ranks' | relative_url }}" class="cat-card cb-staff" data-s="staff rank helper moderator admin perks apply">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-star"></i></div>
-                <div class="cat-name">Staff &amp; Ranks</div>
-              </div>
-              <div class="cat-desc">The rank ladder, staff team structure, perks, and how to apply.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Rank Perks</span><span class="cat-tag-pill">Apply</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/staff-ranks' | relative_url }}" class="cat-card" data-s="staff rank helper moderator admin perks apply">
+            <div class="cat-icon ic-staff"><i class="fas fa-hat-wizard"></i></div>
+            <div class="cat-name">Staff & Ranks</div>
+            <div class="cat-desc">The rank ladder, staff team structure, perks, and how to apply.</div>
+            <div class="cat-count">→ <span>Rank Perks</span> · Staff · Apply</div>
           </a>
-
-          <a href="{{ '/wiki/commands' | relative_url }}" class="cat-card cb-cmd" data-s="commands plugins essentials teleport economy warp sethome">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-terminal"></i></div>
-                <div class="cat-name">Commands</div>
-              </div>
-              <div class="cat-desc">Every player command organised by plugin. The full cheat sheet.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Teleport</span><span class="cat-tag-pill">Economy</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/commands' | relative_url }}" class="cat-card" data-s="commands plugins essentials teleport economy warp sethome">
+            <div class="cat-icon ic-cmd"><i class="fas fa-terminal"></i></div>
+            <div class="cat-name">Commands</div>
+            <div class="cat-desc">Every player command organised by plugin. The full cheat sheet.</div>
+            <div class="cat-count">→ <span>Teleport</span> · Economy · Claims</div>
           </a>
-
-          <a href="{{ '/wiki/changelog' | relative_url }}" class="cat-card cb-log" data-s="changelog history patch update version season">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-clock-rotate-left"></i></div>
-                <div class="cat-name">Changelog</div>
-              </div>
-              <div class="cat-desc">Server update history, patch notes, and season milestones.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Updates</span><span class="cat-tag-pill">History</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/changelog' | relative_url }}" class="cat-card" data-s="changelog history patch update version season">
+            <div class="cat-icon" style="background:rgba(201,162,39,.12);color:var(--gold)"><i class="fas fa-clock-rotate-left"></i></div>
+            <div class="cat-name">Changelog</div>
+            <div class="cat-desc">Server update history, patch notes, and season milestones.</div>
+            <div class="cat-count">→ <span>Updates</span> · Seasons · History</div>
           </a>
-
-          <a href="{{ '/wiki/categories' | relative_url }}" class="cat-card cb-cat" data-s="categories browse index all pages list">
-            <div class="cat-band"></div>
-            <div class="cat-body">
-              <div class="cat-icon-row">
-                <div class="cat-icon"><i class="fas fa-layer-group"></i></div>
-                <div class="cat-name">All Categories</div>
-              </div>
-              <div class="cat-desc">Browse all wiki pages grouped by topic — Guides, Gameplay, Lore, and more.</div>
-              <div class="cat-footer">
-                <div class="cat-tags"><span class="cat-tag-pill">Guides</span><span class="cat-tag-pill">Reference</span></div>
-                <i class="fas fa-chevron-right cat-arrow"></i>
-              </div>
-            </div>
+          <a href="{{ '/wiki/categories' | relative_url }}" class="cat-card" data-s="categories browse index all pages list">
+            <div class="cat-icon" style="background:rgba(74,184,184,.12);color:var(--teal)"><i class="fas fa-layer-group"></i></div>
+            <div class="cat-name">Categories</div>
+            <div class="cat-desc">Browse all wiki pages grouped by topic — Guides, Gameplay, Lore, and more.</div>
+            <div class="cat-count">→ <span>Guides</span> · Gameplay · Reference</div>
           </a>
-
           <div class="no-results" id="noRes"><i class="fas fa-search"></i>No results for "<span id="noResQ"></span>"</div>
         </div>
 
         {% if content != '' %}<div style="margin-top:2.5rem">{{ content }}</div>{% endif %}
       </div>
 
-      <!-- SIDE PANEL -->
       <aside class="side-panel">
         <div class="side-box">
-          <div class="side-box-head"><i class="fas fa-server"></i>Server Info</div>
+          <div class="side-box-head"><i class="fas fa-server"></i> Server Info</div>
           <div class="side-box-body" style="display:flex;flex-direction:column;gap:.6rem">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:.82rem">
-              <span style="color:var(--text-muted)">Address</span>
-              <code style="color:var(--yellow);font-family:var(--font-mono);font-size:.76rem">play.witchcraftmc.gg</code>
-            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Address</span><code style="color:var(--teal);font-family:var(--font-mono);font-size:.78rem">play.witchcraftmc.gg</code></div>
             <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Version</span><span>1.20.x</span></div>
             <div style="display:flex;justify-content:space-between;font-size:.82rem"><span style="color:var(--text-muted)">Type</span><span>Survival SMP</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:.82rem;align-items:center">
-              <span style="color:var(--text-muted)">Status</span>
-              <div style="display:flex;align-items:center;gap:.45rem"><div class="status-dot"></div><span style="color:var(--green)">Online</span></div>
-            </div>
-            <a href="http://discord.gg/5gHJtxrMZS" target="_blank" rel="noopener" style="margin-top:.35rem;display:flex;align-items:center;justify-content:center;gap:.5rem;background:rgba(88,101,242,.9);color:#fff;text-align:center;padding:.55rem;border-radius:6px;font-size:.82rem;font-weight:600;transition:background .15s" onmouseover="this.style.background='rgba(88,101,242,1)'" onmouseout="this.style.background='rgba(88,101,242,.9)'">
-              <i class="fab fa-discord"></i>Join Discord
-            </a>
+            <div style="display:flex;justify-content:space-between;font-size:.82rem;align-items:center"><span style="color:var(--text-muted)">Status</span><div style="display:flex;align-items:center;gap:.5rem"><div class="status-dot"></div><span>Online</span></div></div>
+            <a href="#" style="margin-top:.25rem;display:block;background:var(--violet);color:#fff;text-align:center;padding:.55rem;border-radius:4px;font-size:.82rem;font-weight:600"><i class="fab fa-discord" style="margin-right:.4rem"></i>Join Discord</a>
           </div>
         </div>
 
         <div class="side-box">
-          <div class="side-box-head"><i class="fas fa-newspaper"></i>Latest Updates</div>
+          <div class="side-box-head"><i class="fas fa-newspaper"></i> Latest Updates</div>
           <div class="side-box-body" style="padding:.5rem .75rem">
             <ul class="patch-list">
               <li><a href="#"><div class="pdot"></div><div><div>Wiki launched 🎉</div><span class="pdate">Server pre-launch</span></div></a></li>
@@ -431,7 +252,7 @@
         </div>
 
         <div class="side-box">
-          <div class="side-box-head"><i class="fas fa-link"></i>Quick Links</div>
+          <div class="side-box-head"><i class="fas fa-link"></i> Quick Links</div>
           <div class="side-box-body" style="padding:.5rem .75rem">
             <div class="quick-links">
               <a href="{{ '/wiki/getting-started' | relative_url }}" class="quick-link"><i class="fas fa-play"></i>New Player Guide</a>
@@ -443,7 +264,7 @@
               <a href="{{ '/wiki/search' | relative_url }}" class="quick-link"><i class="fas fa-magnifying-glass"></i>Search</a>
               <a href="http://discord.gg/5gHJtxrMZS" class="quick-link" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Discord Server</a>
               <a href="#" class="quick-link"><i class="fas fa-store"></i>Store</a>
-              <a href="#" class="quick-link"><i class="fas fa-vote-yea"></i>Vote for us</a>
+              <a href="#" class="quick-link"><i class="fas fa-vote-yea"></i>Vote for Us</a>
             </div>
           </div>
         </div>
@@ -455,7 +276,10 @@
 <footer class="wiki-footer">
   <div class="container">
     <div class="wiki-footer-inner">
-      <div class="copy">© {{ site.time | date: "%Y" }} <strong>WitchCraftMC</strong> · All rights reserved</div>
+      <div>
+        <div class="copy">© {{ site.time | date: "%Y" }} WitchCraftMC · All rights reserved</div>
+        <div class="rune" style="margin-top:.25rem">ᚹᛁᛏᚳᚻᚳᚱᚪᚠᛏ</div>
+      </div>
       <div class="wiki-footer-links">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
@@ -470,33 +294,11 @@
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script>
-  // Live filter
-  var input = document.getElementById('wikiSearch');
-  var grid  = document.getElementById('catGrid');
-  var noRes = document.getElementById('noRes');
-  var noResQ= document.getElementById('noResQ');
-  if(input && grid){
-    input.addEventListener('input', function(){
-      var q = this.value.trim().toLowerCase();
-      var cards = grid.querySelectorAll('.cat-card');
-      var found = 0;
-      cards.forEach(function(c){
-        var hay = (c.dataset.s||'') + ' ' + c.textContent.toLowerCase();
-        var show = !q || hay.includes(q);
-        c.style.display = show ? '' : 'none';
-        if(show) found++;
-      });
-      if(noRes){ noRes.style.display = found ? 'none' : 'block'; if(noResQ) noResQ.textContent = q; }
-    });
-  }
-
-  // Submit form on Enter
-  var form = document.getElementById('wikiSearchForm');
-  if(input && form){
-    input.addEventListener('keydown', function(e){
-      if(e.key === 'Enter'){ e.preventDefault(); form.submit(); }
-    });
-  }
+  const el=document.getElementById('wikiSearch'),cards=document.querySelectorAll('.cat-card'),noRes=document.getElementById('noRes'),noResQ=document.getElementById('noResQ'),form=document.getElementById('wikiSearchForm');
+  // Live filter on category cards
+  el.addEventListener('input',()=>{const q=el.value.trim().toLowerCase();let v=0;cards.forEach(c=>{const m=!q||(c.dataset.s+' '+c.querySelector('.cat-name').textContent+' '+c.querySelector('.cat-desc').textContent).toLowerCase().includes(q);c.style.display=m?'':'none';if(m)v++;});noRes.style.display=(v===0&&q)?'block':'none';noResQ.textContent=q;});
+  // On submit, navigate to the full search page
+  form.addEventListener('submit', e => { if (!el.value.trim()) e.preventDefault(); });
 </script>
 </body>
 </html>
