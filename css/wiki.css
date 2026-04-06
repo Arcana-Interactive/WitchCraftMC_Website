@@ -1403,6 +1403,12 @@ a:hover{
 .mc-fmt-e{color:#FFFF55;text-shadow:.125em .125em 0 #3F3F15}
 .mc-fmt-f{color:#FFF;text-shadow:.125em .125em 0 #3E3E3E}
 */
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('/css/minecraftia/Minecraftia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .format-0 {
 	color: #000;
 	text-shadow: 0.125em 0.125em 0 #000;
@@ -1489,9 +1495,7 @@ a:hover{
 	background-color: #100010;
 	background-color: rgba(16, 0, 16, 0.94);
 	padding: 0.375em;
-	font-family: 'MinecraftiaRegular';
-      font-weight: normal;
-      font-style: normal;
+	font-family: 'Minecraftia';
 	font-size: 16px;
 	word-spacing: 4px;
 	white-space: nowrap;
