@@ -1354,7 +1354,7 @@ a:hover{
 /*****************************
 *          MINETIPS          *
 ******************************/
-#minetip-tooltip {
+/*#minetip-tooltip {
       font-family: 'MinecraftiaRegular';
       font-weight: normal;
       font-style: normal;
@@ -1369,7 +1369,6 @@ a:hover{
       color: #FBFBFB;
       text-shadow: .125em .125em 0 #3E3E3E;
 }
-/* Outer dark border strips */
 #minetip-tooltip::before {
   content:'';
   position:absolute;
@@ -1377,7 +1376,6 @@ a:hover{
   border:.15em solid rgba(16,0,16,.94);
   border-style:none solid;
 }
-/* Inner purple gradient border */
 #minetip-tooltip::after {
   content:'';
   position:absolute;
@@ -1388,7 +1386,6 @@ a:hover{
 .minetip-title       { display:block; }
 .minetip-description { display:block; margin-top:.3em; color:#AAAAAA; text-shadow:.125em .125em 0 #2A2A2A; }
 
-/* Minecraft colour codes */
 .mc-fmt-0{color:#000;text-shadow:.125em .125em 0 #000}
 .mc-fmt-1{color:#0000AA;text-shadow:.125em .125em 0 #00002A}
 .mc-fmt-2{color:#00AA00;text-shadow:.125em .125em 0 #002A00}
@@ -1409,6 +1406,122 @@ a:hover{
 .mc-fmt-o{font-style:italic}
 .mc-fmt-n{text-decoration:underline}
 .mc-fmt-m{text-decoration:line-through}
+*/
+.format-0 {
+	color: #000;
+	text-shadow: 0.125em 0.125em 0 #000;
+}
+.format-1 {
+	color: #0000A8;
+	text-shadow: 0.125em 0.125em 0 #00002A;
+}
+.format-2 {
+	color: #00A800;
+	text-shadow: 0.125em 0.125em 0 #002A00;
+}
+.format-3 {
+	color: #00A8A8;
+	text-shadow: 0.125em 0.125em 0 #002A2A;
+}
+.format-4 {
+	color: #A80000;
+	text-shadow: 0.125em 0.125em 0 #2A0000;
+}
+.format-5 {
+	color: #A800A8;
+	text-shadow: 0.125em 0.125em 0 #2A002A;
+}
+.format-6 {
+	color: #FBA800;
+	text-shadow: 0.125em 0.125em 0 #3E2A00;
+}
+.format-7 {
+	color: #A8A8A8;
+	text-shadow: 0.125em 0.125em 0 #2A2A2A;
+}
+.format-8 {
+	color: #545454;
+	text-shadow: 0.125em 0.125em 0 #151515;
+}
+.format-9 {
+	color: #5454FB;
+	text-shadow: 0.125em 0.125em 0 #15153E;
+}
+.format-a {
+	color: #54FB54;
+	text-shadow: 0.125em 0.125em 0 #153E15;
+}
+.format-b {
+	color: #54FBFB;
+	text-shadow: 0.125em 0.125em 0 #153E3E;
+}
+.format-c {
+	color: #FB5454;
+	text-shadow: 0.125em 0.125em 0 #3E1515;
+}
+.format-d {
+	color: #FB54FB;
+	text-shadow: 0.125em 0.125em 0 #3E153E;
+}
+.format-e {
+	color: #FBFB54;
+	text-shadow: 0.125em 0.125em 0 #3E3E15;
+}
+.format-f,
+#minetip-tooltip {
+	color: #FBFBFB;
+	text-shadow: 0.125em 0.125em 0 #3E3E3E;
+}
+
+/* Styling for minecraft style tooltip */
+#minetip-tooltip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #100010;
+	background-color: rgba(16, 0, 16, 0.94);
+	padding: 0.375em;
+	font-family: 'MinecraftiaRegular', sans-serif;
+      font-weight: normal;
+      font-style: normal;
+	font-size: 16px;
+	word-spacing: 4px;
+	white-space: nowrap;
+	line-height: 1.25em;
+	margin: 0.125em 0.25em;
+	pointer-events: none;
+	z-index: 9999;
+}
+
+#minetip-tooltip::before {
+	content: "";
+	position: absolute;
+	top: 0.125em;
+	right: -0.125em;
+	bottom: 0.125em;
+	left: -0.125em;
+	border: 0.15em solid #100010;
+	border-style: none solid;
+	border-color: rgba(16, 0, 16, 0.94);
+}
+
+#minetip-tooltip::after {
+	content: "";
+	position: absolute;
+	top: 0.125em;
+	right: 0;
+	bottom: 0.125em;
+	left: 0;
+	border: 0.125em solid #2D0A63;
+	border-image: -webkit-linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
+	border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
+}
+
+#minetip-tooltip > .description,
+#minetip-tooltip > .minetip-description {
+	display: block;
+	margin-top: 0.25em;
+}
 
 /* ════════════════════════════════════════
    CRAFTING RECIPE WIDGET
