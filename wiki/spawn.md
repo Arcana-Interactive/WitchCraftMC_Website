@@ -21,8 +21,8 @@ history:
 <div class="infobox">
   <div class="infobox-title">Spawn</div>
     <div class="infobox-img"><img src="/img/icons/spawn.png" alt="The Spawn Island"></div>
-  <div class="infobox-section">Creatures</div>
-    <div class="infobox-column"><span class="label">NPCS</span></div>
+  <div class="infobox-section">NPCs</div>
+    <!--<div class="infobox-column"><span class="label">NPCS</span></div>-->
     <div class="infobox-column">
       <span class="value"><a href="{{ '/wiki/npc/Auctioneer' | relative_url }}" class="quick-link">Auctioneer</a></span>
       <span class="value"><a href="{{ '/wiki/npc/Blacksmith' | relative_url }}" class="quick-link">Blacksmith</a></span>

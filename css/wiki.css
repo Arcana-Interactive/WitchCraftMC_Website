@@ -576,16 +576,13 @@ a:hover {
 ******************************/
 
 .side-panel {
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-      gap:1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1rem;
 }
 
 .side-box {
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
       background:var(--surface);
       border:1px solid var(--border);
       border-radius:var(--radius);
