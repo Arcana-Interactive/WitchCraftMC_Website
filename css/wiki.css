@@ -947,11 +947,11 @@ a:hover {
 }
 
 /* Wiki-internal links get a subtle arrow indicator */
-.wiki-content a[href^="/wiki/"]:not(.no-arrow)::after {
-      content:' ↗';
-      font-size:.65em;
-      opacity:.55;
-      vertical-align:super
+.wiki-content a:not([href^="/wiki/"]):not(.no-arrow)::after {
+  content: ' ↗';
+  font-size: .65em;
+  opacity: .55;
+  vertical-align: super;
 }
 
 /* Article content styles */
@@ -1152,7 +1152,7 @@ a:hover {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: .65rem 2rem;
+      padding:.45rem .85rem;
       border-bottom: 1px solid var(--border);
       gap: .5rem
 }
@@ -1195,7 +1195,7 @@ a:hover {
 
 .infobox-row .label {
       color:var(--text);
-      font-size:.8rem;
+      font-size:.9rem;
       flex-shrink:0;
       padding-top:.05rem
 }
@@ -1220,7 +1220,7 @@ a:hover {
 
 .infobox-column .label {
       color:var(--text);
-      font-size:.8rem;
+      font-size:.9rem;
       flex-shrink:0;
       padding-top:.05rem
 }
@@ -1231,6 +1231,22 @@ a:hover {
       font-weight:600;
       max-width:160px;
       word-break:break-word
+}
+
+.info-link {
+      display:flex;
+      align-items:center;
+      gap:.7rem;
+      padding:.5rem .6rem;
+      color:var(--text-muted);
+      font-size:.83rem;
+      transition:background .12s,color .12s
+}
+
+.info-link:hover {
+      background:var(--surface-2);
+      color:var(--text);
+      text-decoration:none
 }
 
 
