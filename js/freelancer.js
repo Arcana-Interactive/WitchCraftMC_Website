@@ -8,9 +8,13 @@
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        var target = $anchor.attr('href');
+        var $target = $(target);
+        if ($target.length) {
+            $('html, body').stop(true, true).animate({
+                scrollTop: $target.offset().top
+            }, 1500, 'easeInOutExpo');
+        }
         event.preventDefault();
     });
 });
@@ -33,5 +37,24 @@ $('body').scrollspy({
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
+    if ($('.navbar-toggle').is(':visible')) {
+        $('#bs-example-navbar-collapse-1').collapse('hide');
+    }
+});
+
+// Fix mobile hamburger toggle - take over from Bootstrap to ensure open/close both work
+$(document).ready(function() {
+    $('.navbar-toggle').on('click', function(e) {
+        // Stop Bootstrap's document-delegated handler from double-firing
+        e.stopPropagation();
+        var $navCollapse = $('#bs-example-navbar-collapse-1');
+        $navCollapse.collapse('toggle');
+    });
+
+    // Close menu when tapping outside the navbar on mobile
+    $(document).on('click touchstart', function(e) {
+        if (!$(e.target).closest('.navbar').length) {
+            $('#bs-example-navbar-collapse-1').collapse('hide');
+        }
+    });
 });

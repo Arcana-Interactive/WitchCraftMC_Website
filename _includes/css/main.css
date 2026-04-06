@@ -591,3 +591,63 @@ footer .footer-below {
 subtitle {
     color: #b1b1b1;
 }
+
+/* =============================================
+   Mobile / Responsive Fixes
+   ============================================= */
+
+/* Fix modal padding and scrollability on small screens */
+@media (max-width: 767px) {
+    .portfolio-modal .modal-content {
+        padding: 60px 0 30px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .portfolio-modal .modal-content h2 {
+        font-size: 1.8em;
+    }
+
+    /* Scale down close button so it doesn't overlap content */
+    .portfolio-modal .close-modal {
+        top: 10px;
+        right: 10px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .portfolio-modal .close-modal .lr {
+        height: 44px;
+        margin-left: 21px;
+    }
+
+    .portfolio-modal .close-modal .lr .rl {
+        height: 44px;
+    }
+
+    /* Ensure modal itself can scroll on iOS */
+    .portfolio-modal {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Tighten up navbar items on mobile so they don't crowd */
+    .navbar .nav-spaces {
+        margin: 4px 0;
+    }
+
+    /* Keep IP button readable on small screens */
+    .ip-button {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .ip-text {
+        font-size: 13px;
+    }
+
+    /* Player counter fits on one line */
+    p.small {
+        font-size: 13px;
+    }
+}
