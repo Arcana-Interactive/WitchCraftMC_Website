@@ -16,7 +16,7 @@ see_also:
 
 ## The Worlds of WitchCraftMC
 
-On WitchCraftMC, appart from the [**Spawn**](/wiki/Spawn), there are 5 available worlds that players can play on. All worlds except the end can be reached through the use of ***`/rtp`***. The End on the other hand must be reached through a stronghold, *though there is a rumour that one existed in the Spawn once.*
+On WitchCraftMC, appart from the [**Spawn**](/wiki/spawn), there are 5 available worlds that players can play on. All worlds except the end can be reached through the use of ***`/rtp`***. The End on the other hand must be reached through a stronghold, *though there is a rumour that one existed in the Spawn once.*
 
 The resource worlds are unique in that they ocassionally are reset. Building is not encouraged in these worlds, but are excellent for resource gathering.
 
