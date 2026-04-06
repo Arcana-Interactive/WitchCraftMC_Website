@@ -114,8 +114,8 @@ a:hover {
 .wiki-banner {
       background:var(--surface);
       border-bottom:1px solid var(--border);
-      padding:3.5rem 0 2.5rem;
-      margin-top:56px;
+      padding:calc(3.5rem + 56px) 0 2.5rem;
+      margin-top:0;
       position:relative;
       overflow:hidden
 }
