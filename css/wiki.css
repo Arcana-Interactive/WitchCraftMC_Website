@@ -576,10 +576,9 @@ a:hover {
 ******************************/
 
 .side-panel {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 1rem;
+      display:flex;
+      justify-content:flex-end;
+      gap:1rem;
 }
 
 .side-box {
