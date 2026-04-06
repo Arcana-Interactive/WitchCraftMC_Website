@@ -578,6 +578,7 @@ a:hover {
 .side-panel {
       display:flex;
       flex-direction:column;
+      justify-content:flex-end;
       gap:1rem;
 }
 
@@ -1113,6 +1114,9 @@ a:hover {
 .infobox {
       float:right;
       clear:right;
+      display: flex;
+      flex-direction:column;
+      justify-content:center;
       margin:0 0 1.5rem 1.5rem;
       width:270px;
       background:var(--surface-2);
@@ -1142,13 +1146,13 @@ a:hover {
 }
 
 .infobox-img {
-    background: var(--bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .65rem 2rem;
-    border-bottom: 1px solid var(--border);
-    gap: .5rem
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .65rem 2rem;
+      border-bottom: 1px solid var(--border);
+      gap: .5rem
 }
 
 .infobox-img img {
