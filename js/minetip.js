@@ -13,6 +13,9 @@
 ( function () {
   'use strict';
 
+  /* Skip entirely on touch-primary devices — no hover means no minetips */
+  if ( window.matchMedia( '(hover: none)' ).matches ) return;
+
   /* ── helpers ───────────────────────────────────────────────────── */
   var ESC = { '\\&': '&#38;', '<': '&#60;', '>': '&#62;' };
 
