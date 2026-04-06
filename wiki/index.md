@@ -1,6 +1,6 @@
 ---
 layout: wiki
 title: Wiki
-description: "The complete knowledge base for WitchCraftMC players."
+description: "A comprehensive documentation for the WitchCraftMC server."
 permalink: /wiki/
 ---
