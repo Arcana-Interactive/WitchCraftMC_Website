@@ -268,24 +268,7 @@
   </div>
 </main>
 
-<footer class="wiki-footer">
-  <div class="container">
-    <div class="wiki-footer-inner">
-      <div class="wiki-footer-links">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
-        <a href="{{ '/wiki/categories/' | relative_url }}">Categories</a>
-        <a href="{{ '/wiki/changelog/' | relative_url }}">Changelog</a>
-        <a href="http://discord.gg/5gHJtxrMZS" target="_blank" rel="noopener">Discord</a>
-        <a href="#">Store</a>
-      </div>
-      <div>
-        <div class="copy">© {{ site.time | date: "%Y" }} WitchCraftMC · All rights reserved</div>
-        <div class="rune">ᚹᛁᛏᚳᚻᚳᚱᚪᚠᛏ</div>
-      </div>
-    </div>
-  </div>
-</footer>
+{% include wiki-footer.html %}
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script>

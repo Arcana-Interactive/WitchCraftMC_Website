@@ -252,10 +252,10 @@
     }
 
     /* FOOTER */
-    .wiki-footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 0}
-    .wiki-footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-    .wiki-footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
-    .wiki-footer-links a{color:var(--text-muted);font-size:.8rem}
+    .wiki-footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5rem 0}
+    .wiki-footer-inner{display:flex;flex-direction:column;align-items:center;gap:1.25rem;text-align:center}
+    .wiki-footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.5rem}
+    .wiki-footer-links a{color:var(--text-muted);font-size:.82rem}
     .wiki-footer-links a:hover{color:var(--text);text-decoration:none}
     .copy{font-size:.78rem;color:var(--text-dim)}
     .rune{font-family:var(--font-mono);font-size:.7rem;color:var(--text-dim);opacity:.4}
@@ -267,7 +267,6 @@
     }
     /* Footer: stack on small screens */
     @media(max-width:540px){
-      .wiki-footer-inner{flex-direction:column;align-items:flex-start}
       .wiki-footer-links{gap:.75rem}
     }
     /* Crafting recipe: ensure it fits narrow screens */
@@ -713,24 +712,7 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="wiki-footer">
-  <div class="container">
-    <div class="wiki-footer-inner">
-      <div>
-        <div class="copy">© {{ site.time | date: "%Y" }} WitchCraftMC · All rights reserved</div>
-        <div class="rune" style="margin-top:.25rem">ᚹᛁᛏᚳᚻᚳᚱᚪᚠᛏ</div>
-      </div>
-      <div class="wiki-footer-links">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
-        <a href="{{ '/wiki/categories/' | relative_url }}">Categories</a>
-        <a href="{{ '/wiki/changelog/' | relative_url }}">Changelog</a>
-        <a href="http://discord.gg/5gHJtxrMZS" target="_blank" rel="noopener">Discord</a>
-        <a href="#">Store</a>
-      </div>
-    </div>
-  </div>
-</footer>
+{% include wiki-footer.html %}
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script src="{{ '/js/minetip.js' | relative_url }}"></script>
