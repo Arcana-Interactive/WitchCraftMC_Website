@@ -1,7 +1,5 @@
 # ============================================================
 #  WitchCraftMC Wiki — README & Setup Guide
-#  Drop the files from this package into your existing
-#  Jekyll repo (Freelancer theme fork) as described below.
 # ============================================================
 
 ## 📁 Files in this package
@@ -80,12 +78,11 @@ The wiki layouts reference:
 
 ```
 /css/bootstrap.min.css
-/css/freelancer.min.css
+/css/style.min.css
 /js/bootstrap.bundle.min.js
 ```
 
-These match standard Freelancer theme paths. If your repo uses different
-paths (e.g., `/assets/css/...`), do a find-and-replace in both layout files.
+If your repo uses different paths (e.g., `/assets/css/...`), do a find-and-replace in both layout files.
 
 ---
 

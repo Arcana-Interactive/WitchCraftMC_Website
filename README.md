@@ -1,32 +1,34 @@
-Freelancer Jekyll theme  
-=========================
+# WitchCraftMC Website
 
-Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstrap.com/template-overviews/freelancer/)
+The official website for **WitchCraftMC** — a Minecraft server with a witchcraft and magic theme.
 
-## How to use
- - Place a image in `/img/portfolio/`
- - Replace `your-email@domain.com` in `_config.yml` with your email address. Refer to [formspree](http://formspree.io/) for more information.
- - Create posts to display your projects. Use the follow as an example:
-```txt
----
-layout: default
-modal-id: 1
-date: 2020-01-18
-img: cabin.png
-alt: image-alt
-project-date: January 2020
-client: The Client
-category: Web Development
-description: The description of the project
+## About
 
----
+This is the public-facing website for WitchCraftMC, built with [Jekyll](http://jekyllrb.com/) and hosted via GitHub Pages. It includes a landing page, server info, and a player wiki.
+
+## Structure
+
+```
+_layouts/       ← Page layouts
+_includes/      ← Reusable partials (nav, footer, etc.)
+_posts/         ← Portfolio/project posts
+wiki/           ← Player wiki pages
+img/            ← Images and assets
+css/            ← Stylesheets
+js/             ← JavaScript
 ```
 
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.com/freelancer-theme)
+## Wiki
 
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/jeromelachaud/freelancer-theme/master/screenshot.png)
+The wiki lives at `/wiki/` and covers getting started, rules, claims, crafting, worlds, staff ranks, and commands. See `wiki/README.md` for setup details.
 
----------
-For more details, read the [documentation](http://jekyllrb.com/)
+## Local Development
+
+1. Install [Jekyll](https://jekyllrb.com/docs/installation/)
+2. Run `bundle install`
+3. Run `bundle exec jekyll serve`
+4. Visit `http://localhost:4000`
+
+## Configuration
+
+Edit `_config.yml` to update the site title, description, email, and other settings.
