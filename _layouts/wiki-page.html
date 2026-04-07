@@ -192,16 +192,21 @@
         {% if section.links %}
           <div class="infobox-column">
             {% for item in section.links %}
-              {% assign _icon_sz = item.icon_size | default: section.icon_size | default: 24 %}
+              {% assign _icon_sz   = item.icon_size | default: section.icon_size | default: 24 %}
+              {% comment %} icon_cell: fixed slot width shared by every item in this section.
+                           Keeps text labels horizontally aligned even when individual
+                           icon_size values differ. Defaults to each icon's own size
+                           (current behaviour) when not set on the section. {% endcomment %}
+              {% assign _icon_cell = section.icon_cell | default: _icon_sz %}
               {% if item.link %}
                 <span class="value">
                   <a href="{{ item.link | relative_url }}" class="infobox-link">
-                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
+                    {% if item.icon %}<span style="display:inline-flex;align-items:center;justify-content:center;width:{{ _icon_cell }}px;height:{{ _icon_cell }}px;flex-shrink:0"><img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;display:block"></span>{% endif %}{{ item.text }}
                   </a>
                 </span>
               {% else %}
                 <span class="value">
-                  {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
+                  {% if item.icon %}<span style="display:inline-flex;align-items:center;justify-content:center;width:{{ _icon_cell }}px;height:{{ _icon_cell }}px;flex-shrink:0"><img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;display:block"></span>{% endif %}{{ item.text }}
                 </span>
               {% endif %}
             {% endfor %}
