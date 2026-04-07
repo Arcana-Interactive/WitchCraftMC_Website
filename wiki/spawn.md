@@ -26,7 +26,7 @@ Infobox:
   Sections:
     - heading: "NPCs"
       links:
-        - text: "Auctioneer"
+        - text: "test"
           link: "/wiki/npc/Auctioneer"
           icon: "/img/icons/npc/auctioneer.png"
         - text: "Blacksmith"
