@@ -28,10 +28,10 @@ Infobox:
       links:
         - text: "Auctioneer"
           link: "/wiki/npc/Auctioneer"
-          # icon: "/img/icons/npc/auctioneer.png"
+          icon: "/img/icons/npc/auctioneer.png"
         - text: "Blacksmith"
           link: "/wiki/npc/Blacksmith"
-          # icon: "/img/icons/npc/blacksmith.png"
+          icon: "/img/icons/blacksmith.png"
         - text: "Furniture Merchant"
           link: "/wiki/npc/Furniture Merchant"
           # icon: "/img/icons/npc/furniture_merchant.png"
