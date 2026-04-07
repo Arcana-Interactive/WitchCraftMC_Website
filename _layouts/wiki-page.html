@@ -192,12 +192,12 @@
               {% if item.link %}
                 <span class="value">
                   <a href="{{ item.link | relative_url }}" class="infobox-link">
-                    {% if item.icon %}<img src="{{ item.icon }}" alt="" class="infobox-link-icon">{% endif %}{{ item.text }}
+                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ section.icon_size | default: 24 }}px;height:{{ section.icon_size | default: 24 }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
                   </a>
                 </span>
               {% else %}
                 <span class="value">
-                  {% if item.icon %}<img src="{{ item.icon }}" alt="" class="infobox-link-icon">{% endif %}{{ item.text }}
+                  {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ section.icon_size | default: 24 }}px;height:{{ section.icon_size | default: 24 }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
                 </span>
               {% endif %}
             {% endfor %}

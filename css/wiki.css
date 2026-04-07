@@ -1335,15 +1335,6 @@ a:hover {
       text-decoration:none!important
 }
 
-.infobox-link-icon {
-      width:24px;
-      height:24px;
-      image-rendering:pixelated;
-      image-rendering:crisp-edges;
-      flex-shrink:0;
-      vertical-align:middle
-}
-
 /* Inline icon next to any text — use class .wiki-icon in content */
 .wiki-icon {
       width:16px;
