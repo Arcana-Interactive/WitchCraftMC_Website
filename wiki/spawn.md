@@ -28,7 +28,7 @@ Infobox:
       links:
         - text: "Auctioneer"
           link: "/wiki/npc/Auctioneer"
-          icon: "/img/icons/npc/AuctionHouse.png"
+          icon: "/img/icons/npc/auctioneer.png"
         - text: "Blacksmith"
           link: "/wiki/npc/Blacksmith"
           icon: "/img/icons/Blacksmith.png"
