@@ -190,27 +190,36 @@
 
         {% comment %} ── Link list (with optional icons) ── {% endcomment %}
         {% if section.links %}
+          {% assign _section_sz = section.icon_size | default: 24 %}
+          {% assign _icon_slot  = _section_sz | plus: 8 %}
           <div class="infobox-column">
             {% for item in section.links %}
-              {% assign _icon_sz = item.icon_size | default: section.icon_size | default: 24 %}
-              {% comment %} icon_offset_x / icon_offset_y: nudge the icon by N pixels relative
-                           to its normal position. Uses CSS transform so it never disturbs
-                           surrounding layout, works identically on all screen sizes / phones. {% endcomment %}
+              {% assign _icon_sz = item.icon_size | default: _section_sz %}
+              {% comment %}
+                icon_offset_x / icon_offset_y: nudge the icon N pixels from its centred position.
+                The icon is absolutely positioned so changing its size never affects the row
+                height or moves the text — text always sits at the same vertical position
+                regardless of individual icon sizes.
+              {% endcomment %}
               {% assign _ox = item.icon_offset_x | default: 0 %}
               {% assign _oy = item.icon_offset_y | default: 0 %}
-              {% assign _transform = "none" %}
-              {% if _ox != 0 or _oy != 0 %}
-                {% capture _transform %}translate({{ _ox }}px, {{ _oy }}px){% endcapture %}
+              {% capture _img_style %}position:absolute;left:0;top:50%;width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;transform:translateY(-50%) translate({{ _ox }}px,{{ _oy }}px){% endcapture %}
+              {% if item.icon %}
+                {% assign _link_style = "position:relative;padding-left:" | append: _icon_slot | append: "px" %}
+              {% else %}
+                {% assign _link_style = "" %}
               {% endif %}
               {% if item.link %}
                 <span class="value">
-                  <a href="{{ item.link | relative_url }}" class="infobox-link">
-                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle;transform:{{ _transform }}">{% endif %}{{ item.text }}
+                  <a href="{{ item.link | relative_url }}" class="infobox-link" style="{{ _link_style }}">
+                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="{{ _img_style }}">{% endif %}{{ item.text }}
                   </a>
                 </span>
               {% else %}
                 <span class="value">
-                  {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle;transform:{{ _transform }}">{% endif %}{{ item.text }}
+                  <span class="infobox-link" style="{{ _link_style }}">
+                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="{{ _img_style }}">{% endif %}{{ item.text }}
+                  </span>
                 </span>
               {% endif %}
             {% endfor %}
