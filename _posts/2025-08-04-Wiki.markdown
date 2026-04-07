@@ -1,7 +1,7 @@
 ---
 layout: default
 caption: Wiki
-redirect: https://www.witchcraftmc.com/wiki/
+redirect: /wiki/
 img: game.png
 alt: image-alt
 ---
