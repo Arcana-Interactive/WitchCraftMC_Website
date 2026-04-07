@@ -31,7 +31,7 @@ Infobox:
           icon: "/img/icons/npc/auctioneer.png"
         - text: "Blacksmith"
           link: "/wiki/npc/Blacksmith"
-          icon: "/img/icons/Blacksmith.png"
+          icon: "/img/icons/npc/Blacksmith.png"
         - text: "Furniture Merchant"
           link: "/wiki/npc/Furniture Merchant"
           icon: "/img/icons/npc/Steven_Chairman.png"
