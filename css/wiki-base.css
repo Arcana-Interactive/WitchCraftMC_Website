@@ -1,0 +1,174 @@
+:root {
+      /* ── Background & Surface ── */
+      --bg: #161222;
+      --surface: #1e1832;
+      --surface-2: #262040;
+      --surface-3: #2e274d;
+
+      /* ── Borders ── */
+      --border: rgba(180,160,220,.1);
+      --border-gold: rgba(var(--gold-rgb),.3);
+
+      /* ── Text ── */
+      --text: #ddd8e8;
+      --text-muted: #9990b3;
+      --text-dim: #6e6590;
+
+      /* ── Accent colours ── */
+      --gold: #c9a227;
+      --gold-bright: #f0c93a;
+      --violet: #9b7ed8;
+      --violet-soft: #b9a4e8;
+      --teal: #8fb8d4;
+
+      /* ── RGB helpers (for rgba() usage) ──
+         ⚠  Keep these in sync with the accent colours above.
+            If you change --gold, also update --gold-rgb, etc. */
+      --violet-rgb: 155,126,216;
+      --teal-rgb: 143,184,212;
+      --gold-rgb: 201,162,39;
+
+      /* ── Fonts ── */
+      --font-body: 'Nunito',sans-serif;
+      --font-title: 'Cinzel',serif;
+      --font-mono: 'JetBrains Mono',monospace;
+      --radius: 6px;
+
+      /* ── Minecraft rarity colours ── */
+      --rarity-common: #aaaaaa;
+      --rarity-uncommon: #55ff55;
+      --rarity-rare: #5555ff;
+      --rarity-epic: #aa00aa;
+      --rarity-legendary: #ffaa00;
+      --rarity-mythic: #ff55ff;
+      --rarity-divine: #55ffff;
+      --rarity-special: #ff5555;
+}
+
+*,
+
+*::before,
+
+*::after {
+      box-sizing:border-box;
+      margin:0;
+      padding:0
+}
+
+body {
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--font-body);
+      font-size:15px;
+      line-height:1.6
+}
+
+a {
+      color:var(--teal);
+      text-decoration:none
+}
+
+a:hover {
+      color:#a8cde2;
+      text-decoration:underline
+}
+
+/*****************************
+*     SHARED UTILITY CLASS   *
+******************************/
+
+/* "Cinzel uppercase gold" heading — used by .sec-head, .side-box-head,
+   .sb-section-head, .see-also-head, .wh-label, .infobox-section, etc.
+   Each component adds its own font-size, spacing, and layout. */
+.wiki-label {
+      font-family:var(--font-title);
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--gold)
+}
+
+/*****************************
+*          NAVBAR            *
+******************************/
+
+#mainNav {
+      background: var(--surface)!important;
+      border-bottom: 1px solid var(--border);
+      padding: .6rem 0
+}
+
+#mainNav .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+}
+
+.navbar-brand {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text)!important;
+      letter-spacing: .04em
+}
+
+.nav-link {
+      font-weight:600;
+      font-size:.85rem;
+      color:var(--text-muted)!important;
+      padding:.35rem .8rem!important;
+      border-radius:4px;
+      transition:color .15s,background .15s
+}
+
+.nav-link:hover,
+
+.nav-link.active {
+      color:var(--text)!important;
+      background:var(--surface-3)
+}
+
+.nav-link.wiki-active {
+      color:var(--gold)!important;
+      background:rgba(var(--gold-rgb),.1)
+}
+
+/* FOOTER */
+.wiki-footer {
+      background:var(--surface);
+      border-top:1px solid var(--border);
+      padding:2.5rem 0
+}
+
+.wiki-footer-inner {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1.25rem;
+      text-align:center
+}
+.wiki-footer-links {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:.5rem 1.5rem
+}
+.wiki-footer-links a {
+      color:var(--text-muted);
+      font-size:.82rem
+}
+.wiki-footer-links a:hover {
+      color:var(--text);
+      text-decoration:none
+}
+
+.copy {
+      font-size:.78rem;
+      color:var(--text-dim)
+}
+
+/* Footer: stack on small screens */
+@media (max-width:540px) {
+      .wiki-footer-links{
+            gap:.75rem
+      }
+}

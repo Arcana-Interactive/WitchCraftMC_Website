@@ -1,0 +1,230 @@
+/*****************************
+*      CRAFTING RECIPE UI    *
+*                            *
+*  To use your own resource  *
+*  pack textures, drop PNGs  *
+*  into /img/ui/ and update  *
+*  the background-image      *
+*  paths below.              *
+*                            *
+*  Textures needed:          *
+*  ┌──────────────────────┐  *
+*  │ crafting_bg.png      │  *
+*  │   outer container    │  *
+*  │                      │  *
+*  │ crafting_grid.png    │  *
+*  │   3×3 grid area      │  *
+*  │                      │  *
+*  │ inv_slot.png         │  *
+*  │   single slot bg     │  *
+*  │                      │  *
+*  │ inv_slot_item.png    │  *
+*  │   inner item cell    │  *
+*  │                      │  *
+*  │ crafting_arrow.png   │  *
+*  │   result arrow       │  *
+*  └──────────────────────┘  *
+******************************/
+
+.mc-recipe {
+  display: inline-flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .85rem 1.1rem 1rem;
+  margin: 1.25rem 0;
+  user-select: none;
+  border-radius: 2px;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/crafting_bg.png');
+   *  Then remove the colour + border fallbacks below.
+   */
+  background-color: #C6C6C6;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-color: #FFF #555 #555 #FFF;
+}
+
+.mc-recipe-label {
+  font-family: var(--font-title);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: .2rem;
+}
+
+.mc-recipe-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+/* 3×3 crafting grid */
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  grid-template-rows: repeat(3, 40px);
+  gap: 2px;
+  padding: 2px;
+  flex-shrink: 0;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/crafting_grid.png');
+   *  Then remove the colour + border fallbacks below.
+   */
+  background-color: #8B8B8B;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #373737;
+}
+
+/* Inventory slot outer shell */
+.invslot {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/inv_slot.png');
+   *  background-size: cover;
+   *  Then remove the colour fallback below.
+   */
+  background-color: #8B8B8B;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Item cell — hover-able, tooltip-triggering */
+.invslot-item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+
+  /* ── Replace with your texture ──
+   *  background-image: url('/img/ui/inv_slot_item.png');
+   *  background-size: cover;
+   *  Then remove the colour + border fallbacks below.
+   */
+  background-color: #3C3C3C;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: 2px solid #555;
+  border-left: 2px solid #555;
+  border-bottom: 2px solid #1A1A1A;
+  border-right: 2px solid #1A1A1A;
+}
+
+.invslot-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.18);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Item image — pixelated scaling */
+.invslot-item img {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+
+/* Result slot — slightly larger */
+.mc-result-slot .invslot {
+      width:50px;
+      height:50px;
+}
+
+.mc-result-slot .invslot-item {
+      width:46px;
+      height:46px;
+}
+
+.mc-result-slot .invslot-item img {
+      width:36px;
+      height:36px;
+}
+
+/* Arrow — replace the SVG with an image if you prefer ──
+ *  Drop /img/ui/crafting_arrow.png and use:
+ *    <img src="/img/ui/crafting_arrow.png" alt="→">
+ *  instead of the <svg> in the HTML.
+ */
+.mc-arrow-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Item icons ──
+ *  Drop your Minecraft textures into /img/items/ as PNGs.
+ *  Use <img> tags inside .invslot-item elements:
+ *    <img src="/img/items/leather.png" alt="Leather">
+ *
+ *  For infobox hero icons, use .mc-icon-lg:
+ *    <img src="/img/items/backpack.png" alt="Backpack" class="mc-icon-lg">
+ *
+ *  All item images use pixelated rendering for that
+ *  crisp Minecraft look at any size.
+ */
+
+.mc-icon-lg {
+  width: 48px;
+  height: 48px;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  flex-shrink: 0
+}
+
+/* Fallback coloured squares — shown while textures are missing */
+.mc-icon-fallback {
+  width: 28px;
+  height: 28px;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 2px solid rgba(255,255,255,.12)
+}
+
+.mc-icon-fallback[data-item="leather"]     { background: #8B4513 }
+.mc-icon-fallback[data-item="chest"]       { background: #96742A }
+.mc-icon-fallback[data-item="iron_ingot"]  { background: #BEBEBE }
+.mc-icon-fallback[data-item="string"]      { background: #DCDCDC }
+.mc-icon-fallback[data-item="diamond"]     { background: #44E6E6 }
+.mc-icon-fallback[data-item="stick"]       { background: #8B6914 }
+.mc-icon-fallback[data-item="backpack"]    { background: #7A5230 }
+.mc-icon-fallback[data-item="repair_kit"]  { background: #C8C8C8 }
+.mc-icon-fallback[data-item="gold_ingot"]  { background: #FFD700 }
+.mc-icon-fallback[data-item="planks"]      { background: #A0744E }
+.mc-icon-fallback[data-item="stone"]       { background: #808080 }
+
+
+/* Crafting recipe: ensure it fits narrow screens */
+@media (max-width:480px) {
+      .mc-recipe{
+            width:100%;
+            overflow-x:auto
+      }
+      .mc-recipe-row{
+            gap:.5rem
+      }
+}

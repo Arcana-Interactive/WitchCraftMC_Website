@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="{{ '/css/freelancer.min.css' | relative_url }}">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="{{ '/css/wiki.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/wiki-base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/wiki-home.css' | relative_url }}">
 </head>
 <body>
 
@@ -41,7 +42,7 @@
           <div><strong>Welcome to the WitchCraftMC Wiki!</strong> This wiki is actively being built alongside the server launch. Found something missing or wrong? Let us know on <a href="http://discord.gg/5gHJtxrMZS">Discord</a>.</div>
         </div>
 
-        <div class="sec-head">Browse Categories</div>
+        <div class="wiki-label sec-head">Browse Categories</div>
 
         <div class="cat-grid" id="catGrid">
           <a href="{{ '/wiki/getting-started' | relative_url }}" class="cat-card" data-s="getting started new player join how to beginner">
@@ -114,7 +115,7 @@
       <div class ="side-panel-parent">
         <aside class="side-panel">
           <div class="side-box">
-            <div class="side-box-head"><i class="fas fa-server"></i> Server Info</div>
+            <div class="wiki-label side-box-head"><i class="fas fa-server"></i> Server Info</div>
             <div class="side-box-body" style="display:flex;flex-direction:column;gap:.6rem">
               <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.82rem">
                 <span style="color:var(--text-muted)">Server-ip</span>
@@ -127,7 +128,7 @@
           </div>
 
           <div class="side-box">
-            <div class="side-box-head"><i class="fas fa-newspaper"></i> Latest Updates</div>
+            <div class="wiki-label side-box-head"><i class="fas fa-newspaper"></i> Latest Updates</div>
             <div class="side-box-body" style="padding:.5rem .75rem">
               <ul class="patch-list">
                 <li><a href="#"><div class="pdot"></div><div><div>Wiki launched 🎉</div><span class="pdate">Server pre-launch</span></div></a></li>
@@ -138,7 +139,7 @@
           </div>
 
           <div class="side-box">
-            <div class="side-box-head"><i class="fas fa-link"></i> Quick Links</div>
+            <div class="wiki-label side-box-head"><i class="fas fa-link"></i> Quick Links</div>
             <div class="side-box-body" style="padding:.5rem .75rem">
               <div class="quick-links">
                 <a href="{{ '/wiki/getting-started' | relative_url }}" class="quick-link"><i class="fas fa-play"></i>New Player Guide</a>

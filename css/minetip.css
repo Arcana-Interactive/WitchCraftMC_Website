@@ -1,0 +1,157 @@
+/*****************************
+*          MINETIPS          *
+******************************/
+
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('/css/minecraftia/Minecraftia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.format-0 {
+	color: #000;
+	text-shadow: 0.125em 0.125em 0 #000;
+}
+
+.format-1 {
+	color: #0000A8;
+	text-shadow: 0.125em 0.125em 0 #00002A;
+}
+
+.format-2 {
+	color: #00A800;
+	text-shadow: 0.125em 0.125em 0 #002A00;
+}
+
+.format-3 {
+	color: #00A8A8;
+	text-shadow: 0.125em 0.125em 0 #002A2A;
+}
+
+.format-4 {
+	color: #A80000;
+	text-shadow: 0.125em 0.125em 0 #2A0000;
+}
+
+.format-5 {
+	color: #A800A8;
+	text-shadow: 0.125em 0.125em 0 #2A002A;
+}
+
+.format-6 {
+	color: #FBA800;
+	text-shadow: 0.125em 0.125em 0 #3E2A00;
+}
+
+.format-7 {
+	color: #A8A8A8;
+	text-shadow: 0.125em 0.125em 0 #2A2A2A;
+}
+
+.format-8 {
+	color: #545454;
+	text-shadow: 0.125em 0.125em 0 #151515;
+}
+
+.format-9 {
+	color: #5454FB;
+	text-shadow: 0.125em 0.125em 0 #15153E;
+}
+
+.format-a {
+	color: #54FB54;
+	text-shadow: 0.125em 0.125em 0 #153E15;
+}
+
+.format-b {
+	color: #54FBFB;
+	text-shadow: 0.125em 0.125em 0 #153E3E;
+}
+
+.format-c {
+	color: #FB5454;
+	text-shadow: 0.125em 0.125em 0 #3E1515;
+}
+
+.format-d {
+	color: #FB54FB;
+	text-shadow: 0.125em 0.125em 0 #3E153E;
+}
+
+.format-e {
+	color: #FBFB54;
+	text-shadow: 0.125em 0.125em 0 #3E3E15;
+}
+
+.format-l{
+      font-weight:bold
+}
+
+.format-o{
+      font-style:italic
+}
+
+.format-n{
+      text-decoration:underline
+}
+
+.format-m{
+      text-decoration:line-through
+}
+
+.format-f,
+
+#minetip-tooltip {
+	color: #FBFBFB;
+	text-shadow: 0.125em 0.125em 0 #3E3E3E;
+}
+
+/* Styling for minecraft style tooltip */
+#minetip-tooltip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #100010;
+	background-color: rgba(16, 0, 16, 0.94);
+	padding: 0.375em;
+	font-family: 'Minecraftia', sans-serif;
+	font-size: 16px;
+	word-spacing: 4px;
+	white-space: nowrap;
+	line-height: 1.25em;
+	margin: 0.125em 0.25em;
+	pointer-events: none;
+	z-index: 9999;
+}
+
+#minetip-tooltip::before {
+	content: "";
+	position: absolute;
+	top: 0.125em;
+	right: -0.125em;
+	bottom: 0.125em;
+	left: -0.125em;
+	border: 0.15em solid #100010;
+	border-style: none solid;
+	border-color: rgba(16, 0, 16, 0.94);
+}
+
+#minetip-tooltip::after {
+	content: "";
+	position: absolute;
+	top: 0.125em;
+	right: 0;
+	bottom: 0.125em;
+	left: 0;
+	border: 0.125em solid #2D0A63;
+	border-image: -webkit-linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
+	border-image: linear-gradient(rgba(80, 0, 255, 0.31), rgba(40, 0, 127, 0.31)) 1;
+}
+
+#minetip-tooltip > .description,
+
+#minetip-tooltip > .minetip-description {
+	display: block;
+	margin-top: 0.25em;
+}

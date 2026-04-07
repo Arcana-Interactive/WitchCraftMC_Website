@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="{{ '/css/freelancer.min.css' | relative_url }}">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Nunito:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="{{ '/css/wiki.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/wiki-base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/wiki-article.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/minetip.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/crafting.css' | relative_url }}">
 </head>
 <body>
 
@@ -47,7 +50,7 @@
 
     <!-- Navigation section -->
     <div class="sb-section">
-      <div class="sb-section-head" onclick="toggleSection(this)">
+      <div class="wiki-label sb-section-head" onclick="toggleSection(this)">
         Navigation <i class="fas fa-chevron-down chevron"></i>
       </div>
       <ul class="sb-links" style="max-height:500px">
@@ -67,7 +70,7 @@
 
     <!-- On This Page (ToC) — filled by JS -->
     <div class="sb-section" id="tocSection" style="display:none">
-      <div class="sb-section-head" onclick="toggleSection(this)">
+      <div class="wiki-label sb-section-head" onclick="toggleSection(this)">
         On This Page <i class="fas fa-chevron-down chevron"></i>
       </div>
       <ul class="sb-links" id="tocList" style="max-height:9999px"></ul>
@@ -78,7 +81,7 @@
     <!-- Categories -->
     {% if page.categories %}
     <div class="sb-section">
-      <div class="sb-section-head" onclick="toggleSection(this)">
+      <div class="wiki-label sb-section-head" onclick="toggleSection(this)">
         Categories <i class="fas fa-chevron-down chevron"></i>
       </div>
       <ul class="sb-links" style="max-height:500px">
@@ -93,7 +96,7 @@
 
     <!-- Useful links -->
     <div class="sb-section">
-      <div class="sb-section-head" onclick="toggleSection(this)">
+      <div class="wiki-label sb-section-head" onclick="toggleSection(this)">
         Useful Links <i class="fas fa-chevron-down chevron"></i>
       </div>
       <ul class="sb-links" style="max-height:500px">
@@ -172,7 +175,7 @@
       {% endif %}
       {% for section in page.Infobox.Sections %}
         {% if section.heading %}
-          <div class="infobox-section">{{ section.heading }}</div>
+          <div class="wiki-label infobox-section">{{ section.heading }}</div>
         {% endif %}
 
         {% comment %} ── Key-value rows ── {% endcomment %}
@@ -216,7 +219,7 @@
     <div class="wiki-history" id="pageHistory">
       <div class="wiki-history-head" onclick="toggleHistory(this)" aria-expanded="false">
         <i class="fas fa-clock-rotate-left wh-icon"></i>
-        <span class="wh-label">History</span>
+        <span class="wiki-label wh-label">History</span>
         <i class="fas fa-chevron-down wh-chevron"></i>
       </div>
       <div class="wiki-history-body" aria-hidden="true">
@@ -245,7 +248,7 @@
     <!-- See Also -->
     {% if page.see_also %}
     <div class="see-also">
-      <div class="see-also-head"><i class="fas fa-arrow-right-arrow-left"></i>See Also</div>
+      <div class="wiki-label see-also-head"><i class="fas fa-arrow-right-arrow-left"></i>See Also</div>
       <div class="see-also-links">
         {% for item in page.see_also %}
         <a href="{{ item.url | relative_url }}" class="see-also-link"><i class="fas fa-book-open"></i>{{ item.title }}</a>
