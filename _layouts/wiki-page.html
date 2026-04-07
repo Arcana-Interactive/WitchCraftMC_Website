@@ -192,15 +192,16 @@
         {% if section.links %}
           <div class="infobox-column">
             {% for item in section.links %}
+              {% assign _icon_sz = item.icon_size | default: section.icon_size | default: 24 %}
               {% if item.link %}
                 <span class="value">
                   <a href="{{ item.link | relative_url }}" class="infobox-link">
-                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ section.icon_size | default: 24 }}px;height:{{ section.icon_size | default: 24 }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
+                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
                   </a>
                 </span>
               {% else %}
                 <span class="value">
-                  {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ section.icon_size | default: 24 }}px;height:{{ section.icon_size | default: 24 }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
+                  {% if item.icon %}<img src="{{ item.icon }}" alt="" style="width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;vertical-align:middle">{% endif %}{{ item.text }}
                 </span>
               {% endif %}
             {% endfor %}
