@@ -4,7 +4,7 @@ The official website for **WitchCraftMC** — a Minecraft server with a witchcra
 
 ## About
 
-This is the public-facing website for WitchCraftMC, built with [Jekyll](http://jekyllrb.com/) and hosted via GitHub Pages. It includes a landing page, server info, and a player wiki.
+This is the public-facing website for WitchCraftMC, hosted via GitHub Pages. It includes a landing page, server info, and a player wiki.
 
 ## Structure
 
@@ -22,12 +22,6 @@ js/             ← JavaScript
 
 The wiki lives at `/wiki/` and covers getting started, rules, claims, crafting, worlds, staff ranks, and commands. See `wiki/README.md` for setup details.
 
-## Local Development
-
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/)
-2. Run `bundle install`
-3. Run `bundle exec jekyll serve`
-4. Visit `http://localhost:4000`
 
 ## Configuration
 
