@@ -1336,8 +1336,8 @@ a:hover {
 }
 
 .infobox-link-icon {
-      width:32px;
-      height:32px;
+      width:24px;
+      height:24px;
       image-rendering:pixelated;
       image-rendering:crisp-edges;
       flex-shrink:0;
