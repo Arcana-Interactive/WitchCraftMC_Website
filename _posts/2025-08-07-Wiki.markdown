@@ -1,0 +1,7 @@
+---
+layout: default
+caption: Wiki
+redirect: https://www.witchcraftmc.com/wiki/
+img: cake.png
+alt: image-alt
+---
