@@ -19,6 +19,13 @@
       pointer-events:none
 }
 
+/* Lock banner container to the same width as the wiki body so all content
+   aligns consistently on every screen size. */
+.wiki-banner > .container {
+      max-width:1300px;
+      padding:0 1.5rem
+}
+
 .wiki-banner .inner {
       position:relative;
       text-align:center
@@ -64,9 +71,11 @@
 *          SEARCH            *
 ******************************/
 
+/* Left-aligned so the eyeglass + search button stay at the left edge of the
+   content column on all screen sizes instead of floating to the center. */
 .wiki-search {
-      max-width:580px;
-      margin:0 auto;
+      max-width:640px;
+      margin:0;
       position:relative
 }
 
