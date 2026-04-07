@@ -51,7 +51,7 @@ Each entry below follows the format:
 ### v1.0 — Server Launch
 
 <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap">
-  <span style="background:rgba(109,79,194,.2);color:var(--violet-soft);border-radius:3px;padding:.15rem .6rem;font-size:.72rem;font-weight:700;font-family:var(--font-mono)">SEASON</span>
+  <span style="background:rgba(var(--violet-rgb),.2);color:var(--violet-soft);border-radius:3px;padding:.15rem .6rem;font-size:.72rem;font-weight:700;font-family:var(--font-mono)">SEASON</span>
   <span style="font-family:var(--font-mono);font-size:.78rem;color:var(--text-dim)">2025 · Season 1 Start</span>
 </div>
 

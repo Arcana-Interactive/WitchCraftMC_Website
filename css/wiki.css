@@ -1,26 +1,36 @@
 :root {
-      --bg: #12111a;
-      --surface: #1a1927;
-      --surface-2:#211f31; 
-      --surface-3:#28263c;
+      /* ── Background & Surface ── */
+      --bg: #161222;
+      --surface: #1e1832;
+      --surface-2: #262040;
+      --surface-3: #2e274d;
 
-      --border: rgba(255,255,255,.07);
-      --border-gold: rgba(201,162,39,.3);
+      /* ── Borders ── */
+      --border: rgba(180,160,220,.1);
+      --border-gold: rgba(var(--gold-rgb),.3);
 
-      --text: #e2ddd6;
-      --text-muted: #8b8599;
-      --text-dim: #5c5772;
+      /* ── Text ── */
+      --text: #ddd8e8;
+      --text-muted: #9990b3;
+      --text-dim: #6e6590;
 
+      /* ── Accent colours ── */
       --gold: #c9a227;
       --gold-bright: #f0c93a;
-      --violet: #6d4fc2;
-      --violet-soft: #9575d9;
-      --teal: #4ab8b8;
+      --violet: #9b7ed8;
+      --violet-soft: #b9a4e8;
+      --teal: #8fb8d4;
 
+      /* ── RGB helpers (for rgba() usage) ── */
+      --violet-rgb: 155,126,216;
+      --teal-rgb: 143,184,212;
+      --gold-rgb: 201,162,39;
+
+      /* ── Fonts ── */
       --font-body: 'Nunito',sans-serif;
       --font-title: 'Cinzel',serif;
       --font-mono: 'JetBrains Mono',monospace;
-      --radius:6px;
+      --radius: 6px;
 
       /* ── Minecraft rarity colours ── */
       --rarity-common: #aaaaaa;
@@ -57,7 +67,7 @@ a {
 }
 
 a:hover {
-      color:#6dd4d4;
+      color:#a8cde2;
       text-decoration:underline
 }
 
@@ -103,7 +113,7 @@ a:hover {
 
 .nav-link.wiki-active {
       color:var(--gold)!important;
-      background:rgba(201,162,39,.1)
+      background:rgba(var(--gold-rgb),.1)
 }
 
 
@@ -124,7 +134,7 @@ a:hover {
       content:'';
       position:absolute;
       inset:0;
-      background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(109,79,194,.25) 0%,transparent 70%),radial-gradient(ellipse 40% 30% at 80% 50%,rgba(74,184,184,.06) 0%,transparent 60%);
+      background:rgba(var(--violet-rgb),.08);
       pointer-events:none
 }
 
@@ -142,8 +152,8 @@ a:hover {
       letter-spacing:.18em;
       text-transform:uppercase;
       color:var(--gold);
-      background:rgba(201,162,39,.1);
-      border:1px solid rgba(201,162,39,.2);
+      background:rgba(var(--gold-rgb),.1);
+      border:1px solid rgba(var(--gold-rgb),.2);
       border-radius:20px;
       padding:.3rem .9rem;
       margin-bottom:1.25rem
@@ -155,7 +165,7 @@ a:hover {
       font-size:clamp(1.9rem,5vw,3.2rem);
       color:#fff;letter-spacing:.02em;
       margin-bottom:.6rem;
-      text-shadow:0 0 60px rgba(109,79,194,.5)
+      text-shadow:none
 }
 
 .wiki-banner h1 em {
@@ -192,7 +202,7 @@ a:hover {
 .page-header::before {
       content:'';
       position:absolute;
-      inset:0;background:radial-gradient(ellipse 90% 80% at 0% 50%,rgba(109,79,194,.12) 0%,transparent 60%);
+      inset:0;background:rgba(var(--violet-rgb),.05);
       pointer-events:none
 }
 
@@ -270,7 +280,7 @@ a:hover {
 
 .wiki-search input:focus {
       border-color:var(--violet);
-      box-shadow:0 0 0 3px rgba(109,79,194,.2)
+      box-shadow:0 0 0 3px rgba(var(--violet-rgb),.2)
 }
 
 .wiki-search input::placeholder {
@@ -417,7 +427,7 @@ a:hover {
       content:'';
       flex:1;
       height:1px;
-      background:linear-gradient(90deg,var(--border-gold),transparent)
+      background:var(--border-gold)
 }
 
 
@@ -506,9 +516,9 @@ a:hover {
 }
 
 .cat-tag:hover {
-      border-color:rgba(201,162,39,.4);
+      border-color:rgba(var(--gold-rgb),.3);
       color:var(--gold);
-      background:rgba(201,162,39,.06);
+      background:rgba(var(--gold-rgb),.06);
       text-decoration:none!important
 }
 
@@ -517,17 +527,17 @@ a:hover {
 }
 
 .ic-start {
-      background:rgba(74,184,184,.15);
+      background:rgba(var(--teal-rgb),.12);
       color:var(--teal)
 }
 
 .ic-rules {
-      background:rgba(201,162,39,.12);
+      background:rgba(var(--gold-rgb),.12);
       color:var(--gold)
 }
 
 .ic-claims {
-      background:rgba(109,79,194,.15);
+      background:rgba(var(--violet-rgb),.12);
       color:var(--violet-soft)
 }
 
@@ -871,7 +881,7 @@ a:hover {
 
 .sb-search-wrap input:focus {
       border-color:var(--violet);
-      box-shadow:0 0 0 2px rgba(109,79,194,.2)
+      box-shadow:0 0 0 2px rgba(var(--violet-rgb),.2)
 }
 
 .sb-search-wrap input::placeholder {
@@ -953,7 +963,7 @@ a:hover {
 
 .sb-link.active {
       color:var(--teal);
-      background:rgba(74,184,184,.08)
+      background:rgba(var(--teal-rgb),.08)
 }
 
 .sb-link.active::before {
@@ -995,14 +1005,14 @@ a:hover {
 /* WIKI LINKS (internal cross-references) */
 .wiki-content a {
       color:var(--teal);
-      border-bottom:1px solid rgba(74,184,184,.25);
+      border-bottom:1px solid rgba(var(--teal-rgb),.2);
       padding-bottom:1px;
       transition:color .15s,border-color .15s
 }
 
 .wiki-content a:hover {
-      color:#6dd4d4;
-      border-bottom-color:rgba(74,184,184,.7);
+      color:#a8cde2;
+      border-bottom-color:rgba(var(--teal-rgb),.5);
       text-decoration:none
 }
 
@@ -1066,12 +1076,12 @@ a:hover {
 
 /* Inline code & pre */
 .wiki-content code {
-      background:rgba(109,79,194,.15);
-      border:1px solid rgba(109,79,194,.25);
+      background:rgba(var(--violet-rgb),.12);
+      border:1px solid rgba(var(--violet-rgb),.2);
       border-radius:3px;
       padding:.12em .42em;
       font-size:.85em;
-      color:#b09ef0;
+      color:var(--violet-soft);
       font-family:var(--font-mono)
 }
 
@@ -1321,7 +1331,7 @@ a:hover {
 }
 
 .infobox-link:hover {
-      color:#6dd4d4;
+      color:#a8cde2;
       text-decoration:none!important
 }
 
@@ -1411,12 +1421,12 @@ a:hover {
 }
 
 .rank-patron {
-      background:rgba(201,162,39,.15);
+      background:rgba(var(--gold-rgb),.15);
       color:var(--gold)
 }
 
 .rank-arcane {
-      background:rgba(109,79,194,.2);
+      background:rgba(var(--violet-rgb),.2);
       color:var(--violet-soft)
 }
 
@@ -1431,7 +1441,7 @@ a:hover {
 }
 
 .rank-admin {
-      background:rgba(201,162,39,.15);
+      background:rgba(var(--gold-rgb),.15);
       color:var(--gold)
 }
 
@@ -1481,9 +1491,9 @@ a:hover {
 }
 
 .see-also-link:hover {
-      border-color:rgba(74,184,184,.4);
-      background:rgba(74,184,184,.06);
-      color:#6dd4d4;
+      border-color:rgba(var(--teal-rgb),.3);
+      background:rgba(var(--teal-rgb),.06);
+      color:#a8cde2;
       text-decoration:none
 }
 
@@ -2101,8 +2111,8 @@ a:hover {
 ******************************/
 
 .wiki-ann {
-      background:linear-gradient(90deg,rgba(109,79,194,.15),rgba(74,184,184,.08));
-      border:1px solid rgba(109,79,194,.3);
+      background:rgba(var(--violet-rgb),.08);
+      border:1px solid rgba(var(--violet-rgb),.15);
       border-radius:var(--radius);
       padding:.75rem 1.1rem;
       display:flex;

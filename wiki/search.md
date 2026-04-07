@@ -32,16 +32,16 @@ see_also:
 </div>
 
 <style>
-  #search-input:focus{border-color:var(--violet)!important;box-shadow:0 0 0 3px rgba(109,79,194,.2)!important}
+  #search-input:focus{border-color:var(--violet)!important;box-shadow:0 0 0 3px rgba(var(--violet-rgb),.2)!important}
   .sr-card{display:block;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.25rem;margin-bottom:.75rem;transition:border-color .15s,background .15s;text-decoration:none!important}
-  .sr-card:hover{border-color:rgba(74,184,184,.4);background:var(--surface-2);text-decoration:none!important}
+  .sr-card:hover{border-color:rgba(var(--teal-rgb),.3);background:var(--surface-2);text-decoration:none!important}
   .sr-title{font-family:var(--font-title);font-size:1rem;font-weight:700;color:#fff;margin-bottom:.3rem}
   .sr-desc{font-size:.83rem;color:var(--text-muted);line-height:1.55;margin-bottom:.45rem}
   .sr-snippet{font-size:.8rem;color:var(--text-dim);line-height:1.55;border-left:2px solid var(--border);padding-left:.75rem;margin-bottom:.45rem}
   .sr-meta{display:flex;align-items:center;gap:.75rem;font-size:.72rem;color:var(--text-dim)}
   .sr-cat{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:.1rem .55rem}
   .sr-url{font-family:var(--font-mono)}
-  mark{background:rgba(201,162,39,.25);color:var(--gold-bright);border-radius:2px;padding:0 .15em}
+  mark{background:rgba(var(--gold-rgb),.25);color:var(--gold-bright);border-radius:2px;padding:0 .15em}
   .no-results{text-align:center;padding:3rem 1rem;color:var(--text-muted)}
   .no-results i{font-size:2rem;display:block;margin-bottom:.75rem;color:var(--text-dim)}
 </style>
