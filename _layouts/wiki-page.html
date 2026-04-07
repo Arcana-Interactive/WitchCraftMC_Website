@@ -362,13 +362,59 @@
   }
 
   // Highlight active ToC item on scroll
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      const link = tocList && tocList.querySelector(`a[href="#${e.target.id}"]`);
-      if (link) link.classList.toggle('active', e.isIntersecting);
-    });
-  }, { rootMargin: '-56px 0px -70% 0px' });
-  headings.forEach(h => observer.observe(h));
+  //
+  // How it works:
+  //   Each heading "owns" from its top to the next heading's top (section-range).
+  //   We find which range a moving trigger position falls in — always exactly one
+  //   match, no gaps, no doubles.
+  //
+  //   The trigger starts just below the navbar and slides progressively downward
+  //   as you approach the bottom of the page. This means any section whose heading
+  //   can't physically scroll to the top (page too short) will still activate
+  //   naturally — no special-cases, no per-page tuning required.
+  (function() {
+    if (!tocList || !headings.length) return;
+
+    // Read navbar height from the DOM — works even if the navbar height changes
+    const navbar = document.getElementById('mainNav');
+
+    function updateToc() {
+      const scrollY = window.scrollY;
+      const vh      = window.innerHeight;
+      const docH    = document.documentElement.scrollHeight;
+      const navH    = navbar ? navbar.offsetHeight : 0;
+
+      // Recalculate absolute positions each call (handles lazy images, resizes, etc.)
+      const tops = Array.from(headings).map(h =>
+        h.getBoundingClientRect().top + scrollY
+      );
+
+      // Dynamic trigger: just below the navbar normally, but slides down smoothly
+      // as we near the bottom so every heading can be reached on any page length.
+      const distFromBottom = Math.max(0, docH - scrollY - vh);
+      const boost = distFromBottom < vh ? (vh - distFromBottom) * 0.5 : 0;
+      const trigger = scrollY + navH + 8 + boost;
+
+      let activeIdx = -1;
+      for (let i = 0; i < tops.length; i++) {
+        const rangeEnd = i + 1 < tops.length ? tops[i + 1] : docH;
+        if (trigger >= tops[i] && trigger < rangeEnd) {
+          activeIdx = i;
+          break;
+        }
+      }
+
+      tocList.querySelectorAll('a.sb-link').forEach(a => a.classList.remove('active'));
+      if (activeIdx >= 0) {
+        const link = tocList.querySelector(`a[href="#${headings[activeIdx].id}"]`);
+        if (link) link.classList.add('active');
+      }
+    }
+
+    window.addEventListener('scroll', updateToc, { passive: true });
+    window.addEventListener('resize', updateToc, { passive: true });
+    updateToc();
+  })();
 </script>
 </body>
 </html>
