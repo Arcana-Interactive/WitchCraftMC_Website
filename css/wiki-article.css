@@ -538,7 +538,12 @@
       border:1px solid var(--border);
       border-radius:var(--radius);
       overflow:hidden;
-      font-size:.82rem
+      font-size:.82rem;
+      box-shadow:
+            inset 1px 1px 0 rgba(255,255,255,.07),
+            inset -1px -1px 0 rgba(0,0,0,.25),
+            0 2px 10px rgba(0,0,0,.35),
+            0 0 0 1px rgba(0,0,0,.2)
 }
 
 @media (max-width:640px) {
@@ -621,26 +626,9 @@
 .infobox-column {
       display:flex;
       flex-direction:column;
-      justify-content:space-between;
-      align-items:center;
-      padding:.45rem .85rem;
+      align-items:stretch;
       border-bottom:1px solid rgba(255,255,255,.04);
-      gap:.5rem
-}
-
-.infobox-column .label {
-      color:var(--text);
-      font-size:.9rem;
-      flex-shrink:0;
-      padding-top:.05rem
-}
-
-.infobox-column .value {
-      color:var(--text);
-      text-align:center;
-      font-weight:600;
-      max-width:160px;
-      word-break:break-word
+      padding:.25rem 0;
 }
 
 .info-link {
@@ -659,19 +647,21 @@
       text-decoration:none
 }
 
-/* ── Infobox link with optional icon (Hypixel-style) ── */
+/* ── Infobox NPC/link row (Hypixel-style) ── */
 .infobox-link {
-      display:inline-flex;
+      display:flex;
       align-items:center;
-      gap:.4rem;
+      gap:.45rem;
+      padding:.25rem .85rem;
       color:var(--teal);
       font-size:.82rem;
-      transition:color .12s;
+      transition:color .12s, background .12s;
       border-bottom:none!important
 }
 
 .infobox-link:hover {
       color:#a8cde2;
+      background:rgba(255,255,255,.04);
       text-decoration:none!important
 }
 
@@ -788,6 +778,7 @@
 
 /* ── SEE ALSO box ── */
 .see-also {
+      clear:right;
       background:var(--surface-2);
       border:1px solid var(--border);
       border-radius:var(--radius);
@@ -834,6 +825,7 @@
 
 /* ── PAGE HISTORY MODULE ── */
 .wiki-history {
+      clear:right;
       border:1px solid var(--border);
       border-radius:var(--radius);
       overflow:hidden;

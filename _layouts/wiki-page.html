@@ -63,6 +63,31 @@
         <li><a href="{{ '/wiki/staff-ranks' | relative_url }}" class="sb-link {% if page.url contains 'staff-ranks' %}active{% endif %}"><i class="fas fa-hat-wizard"></i>Staff & Ranks</a></li>
         <li><a href="{{ '/wiki/commands' | relative_url }}" class="sb-link {% if page.url contains 'commands' %}active{% endif %}"><i class="fas fa-terminal"></i>Commands</a></li>
         <li><a href="{{ '/wiki/changelog' | relative_url }}" class="sb-link {% if page.url contains 'changelog' %}active{% endif %}"><i class="fas fa-clock-rotate-left"></i>Changelog</a></li>
+        <li><a href="{{ '/wiki/spawn' | relative_url }}" class="sb-link {% if page.url contains 'spawn' %}active{% endif %}"><i class="fas fa-map-pin"></i>Spawn</a></li>
+      </ul>
+    </div>
+
+    <div class="sb-divider"></div>
+
+    <!-- NPCs -->
+    <div class="sb-section">
+      <div class="wiki-label sb-section-head {% unless page.url contains '/wiki/npc' %}collapsed{% endunless %}" onclick="toggleSection(this)">
+        NPCs <i class="fas fa-chevron-down chevron"></i>
+      </div>
+      <ul class="sb-links {% unless page.url contains '/wiki/npc' %}collapsed{% endunless %}" {% unless page.url contains '/wiki/npc' %}style="max-height:0"{% else %}style="max-height:500px"{% endunless %}>
+        <li><a href="{{ '/wiki/npc/' | relative_url }}" class="sb-link {% if page.url == '/wiki/npc/' %}active{% endif %}"><i class="fas fa-users"></i>All NPCs</a></li>
+        <li><a href="{{ '/wiki/npc/Auctioneer' | relative_url }}" class="sb-link {% if page.title == 'Auctioneer' %}active{% endif %}"><i class="fas fa-gavel"></i>Auctioneer</a></li>
+        <li><a href="{{ '/wiki/npc/Blacksmith' | relative_url }}" class="sb-link {% if page.title == 'Blacksmith' %}active{% endif %}"><i class="fas fa-hammer"></i>Blacksmith</a></li>
+        <li><a href="{{ '/wiki/npc/Furniture Merchant' | relative_url }}" class="sb-link {% if page.title == 'Furniture Merchant' %}active{% endif %}"><i class="fas fa-couch"></i>Furniture Merchant</a></li>
+        <li><a href="{{ '/wiki/npc/Cosmeticist' | relative_url }}" class="sb-link {% if page.title == 'Cosmeticist' %}active{% endif %}"><i class="fas fa-palette"></i>Cosmeticist</a></li>
+        <li><a href="{{ '/wiki/npc/Farmer' | relative_url }}" class="sb-link {% if page.title == 'Farmer' %}active{% endif %}"><i class="fas fa-seedling"></i>Farmer</a></li>
+        <li><a href="{{ '/wiki/npc/Mob Merchant' | relative_url }}" class="sb-link {% if page.title == 'Mob Merchant' %}active{% endif %}"><i class="fas fa-dragon"></i>Mob Merchant</a></li>
+        <li><a href="{{ '/wiki/npc/Lumberjack' | relative_url }}" class="sb-link {% if page.title == 'Lumberjack' %}active{% endif %}"><i class="fas fa-tree"></i>Lumberjack</a></li>
+        <li><a href="{{ '/wiki/npc/Fish Merchant' | relative_url }}" class="sb-link {% if page.title == 'Fish Merchant' %}active{% endif %}"><i class="fas fa-fish"></i>Fish Merchant</a></li>
+        <li><a href="{{ '/wiki/npc/Rex Timberland' | relative_url }}" class="sb-link {% if page.title == 'Rex Timberland' %}active{% endif %}"><i class="fas fa-star"></i>Rex Timberland</a></li>
+        <li><a href="{{ '/wiki/npc/Archwizard' | relative_url }}" class="sb-link {% if page.title == 'Archwizard' %}active{% endif %}"><i class="fas fa-wand-sparkles"></i>Archwizard</a></li>
+        <li><a href="{{ '/wiki/npc/Enchanter' | relative_url }}" class="sb-link {% if page.title == 'Enchanter' %}active{% endif %}"><i class="fas fa-book-sparkles"></i>Enchanter</a></li>
+        <li><a href="{{ '/wiki/npc/Agent LemLem' | relative_url }}" class="sb-link {% if page.title == 'Agent LemLem' %}active{% endif %}"><i class="fas fa-user-secret"></i>Agent LemLem</a></li>
       </ul>
     </div>
 
@@ -190,37 +215,13 @@
 
         {% comment %} ── Link list (with optional icons) ── {% endcomment %}
         {% if section.links %}
-          {% assign _section_sz = section.icon_size | default: 24 %}
-          {% assign _icon_slot  = _section_sz | plus: 8 %}
+          {% assign _icon_sz = section.icon_size | default: 24 %}
           <div class="infobox-column">
             {% for item in section.links %}
-              {% assign _icon_sz = item.icon_size | default: _section_sz %}
-              {% comment %}
-                icon_offset_x / icon_offset_y: nudge the icon N pixels from its centred position.
-                The icon is absolutely positioned so changing its size never affects the row
-                height or moves the text — text always sits at the same vertical position
-                regardless of individual icon sizes.
-              {% endcomment %}
-              {% assign _ox = item.icon_offset_x | default: 0 %}
-              {% assign _oy = item.icon_offset_y | default: 0 %}
-              {% capture _img_style %}position:absolute;left:0;top:50%;width:{{ _icon_sz }}px;height:{{ _icon_sz }}px;image-rendering:pixelated;image-rendering:crisp-edges;transform:translateY(-50%) translate({{ _ox }}px,{{ _oy }}px){% endcapture %}
-              {% if item.icon %}
-                {% assign _link_style = "position:relative;padding-left:" | append: _icon_slot | append: "px" %}
-              {% else %}
-                {% assign _link_style = "" %}
-              {% endif %}
               {% if item.link %}
-                <span class="value">
-                  <a href="{{ item.link | relative_url }}" class="infobox-link" style="{{ _link_style }}">
-                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="{{ _img_style }}">{% endif %}{{ item.text }}
-                  </a>
-                </span>
+                <a href="{{ item.link | relative_url }}" class="infobox-link">{% if item.icon %}<img src="{{ item.icon }}" alt="" width="{{ _icon_sz }}" height="{{ _icon_sz }}" style="image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;">{% endif %}{{ item.text }}</a>
               {% else %}
-                <span class="value">
-                  <span class="infobox-link" style="{{ _link_style }}">
-                    {% if item.icon %}<img src="{{ item.icon }}" alt="" style="{{ _img_style }}">{% endif %}{{ item.text }}
-                  </span>
-                </span>
+                <span class="infobox-link">{% if item.icon %}<img src="{{ item.icon }}" alt="" width="{{ _icon_sz }}" height="{{ _icon_sz }}" style="image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;">{% endif %}{{ item.text }}</span>
               {% endif %}
             {% endfor %}
           </div>
