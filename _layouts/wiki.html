@@ -179,8 +179,7 @@
 <script>
   // ── CLOCK ──────────────────────────────────────
   (function(){
-    var DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var SEASONS = ['Early Spring','Spring','Late Spring','Early Summer','Summer','Late Summer','Early Autumn','Autumn','Late Autumn','Early Winter','Winter','Late Winter'];
     function ordinal(n){var s=['th','st','nd','rd'],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0]);}
     function pad(n){return String(n).padStart(2,'0');}
     function tick(){
@@ -190,7 +189,7 @@
       var h12=h%12||12;
       document.getElementById('clockTime').textContent=h12+':'+pad(m)+' '+ampm;
       document.getElementById('clockDate').textContent=
-        ordinal(now.getDate())+' of '+MONTHS[now.getMonth()]+', '+now.getFullYear();
+        ordinal(now.getDate())+' of '+SEASONS[now.getMonth()]+', '+now.getFullYear();
     }
     tick();
     setInterval(tick,1000);
