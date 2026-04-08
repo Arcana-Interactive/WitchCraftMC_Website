@@ -1,0 +1,55 @@
+# ══════════════════════════════════════════════════════
+#  WitchCraftMC — Crafting Recipes
+#  _data/recipes.yml
+# ══════════════════════════════════════════════════════
+#
+#  Each recipe needs a unique ID (used in the include call).
+#
+#  Keys
+#  ────
+#  result          Item ID from items.yml
+#  result_count    (optional) Stack size of the output. Default: 1
+#  shapeless       (optional) Set to true for shapeless recipes.
+#                  Shows a label — items can go in any slot.
+#  grid            3 rows of exactly 3 slots each.
+#                  Use ~ for an empty slot.
+#
+#  Usage in any wiki page
+#  ──────────────────────
+#  {% include crafting-recipe.html id="backpack" %}
+#
+# ══════════════════════════════════════════════════════
+
+# ── Custom recipes ─────────────────────────────────────
+
+backpack:
+  result: backpack
+  grid:
+    - [leather, leather, leather]
+    - [leather, chest,   leather]
+    - [leather, leather, leather]
+
+repair_kit:
+  result: repair_kit
+  grid:
+    - [iron_ingot, iron_ingot, iron_ingot]
+    - [iron_ingot, string,     iron_ingot]
+    - [iron_ingot, iron_ingot, iron_ingot]
+
+# ── Example: shapeless recipe (items can go anywhere) ──
+# example_shapeless:
+#   result: some_item
+#   shapeless: true
+#   grid:
+#     - [iron_ingot, gold_ingot, ~]
+#     - [~,          ~,          ~]
+#     - [~,          ~,          ~]
+
+# ── Example: recipe with multiple output items ──────────
+# example_multi:
+#   result: stick
+#   result_count: 4
+#   grid:
+#     - [planks, ~, ~]
+#     - [planks, ~, ~]
+#     - [~,      ~, ~]

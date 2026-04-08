@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container-fluid" style="padding:0 2.5rem;display:flex;align-items:center">
-    <a class="navbar-brand me-4" href="{{ '/' | relative_url }}"><i class="fas fa-hat-wizard" style="color:var(--gold);margin-right:.5rem;font-size:.9rem"></i>{{ site.title }}</a>
+    <a class="navbar-brand me-4" href="{{ '/wiki/' | relative_url }}"><i class="fas fa-hat-wizard" style="color:var(--gold);margin-right:.5rem;font-size:.9rem"></i>{{ site.title }}</a>
   </div>
 </nav>
 
@@ -114,6 +114,18 @@
 
       <div class ="side-panel-parent">
         <aside class="side-panel">
+          <div class="wiki-clock-wrap">
+            <div class="wiki-clock-card">
+              <span class="wcc-corner tl"></span>
+              <span class="wcc-corner tr"></span>
+              <span class="wcc-corner bl"></span>
+              <span class="wcc-corner br"></span>
+              <div class="wiki-clock-title">Server Time</div>
+              <div class="wiki-clock-time" id="clockTime">12:00 AM</div>
+              <div class="wiki-clock-date" id="clockDate"></div>
+            </div>
+          </div>
+
           <div class="side-box">
             <div class="wiki-label side-box-head"><i class="fas fa-server"></i> Server Info</div>
             <div class="side-box-body" style="display:flex;flex-direction:column;gap:.6rem">
@@ -165,6 +177,25 @@
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script>
+  // ── CLOCK ──────────────────────────────────────
+  (function(){
+    var DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    function ordinal(n){var s=['th','st','nd','rd'],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0]);}
+    function pad(n){return String(n).padStart(2,'0');}
+    function tick(){
+      var now=new Date();
+      var h=now.getHours(),m=now.getMinutes();
+      var ampm=h>=12?'PM':'AM';
+      var h12=h%12||12;
+      document.getElementById('clockTime').textContent=h12+':'+pad(m)+' '+ampm;
+      document.getElementById('clockDate').textContent=
+        ordinal(now.getDate())+' of '+MONTHS[now.getMonth()]+', '+now.getFullYear();
+    }
+    tick();
+    setInterval(tick,1000);
+  })();
+
   const el=document.getElementById('wikiSearch'),cards=document.querySelectorAll('.cat-card'),noRes=document.getElementById('noRes'),noResQ=document.getElementById('noResQ'),form=document.getElementById('wikiSearchForm');
   // Live filter on category cards
   el.addEventListener('input',()=>{const q=el.value.trim().toLowerCase();let v=0;cards.forEach(c=>{const m=!q||(c.dataset.s+' '+c.querySelector('.cat-name').textContent+' '+c.querySelector('.cat-desc').textContent).toLowerCase().includes(q);c.style.display=m?'':'none';if(m)v++;});noRes.style.display=(v===0&&q)?'block':'none';noResQ.textContent=q;});

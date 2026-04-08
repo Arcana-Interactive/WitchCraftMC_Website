@@ -172,3 +172,64 @@ a:hover {
             gap:.75rem
       }
 }
+
+/*****************************
+*       CLOCK WIDGET         *
+******************************/
+
+/* Outer wrapper — provides the padding around the card */
+.wiki-clock-wrap {
+      padding:.85rem 1rem
+}
+
+/* The card itself — dark bg, violet border, no border-radius (sharp corners) */
+.wiki-clock-card {
+      position:relative;
+      background:#0d0c13;
+      border:2px solid rgba(var(--violet-rgb),.55);
+      box-shadow:inset 0 0 28px rgba(var(--violet-rgb),.06),
+                 0 0 0 1px rgba(var(--violet-rgb),.1);
+      padding:1.35rem 1.5rem 1.25rem;
+      text-align:center
+}
+
+/* Gold corner ornaments — one span per corner */
+.wcc-corner {
+      position:absolute;
+      width:9px;
+      height:9px;
+      background:var(--gold)
+}
+.wcc-corner.tl { top:-2px;  left:-2px  }
+.wcc-corner.tr { top:-2px;  right:-2px }
+.wcc-corner.bl { bottom:-2px; left:-2px  }
+.wcc-corner.br { bottom:-2px; right:-2px }
+
+/* "Server Time" heading */
+.wiki-clock-title {
+      font-family:var(--font-body);
+      font-size:.95rem;
+      font-weight:700;
+      color:var(--text);
+      letter-spacing:.02em;
+      margin-bottom:.55rem
+}
+
+/* Large time "3:50 PM" */
+.wiki-clock-time {
+      font-family:var(--font-title);
+      font-size:1.6rem;
+      font-weight:700;
+      color:#fff;
+      letter-spacing:.03em;
+      line-height:1;
+      margin-bottom:.55rem
+}
+
+/* Date line */
+.wiki-clock-date {
+      font-family:var(--font-body);
+      font-size:.9rem;
+      color:var(--text);
+      line-height:1.4
+}

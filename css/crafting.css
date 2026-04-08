@@ -29,22 +29,9 @@
 .mc-recipe {
   display: inline-flex;
   flex-direction: column;
-  gap: .5rem;
-  padding: .85rem 1.1rem 1rem;
+  gap: .4rem;
   margin: 1.25rem 0;
   user-select: none;
-  border-radius: 2px;
-
-  /* ── Replace with your texture ──
-   *  background-image: url('/img/ui/crafting_bg.png');
-   *  Then remove the colour + border fallbacks below.
-   */
-  background-color: #C6C6C6;
-  background-image: none;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 2px solid;
-  border-color: #FFF #555 #555 #FFF;
 }
 
 .mc-recipe-label {
@@ -53,53 +40,46 @@
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: #444;
-  margin-bottom: .2rem;
+  color: var(--text-muted);
+  margin-bottom: .1rem;
 }
 
+/* ── Texture container — sized to exactly match crafting_bg.png (352×172 at 2×) ── */
 .mc-recipe-row {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-}
-
-/* 3×3 crafting grid */
-.mc-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 40px);
-  grid-template-rows: repeat(3, 40px);
-  gap: 2px;
-  padding: 2px;
+  position: relative;
+  width: 352px;
+  height: 172px;
   flex-shrink: 0;
-
-  /* ── Replace with your texture ──
-   *  background-image: url('/img/ui/crafting_grid.png');
-   *  Then remove the colour + border fallbacks below.
-   */
-  background-color: #8B8B8B;
-  background-image: none;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 2px solid #373737;
+  background-image: url('/img/ui/crafting_bg.png');
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
-/* Inventory slot outer shell */
+/* 3×3 crafting grid — absolutely positioned to align with texture slots
+   Grid origin in texture at 2×: (58px, 32px). Each slot = 36×36px. */
+.mc-grid {
+  position: absolute;
+  top: 32px;
+  left: 58px;
+  display: grid;
+  grid-template-columns: repeat(3, 36px);
+  grid-template-rows: repeat(3, 36px);
+  gap: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  flex-shrink: 0;
+}
+
+/* Inventory slot — transparent, texture draws the cell */
 .invslot {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* ── Replace with your texture ──
-   *  background-image: url('/img/ui/inv_slot.png');
-   *  background-size: cover;
-   *  Then remove the colour fallback below.
-   */
-  background-color: #8B8B8B;
-  background-image: none;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: transparent;
 }
 
 /* Item cell — hover-able, tooltip-triggering */
@@ -112,27 +92,15 @@
   cursor: default;
   position: relative;
   overflow: hidden;
-
-  /* ── Replace with your texture ──
-   *  background-image: url('/img/ui/inv_slot_item.png');
-   *  background-size: cover;
-   *  Then remove the colour + border fallbacks below.
-   */
-  background-color: #3C3C3C;
-  background-image: none;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-top: 2px solid #555;
-  border-left: 2px solid #555;
-  border-bottom: 2px solid #1A1A1A;
-  border-right: 2px solid #1A1A1A;
+  background: transparent;
+  border: none;
 }
 
 .invslot-item:hover::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.22);
   pointer-events: none;
   z-index: 1;
 }
@@ -146,32 +114,34 @@
   display: block;
 }
 
-/* Result slot — slightly larger */
+/* Arrow — drawn by the texture, hide the HTML element */
+.mc-arrow-wrap {
+  display: none;
+}
+
+/* Result slot — absolutely positioned to align with texture (2×: top=60, left=238, size=52px) */
+.mc-result-slot {
+  position: absolute;
+  top: 60px;
+  left: 238px;
+}
+
 .mc-result-slot .invslot {
-      width:50px;
-      height:50px;
+  width: 52px;
+  height: 52px;
+  background: transparent;
 }
 
 .mc-result-slot .invslot-item {
-      width:46px;
-      height:46px;
+  width: 52px;
+  height: 52px;
+  background: transparent;
+  border: none;
 }
 
 .mc-result-slot .invslot-item img {
-      width:36px;
-      height:36px;
-}
-
-/* Arrow — replace the SVG with an image if you prefer ──
- *  Drop /img/ui/crafting_arrow.png and use:
- *    <img src="/img/ui/crafting_arrow.png" alt="→">
- *  instead of the <svg> in the HTML.
- */
-.mc-arrow-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
 }
 
 /* ── Item icons ──
@@ -218,13 +188,48 @@
 .mc-icon-fallback[data-item="stone"]       { background: #808080 }
 
 
+/* Stack count badge — shown on result slot when result_count > 1 */
+.invslot-count {
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 0 #3f3f3f;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+/* Shapeless recipe badge */
+.mc-recipe-shapeless {
+  display: inline-block;
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: .1rem .35rem;
+  margin-left: .5rem;
+  vertical-align: middle;
+  font-family: var(--font-body);
+}
+
 /* Crafting recipe: ensure it fits narrow screens */
-@media (max-width:480px) {
-      .mc-recipe{
-            width:100%;
-            overflow-x:auto
-      }
-      .mc-recipe-row{
-            gap:.5rem
-      }
+@media (max-width:520px) {
+  .mc-recipe { overflow-x: auto }
+  .mc-recipe-row { width: 280px; height: 137px }
+  .mc-grid { top: 26px; left: 46px }
+  .mc-grid { grid-template-columns: repeat(3,29px); grid-template-rows: repeat(3,29px) }
+  .invslot { width:29px; height:29px }
+  .invslot-item { width:29px; height:29px }
+  .invslot-item img { width:22px; height:22px }
+  .mc-result-slot { top:48px; left:190px }
+  .mc-result-slot .invslot,
+  .mc-result-slot .invslot-item { width:41px; height:41px }
+  .mc-result-slot .invslot-item img { width:30px; height:30px }
 }

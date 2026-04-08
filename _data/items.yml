@@ -1,0 +1,82 @@
+# ══════════════════════════════════════════════════════
+#  WitchCraftMC — Item Registry
+#  _data/items.yml
+# ══════════════════════════════════════════════════════
+#
+#  Add a new entry here whenever you add a new item
+#  texture to /img/items/.
+#
+#  Keys
+#  ────
+#  name      Display name shown in tooltips & recipe labels
+#  img       Path to the item's texture (16×16 or 32×32 PNG)
+#  tooltip   Minetip tooltip text
+#              · Use  /  to start a new line
+#              · Use  &e  &7  &a  etc. for Minecraft colour codes
+#              · First line is the item title (auto-styled)
+#
+# ══════════════════════════════════════════════════════
+
+# ── Vanilla items ──────────────────────────────────────
+
+leather:
+  name: Leather
+  img: /img/items/leather.png
+  tooltip: "&7Dropped by cows, horses, and llamas."
+
+chest:
+  name: Chest
+  img: /img/items/chest.png
+  tooltip: "&7A storage container./&7Holds up to &f27 &7stacks of items."
+
+iron_ingot:
+  name: Iron Ingot
+  img: /img/items/iron_ingot.png
+  tooltip: "&7Smelted from iron ore./&7A common crafting material."
+
+gold_ingot:
+  name: Gold Ingot
+  img: /img/items/gold_ingot.png
+  tooltip: "&7Smelted from gold ore./&7Used in powered rails, clocks, and more."
+
+diamond:
+  name: Diamond
+  img: /img/items/diamond.png
+  tooltip: "&7Found deep underground./&7Used in the strongest tools and armour."
+
+string:
+  name: String
+  img: /img/items/string.png
+  tooltip: "&7Dropped by spiders./&7Used in bows, fishing rods, and more."
+
+stick:
+  name: Stick
+  img: /img/items/stick.png
+  tooltip: "&7Crafted from planks./&7A basic crafting component."
+
+planks:
+  name: Oak Planks
+  img: /img/items/planks.png
+  tooltip: "&7Crafted from logs./&7A versatile building and crafting material."
+
+stone:
+  name: Stone
+  img: /img/items/stone.png
+  tooltip: "&7Smelted from cobblestone."
+
+# ── WitchCraftMC custom items ──────────────────────────
+
+backpack:
+  name: Backpack
+  img: /img/items/backpack.png
+  tooltip: "&eWitchCraftMC Custom Item/&7Right-click to open./&7Stores up to &f27 &7items./&cDoes not work in off-hand."
+
+repair_kit:
+  name: Repair Kit
+  img: /img/items/repair_kit.png
+  tooltip: "&eWitchCraftMC Custom Item/&7Right-click a damaged tool to repair it./&aRestores &f50% &adurability./&7No XP or anvil required."
+
+arcane_key:
+  name: Arcane Key
+  img: /img/items/arcane_key.png
+  tooltip: "&5Arcane Crate Key/&7Use at the crate plaza near spawn./&5Rare &7— obtained from special events."

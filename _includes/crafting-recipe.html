@@ -1,0 +1,67 @@
+{% comment %}
+  ╔══════════════════════════════════════════════════════╗
+  ║  crafting-recipe.html                               ║
+  ║  Renders a crafting recipe from _data/recipes.yml   ║
+  ╠══════════════════════════════════════════════════════╣
+  ║  Parameters                                         ║
+  ║  ─────────────────────────────────────────────────  ║
+  ║  id      (required) Recipe ID from recipes.yml      ║
+  ║  label   (optional) Override the recipe label text  ║
+  ║                                                     ║
+  ║  Usage                                              ║
+  ║  ─────────────────────────────────────────────────  ║
+  ║  {% include crafting-recipe.html id="backpack" %}   ║
+  ╚══════════════════════════════════════════════════════╝
+{% endcomment %}
+
+{%- assign recipe      = site.data.recipes[include.id] -%}
+{%- assign result_item = site.data.items[recipe.result] -%}
+{%- assign label       = include.label | default: result_item.name -%}
+
+<div class="mc-recipe">
+  <div class="mc-recipe-label">
+    Crafting Recipe &mdash; {{ label }}
+    {%- if recipe.shapeless %}<span class="mc-recipe-shapeless">Shapeless</span>{%- endif %}
+  </div>
+
+  <div class="mc-recipe-row">
+
+    <!-- 3×3 grid -->
+    <div class="mc-grid">
+      {%- for row in recipe.grid -%}
+        {%- for slot in row -%}
+          {%- if slot -%}
+            {%- assign item = site.data.items[slot] -%}
+            <div class="invslot">
+              <div class="invslot-item"
+                title="{{ item.name }}"
+                data-minetip-text="{{ item.tooltip }}">
+                <img src="{{ item.img }}" alt="{{ item.name }}">
+              </div>
+            </div>
+          {%- else -%}
+            <div class="invslot"><div class="invslot-item"></div></div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+
+    <!-- Arrow (hidden by CSS — drawn by the texture) -->
+    <div class="mc-arrow-wrap"></div>
+
+    <!-- Result slot -->
+    <div class="mc-result-slot">
+      <div class="invslot">
+        <div class="invslot-item"
+          title="{{ result_item.name }}"
+          data-minetip-text="{{ result_item.tooltip }}">
+          <img src="{{ result_item.img }}" alt="{{ result_item.name }}">
+          {%- if recipe.result_count and recipe.result_count > 1 -%}
+            <span class="invslot-count">{{ recipe.result_count }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

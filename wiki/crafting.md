@@ -66,51 +66,7 @@ WitchCraftMC keeps vanilla crafting intact but adds a handful of **custom recipe
 
 Store extra items without returning to base. Craft it with leather surrounding a chest:
 
-<div class="mc-recipe">
-  <div class="mc-recipe-label">Crafting Recipe — Backpack</div>
-  <div class="mc-recipe-row">
-    <div class="mc-grid">
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by &ecows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Chest"
-        data-minetip-text="&7A storage container./&7Holds up to 27 stacks of items."><img src="/img/items/chest.png" alt="Chest"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Leather"
-        data-minetip-text="&7Dropped by cows, horses, and llamas."><img src="/img/items/leather.png" alt="Leather"></div></div>
-    </div>
-    <div class="mc-arrow-wrap">
-      <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 7h16V1l8 8-8 8v-6H0V7z" fill="#6B6B6B"/>
-        <path d="M0 7h15V2l7 7-7 7v-5H0V7z" fill="#9B9B9B"/>
-      </svg>
-    </div>
-    <div class="mc-result-slot">
-      <div class="invslot"><div class="invslot-item"
-        title="Backpack"
-        data-minetip-text="&eWitchCraftMC Custom Item/&7Right-click to open./&7Stores up to &f27 &7items./&cDoes not work in off-hand."><img src="/img/items/backpack.png" alt="Backpack"></div></div>
-    </div>
-  </div>
-</div>
+{% include crafting-recipe.html id="backpack" %}
 
 **Usage:** Right-click while holding the Backpack to open it. Does not work in the off-hand slot.
 
@@ -135,51 +91,7 @@ Store extra items without returning to base. Craft it with leather surrounding a
 
 Repair tools and weapons without an anvil or XP — especially useful early-game.
 
-<div class="mc-recipe">
-  <div class="mc-recipe-label">Crafting Recipe — Repair Kit</div>
-  <div class="mc-recipe-row">
-    <div class="mc-grid">
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="String"
-        data-minetip-text="&7Dropped by spiders./&7Used in bows, fishing rods, and more."><img src="/img/items/string.png" alt="String"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-      <div class="invslot"><div class="invslot-item"
-        title="Iron Ingot"
-        data-minetip-text="&7Smelted from iron ore./&7A common crafting material."><img src="/img/items/iron_ingot.png" alt="Iron Ingot"></div></div>
-    </div>
-    <div class="mc-arrow-wrap">
-      <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 7h16V1l8 8-8 8v-6H0V7z" fill="#6B6B6B"/>
-        <path d="M0 7h15V2l7 7-7 7v-5H0V7z" fill="#9B9B9B"/>
-      </svg>
-    </div>
-    <div class="mc-result-slot">
-      <div class="invslot"><div class="invslot-item"
-        title="Repair Kit"
-        data-minetip-text="&eWitchCraftMC Custom Item/&7Right-click a damaged tool to repair it./&aRestores &f50% &adurability./&7No XP or anvil required."><img src="/img/items/repair_kit.png" alt="Repair Kit"></div></div>
-    </div>
-  </div>
-</div>
+{% include crafting-recipe.html id="repair_kit" %}
 
 **Usage:** Right-click the item you want to repair while holding the Repair Kit. Restores **50% durability**.
 
