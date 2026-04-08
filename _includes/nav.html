@@ -1,7 +1,6 @@
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -12,25 +11,27 @@
       <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
-          <a href="#page-top"></a>
+      <ul class="nav navbar-nav navbar-right nav-util">
+        <li>
+          <button id="ip-copy-btn" onclick="copyServerIP()" class="ip-button">
+            <span class="ip-text">play.witchcraftmc.com</span>
+            <i class="fa-regular fa-copy ip-copy-icon"></i>
+            <span class="ip-copied-label">Copied!</span>
+          </button>
         </li>
-        <li class="page-scroll nav-spaces">
-          <button onclick="navigator.clipboard.writeText('play.witchcraftmc.com')" class="ip-button"><span class="ip-text">play.witchcraftmc.com⮺</span></button>
-        </li>
-        <li class="page-scroll ip-text nav-spaces">
-          <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
-          <p class="small">Players Online: <span data-playercounter-ip="play.witchcraftmc.com" data-playercounter-format="{online}/{max}"></span></p>
-        </li>
-        <!--<li class="nav-item">
-          <a class="nav-link" href="/wiki/">Wiki</a>
-        </li>-->
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-fluid -->
 </nav>
+
+<script>
+  function copyServerIP() {
+    navigator.clipboard.writeText('play.witchcraftmc.com');
+    var btn = document.getElementById('ip-copy-btn');
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.classList.remove('copied');
+    }, 2000);
+  }
+</script>
