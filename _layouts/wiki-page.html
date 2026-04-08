@@ -422,19 +422,35 @@
 // ── Dead-link highlighter ───────────────────────────
 // Sends a HEAD request for every internal wiki link on the page.
 // If the target returns 404, the link gets a red "broken" style.
+// Requests are processed in small batches to avoid overwhelming the server.
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.wiki-content a[href^="/wiki/"]').forEach(function (link) {
-    fetch(link.href, { method: 'HEAD' })
+  var links = Array.from(document.querySelectorAll('.wiki-content a[href^="/wiki/"]'));
+  var BATCH = 5;
+  var TIMEOUT_MS = 5000;
+
+  function checkLink(link) {
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, TIMEOUT_MS);
+    return fetch(link.href, { method: 'HEAD', cache: 'no-cache', signal: controller.signal })
       .then(function (res) {
         if (res.status === 404) {
           link.classList.add('dead-link');
         }
       })
       .catch(function () {
-        // Network error — also treat as broken
+        // Network error or timeout — treat as broken
         link.classList.add('dead-link');
-      });
-  });
+      })
+      .finally(function () { clearTimeout(timer); });
+  }
+
+  function runBatch(index) {
+    if (index >= links.length) return;
+    var batch = links.slice(index, index + BATCH).map(checkLink);
+    Promise.all(batch).then(function () { runBatch(index + BATCH); });
+  }
+
+  runBatch(0);
 });
 </script>
 </body>
