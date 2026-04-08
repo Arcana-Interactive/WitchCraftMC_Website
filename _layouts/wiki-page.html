@@ -418,5 +418,24 @@
     updateToc();
   })();
 </script>
+<script>
+// ── Dead-link highlighter ───────────────────────────
+// Sends a HEAD request for every internal wiki link on the page.
+// If the target returns 404, the link gets a red "broken" style.
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.wiki-content a[href^="/wiki/"]').forEach(function (link) {
+    fetch(link.href, { method: 'HEAD' })
+      .then(function (res) {
+        if (res.status === 404) {
+          link.classList.add('dead-link');
+        }
+      })
+      .catch(function () {
+        // Network error — also treat as broken
+        link.classList.add('dead-link');
+      });
+  });
+});
+</script>
 </body>
 </html>

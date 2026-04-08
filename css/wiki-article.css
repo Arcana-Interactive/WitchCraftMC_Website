@@ -367,6 +367,24 @@
   vertical-align: super;
 }
 
+/* ── Broken / dead links ── */
+.wiki-content a.dead-link {
+  color: #e74c3c !important;                       /* red text   */
+  border-bottom: 1px dashed #e74c3c !important;    /* red dashed underline */
+}
+
+.wiki-content a.dead-link:hover {
+  color: #ff6b6b !important;
+  border-bottom-color: #ff6b6b !important;
+}
+
+/* Optional: add a warning icon after broken links */
+.wiki-content a.dead-link::after {
+  content: ' ⚠';
+  font-size: .7em;
+  color: #e74c3c;
+}
+
 /* Article content styles */
 .wiki-content h2 {
       font-family:var(--font-title);
