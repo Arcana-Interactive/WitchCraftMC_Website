@@ -166,6 +166,13 @@ header .intro-text .skills {
     outline: 0;
 }
 
+@media(min-width:768px) {
+    .navbar-nav.navbar-right {
+        display: flex;
+        align-items: center;
+    }
+}
+
 .navbar-default,
 .navbar-inverse {
     border: 0;
