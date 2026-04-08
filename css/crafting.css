@@ -44,11 +44,11 @@
   margin-bottom: .1rem;
 }
 
-/* ── Texture container — sized to exactly match crafting_bg.png (352×172 at 2×) ── */
+/* ── Texture container — sized to exactly match crafting_bg.png at 2× (116×64 native → 232×128) ── */
 .mc-recipe-row {
   position: relative;
-  width: 352px;
-  height: 172px;
+  width: 232px;
+  height: 128px;
   flex-shrink: 0;
   background-image: url('/img/ui/crafting_bg.png');
   background-size: 100% 100%;
@@ -57,11 +57,11 @@
 }
 
 /* 3×3 crafting grid — absolutely positioned to align with texture slots
-   Grid origin in texture at 2×: (58px, 32px). Each slot = 36×36px. */
+   Grid origin in texture at 2×: (10px, 10px). Each slot = 36×36px. */
 .mc-grid {
   position: absolute;
-  top: 32px;
-  left: 58px;
+  top: 10px;
+  left: 10px;
   display: grid;
   grid-template-columns: repeat(3, 36px);
   grid-template-rows: repeat(3, 36px);
@@ -119,11 +119,11 @@
   display: none;
 }
 
-/* Result slot — absolutely positioned to align with texture (2×: top=60, left=238, size=52px) */
+/* Result slot — absolutely positioned to align with texture (2×: top=38, left=170, size=52px) */
 .mc-result-slot {
   position: absolute;
-  top: 60px;
-  left: 238px;
+  top: 38px;
+  left: 170px;
 }
 
 .mc-result-slot .invslot {
@@ -222,14 +222,17 @@
 /* Crafting recipe: ensure it fits narrow screens */
 @media (max-width:520px) {
   .mc-recipe { overflow-x: auto }
-  .mc-recipe-row { width: 280px; height: 137px }
-  .mc-grid { top: 26px; left: 46px }
-  .mc-grid { grid-template-columns: repeat(3,29px); grid-template-rows: repeat(3,29px) }
-  .invslot { width:29px; height:29px }
-  .invslot-item { width:29px; height:29px }
-  .invslot-item img { width:22px; height:22px }
-  .mc-result-slot { top:48px; left:190px }
+  /* 1.5× scale: 116×64 → 174×96 */
+  .mc-recipe-row { width: 174px; height: 96px }
+  /* Grid origin at 1.5×: 5×1.5=7.5→8px */
+  .mc-grid { top: 8px; left: 8px }
+  .mc-grid { grid-template-columns: repeat(3,27px); grid-template-rows: repeat(3,27px) }
+  .invslot { width:27px; height:27px }
+  .invslot-item { width:27px; height:27px }
+  .invslot-item img { width:21px; height:21px }
+  /* Result origin at 1.5×: x=85×1.5=128px, y=19×1.5=29px, size=26×1.5=39px */
+  .mc-result-slot { top:29px; left:128px }
   .mc-result-slot .invslot,
-  .mc-result-slot .invslot-item { width:41px; height:41px }
-  .mc-result-slot .invslot-item img { width:30px; height:30px }
+  .mc-result-slot .invslot-item { width:39px; height:39px }
+  .mc-result-slot .invslot-item img { width:28px; height:28px }
 }
