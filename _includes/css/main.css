@@ -242,7 +242,7 @@ img {
       background:rgba(var(--violet-rgb),.12);
       border:1px solid rgba(var(--violet-rgb),.25);
       border-radius:var(--radius);
-      padding:.95rem 2.09rem;
+      padding:0 2.09rem;
       cursor:pointer;
       transition:background .2s,border-color .2s
 }
