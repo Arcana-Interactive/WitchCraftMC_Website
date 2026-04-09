@@ -184,7 +184,7 @@ img {
 }
 
 /* Center nav links */
-.nav-center {
+.wc-nav-center {
       display:flex;
       align-items:center;
       gap:.15rem
@@ -193,14 +193,14 @@ img {
 @media(min-width:768px) {
       .nav-center{
             position:absolute;
-            left:50%;
+            left:25%;
             transform:translateX(-50%)
       }
 }
 
-.navbar .navbar-nav li a,
+.wc-navbar .wc-navbar-nav li a,
 
-.navbar .navbar-nav li a:focus {
+.wc-navbar .wc-navbar-nav li a:focus {
       color:var(--text-muted)!important;
       font-size:.9rem;
       font-weight:600;
@@ -210,48 +210,28 @@ img {
       outline:0
 }
 
-.navbar .navbar-nav li a:hover {
+.wc-navbar .wc-navbar-nav li a:hover {
       color:#fff!important;
       background:var(--surface-3)
 }
 
-.navbar-nav>.active>a {
+.wc-navbar-nav>.active>a {
       background-color:var(--surface-3)!important;
       color:var(--gold)!important
 }
 
-.navbar-toggle {
+.wc-navbar-toggle {
       border-color:var(--border)
 }
 
-.navbar-toggle .icon-bar {
+.wc-navbar-toggle .icon-bar {
       background-color:var(--text-muted)
 }
 
-.navbar-default .navbar-toggle:hover,
+.wc-navbar-default .wc-navbar-toggle:hover,
 
-.navbar-default .navbar-toggle:focus {
+.wc-navbar-default .wc-navbar-toggle:focus {
       background-color:var(--surface-2)
-}
-
-/* Right-side utility area */
-.nav-util {
-      display:flex;
-      align-items:center
-}
-
-/* Vertically center the IP button to match the brand height */
-.nav-util > li {
-      display:flex;
-      align-items:center
-}
-
-.navbar-nav.nav-util > li > button,
-
-.navbar-nav.nav-util > li {
-      margin-top:0;
-      padding-top:0;
-      padding-bottom:0
 }
 
 /* IP button in nav */
@@ -350,30 +330,13 @@ header .intro-text .name {
       margin-bottom:.5rem
 }
 
-header .intro-text .name em {
-      font-style:normal;
-      color:var(--gold)
-}
-
-header .intro-text .skills {
-      font-family:var(--font-body);
-      font-size:1.05em;
-      font-weight:400;
-      color:var(--text-muted);
-      max-width:500px;
-      margin:0 auto
-}
-
 @media(min-width:768px) {
       header .container{
-            padding-top:180px;
-            padding-bottom:100px
+            padding-top:100px;
+            padding-bottom:15px
       }
       header .intro-text .name{
             font-size:4.2em
-      }
-      header .intro-text .skills{
-            font-size:1.15em
       }
 }
 
@@ -392,16 +355,16 @@ header .intro-text .skills {
 ******************************/
 
 section {
-      padding:80px 0;
+      padding-top:15px;
+      padding-bottom:50px;
       position:relative
 }
 
 section h2 {
-      margin:0 0 .6rem;
-      font-size:2rem;
+      margin:2rem 0 2.5rem;
+      font-size:2.5rem;
       font-family:var(--font-title);
       font-weight:700;
-      letter-spacing:.06em;
       color:#fff
 }
 
