@@ -119,17 +119,18 @@ img {
 ******************************/
 
 /* ── How the layout works ──────────────────────────────────────────────────
-   The container-fluid is a fixed-height positioning context.
-   Both the brand and the IP button are placed with position:absolute,
-   anchored symmetrically around the vertical centre line of the page.
+   On desktop (≥768px): both items are absolutely positioned, anchored
+   symmetrically from the page centre. --nav-gap is a PERCENTAGE so it
+   scales with screen width — no more tight spacing on small monitors.
 
-   To adjust how far apart they sit, change ONE value: --nav-gap
-   e.g. 120px → brand's right edge is 120px left of centre,
-                 IP button's left edge is 120px right of centre.
+   On mobile (<768px): falls back to a plain flex row so both items stay
+   visible and don't vanish.
+
+   To move items closer/further from centre, change ONE value: --nav-gap
    ───────────────────────────────────────────────────────────────────────── */
 
-/* Gap from centre to each element's inner edge — tweak this to reposition */
-:root { --nav-gap: 400px; }
+/* % gap from centre — scales with viewport width */
+:root { --nav-gap: 15%; }
 
 
 /* Bar itself */
@@ -149,29 +150,24 @@ img {
 }
 
 
-/* Container: fixed height so absolutely-positioned children don't collapse it */
+/* ── Mobile: simple flex row so items don't vanish ── */
 .navbar-fixed-top .container-fluid {
-      position:      relative;
-      height:        56px;
-      padding-left:  0 !important;
-      padding-right: 0 !important;
+      display:         flex;
+      align-items:     center;
+      justify-content: space-between;
+      padding-left:    1rem !important;
+      padding-right:   1rem !important;
 }
 
-
-/* Brand (left side) — right edge lands --nav-gap left of centre */
 .navbar-fixed-top .navbar-header {
-      position:  absolute;
-      right:     calc(50% + var(--nav-gap));
-      top:       50%;
-      transform: translateY(-50%);
-      float:     none;
-      margin:    0;
+      float:  none;
+      margin: 0;
 }
 
 .navbar-fixed-top .navbar-brand {
       font-family:    var(--font-title);
       font-weight:    800;
-      font-size:      1.87rem;
+      font-size:      1.2rem;
       color:          #fff !important;
       letter-spacing: -.01em;
       transition:     all .3s;
@@ -181,12 +177,35 @@ img {
 }
 
 
-/* IP button (right side) — left edge lands --nav-gap right of centre */
-.navbar-fixed-top #ip-copy-btn {
-      position:  absolute;
-      left:      calc(50% + var(--nav-gap));
-      top:       50%;
-      transform: translateY(-50%);
+/* ── Desktop: absolute centre-anchor layout ── */
+@media (min-width: 768px) {
+      .navbar-fixed-top .container-fluid {
+            position:       relative;
+            height:         56px;
+            display:        block;
+            padding-left:   0 !important;
+            padding-right:  0 !important;
+      }
+
+      /* Brand: right edge sits --nav-gap left of centre */
+      .navbar-fixed-top .navbar-header {
+            position:  absolute;
+            right:     calc(50% + var(--nav-gap));
+            top:       50%;
+            transform: translateY(-50%);
+      }
+
+      /* IP button: left edge sits --nav-gap right of centre */
+      .navbar-fixed-top #ip-copy-btn {
+            position:  absolute;
+            left:      calc(50% + var(--nav-gap));
+            top:       50%;
+            transform: translateY(-50%);
+      }
+
+      .navbar-fixed-top .navbar-brand {
+            font-size: 1.87rem;
+      }
 }
 
 .wc-navbar .wc-navbar-nav li a,
