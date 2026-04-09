@@ -1,8 +1,8 @@
 ---
 layout: wiki-page
-title: Furniture Merchant
+title: Steven Chairman
 description: "Buy decorative furniture and props for your builds."
-permalink: /wiki/npc/Furniture Merchant
+permalink: /wiki/npc/steven-chairman
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn

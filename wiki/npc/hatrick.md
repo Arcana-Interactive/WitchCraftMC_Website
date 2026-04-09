@@ -1,8 +1,8 @@
 ---
 layout: wiki-page
-title: Cosmeticist
+title: Hatrick
 description: "Customise your appearance with cosmetics and vanity items."
-permalink: /wiki/npc/Cosmeticist
+permalink: /wiki/npc/hatrick
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn

@@ -19,13 +19,11 @@
 {%- assign label       = include.label | default: result_item.name -%}
 
 <div class="mc-recipe">
-  <div class="mc-recipe-label">
+  <!--<div class="mc-recipe-label">
     Crafting Recipe &mdash; {{ label }}
     {%- if recipe.shapeless %}<span class="mc-recipe-shapeless">Shapeless</span>{%- endif %}
-  </div>
-
+  </div>-->
   <div class="mc-recipe-row">
-
     <!-- 3×3 grid -->
     <div class="mc-grid">
       {%- for row in recipe.grid -%}
@@ -45,7 +43,6 @@
         {%- endfor -%}
       {%- endfor -%}
     </div>
-
     <!-- Arrow (hidden by CSS — drawn by the texture) -->
     <div class="mc-arrow-wrap"></div>
 
@@ -62,6 +59,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>

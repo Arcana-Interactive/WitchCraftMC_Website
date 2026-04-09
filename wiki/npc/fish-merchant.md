@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Fish Merchant
 description: "Sell your catch and buy fishing supplies at Spawn."
-permalink: /wiki/npc/Fish Merchant
+permalink: /wiki/npc/fish-merchant
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn

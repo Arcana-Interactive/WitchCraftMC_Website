@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Mob Merchant
 description: "Buy and sell mob drops and spawn eggs at Spawn."
-permalink: /wiki/npc/Mob Merchant
+permalink: /wiki/npc/mob-merchant
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn

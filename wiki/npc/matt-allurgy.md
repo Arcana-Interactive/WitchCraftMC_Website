@@ -1,8 +1,8 @@
 ---
 layout: wiki-page
-title: Blacksmith
+title: Matt Allurgy
 description: "Repair and upgrade your gear at the Spawn forge."
-permalink: /wiki/npc/Blacksmith
+permalink: /wiki/npc/matt-allurgy
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn

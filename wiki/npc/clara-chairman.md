@@ -1,8 +1,8 @@
 ---
 layout: wiki-page
-title: Lumberjack
+title: Clara Chairman
 description: "Trade wood and forest resources at Spawn."
-permalink: /wiki/npc/Lumberjack
+permalink: /wiki/npc/clara-chairman
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn

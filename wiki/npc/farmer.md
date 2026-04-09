@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Farmer
 description: "Trade crops and farming supplies at Spawn."
-permalink: /wiki/npc/Farmer
+permalink: /wiki/npc/farmer
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn
