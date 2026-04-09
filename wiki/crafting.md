@@ -48,7 +48,6 @@ WitchCraftMC keeps vanilla crafting intact but adds a handful of **custom recipe
 ## Custom Recipes
 
 ### Backpack
-
 <div class="infobox">
   <div class="infobox-title">Backpack</div>
   <div class="infobox-img"><img src="/img/items/backpack.png" alt="Backpack" class="mc-icon-lg"></div>
@@ -66,7 +65,7 @@ WitchCraftMC keeps vanilla crafting intact but adds a handful of **custom recipe
 
 Store extra items without returning to base. Craft it with leather surrounding a chest:
 
-{% include crafting-recipe.html id="backpack" %}
+{% include crafting-recipe.html id="charcoal_block" %}
 
 **Usage:** Right-click while holding the Backpack to open it. Does not work in the off-hand slot.
 
@@ -91,7 +90,7 @@ Store extra items without returning to base. Craft it with leather surrounding a
 
 Repair tools and weapons without an anvil or XP — especially useful early-game.
 
-{% include crafting-recipe.html id="repair_kit" %}
+{% include crafting-recipe.html id="pyroclastic_axe" %}
 
 **Usage:** Right-click the item you want to repair while holding the Repair Kit. Restores **50% durability**.
 

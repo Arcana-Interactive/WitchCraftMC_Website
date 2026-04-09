@@ -22,34 +22,30 @@
 
 # ── Custom recipes ─────────────────────────────────────
 
-backpack:
-  result: backpack
+charcoal_block:
+  result: coal_block
   grid:
-    - [leather, leather, leather]
-    - [leather, chest,   leather]
-    - [leather, leather, leather]
+    - [charcoal, charcoal, charcoal]
+    - [charcoal, charcoal, charcoal]
+    - [charcoal, charcoal, charcoal]
 
-repair_kit:
-  result: repair_kit
+arcanium_ingot:
+  result: arcanium_ingot
   grid:
-    - [iron_ingot, iron_ingot, iron_ingot]
-    - [iron_ingot, string,     iron_ingot]
-    - [iron_ingot, iron_ingot, iron_ingot]
+    - [arcanium_fragment, arcanium_fragment, arcanium_fragment]
+    - [arcanium_fragment, arcanium_fragment, arcanium_fragment]
+    - [arcanium_fragment, arcanium_fragment, arcanium_fragment]
 
-# ── Example: shapeless recipe (items can go anywhere) ──
-# example_shapeless:
-#   result: some_item
-#   shapeless: true
-#   grid:
-#     - [iron_ingot, gold_ingot, ~]
-#     - [~,          ~,          ~]
-#     - [~,          ~,          ~]
+arcanium_block:
+  result: arcanium_block
+  grid:
+    - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
+    - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
+    - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
 
-# ── Example: recipe with multiple output items ──────────
-# example_multi:
-#   result: stick
-#   result_count: 4
-#   grid:
-#     - [planks, ~, ~]
-#     - [planks, ~, ~]
-#     - [~,      ~, ~]
+pyroclastic_axe:
+  result: pyroclastic_axe
+  grid:
+    - [arcanium_ingot, arcanium_ingot,'']
+    - [arcanium_ingot, pyroclastic_core,'']
+    - ['',stick,'']

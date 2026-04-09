@@ -18,65 +18,76 @@
 # ══════════════════════════════════════════════════════
 
 # ── Vanilla items ──────────────────────────────────────
-
-leather:
-  name: Leather
-  img: /img/items/Leather.png
-  tooltip: "&7Dropped by cows, horses, and llamas."
-
-chest:
-  name: Chest
-  img: /img/items/Chest.png
-  tooltip: "&7A storage container./&7Holds up to &f27 &7stacks of items."
-
-iron_ingot:
-  name: Iron Ingot
-  img: /img/items/Iron_Ingot.png
-  tooltip: "&7Smelted from iron ore./&7A common crafting material."
-
-gold_ingot:
-  name: Gold Ingot
-  img: /img/items/Gold_Ingot.png
-  tooltip: "&7Smelted from gold ore./&7Used in powered rails, clocks, and more."
-
-diamond:
-  name: Diamond
-  img: /img/items/Diamond.png
-  tooltip: "&7Found deep underground./&7Used in the strongest tools and armour."
-
-string:
-  name: String
-  img: /img/items/String.png
-  tooltip: "&7Dropped by spiders./&7Used in bows, fishing rods, and more."
+charcoal:
+  name: Charcoal
+  img: /img/items/charcoal.png
+  tooltip: "&7A common ore"
+coal_block:
+  name: Block of Coal
+  img: /img/items/coal_block.png
+  tooltip: "&7A common block of ore"
 
 stick:
   name: Stick
-  img: /img/items/Stick.png
+  img: /img/items/stick.png
   tooltip: "&7Crafted from planks./&7A basic crafting component."
 
+chest:
+  name: Chest
+  img: /img/items/chest.png
+  tooltip: "&7A storage container./&7Holds up to &f27 &7stacks of items."
+iron_ingot:
+  name: Iron Ingot
+  img: /img/items/iron_ingot.png
+  tooltip: "&7Smelted from iron ore./&7A common crafting material."
+gold_ingot:
+  name: Gold Ingot
+  img: /img/items/gold_ingot.png
+  tooltip: "&7Smelted from gold ore./&7Used in powered rails, clocks, and more."
+diamond:
+  name: Diamond
+  img: /img/items/diamond.png
+  tooltip: "&7Found deep underground./&7Used in the strongest tools and armour."
+string:
+  name: String
+  img: /img/items/string.png
+  tooltip: "&7Dropped by spiders./&7Used in bows, fishing rods, and more."
 planks:
   name: Oak Planks
-  img: /img/items/Planks.png
+  img: /img/items/planks.png
   tooltip: "&7Crafted from logs./&7A versatile building and crafting material."
-
 stone:
   name: Stone
-  img: /img/items/Stone.png
+  img: /img/items/stone.png
   tooltip: "&7Smelted from cobblestone."
 
 # ── WitchCraftMC custom items ──────────────────────────
+arcanium_fragments:
+  name: Arcanium Fragments
+  img: /img/items/arcanium_ingot.png
+  tooltip: "&7A rare magical fragment"
+arcanium_ingot:
+  name: Arcanium Ingot
+  img: /img/items/arcanium_ingot.png
+  tooltip: "&7A rare magical ingot"
+arcanium_block:
+  name: Arcanium Block
+  img: /img/items/arcanium_ingot.png
+  tooltip: "&7A rare magical block"
 
-backpack:
-  name: Backpack
-  img: /img/items/Backpack.png
-  tooltip: "&eWitchCraftMC Custom Item/&7Right-click to open./&7Stores up to &f27 &7items./&cDoes not work in off-hand."
-
-repair_kit:
-  name: Repair Kit
-  img: /img/items/Repair_Kit.png
-  tooltip: "&eWitchCraftMC Custom Item/&7Right-click a damaged tool to repair it./&aRestores &f50% &adurability./&7No XP or anvil required."
-
-arcane_key:
-  name: Arcane Key
-  img: /img/items/Arcane_Key.png
-  tooltip: "&5Arcane Crate Key/&7Use at the crate plaza near spawn./&5Rare &7— obtained from special events."
+water_core:
+  name: Water Core
+  img: /img/items/water_core.png
+  tooltip: "&7Crafting Ingredient"
+pyroclastic_core:
+  name: Pyroclastic Core
+  img: /img/items/pyroclastic_core.png
+  tooltip: "&7Crafting Ingredient"
+pyroclastic_pickaxe:
+  name: Pyroclastic Pickaxe
+  img: /img/items/pyroclastic_pickaxe.png
+  tooltip: "&7A really warm pickaxe"
+pyroclastic_axe:
+  name: Pyroclastic Axe
+  img: /img/items/pyroclastic_core.png
+  tooltip: "&7A really warm axe"
