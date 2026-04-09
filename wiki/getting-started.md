@@ -17,43 +17,22 @@ see_also:
     url: /wiki/commands/
   - title: Staff & Ranks
     url: /wiki/staff-ranks/
-history:
-  - version: "Pre-Launch"
-    date: "2024-01-01"
-    changes: "Getting Started guide created."
-  - version: "v1.0"
-    date: "2024-03-15"
-    changes: "Page published at server launch. Covers joining, basic survival, and first steps."
-  - version: "v1.1"
-    date: "2024-06-08"
-    changes: "Added section on the /kit starter command and Discord verification steps."
-  - version: "v1.2"
-    date: "2025-02-14"
-    changes: "Rewritten to reflect Season 2 spawn layout and updated starter kit contents."
 ---
 
 ## Welcome to WitchCraftMC
 
-WitchCraftMC is a **Survival SMP** server with a focus on community, exploration, and building. Whether you're a seasoned veteran or stepping into Minecraft for the first time, this guide will get you on your feet.
-
-<div class="wiki-callout tip">
-  <span class="callout-icon"><i class="fas fa-star"></i></span>
-  <div>Before doing anything else, read the <a href="/wiki/rules/">Rules</a>. Breaking them — even unknowingly — can result in a ban.</div>
-</div>
-
-## How to Join
-
-1. Launch **Minecraft Java Edition** (version `1.20.x` or the version listed on our Discord).
-2. Go to **Multiplayer → Add Server**.
-3. Enter the server address: `play.witchcraftmc.gg`
-4. Click **Join Server** — you're in!
-
-<div class="wiki-callout info">
-  <span class="callout-icon"><i class="fas fa-info-circle"></i></span>
-  <div>Join our <a href="http://discord.gg/5gHJtxrMZS" target="_blank">Discord server</a> to get announcements, report issues, and chat with the community.</div>
+WitchCraftMC is a **Survival** server with a focus on rpg elements, community, exploration, and building. Whether you're a seasoned veteran or stepping into Minecraft for the first time, this guide will get you on your feet.
+<div class="wiki-callout warning">
+  <span class="callout-icon"><i class="fas fa-triangle-exclamation"></i></span>
+  <div>Before doing anything else, read the <a href="/wiki/rules/">Rules</a>. Breaking them — even unknowingly — can result in a ban</div>
 </div>
 
 ## Your First Steps
+
+<div class="wiki-callout info">
+  <span class="callout-icon"><i class="fas fa-info-circle"></i></span>
+  <div>Join our <a href="http://discord.gg/5gHJtxrMZS" target="_blank">Discord Server</a> to receive announcements, report bugs, make suggestions, and to chat with the community.</div>
+</div>
 
 Once you spawn, here's what we recommend doing first:
 
