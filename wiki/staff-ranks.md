@@ -1,23 +1,15 @@
 ---
 layout: wiki-page
-title: Staff & Ranks
-description: "The WitchCraftMC rank system, staff team structure, and how to apply."
+title: Staff Ranks
+description: "The WitchCraftMC staff team structure, and how to apply."
 permalink: /wiki/staff-ranks/
 toc: true
 categories: [Community, Ranks]
-prev_page:
-  title: World & Lore
-  url: /wiki/worlds/
-next_page:
-  title: Commands & Plugins
-  url: /wiki/commands/
 see_also:
-  - title: Commands & Plugins
-    url: /wiki/commands/
-  - title: Getting Started
-    url: /wiki/getting-started/
-  - title: Rules
-    url: /wiki/rules/
+  - title: Store Ranks
+    url: /wiki/store-ranks/
+  - title: In-Game Ranks
+    url: /wiki/ranks/
 ---
 
 ## Player Ranks

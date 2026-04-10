@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Archwizard
 description: "Master of arcane arts — enchanting and magical services at Spawn."
-permalink: /wiki/npc/Archwizard
+permalink: /wiki/npc/archwizard
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn
