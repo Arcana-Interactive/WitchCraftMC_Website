@@ -1,16 +1,10 @@
 ---
 layout: wiki-page
-title: Crafting & Items
-description: "Custom recipes, unique drops, and special items exclusive to WitchCraftMC."
+title: Crafting Recipes
+description: "Custom recipes exclusive to WitchCraftMC."
 permalink: /wiki/crafting/
 toc: true
 categories: [Gameplay, Economy]
-prev_page:
-  title: Land Claims
-  url: /wiki/claims/
-next_page:
-  title: World & Lore
-  url: /wiki/worlds/
 see_also:
   - title: Commands & Plugins
     url: /wiki/commands/

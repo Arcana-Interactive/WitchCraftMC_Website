@@ -5,9 +5,6 @@ description: "New to WitchCraftMC? Here's everything you need for your first ses
 permalink: /wiki/getting-started/
 toc: true
 categories: [Guides, Beginner]
-next_page:
-  title: Rules
-  url: /wiki/rules/
 see_also:
   - title: Rules
     url: /wiki/rules/
@@ -24,7 +21,7 @@ see_also:
 WitchCraftMC is a **Survival** server with a focus on rpg elements, community, exploration, and building. Whether you're a seasoned veteran or stepping into Minecraft for the first time, this guide will get you on your feet.
 <div class="wiki-callout warning">
   <span class="callout-icon"><i class="fas fa-triangle-exclamation"></i></span>
-  <div>Before doing anything else, read the <a href="/wiki/rules/">Rules</a>. Breaking them — even unknowingly — can result in a ban</div>
+  <div>Before doing anything else, read the <a href="/wiki/rules/">Rules</a>. Breaking them, even unknowingly, can result in a ban</div>
 </div>
 
 ## Your First Steps
@@ -34,32 +31,32 @@ WitchCraftMC is a **Survival** server with a focus on rpg elements, community, e
   <div>Join our <a href="http://discord.gg/5gHJtxrMZS" target="_blank">Discord Server</a> to receive announcements, report bugs, make suggestions, and to chat with the community.</div>
 </div>
 
-Once you spawn, here's what we recommend doing first:
+Once you spawn in, here's what we recommend doing first:
 
-1. **Read the spawn signs** — they contain essential server info.
-2. **Pick up your starter kit** by running `/kit starter` (available to all [Wanderer](/wiki/staff-ranks/#wanderer) rank players).
-3. **Find a spot to settle** — use `/rtp` to teleport to a random wilderness location.
-4. **Claim your land** before building anything. See the [Land Claims](/wiki/claims/) guide.
-5. **Set a home** with `/sethome` once you find your spot.
+1. Head over to the Survival NPC in the Hub and click to join the Survival Server
+2. **Find a spot to settle** - use `/rtp` to teleport to a random location in our available [worlds](/wiki/worlds/).
+> *keep in mind that you should only build in the Survival Worlds, and gather resources in the Resource Worlds*
+3. **Claim your land** - before building anything. See the [Claims](/wiki/claims/) guide.
+4. **Set a home** - use `/sethome` once you find your spot to be able to teleport back to your area!
+5. **Gain Money** - You should use `/rtp` to teleport to a Resource World and obtain resources. These can be sold to the various [Shops](/wiki/npc/) in [Spawn](/wiki/spawn/).
+6. **Rank Up** - You can use `/rankup` to teleport to the [Archwizard](/wiki/npc/archwizard/) in Spawn to rank up to the next [rank](/wiki/ranks/)!
 
 ## Useful Beginner Commands
 
 | Command | What it does |
 |---|---|
-| `/kit starter` | Claim your one-time starter kit |
-| `/rtp` | Random teleport into the wilderness |
-| `/sethome` | Save your current location as home |
-| `/home` | Teleport back to your saved home |
-| `/spawn` | Return to the server spawn |
+| `/help` | Open the Help GUI for an in-game command list. |
+| `/vote` | Get the Vote Links to vote for the server for rewards | 
+| `/rtp` | Teleport to a random location within our available worlds. |
+| `/sethome <HomeName>` | Save your current location as a home, so it can be teleported to. |
+| `/home <HomeName>` | Teleport back to a saved home |
+| `/spawn` | Teleport to the server spawn |
 | `/tpa <player>` | Request to teleport to another player |
-| `/money` | Check your balance |
+| `/bal` | Check your current balance |
+| `/rankup` | Teleport to the [Archwizard](/wiki/npc/archwizard/) so you can rank up to the next [rank](/wiki/ranks/).|
 
-For the complete command list, see the [Commands & Plugins](/wiki/commands/) page.
+For the full command list, see the [Commands & Plugins](/wiki/commands/) page.
 
 ## Tips for New Players
 
-- **Don't build at spawn.** The area around spawn is protected. Explore at least 1,000 blocks out.
-- **Claim early.** Unclaimed land can be built on or looted by other players — see [Land Claims](/wiki/claims/).
-- **The economy matters.** You can earn money by selling items at player shops or the server shop (`/shop`).
-- **Ranks unlock over time.** Just by playing you'll advance from [Wanderer → Settler → Villager → Elder](/wiki/staff-ranks/#player-ranks), each with new perks.
-- **Ask for help.** Use `/helpme <question>` or ask in the `#general` Discord channel.
+- **Claim before building.** Unclaimed land can be built on or looted by other players. See [Land Claims](/wiki/claims/) for more information.

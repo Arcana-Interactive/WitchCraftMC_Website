@@ -9,21 +9,14 @@ This document covers everything you need for day-to-day wiki editing: adding pag
 ```
 wiki/
   index.md              ← /wiki/ landing page
-  spawn.md              ← /wiki/spawn/  (lists all NPCs in its infobox)
-  getting-started.md
-  rules.md
-  claims.md
-  crafting.md
-  worlds.md
-  staff-ranks.md
-  commands.md
   changelog.md
+  <page>.md
+  ...
   npc/
-    index.md            ← /wiki/npc/  (NPC browse table — update this when adding NPCs)
+    index.md            ← /wiki/npc/  (NPC browse table - update this when adding NPCs)
     _template.md        ← COPY THIS when making a new NPC page (not rendered by Jekyll)
-    auctioneer.md       ← /wiki/npc/Auctioneer
-    blacksmith.md
-    ... etc.
+    <npc>.md
+    ...
 
 _layouts/
   wiki-page.html        ← layout for all wiki pages; sidebar + infobox are defined here

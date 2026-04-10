@@ -5,12 +5,6 @@ description: "The code of conduct every WitchCraftMC player must follow."
 permalink: /wiki/rules/
 toc: true
 categories: [Guides, Community]
-prev_page:
-  title: Getting Started
-  url: /wiki/getting-started/
-next_page:
-  title: Land Claims
-  url: /wiki/claims/
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
@@ -19,64 +13,79 @@ see_also:
   - title: Staff & Ranks
     url: /wiki/staff-ranks/
 ---
-
-## The Golden Rule
-
-**Treat every player with the same respect you'd want yourself.** All other rules flow from this. If you're unsure whether something is acceptable, ask a [staff member](/wiki/staff-ranks/#staff-ranks) before doing it.
-
 <div class="wiki-callout warning">
   <span class="callout-icon"><i class="fas fa-exclamation-triangle"></i></span>
   <div>Ignorance of the rules is not an excuse. By joining the server, you agree to abide by them.</div>
 </div>
+<div class="wiki-callout tip">
+  <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>
+  <div>If you're unsure whether something is acceptable, always ask a Staff Member before doing it.</div>
+</div>
 
-## General Conduct
 
-- **No harassment, hate speech, or discrimination** of any kind. This includes slurs, targeted bullying, or repeated unwanted contact.
-- **No impersonating staff** or other players. See the [Staff & Ranks](/wiki/staff-ranks/) page to identify real staff tags.
-- **No cheating or hacking.** This includes x-ray texture packs, fly hacks, kill aura, speed hacks, or any client-side mod that gives an unfair advantage. Optifine and minimaps are allowed.
-- **No exploiting bugs.** If you find a dupe glitch or other exploit, report it to staff immediately via a Discord ticket. Abusing it will result in a permanent ban.
-- **No advertising** other servers or Discord servers in chat.
+## General Behaviour
+- **No impersonation** - Do not impersonate Staff or other players.
+- **No doxxing** - Do not share personal or private information regarding other people.
+- **Do not Trap players** - Teleport-killing or other traps are against the rules.
+- **No Scamming** - All formal agreements must be honoured.
+- **No harassment, hate speech, or discrimination** of any kind. This includes slurs, targeted bullying, or attempts at bypassing `/ignore`.
 
 ## Chat Rules
-
-- Keep it **family-friendly** in public channels. There are younger players here.
-- **No spamming** — this includes repeated messages, excessive caps, or character spam.
-- **No politics or religion** as discussion topics. These cause too much conflict.
-- **English only** in main chat. Private messages in any language are fine.
+- **Stay appropriate** - Do not share inappropriate content in any chat. This also includes religion and politics as they can cause heated discussion.
+- No inappropriate nicknames or usernames.
 - Staff have final say on what is appropriate in chat.
+- **English only** in main chat. Private messages are fine to be in any language.
+- **No spamming** - this includes repeated messages, excessive caps, or character spam.
 
 ## Griefing & Theft
+<div class="wiki-callout info">
+  <span class="callout-icon"><i class="fas fa-shield-halved"></i></span>
+  <div>While griefing is disallowed, the best protection is to <a href="/wiki/claims/">claim your land.</a></div>
+</div>
 
-- **Griefing is not allowed.** Do not break, alter, or deface another player's builds — claimed or unclaimed.
-- **Theft is not allowed.** Do not take items from another player's chests, farms, or builds.
-- **Unclaimed land is not entirely free to grief.** Use your best judgement. If it looks like someone lives there, leave it alone.
+- **Do not Grief** - Do not break, or otherwise alter other players’ builds without their permission.
+- **No Border-Griefing** - Do not build, or deform the terrain near other players’ claims without their permission.
+- Killing mobs that are clearly owned by another player is still considered grief.
+- **Use the Resource Worlds** - Only deform the Main world’s terrain for building purposes. Collecting resources should be done in the resource world.
+- **No Theft** - Do not take items from another player without their permission.
+
+## Advertising
+-   Do not share other server-ips or have longer discussions that revolve around another server. Mentioning another server in passing is fine however.
+-   Do not advertise social media accounts unless it has content related to WitchCraftMC.
+
+## No ALT Accounts:
+-   You may only use one account per person. If you have multiple people in your household that are playing, contact a staff member.
+
+## Claim Rules:
+-   If a resident player is inactive for over 7 days, the Claim Owner has the right to remove the player.
+-   Claim Owners may remove their players’ builds at their discretion if either:
+    -   The player has left the town.
+    -   The player has not been online for over 7 days. 
+    
+    *The Claim Owner must give players a 2 day notice before removing builds/items, and allow the player to remove it themselves if they want.*
+-   Claim Owners are permitted to set their own claim rules. If resident players do not follow these, Claim Owners are allowed to enforce them by evicting the player.
+-   Claim Owners can ban any player from their claims for any reason. However if the player has builds or items within the claim, the Claim Owner still has to follow the above rules for retrieval.
+
+## Gameplay rules:
+- **No inappropriate builds** (including pixel, and map art.)
+- **No lag machines.** - If your build causes significant server lag it will be removed without warning.
+-   **No exploiting bugs.** - If you find a glitch or exploit, report it to a Staff Member immediately or make a bug report on discord. Abusing exploits or glitches will result in a permanent ban. Vanilla glitches and exploits also fall under this.
+-   **No Automatic farms** where you do not need to actively interact with it. Ask Staff if you are unsure if one is allowed.
+- **No blacklisted modifications** - See the below list for some examples.
 
 <div class="wiki-callout info">
   <span class="callout-icon"><i class="fas fa-shield-halved"></i></span>
-  <div>The best protection is to <a href="/wiki/claims/">claim your land</a>. Grief within an unclaimed area is harder to action, though staff will investigate all reports.</div>
+  <div>This is not a comprehensive list of modifications. If you are unsure if a specific mod is allowed, contact a Staff Member.</div>
 </div>
 
-## PvP
+### Blacklisted Modifications:
+-   Xray, actions or modifications that allow for seeing through textures a normal player can not.
+-   Auto clickers or macros that give a gameplay advantage.
 
-- PvP is **opt-in** only. You cannot attack a player who has not agreed to fight.
-- **Spawn killing** is never permitted, even in PvP-enabled areas.
-- **Scamming in trades or duels** is against the rules. All agreements must be honoured. Use `/trade <player>` for safe face-to-face trades — see [Commands](/wiki/commands/#economy).
-
-## Builds & Structures
-
-- **No offensive or inappropriate builds** (including pixel art).
-- **No lag machines.** If your build causes significant server lag it will be removed without warning.
-- **No massive ugly cobblestone towers** near spawn or other players' builds. Build with care for the environment.
-
-## Punishments
-
-Violations are handled at staff discretion based on severity and history. The general ladder is:
-
-1. **Verbal warning** in chat or Discord.
-2. **Formal warning** on record.
-3. **Temporary mute or ban** (duration varies).
-4. **Permanent ban.**
-
-Severe violations (hacking, doxxing, CSAM, etc.) result in an immediate permanent ban with no appeal.
-
-To appeal a punishment, open a ticket in our Discord. See [Staff & Ranks](/wiki/staff-ranks/) to understand who handles appeals at each level.
+### Approved Modifications:
+-   Minimaps, as long as cave mode or similar is disabled.
+-   Optifine or other performance enhancing mods.
+-   Shaders or other aesthetic changes.
+-   Litematica (easyplace is also allowed).
+-   Inventory Tweaks
+-   Macros that do not give a direct gameplay advantage, such as chat macros.

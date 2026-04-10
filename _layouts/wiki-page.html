@@ -56,39 +56,15 @@
       </div>
       <ul class="sb-links" style="max-height:500px">
         <li><a href="{{ '/wiki/' | relative_url }}" class="sb-link"><i class="fas fa-house"></i>Wiki Home</a></li>
-        <li><a href="{{ '/wiki/getting-started' | relative_url }}" class="sb-link {% if page.url contains 'getting-started' %}active{% endif %}"><i class="fas fa-compass"></i>Getting Started</a></li>
+        <li><a href="{{ '/wiki/changelog' | relative_url }}" class="sb-link {% if page.url contains 'changelog' %}active{% endif %}"><i class="fas fa-clock-rotate-left"></i>Changelog</a></li>
         <li><a href="{{ '/wiki/rules' | relative_url }}" class="sb-link {% if page.url contains 'rules' %}active{% endif %}"><i class="fas fa-scroll"></i>Rules</a></li>
+        <li><a href="{{ '/wiki/getting-started' | relative_url }}" class="sb-link {% if page.url contains 'getting-started' %}active{% endif %}"><i class="fas fa-compass"></i>Getting Started</a></li>
+        <li><a href="{{ '/wiki/npc/' | relative_url }}" class="sb-link {% if page.url == '/wiki/npc/' %}active{% endif %}"><i class="fas fa-users"></i>NPCs</a></li>
         <li><a href="{{ '/wiki/claims' | relative_url }}" class="sb-link {% if page.url contains 'claims' %}active{% endif %}"><i class="fas fa-shield-halved"></i>Land Claims</a></li>
         <li><a href="{{ '/wiki/crafting' | relative_url }}" class="sb-link {% if page.url contains 'crafting' %}active{% endif %}"><i class="fas fa-flask-vial"></i>Crafting & Items</a></li>
         <li><a href="{{ '/wiki/worlds' | relative_url }}" class="sb-link {% if page.url contains 'worlds' %}active{% endif %}"><i class="fas fa-earth-americas"></i>Worlds</a></li>
         <li><a href="{{ '/wiki/staff-ranks' | relative_url }}" class="sb-link {% if page.url contains 'staff-ranks' %}active{% endif %}"><i class="fas fa-hat-wizard"></i>Staff & Ranks</a></li>
         <li><a href="{{ '/wiki/commands' | relative_url }}" class="sb-link {% if page.url contains 'commands' %}active{% endif %}"><i class="fas fa-terminal"></i>Commands</a></li>
-        <li><a href="{{ '/wiki/changelog' | relative_url }}" class="sb-link {% if page.url contains 'changelog' %}active{% endif %}"><i class="fas fa-clock-rotate-left"></i>Changelog</a></li>
-        <li><a href="{{ '/wiki/spawn' | relative_url }}" class="sb-link {% if page.url contains 'spawn' %}active{% endif %}"><i class="fas fa-map-pin"></i>Spawn</a></li>
-      </ul>
-    </div>
-
-    <div class="sb-divider"></div>
-
-    <!-- NPCs -->
-    <div class="sb-section">
-      <div class="wiki-label sb-section-head {% unless page.url contains '/wiki/npc' %}collapsed{% endunless %}" onclick="toggleSection(this)">
-        NPCs <i class="fas fa-chevron-down chevron"></i>
-      </div>
-      <ul class="sb-links {% unless page.url contains '/wiki/npc' %}collapsed{% endunless %}" {% unless page.url contains '/wiki/npc' %}style="max-height:0"{% else %}style="max-height:500px"{% endunless %}>
-        <li><a href="{{ '/wiki/npc/' | relative_url }}" class="sb-link {% if page.url == '/wiki/npc/' %}active{% endif %}"><i class="fas fa-users"></i>All NPCs</a></li>
-        <li><a href="{{ '/wiki/npc/Auctioneer' | relative_url }}" class="sb-link {% if page.title == 'Auctioneer' %}active{% endif %}"><i class="fas fa-gavel"></i>Auctioneer</a></li>
-        <li><a href="{{ '/wiki/npc/Blacksmith' | relative_url }}" class="sb-link {% if page.title == 'Blacksmith' %}active{% endif %}"><i class="fas fa-hammer"></i>Blacksmith</a></li>
-        <li><a href="{{ '/wiki/npc/Furniture Merchant' | relative_url }}" class="sb-link {% if page.title == 'Furniture Merchant' %}active{% endif %}"><i class="fas fa-couch"></i>Furniture Merchant</a></li>
-        <li><a href="{{ '/wiki/npc/Cosmeticist' | relative_url }}" class="sb-link {% if page.title == 'Cosmeticist' %}active{% endif %}"><i class="fas fa-palette"></i>Cosmeticist</a></li>
-        <li><a href="{{ '/wiki/npc/Farmer' | relative_url }}" class="sb-link {% if page.title == 'Farmer' %}active{% endif %}"><i class="fas fa-seedling"></i>Farmer</a></li>
-        <li><a href="{{ '/wiki/npc/Mob Merchant' | relative_url }}" class="sb-link {% if page.title == 'Mob Merchant' %}active{% endif %}"><i class="fas fa-dragon"></i>Mob Merchant</a></li>
-        <li><a href="{{ '/wiki/npc/Lumberjack' | relative_url }}" class="sb-link {% if page.title == 'Lumberjack' %}active{% endif %}"><i class="fas fa-tree"></i>Lumberjack</a></li>
-        <li><a href="{{ '/wiki/npc/Fish Merchant' | relative_url }}" class="sb-link {% if page.title == 'Fish Merchant' %}active{% endif %}"><i class="fas fa-fish"></i>Fish Merchant</a></li>
-        <li><a href="{{ '/wiki/npc/Rex Timberland' | relative_url }}" class="sb-link {% if page.title == 'Rex Timberland' %}active{% endif %}"><i class="fas fa-star"></i>Rex Timberland</a></li>
-        <li><a href="{{ '/wiki/npc/Archwizard' | relative_url }}" class="sb-link {% if page.title == 'Archwizard' %}active{% endif %}"><i class="fas fa-wand-sparkles"></i>Archwizard</a></li>
-        <li><a href="{{ '/wiki/npc/Enchanter' | relative_url }}" class="sb-link {% if page.title == 'Enchanter' %}active{% endif %}"><i class="fas fa-book-sparkles"></i>Enchanter</a></li>
-        <li><a href="{{ '/wiki/npc/Agent LemLem' | relative_url }}" class="sb-link {% if page.title == 'Agent LemLem' %}active{% endif %}"><i class="fas fa-user-secret"></i>Agent LemLem</a></li>
       </ul>
     </div>
 
