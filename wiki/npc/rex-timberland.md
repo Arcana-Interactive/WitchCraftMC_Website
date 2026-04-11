@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Rex Timberland
 description: "A mysterious figure at Spawn with rare wares."
-permalink: /wiki/npc/Rex Timberland
+permalink: /wiki/npc/rex-timberland
 categories: [NPCs, Spawn]
 see_also:
   - title: Spawn
@@ -15,24 +15,29 @@ history:
 Infobox:
   Enabled: true
   title: "Rex Timberland"
-  image: "/img/icons/npc/Body/Rex_T.png"
+  image: "/img/icons/npc/Body/rex_timberland.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
-          value: "Special Merchant"
+        - label: "<strong>Type"
+          value: "Special"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Docks (Construction Zone)"
+        - label: "<strong>Coordinates"
+          value: "<code>x:-134 y:68 z:18</code>"
 ---
 
-## Overview
+Rex Timberland is an NPC that works on building projects for [The Spawn](/wiki/spawn).
 
-Rex Timberland is a wanderer who has set up shop at Spawn. He deals in rare and unusual items that you won't find at the standard merchant stalls — what exactly he has on offer changes, so check back often.
+## Dialogue
 
-## Shop
-
-*(Describe Rex's inventory here — rare drops, unique items, limited-time stock, etc.)*
-
-## Lore
-
-*(Rex's backstory and any lore relevant to him can go here.)*
+| Condition | Dialogue |
+|:---:|:---|
+| None | <span class="minefont"><span class="format-3">[NPC] Rex Timberland</span> » The name's Rex.</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Rex Timberland</span> » T. Rex.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Rex Timberland</span> » Yes, I was named after the mammal.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Rex Timberland</span> » Anywho, I'm the builder around here.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Rex Timberland</span> » I build things.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Rex Timberland</span> » Come back when I'm closer to being done.</span> |

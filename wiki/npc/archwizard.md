@@ -1,14 +1,14 @@
 ---
 layout: wiki-page
 title: Archwizard
-description: "Master of arcane arts — enchanting and magical services at Spawn."
+description: "An NPC to help with ranking up!"
 permalink: /wiki/npc/archwizard
 categories: [NPCs, Spawn]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
-  - title: Enchanter
-    url: /wiki/npc/Enchanter
+  - title: NPCs
+    url: /wiki/npc/
+  - title: In-Game Ranks
+    url: /wiki/ranks/
 history:
   - version: "Survival Release"
     date: "2026-01-01"
@@ -17,24 +17,44 @@ history:
 Infobox:
   Enabled: true
   title: "Archwizard"
-  image: "/img/icons/npc/Body/Archwizard.png"
+  image: "/img/icons/npc/Body/archwizard.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
-          value: "Service"
+        - label: "<strong>Type"
+          value: "Rank Up"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Town (Wizard's House)"
+        - label: "<strong>Coordinates"
+          value: "<code>x:33 y:68 z:75</code>"
 ---
 
-## Overview
+The Archwizard is an NPC that allows players to rank up when they have enough money. They can be found in the Wizard's House in [Spawn](/wiki/spawn).
 
-The Archwizard presides over the arcane wing of Spawn, offering high-level magical services that go beyond standard enchanting. Consult them for the most powerful and rare enchantments available on the server.
+## Interface
+\<insert rankup ui\>
 
-## Services
+## Ranks
 
-*(Describe the Archwizard's services here — custom enchants, curse removal, special magic abilities, etc.)*
+| Rank |  Cost |
+|:---:|:---:|
+| Initiate | `$0` |
+| Seeker | `$10,000` |
+| Novice | `$20,000` |
+| Acolyte | `$50,000` |
+| Adept | `$100,000` |
+| Sorcerer | `$250,000` |
+| Elder | `$500,000` |
 
-## Notes
+## Dialogue
 
-*(Add any requirements, costs, or lore surrounding the Archwizard here.)*
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Archwizard</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Archwizard</span> » Im the Archmage. You can rank up here, for a cost...</span> |
+
+<!--
+## Trivia
+-->

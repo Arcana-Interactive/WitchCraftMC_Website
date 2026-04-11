@@ -1,12 +1,14 @@
 ---
 layout: wiki-page
 title: Clara Chairman
-description: "Trade wood and forest resources at Spawn."
+description: "Sell wood for money!"
 permalink: /wiki/npc/clara-chairman
-categories: [NPCs, Spawn]
+categories: [NPCs, Spawn, Economy]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
+  - title: NPCs
+    url: /wiki/npc/
+  - title: Economy
+    url: /wiki/economy/
 history:
   - version: "Survival Release"
     date: "2026-01-01"
@@ -14,27 +16,34 @@ history:
 
 Infobox:
   Enabled: true
-  title: "Lumberjack"
-  image: "/img/icons/npc/Body/Lumberjack.png"
+  title: "Clara Chairman"
+  image: "/img/icons/npc/Body/clara_chairman.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
+        - label: "<strong>Type"
           value: "Merchant"
-        - label: "Currency"
-          value: "Coins"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Docks (Lumberyard)"
+        - label: "<strong>Coordinates"
+          value: "<code>x:-95 y69 z95</code>"
 ---
 
-## Overview
+Clara Chairman is an NPC that serves as the Lumber Merchant at the [Docks](/wiki/spawn#the-docks). Players can sell logs of all kinds to Clara for money.
 
-The Lumberjack buys and sells all types of wood, logs, and forest materials. A reliable way to offload a big woodcutting haul or grab specific wood types you can't easily find near your base.
+## Interface
+\<insert lumber shop ui\>
 
-## Shop
+## Dialogue
 
-*(List wood types and forest materials bought/sold — logs, planks, saplings, bark, etc.)*
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » I am the lumberjack.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » You can sell your wood to me!</span> |
 
-## Notes
+## Trivia
 
-*(Add any pricing notes or tips for efficient wood trading here.)*
+* Clara Chairman is the sister of the Furniture Merchant, [Steven chairman](/wiki/npc/steven-chairman)

@@ -3,38 +3,77 @@ layout: wiki-page
 title: Hatrick
 description: "Customise your appearance with cosmetics and vanity items."
 permalink: /wiki/npc/hatrick
-categories: [NPCs, Spawn]
+categories: [NPCs, Spawn, Cosmetics]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
+  - title: NPCs
+    url: /wiki/npc/
+  - title: Cosmetics
+    url: /wiki/cosmetics/
 history:
   - version: "Survival Release"
     date: "2026-01-01"
-    changes: "Cosmeticist added to Spawn."
+    changes: "Hatrick added to Spawn."
 
 Infobox:
   Enabled: true
-  title: "Cosmeticist"
-  image: "/img/icons/npc/Body/Cosmeticist.png"
+  title: "Hatrick"
+  image: "/img/icons/npc/Body/hatrick.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
+        - label: "<strong>Type"
           value: "Merchant"
-        - label: "Currency"
-          value: "Coins"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Town (Cosmetics Shop)"
+        - label: "<strong>Coordinates"
+          value: "<code>x:-12 y:69 z:26</code>"
 ---
 
-## Overview
+Hatrick is an NPC that serves as the resident Cosmeticist in the [Spawn Town](/wiki/spawn#the-town). Players can purchase visual [cosmetics](/wiki/cosmetics) here.
 
-The Cosmeticist offers purely cosmetic items that change how you look without affecting gameplay. Cloaks, particle effects, hats, and more can all be found here.
+## Interface
+\<insert furniture shop ui\>
 
-## Shop
+## List of Cosmetics
 
-*(List cosmetic categories available — hats, cloaks, trails, emotes, etc.)*
+### Hats
 
-## Notes
+| Cosmetic | Name | Cost |
+|:---:|:---:|:---:|
+| image | Colorful Beanie | `$10,000` |
+| image | Baseball Hat | `$10,000` |
+| image | Frog Hat | `$10,000` |
 
-*(Note whether cosmetics are earned through voting, bought with in-game coins, or from the store.)*
+### Backpacks
+
+| Cosmetic | Name | How to Unlock |
+|:---:|:---:|:---:|
+| image | Backpack | `$10,000` |
+| image | Future Wings | `$10,000` |
+| image | Jetpack | `$10,000` |
+| image | Explorer's Backpack | `$10,000` |
+
+### Hand Items
+
+| Cosmetic | Name | How to Unlock |
+|:---:|:---:|:---:|
+| image | Lantern | `$10,000` |
+| image | Hammer | `$10,000` |
+| image | Earth Day Grabber | `$10,000` |
+
+### Balloons
+
+| Cosmetic | Name | How to Unlock |
+|:---:|:---:|:---:|
+| image | Garbage Truck | `$10,000` |
+| image | Kite | `$10,000` |
+
+## Dialogue
+
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » I am Hatrick, the Cosmeticist.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » You can buy wearable cosmetics from me!</span> |

@@ -3,10 +3,12 @@ layout: wiki-page
 title: Auctioneer
 description: "Place and bid on player auctions at Spawn."
 permalink: /wiki/npc/Auctioneer
-categories: [NPCs, Spawn]
+categories: [NPCs, Spawn, Economy]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
+  - title: NPCs
+    url: /wiki/npc/
+  - title: Economy
+    url: /wiki/economy/
 history:
   - version: "Survival Release"
     date: "2026-01-01"
@@ -15,34 +17,28 @@ history:
 Infobox:
   Enabled: true
   title: "Auctioneer"
-  image: "/img/icons/npc/Body/Auctioneer.png"
+  image: "/img/icons/npc/Body/auctioneer.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
-          value: "Merchant"
-        - label: "Command"
-          value: "/ah"
+        - label: "<strong>Type"
+          value: "Auction House"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Town (Auction House)"
+        - label: "<strong>Coordinates"
+          value: "<code>x-30 y71 z63</code>"
 ---
 
-## Overview
+The Auctioneer is an NPC found in the Auction House in the [Spawn Town](/wiki/spawn#the-town). Players can interact with the Auctioneer to view currently active [auctions](/wiki/economy#auction-house).
 
-The Auctioneer runs the **Auction House** at Spawn, where players can list items for sale and bid on listings from others. It's one of the main ways to trade rare or high-value items on the server.
+## Interface
+\<insert Auction House ui\>
 
-Use `/ah` from anywhere on the server to open the auction house interface without travelling to Spawn.
+## Dialogue
 
-## How to Use
-
-### Listing an Item
-
-Hold the item you want to sell in your hand, then talk to the Auctioneer or run `/ah sell <price>`. The item will be listed for other players to bid on or buy outright.
-
-### Browsing & Bidding
-
-Open the auction house with `/ah` and browse current listings. Click an item to place a bid or purchase it instantly if a buyout price is set.
-
-## Notes
-
-*(Add any server-specific auction rules, fees, or limits here.)*
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Auctioneer</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Auctioneer</span> » Test Conversation!</span> |

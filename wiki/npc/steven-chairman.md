@@ -3,12 +3,12 @@ layout: wiki-page
 title: Steven Chairman
 description: "Buy decorative furniture for your builds."
 permalink: /wiki/npc/steven-chairman
-categories: [NPCs, Spawn]
+categories: [NPCs, Spawn, Furniture]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
-  - title: Crafting & Items
-    url: /wiki/crafting/
+  - title: NPCs
+    url: /wiki/npc/
+  - title: Furniture
+    url: /wiki/furniture/
 history:
   - version: "Survival Release"
     date: "2026-01-01"
@@ -17,7 +17,7 @@ history:
 Infobox:
   Enabled: true
   title: "Steven Chairman"
-  image: "/img/icons/npc/Body/Steven_Chairman.png"
+  image: "/img/icons/npc/Body/steven_chairman.png"
   Sections:
     - heading: "NPC"
       rows:
@@ -66,7 +66,9 @@ Steven Chairman is an NPC that serves as the resident Furniture Merchant in the 
 | Condition | Dialogue |
 |:---:|:---|
 | First interaction | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » I am the blacksmith.</span> | 
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » You can buy your starter gear from me!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » I am the Furniture Merchant.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » You can buy cosmetic furniture from me!</span> |
 
 ## Trivia
+
+* Steven Chairman is the brother of the Lumber Merchant, [Clara chairman](/wiki/npc/clara-chairman)

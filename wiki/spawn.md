@@ -28,52 +28,52 @@ Infobox:
       icon_size: 24
       links:
         - text: "Auctioneer"
-          link: "/wiki/npc/Auctioneer"
-          icon: "/img/icons/npc/Heads/Auctioneer.png"
+          link: "/wiki/npc/auctioneer"
+          icon: "/img/icons/npc/Heads/auctioneer.png"
 
         - text: "Matt Allurgy"
           link: "/wiki/npc/matt-allurgy"
-          icon: "/img/icons/npc/Heads/Blacksmith.png"
+          icon: "/img/icons/npc/Heads/matt_allurgy.png"
 
         - text: "Steven Chairman"
           link: "/wiki/npc/steven-chairman"
-          icon: "/img/icons/npc/Heads/Steven_Chairman.png"
+          icon: "/img/icons/npc/Heads/steven_chairman.png"
 
         - text: "Hatrick"
           link: "/wiki/npc/hatrick"
-          icon: "/img/icons/npc/Heads/Cosmeticist.png"
+          icon: "/img/icons/npc/Heads/hatrick.png"
           
         - text: "Farmer"
-          link: "/wiki/npc/Farmer"
-          icon: "/img/icons/npc/Heads/Farmer.png"
+          link: "/wiki/npc/farmer"
+          icon: "/img/icons/npc/Heads/farmer.png"
 
-        - text: "Mob Merchant"
-          link: "/wiki/npc/Mob Merchant"
-          icon: "/img/icons/npc/Heads/mob_merchant.png"
+        - text: "Captain Saltspring"
+          link: "/wiki/npc/captain-saltspring"
+          icon: "/img/icons/npc/Heads/captain_saltspring.png"
 
         - text: "Clara Chairman"
           link: "/wiki/npc/clara-chairman"
-          icon: "/img/icons/npc/Heads/Lumberjack.png"
+          icon: "/img/icons/npc/Heads/clara_chairman.png"
 
         - text: "Fish Merchant"
           link: "/wiki/npc/fish-merchant"
-          icon: "/img/icons/npc/Heads/Fish_Merchant.png"
+          icon: "/img/icons/npc/Heads/fish_merchant.png"
 
         - text: "Rex Timberland"
           link: "/wiki/npc/Rex Timberland"
-          icon: "/img/icons/npc/Heads/Rex_T.png"
+          icon: "/img/icons/npc/Heads/rex_timberland.png"
 
         - text: "Archwizard"
           link: "/wiki/npc/Archwizard"
-          icon: "/img/icons/npc/Heads/Archwizard.png"
+          icon: "/img/icons/npc/Heads/archwizard.png"
 
         - text: "Agent LemLem"
           link: "/wiki/npc/Agent LemLem"
-          icon: "/img/icons/npc/Heads/Agent_LemLem.png"
+          icon: "/img/icons/npc/Heads/agent_lemlem.png"
 
         - text: "Enchanter"
           link: "/wiki/npc/Enchanter"
-          icon: "/img/icons/npc/Heads/Enchanter.png"
+          icon: "/img/icons/npc/Heads/enchanter.png"
    
 ---
 

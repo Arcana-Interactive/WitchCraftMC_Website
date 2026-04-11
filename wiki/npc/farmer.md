@@ -1,12 +1,14 @@
 ---
 layout: wiki-page
 title: Farmer
-description: "Trade crops and farming supplies at Spawn."
+description: "Sell crops for money!"
 permalink: /wiki/npc/farmer
-categories: [NPCs, Spawn]
+categories: [NPCs, Spawn, Economy]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
+  - title: NPCs
+    url: /wiki/npc/
+  - title: Economy
+    url: /wiki/economy/
 history:
   - version: "Survival Release"
     date: "2026-01-01"
@@ -15,26 +17,29 @@ history:
 Infobox:
   Enabled: true
   title: "Farmer"
-  image: "/img/icons/npc/Body/Farmer.png"
+  image: "/img/icons/npc/Body/farmer.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
+        - label: "<strong>Type"
           value: "Merchant"
-        - label: "Currency"
-          value: "Coins"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Farm"
+        - label: "<strong>Coordinates"
+          value: "<code>x:-151 y:68 z:-61</code>"
 ---
 
-## Overview
+The Farmer is an NPC located in the [Farm](/wiki/spawn#the-farm) that players can sell their harvested crops to.
 
-The Farmer buys and sells crops, seeds, and farming supplies. Whether you have a surplus harvest to offload or need to stock up on seeds for a new farm, the Farmer has you covered.
+## Interface
+\<insert farmer shop ui\>
 
-## Shop
+## Dialogue
 
-*(List crops, seeds, and supplies bought/sold here — wheat, carrots, potatoes, bone meal, etc.)*
-
-## Notes
-
-*(Add buy/sell price information or any farming-related tips here.)*
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Farmer</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Farmer</span> » I am the Farmer.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Farmer</span> » You can sell your crops to me!</span> |

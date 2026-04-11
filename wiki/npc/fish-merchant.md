@@ -1,12 +1,14 @@
 ---
 layout: wiki-page
 title: Fish Merchant
-description: "Sell your catch and buy fishing supplies at Spawn."
+description: "Sell your catch for money!"
 permalink: /wiki/npc/fish-merchant
-categories: [NPCs, Spawn]
+categories: [NPCs, Spawn, Economy]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
+  - title: NPCs
+    url: /wiki/npc/
+  - title: Economy
+    url: /wiki/economy/
 history:
   - version: "Survival Release"
     date: "2026-01-01"
@@ -15,26 +17,29 @@ history:
 Infobox:
   Enabled: true
   title: "Fish Merchant"
-  image: "/img/icons/npc/Body/Fish_Merchant.png"
+  image: "/img/icons/npc/Body/fish_merchant.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
+        - label: "<strong>Type"
           value: "Merchant"
-        - label: "Currency"
-          value: "Coins"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Docks (Fishmonger)"
+        - label: "<strong>Coordinates"
+          value: "<code>x:-105 y:68 z:31</code>"
 ---
 
-## Overview
+The Fish Merchant is an NPC that serves as the resident Fishmonger at the [Docks](/wiki/spawn#the-docks). Players can sell their fished up items here.
 
-The Fish Merchant buys fish and treasure items caught while fishing, and sells bait, rods, and other fishing supplies. A steady income source for dedicated fishers.
+## Interface
+\<insert fish shop ui\>
 
-## Shop
+## Dialogue
 
-*(List fish types and fishing supplies bought/sold — cod, salmon, pufferfish, tropical fish, enchanted rods, etc.)*
-
-## Fishing Tips
-
-*(Add any server-specific fishing mechanics, custom fish, or treasure loot table info here.)*
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Fish Merchant</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Fish Merchant</span> » I am the local fish merchant.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Fish Merchant</span> » You can sell your fish to me!</span> |

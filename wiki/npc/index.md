@@ -11,25 +11,22 @@ see_also:
     url: /wiki/getting-started/
 ---
 
-## Spawn NPCs
+| NPC | Zone |Type | What they do |
+|---|---|---|---|
+| [Auctioneer](/wiki/npc/auctioneer) | [The Town](/wiki/spawn#the-town) | Auction House | Lists active player auctions - use `/ah` |
+| [Steven Chairman](/wiki/npc/steven-chairman) | [The Town](/wiki/spawn#the-town) | Merchant | Sells decorative furniture.|
+| [Hatrick](/wiki/npc/hatrick) | [The Town](/wiki/spawn#the-town) | Merchant | Sells cosmetic equipment.| 
+| [Enchanter](/wiki/npc/enchanter) | [The Town](/wiki/spawn#the-town) | Merchant | Sells custom Enchantments|
+| [Captain Saltspring](/wiki/npc/captain-saltspring) | [The Docks](/wiki/spawn#the-docks) | Merchant | Buys and sells mob drops.|
+| [Matt Allurgy](/wiki/npc/matt-allurgy) | [The Town](/wiki/spawn#the-town) | Merchant | Buys ores from players.|
+| [Farmer](/wiki/npc/farmer) | [The Farm](/wiki/spawn#the-farm) | Merchant | Buys harvested crops from players.|
+| [Clara Chairman](/wiki/npc/clara-chairman) | [The Docks](/wiki/spawn#the-docks) | Merchant | Buys wood from players.|
+| [Fish Merchant](/wiki/npc/fish-merchant) | [The Docks](/wiki/spawn#the-docks) | Merchant | Buys fished up items.|
+| [Archwizard](/wiki/npc/archwizard) | [The Town](/wiki/spawn#the-town) | Rank Up | Allows players to rank up.|
+| [Rex Timberland](/wiki/npc/rex-timberland) | [The Docks](/wiki/spawn#the-docks) | Special | |
+| [Agent LemLem](/wiki/npc/agent-lemlem) | [The Town](/wiki/spawn#the-town) | Special | |
 
-All of the following NPCs are located at **Spawn** (`0, 64, 0`). Click any name to visit their full wiki page.
-
-| NPC | Type | What they do |
-|-----|------|-------------|
-| [Auctioneer](/wiki/npc/auctioneer) | Merchant | Lists and bids on player auctions — use `/ah` |
-| [Matt Allurgy](/wiki/npc/matt-allurgy) | Service | Repairs and upgrades gear |
-| [Steven Chairman](/wiki/npc/steven-chairman) | Merchant | Sells decorative furniture and props for builds |
-| [Hatrick](/wiki/npc/hatrick) | Merchant | Sells cosmetic items — cloaks, hats, particle effects |
-| [Farmer](/wiki/npc/farmer) | Merchant | Buys and sells crops and seeds |
-| [Mob Merchant](/wiki/npc/mob-merchant) | Merchant | Buys and sells mob drops |
-| [Clara Chairman](/wiki/npc/clara-chairman) | Merchant | Buys and sells wood and forest materials |
-| [Fish Merchant](/wiki/npc/fish-merchant) | Merchant | Buys your catch and sells fishing supplies |
-| [Rex Timberland](/wiki/npc/Rex Timberland) | Special Merchant | Rare and rotating stock |
-| [Archwizard](/wiki/npc/archwizard) | Service | High-level magical services and rare enchantments |
-| [Enchanter](/wiki/npc/enchanter) | Service | Applies and disenchants gear |
-| [Agent LemLem](/wiki/npc/Agent LemLem) | Special | Classified |
-
+<!--
 ## Adding a New NPC
 
 When a new NPC is added to the server, here's the full checklist:
@@ -41,3 +38,4 @@ When a new NPC is added to the server, here's the full checklist:
 5. **Add them to spawn.md** — add an entry under the NPCs section in the infobox
 
 See `wiki/npc/_template.md` for a fully annotated copy-paste starter, and `wiki/README.md` for the full image naming conventions.
+-->

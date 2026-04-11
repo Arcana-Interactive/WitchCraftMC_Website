@@ -1,14 +1,14 @@
 ---
 layout: wiki-page
 title: Enchanter
-description: "Apply and trade enchantments at Spawn."
+description: "Buy enchantments at Spawn."
 permalink: /wiki/npc/Enchanter
 categories: [NPCs, Spawn]
 see_also:
-  - title: Spawn
-    url: /wiki/spawn/
-  - title: Archwizard
-    url: /wiki/npc/Archwizard
+  - title: NPCs
+    url: /wiki/npc/
+  - title: Enchantments
+    url: /wiki/npc/enchantments
 history:
   - version: "Survival Release"
     date: "2026-01-01"
@@ -17,32 +17,28 @@ history:
 Infobox:
   Enabled: true
   title: "Enchanter"
-  image: "/img/icons/npc/Body/Enchanter.png"
+  image: "/img/icons/npc/Body/enchanter.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
-          value: "Service"
-        - label: "Currency"
-          value: "XP / Coins"
+        - label: "<strong>Type"
+          value: "Merchant"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Town (Wizard's House)"
+        - label: "<strong>Coordinates"
+          value: "<code>x:28 y:68 z:22</code>"
 ---
 
-## Overview
+The enchanter is an NPC in the [Wizard's House](/wiki/spawn#the-town) that sells custom enchantments to players. Enchantments cost EXP Levels and Amethyst.
 
-The Enchanter at Spawn lets you apply enchantments to your gear without needing an enchanting table setup of your own. Bring your items and the required XP or coins, and walk away with enchanted equipment.
+## Interface
+\<insert enchantment shop ui\>
 
-## Services
+## Dialogue
 
-### Enchanting
-
-*(Describe how to enchant items here — available enchantments, cost per level, any restrictions.)*
-
-### Disenchanting
-
-*(If disenchanting is available, describe it here — reclaiming books, XP refund, etc.)*
-
-## Notes
-
-*(Add any tips for efficient enchanting, enchantment levels available, or custom enchant info here.)*
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Enchanter</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Enchanter</span> » Test Conversation!</span> |

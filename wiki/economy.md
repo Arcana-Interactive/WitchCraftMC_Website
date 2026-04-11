@@ -45,3 +45,6 @@ WitchCraftMC runs a **player-driven economy** with a server shop as a price anch
   <span class="callout-icon"><i class="fas fa-coins"></i></span>
   <div>Set up a player shop by placing a chest, then a sign with your price on top. Check with staff or Discord for the current sign format used by your shop plugin.</div>
 </div>
+
+## Auction House
+blabla
