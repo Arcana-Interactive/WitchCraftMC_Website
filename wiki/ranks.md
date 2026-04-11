@@ -18,7 +18,7 @@ Ranks are earned by ranking up through the [Archwizard](/wiki/npc/archwizard) in
 The **Initiate** rank is the default rank, given to every new player from the start.
 
 **Perks:**
-- `/sethome <HomeName>` - 1x saved home
+- `/sethome <HomeName>` - 1x saved home.
 - Access to all standard [commands](/wiki/commands/)
 
 Tag: <span class="rank-badge rank-villager">[Initiate]</span>
@@ -30,7 +30,7 @@ Tag: <span class="rank-badge rank-villager">[Initiate]</span>
 The **Seeker** rank can be obtained by ranking up at the Archwizard for $10,000.
 
 **Perks:**
-- `/sethome <HomeName>` - 2x saved home.
+- `/sethome <HomeName>` - 2x saved homes.
 - Access to all Initiate perks.
 
 Tag: <span class="rank-badge rank-villager">[Seeker]</span>
@@ -55,7 +55,7 @@ Tag: <span class="rank-badge rank-villager">[Novice]</span>
 The **Acolyte** rank can be obtained by ranking up at the Archwizard for $50,000.
 
 **Perks:**
-- `/sethome <HomeName>` - 3x saved home.
+- `/sethome <HomeName>` - 3x saved homes.
 - `/craft` - open virtual crafting table.
 - Access to all Novice perks.
 
@@ -68,7 +68,7 @@ Tag: <span class="rank-badge rank-villager">[Acolyte]</span>
 The **Adept** rank can be obtained by ranking up at the Archwizard for $100,000.
 
 **Perks:**
-- `/pv` - 2x 6 row playervault.
+- `/pv` - 2x 6 row playervaults.
 - `/trash` - open a virtual container to instantly dispose of items.
 - Ability to sell up to 2 items on the Auction House.
 - Access to all Acolyte perks.
@@ -82,7 +82,7 @@ Tag: <span class="rank-badge rank-villager">[Adept]</span>
 The **Sorcerer** rank can be obtained by ranking up at the Archwizard for $250,000.
 
 **Perks:**
-- `/sethome <HomeName>` - 4x saved home.
+- `/sethome <HomeName>` - 4x saved homes.
 - `/ec` - opens your enderchest.
 - Access to all Adept perks.
 
@@ -95,8 +95,8 @@ Tag: <span class="rank-badge rank-villager">[Sorcerer]</span>
 The **Elder** rank can be obtained by ranking up at the Archwizard for $500,000.
 
 **Perks:**
-- `/sethome <HomeName>` - 5x saved home.
-- `/pv` - 3x 6 row playervault.
+- `/sethome <HomeName>` - 5x saved homes.
+- `/pv` - 3x 6 row playervaults.
 - Access to all Sorcerer perks.
 
 Tag: <span class="rank-badge rank-villager">[Elder]</span>

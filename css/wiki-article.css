@@ -429,10 +429,9 @@
 .wiki-content li {
       margin-bottom:.3rem
 }
-
 .wiki-content hr {
       border:none;
-      border-top:1px solid var(--border);
+      border-top:1px solid var(--border-gold);
       margin:2rem 0
 }
 

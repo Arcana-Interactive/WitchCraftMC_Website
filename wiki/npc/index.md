@@ -17,17 +17,17 @@ All of the following NPCs are located at **Spawn** (`0, 64, 0`). Click any name 
 
 | NPC | Type | What they do |
 |-----|------|-------------|
-| [Auctioneer](/wiki/npc/Auctioneer) | Merchant | Lists and bids on player auctions — use `/ah` |
-| [Blacksmith](/wiki/npc/Blacksmith) | Service | Repairs and upgrades gear |
-| [Furniture Merchant](/wiki/npc/Furniture Merchant) | Merchant | Sells decorative furniture and props for builds |
-| [Cosmeticist](/wiki/npc/Cosmeticist) | Merchant | Sells cosmetic items — cloaks, hats, particle effects |
-| [Farmer](/wiki/npc/Farmer) | Merchant | Buys and sells crops and seeds |
-| [Mob Merchant](/wiki/npc/Mob Merchant) | Merchant | Buys and sells mob drops |
-| [Lumberjack](/wiki/npc/Lumberjack) | Merchant | Buys and sells wood and forest materials |
-| [Fish Merchant](/wiki/npc/Fish Merchant) | Merchant | Buys your catch and sells fishing supplies |
+| [Auctioneer](/wiki/npc/auctioneer) | Merchant | Lists and bids on player auctions — use `/ah` |
+| [Matt Allurgy](/wiki/npc/matt-allurgy) | Service | Repairs and upgrades gear |
+| [Steven Chairman](/wiki/npc/steven-chairman) | Merchant | Sells decorative furniture and props for builds |
+| [Hatrick](/wiki/npc/hatrick) | Merchant | Sells cosmetic items — cloaks, hats, particle effects |
+| [Farmer](/wiki/npc/farmer) | Merchant | Buys and sells crops and seeds |
+| [Mob Merchant](/wiki/npc/mob-merchant) | Merchant | Buys and sells mob drops |
+| [Clara Chairman](/wiki/npc/clara-chairman) | Merchant | Buys and sells wood and forest materials |
+| [Fish Merchant](/wiki/npc/fish-merchant) | Merchant | Buys your catch and sells fishing supplies |
 | [Rex Timberland](/wiki/npc/Rex Timberland) | Special Merchant | Rare and rotating stock |
-| [Archwizard](/wiki/npc/Archwizard) | Service | High-level magical services and rare enchantments |
-| [Enchanter](/wiki/npc/Enchanter) | Service | Applies and disenchants gear |
+| [Archwizard](/wiki/npc/archwizard) | Service | High-level magical services and rare enchantments |
+| [Enchanter](/wiki/npc/enchanter) | Service | Applies and disenchants gear |
 | [Agent LemLem](/wiki/npc/Agent LemLem) | Special | Classified |
 
 ## Adding a New NPC

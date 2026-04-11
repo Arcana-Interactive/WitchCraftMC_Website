@@ -7,6 +7,7 @@ alt: image-alt
 description: 
 ---
 # WitchCraftMC Rules
+<!--
 <div class="wiki-callout warning">
   <span class="callout-icon"><i class="fas fa-exclamation-triangle"></i></span>
   <div>Ignorance of the rules is not an excuse. By joining the server, you agree to abide by them.</div>
@@ -15,14 +16,20 @@ description:
   <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>
   <div>If you're unsure whether something is acceptable, always ask a Staff Member before doing it.</div>
 </div>
+-->
+Ignorance of the rules is not an excuse. By joining the server, you agree to abide by them.
+If you're unsure whether something is acceptable, always ask a Staff Member before doing it.
 
+---
 
 ## General Behaviour
 - **No impersonation** - Do not impersonate Staff or other players.
 - **No doxxing** - Do not share personal or private information regarding other people.
 - **Do not Trap players** - Teleport-killing or other traps are against the rules.
 - **No Scamming** - All formal agreements must be honoured.
-- **No harassment, hate speech, or discrimination** of any kind. This includes slurs, targeted bullying, or attempts at bypassing `/ignore`.
+- **No harassment, hate speech, or discrimination** of any kind. This includes slurs, targeted bullying, or attempts at bypassing ***/ignore***.
+
+---
 
 ## Chat Rules
 - **Stay appropriate** - Do not share inappropriate content in any chat. This also includes religion and politics as they can cause heated discussion.
@@ -31,34 +38,45 @@ description:
 - **English only** in main chat. Private messages are fine to be in any language.
 - **No spamming** - this includes repeated messages, excessive caps, or character spam.
 
+---
+
 ## Griefing & Theft
+<!--
 <div class="wiki-callout info">
   <span class="callout-icon"><i class="fas fa-shield-halved"></i></span>
   <div>While griefing is disallowed, the best protection is to <a href="/wiki/claims/">claim your land.</a></div>
 </div>
-
+-->
+While griefing is disallowed, the best protection is to claim your land.
 - **Do not Grief** - Do not break, or otherwise alter other players’ builds without their permission.
 - **No Border-Griefing** - Do not build, or deform the terrain near other players’ claims without their permission.
 - Killing mobs that are clearly owned by another player is still considered grief.
 - **Use the Resource Worlds** - Only deform the Main world’s terrain for building purposes. Collecting resources should be done in the resource world.
 - **No Theft** - Do not take items from another player without their permission.
 
+---
+
 ## Advertising
 -   Do not share other server-ips or have longer discussions that revolve around another server. Mentioning another server in passing is fine however.
 -   Do not advertise social media accounts unless it has content related to WitchCraftMC.
 
+---
+
 ## No ALT Accounts:
 -   You may only use one account per person. If you have multiple people in your household that are playing, contact a staff member.
+
+---
 
 ## Claim Rules:
 -   If a resident player is inactive for over 7 days, the Claim Owner has the right to remove the player.
 -   Claim Owners may remove their players’ builds at their discretion if either:
-    -   The player has left the town.
+    -   The player has left the town. The Claim Owner must give players a 2 day notice before removing builds/items, and allow the player to remove it themselves if they want.
     -   The player has not been online for over 7 days. 
     
-    *The Claim Owner must give players a 2 day notice before removing builds/items, and allow the player to remove it themselves if they want.*
 -   Claim Owners are permitted to set their own claim rules. If resident players do not follow these, Claim Owners are allowed to enforce them by evicting the player.
 -   Claim Owners can ban any player from their claims for any reason. However if the player has builds or items within the claim, the Claim Owner still has to follow the above rules for retrieval.
+
+---
 
 ## Gameplay rules:
 - **No inappropriate builds** (including pixel, and map art.)
@@ -67,11 +85,17 @@ description:
 -   **No Automatic farms** where you do not need to actively interact with it. Ask Staff if you are unsure if one is allowed.
 - **No blacklisted modifications** - See the below list for some examples.
 
+<!--
 <div class="wiki-callout info">
   <span class="callout-icon"><i class="fas fa-shield-halved"></i></span>
   <div>This is not a comprehensive list of modifications. If you are unsure if a specific mod is allowed, contact a Staff Member.</div>
 </div>
+-->
 
+---
+
+## Mods
+This is not a comprehensive list of modifications. If you are unsure if a specific mod is allowed, contact a Staff Member.
 ### Blacklisted Modifications:
 -   Xray, actions or modifications that allow for seeing through textures a normal player can not.
 -   Auto clickers or macros that give a gameplay advantage.
