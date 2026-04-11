@@ -3,7 +3,7 @@ layout: wiki-page
 title: Search
 description: "Search across all WitchCraftMC wiki pages."
 permalink: /wiki/search/
-categories: [Reference]
+categories: [Meta]
 see_also:
   - title: Wiki Home
     url: /wiki/

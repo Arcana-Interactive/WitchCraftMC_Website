@@ -4,7 +4,7 @@ title: Changelog & History
 description: "Server update history, patch notes, and seasonal milestones."
 permalink: /wiki/changelog/
 toc: true
-categories: [Reference]
+categories: [Meta]
 see_also:
   - title: Wiki Home
     url: /wiki/

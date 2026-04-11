@@ -1,10 +1,10 @@
 ---
 layout: wiki-page
 title: Furniture
-description: "Everything you need to know about the available WitchCraftMC worlds."
+description: "Information about the available furniture."
 permalink: /wiki/furniture/
 toc: true
-categories: [World, Locations]
+categories: [Cosmetic,Furniture,Blocks]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
@@ -13,36 +13,33 @@ see_also:
   - title: Crafting & Items
     url: /wiki/crafting/
 ---
+WitchCraftMC has several pieces of furniture. These can be crafted once a player unlocks their respective recipe. Once crafted, furniture can be placed as decoration around players' bases.
 
-## The Worlds of WitchCraftMC
+Recipes can be unlocked by talking to [Steven Chairman](/wiki/npc/steven-chairman) in [**Spawn**](/wiki/spawn), where various recipes are sold.
 
-On WitchCraftMC, appart from the [**Spawn**](/wiki/spawn), there are 5 available worlds that players can play on. All worlds except the end can be reached through the use of ***`/rtp`***. The End on the other hand must be reached through a stronghold, *though there is a rumour that one existed in the Spawn once.*
+## How to Unlock Recipes
 
-The resource worlds are unique in that they ocassionally are reset. Building is not encouraged in these worlds, but are excellent for resource gathering.
+| Cosmetic | Name | How to Unlock |
+|:---:|:---:|:---:|
+| image | Glass Bottle | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Small Glass Bottle | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Filled Glass Bottle | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Filled Small Glass Bottle | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Solid Bench | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Plank Bench | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Bookstack (Vertical) | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Bookstack (Horizontal) | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Book | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Book (Open) | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Chest | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Diamonds | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Coal | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Gold | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Iron | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Copper | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Lapis Lazuli | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Redstone | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
+| image | Minecart with Emeralds | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
 
-<!-- Example of Callout for later
-<div class="wiki-callout info">
-  <span class="callout-icon"><i class="fas fa-globe"></i></span>
-  <div>The map is <strong>~10,000 × 10,000 blocks</strong> in the overworld. The Nether and End are also accessible via their respective portals.</div>
-</div>
--->
-
-## World Borders
-
-| Dimension | Border |
-|---|---|
-| Overworld | 25k × 25k Blocks |
-| Nether | 15k × 15k Blocks |
-| Resource Overworld | 10k × 10k Blocks |
-| Resource Nether | 10k × 10k Blocks |
-| The End | 10k × 10k Blocks |
-
-## Seasons & World Resets
-
-WitchCraftMC Survival, does have **seasons**. These are however not based on time, but only when it is required, such as a major minecraft world-generation update. At the time of a season reset:
-
-1. The current Overworld is **archived** and made available for download.
-2. A fresh map is generated with a new seed.
-3. [Store Ranks](/wiki/staff-ranks/) and unlocked [cosmetics](/wiki/cosmetics/) carry over. Anything else does not.
-
-Season resets are announced at least a few months before on Discord.
+## Recipes

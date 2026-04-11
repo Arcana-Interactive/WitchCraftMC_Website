@@ -102,6 +102,16 @@
 
 .format-f,
 
+.minefont {
+	padding: 0.375em;
+	font-family: 'Minecraftia', sans-serif;
+	font-size: .70rem;
+	word-spacing: 4px;
+	white-space: nowrap;
+	line-height: 1.25em;
+	margin: 0.125em 0.25em;
+}
+
 #minetip-tooltip {
 	color: #FBFBFB;
 	text-shadow: 0.125em 0.125em 0 #3E3E3E;

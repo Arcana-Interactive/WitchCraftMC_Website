@@ -1,7 +1,7 @@
 ---
 layout: wiki-page
 title: Steven Chairman
-description: "Buy decorative furniture and props for your builds."
+description: "Buy decorative furniture for your builds."
 permalink: /wiki/npc/steven-chairman
 categories: [NPCs, Spawn]
 see_also:
@@ -16,27 +16,57 @@ history:
 
 Infobox:
   Enabled: true
-  title: "Furniture Merchant"
+  title: "Steven Chairman"
   image: "/img/icons/npc/Body/Steven_Chairman.png"
   Sections:
-    - heading: "Details"
+    - heading: "NPC"
       rows:
-        - label: "Location"
-          value: "Spawn"
-        - label: "Type"
+        - label: "<strong>Type"
           value: "Merchant"
-        - label: "Currency"
-          value: "Coins"
+    - heading: "Location"
+      rows:
+        - label: "<strong>Area"
+          value: "The Town"
+        - label: "<strong>Coordinates"
+          value: "<code>x:33 y:68 z:75</code>"
 ---
 
-## Overview
+Steven Chairman is an NPC that serves as the resident Furniture Merchant in the [Spawn Town](/wiki/spawn#the-town). Steven sells recipes for decorative [furniture](/wiki/furniture).
 
-The Furniture Merchant — known to regulars as **Steven** — sells a wide range of decorative furniture and prop items for player builds. If you're looking to furnish a home, tavern, or grand hall, this is your first stop.
+## Interface
+\<insert furniture shop ui\>
 
-## Shop
+## Furniture
 
-*(List furniture categories and items available here — chairs, tables, shelves, lighting, etc.)*
+| Cosmetic | Name | Cost |
+|:---:|:---:|:---:|
+| image | Glass Bottle | `$10,000` |
+| image | Small Glass Bottle | `$10,000` |
+| image | Filled Glass Bottle | `$10,000` |
+| image | Filled Small Glass Bottle | `$10,000` |
+| image | Solid Bench | `$10,000` |
+| image | Plank Bench | `$10,000` |
+| image | Bookstack (Vertical) | `$10,000` |
+| image | Bookstack (Horizontal) | `$10,000` |
+| image | Book | `$10,000` |
+| image | Book (Open) | `$10,000` |
+| image | Minecart | `$10,000` |
+| image | Minecart with Chest | `$10,000` |
+| image | Minecart with Diamonds | `$10,000` |
+| image | Minecart with Coal | `$10,000` |
+| image | Minecart with Gold | `$10,000` |
+| image | Minecart with Iron | `$10,000` |
+| image | Minecart with Copper | `$10,000` |
+| image | Minecart with Lapis Lazuli | `$10,000` |
+| image | Minecart with Redstone | `$10,000` |
+| image | Minecart with Emeralds | `$10,000` |
 
-## Notes
+## Dialogue
 
-*(Add pricing notes, restock schedules, or any unlock requirements here.)*
+| Condition | Dialogue |
+|:---:|:---|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » I am the blacksmith.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » You can buy your starter gear from me!</span> |
+
+## Trivia

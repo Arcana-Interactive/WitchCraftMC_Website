@@ -94,7 +94,7 @@ The Town is the core location where players will spawn in the Spawn Island. The 
 - The **Wizards' House** — rules, info boards, and a starter kit station (use `/kit starter`)
 - The **Blacksmith** — A shop run by [Matt Allurgy](/wiki/npc/matt-allurgy) for players to sell their ores.
 - The **Furniture Shop** — A shop run by [Steven Chairman](/wiki/npc/steven-chairman) for players to buy cosmetic [Furniture](/wiki/furniture)!
-- The **Cosmetics Shop** — A shop run by [Hatrick](/wiki/npc/hatrick) for players to buy aesthetic [Cosmetics](/wiki/cosmetics) for themselves.
+- The **Cosmetics Shop** — A shop run by [Hatrick](/wiki/npc/hatrick) for players to buy aesthetic [Cosmetics](/wiki/cosmetics) for themselves. Also contains the **Wardrobe**, where players can preview owned cosmetics.
 
 ### The Docks
 

@@ -15,6 +15,8 @@ The Store Ranks can be purchased from our [Server Store](https://witchcraftmc.te
 
 Players can either choose to buy any rank immediately, or buy a rank and then later upgrade. Upgrading a rank costs the difference between the given ranks.
 
+On the rare occassion of a [Season Reset](/wiki/worlds#seasons--world-resets), store ranks are not reset.
+
 ## Permanent Ranks
 
 ### Quartz
