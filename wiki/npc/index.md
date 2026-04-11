@@ -11,7 +11,7 @@ see_also:
     url: /wiki/getting-started/
 ---
 
-| NPC | Zone |Type | What they do |
+| NPC | Area |Type | What they do |
 |---|---|---|---|
 | [Auctioneer](/wiki/npc/auctioneer) | [The Town](/wiki/spawn#the-town) | Auction House | Lists active player auctions - use `/ah` |
 | [Steven Chairman](/wiki/npc/steven-chairman) | [The Town](/wiki/spawn#the-town) | Merchant | Sells decorative furniture.|

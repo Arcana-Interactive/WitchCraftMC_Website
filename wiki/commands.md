@@ -1,13 +1,10 @@
 ---
 layout: wiki-page
-title: Commands & Plugins
+title: Commands
 description: "A complete reference of every player command available on WitchCraftMC."
 permalink: /wiki/commands/
 toc: true
 categories: [Reference, Guides]
-prev_page:
-  title: Staff & Ranks
-  url: /wiki/staff-ranks/
 see_also:
   - title: Land Claims
     url: /wiki/claims/
@@ -21,96 +18,74 @@ see_also:
 
 ## Overview
 
-This page lists every command available to players on WitchCraftMC. Commands marked with a ⭐ are available only to certain ranks — see [Staff & Ranks](/wiki/staff-ranks/) for details.
+This page lists every command available to players.
 
 <div class="wiki-callout info">
-  <span class="callout-icon"><i class="fas fa-keyboard"></i></span>
+  <span class="callout-icon"><i class="fas fa-circle-info"></i></span>
   <div>Arguments in <code>&lt;angled brackets&gt;</code> are required. Arguments in <code>[square brackets]</code> are optional.</div>
 </div>
 
 ---
 
-## Essentials — General
+## General
 
-<table class="cmd-table">
-  <thead><tr><th>Command</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td>/help [page]</td><td>List all available commands</td></tr>
-    <tr><td>/spawn</td><td>Teleport to server spawn</td></tr>
-    <tr><td>/playtime</td><td>Check your total time on the server (used for <a href="/wiki/staff-ranks/#player-ranks">rank progression</a>)</td></tr>
-    <tr><td>/msg &lt;player&gt; &lt;message&gt;</td><td>Send a private message</td></tr>
-    <tr><td>/reply &lt;message&gt;</td><td>Reply to the last private message</td></tr>
-    <tr><td>/ignore &lt;player&gt;</td><td>Block messages from a player</td></tr>
-    <tr><td>/afk</td><td>Mark yourself as AFK</td></tr>
-    <tr><td>/nick [name]</td><td>Set a display nickname ⭐ (<a href="/wiki/staff-ranks/#settler">Settler</a>+)</td></tr>
-    <tr><td>/hat</td><td>Wear the item in your hand as a hat ⭐ (<a href="/wiki/staff-ranks/#patron">Patron</a>+)</td></tr>
-  </tbody>
-</table>
+| Command | Description | Requirement |
+| --- | --- | :---: |
+| `/help`| Opens the in-game commands list.|
+| `/playtime`| Shows your current playtime.|
+| `/msg <player> <message>`| Send a private message to the given player.|
+| `/reply <message>`| Reply to the last private message.|
+| `/ignore <player>`| You will no longer see messages from the given player.|
+| `/ignorelist`| See all players you are currently ignoring.|
+| `/afk`| Mark yourself as AFK|
+| `/nick [nickname]`| Sets your Nickname.| [Jade](/wiki/store-ranks#jade), [Topaz](/wiki/store-ranks#Topaz), [Diamond](/wiki/store-ranks#Diamond)|
+| `/hat`| Puts your current held item on your head slot.| [Topaz](/wiki/store-ranks#topaz)|
 
 ---
 
-## Essentials — Teleportation
+## Teleportation
 
-<table class="cmd-table">
-  <thead><tr><th>Command</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td>/sethome [name]</td><td>Save your current location as a home (home limit depends on <a href="/wiki/staff-ranks/#player-ranks">rank</a>)</td></tr>
-    <tr><td>/home [name]</td><td>Teleport to a saved home</td></tr>
-    <tr><td>/delhome &lt;name&gt;</td><td>Delete a saved home</td></tr>
-    <tr><td>/homes</td><td>List all your saved homes</td></tr>
-    <tr><td>/rtp</td><td>Random teleport to wilderness (30-min cooldown)</td></tr>
-    <tr><td>/tpa &lt;player&gt;</td><td>Request to teleport to a player</td></tr>
-    <tr><td>/tpahere &lt;player&gt;</td><td>Request a player teleport to you</td></tr>
-    <tr><td>/tpaccept</td><td>Accept a teleport request</td></tr>
-    <tr><td>/tpdeny</td><td>Deny a teleport request</td></tr>
-    <tr><td>/back</td><td>Return to your last location (e.g., after death)</td></tr>
-    <tr><td>/warp &lt;name&gt;</td><td>Teleport to a server warp point</td></tr>
-    <tr><td>/warps</td><td>List all available warps</td></tr>
-  </tbody>
-</table>
+| Command | Description | Requirement |
+| --- | --- | :---: |
+| `/spawn`| Teleport to [Spawn](/wiki/spawn/). |
+| `/warp <warp>`| Teleport to the given warp. |
+| `/warps`| Lists all available warps. |
+| `/hub`| Teleport to the Hub. |
+| `/sethome [name]`| Saves the current location as a home. |
+| `/home [name]`| Teleports to the given home. |
+| `/delhome [name]`| Deletes the given home. |
+| `/homes`| Lists all your saved homes. |
+| `/rtp [world]`| If a world is given, teleport to a random location in that world. If no world is given, opens the RTP Menu. |
+| `/tpa <player>`| Sends a teleport request to the given player. |
+| `/tpahere <player>`| Sends a teleport request for the given player to teleport to you. |
+| `/tpaccept`| Accepts a teleport request. |
+| `/tpdeny`| Denies a teleport request. |
+| `/back`| Teleports to the last teleport location. | [Jade](/wiki/store-ranks#jade) |
 
 ---
 
 ## Economy
 
-<table class="cmd-table">
-  <thead><tr><th>Command</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td>/money</td><td>Check your balance</td></tr>
-    <tr><td>/pay &lt;player&gt; &lt;amount&gt;</td><td>Send money to another player</td></tr>
-    <tr><td>/baltop</td><td>View the richest players on the server</td></tr>
-    <tr><td>/shop</td><td>Open the server buy/sell shop (at <a href="/wiki/worlds/#spawn-town">Spawn Town</a>)</td></tr>
-    <tr><td>/market</td><td>Open the player auction house</td></tr>
-    <tr><td>/ah sell &lt;price&gt;</td><td>List the item in hand on the auction house</td></tr>
-    <tr><td>/trade &lt;player&gt;</td><td>Initiate a safe face-to-face trade</td></tr>
-  </tbody>
-</table>
-
-See also [Crafting & Items](/wiki/crafting/#economy--shops) for more on the player economy.
-
----
-
-## Land Claims
-
-<table class="cmd-table">
-  <thead><tr><th>Command</th><th>Description</th></tr></thead>
-  <tbody>
-    <tr><td>/claim</td><td>Create a basic claim at your feet</td></tr>
-    <tr><td>/abandonclaim</td><td>Remove the claim you're standing in</td></tr>
-    <tr><td>/claimlist</td><td>View all your claims and block count</td></tr>
-    <tr><td>/claiminfo</td><td>View details about the claim you're in</td></tr>
-    <tr><td>/trust &lt;player&gt;</td><td>Grant build access in your claim</td></tr>
-    <tr><td>/containertrust &lt;player&gt;</td><td>Grant container access in your claim</td></tr>
-    <tr><td>/accesstrust &lt;player&gt;</td><td>Grant door/button access in your claim</td></tr>
-    <tr><td>/untrust &lt;player&gt;</td><td>Remove a player's access</td></tr>
-  </tbody>
-</table>
-
-For the full claiming guide (earning blocks, subdivisions, flags), see [Land Claims](/wiki/claims/).
+| Command | Description | Requirement |
+| --- | --- | :---: |
+| `/bal [username]`| Check your current balance. |
+| `/baltop [page]`| Check the top balances on the server. |
+| `/pay <player> <amount>`| Pay the given player money. |
+| `/ah`| Opens the Auction House. |
+| `/ah sell <price>`| Sells the held item for the given price. |
 
 ---
 
 ## Server Misc
+
+| Command | Description |
+| --- | --- |
+| `/`| |
+| `/`| |
+| `/`| |
+| `/`| |
+| `/`| |
+
 
 <table class="cmd-table">
   <thead><tr><th>Command</th><th>Description</th></tr></thead>
