@@ -1,10 +1,10 @@
 ---
 layout: wiki-page
-title: Crates and Voting
-description: "Everything you need to know about the available WitchCraftMC worlds."
-permalink: /wiki/crates-and-voting/
+title: Crates
+description: "Information about the available Crates"
+permalink: /wiki/crates/
 toc: true
-categories: [World, Locations]
+categories: [Items, Economy]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
@@ -13,6 +13,8 @@ see_also:
   - title: Crafting & Items
     url: /wiki/crafting/
 ---
+
+
 
 | Key | How to Get | Notable Rewards |
 |---|---|---|
