@@ -86,7 +86,7 @@ arcanium_ingot:
     - "&8Custom Item"
 arcanium_block:
   name: Arcanium Block
-  img: /img/icons/items/arcanium_ingot.png
+  img: /img/icons/items/arcanium_block.gif
   tooltip: "&7A rare magical block"
   tags:
     - "&5✦ &dMagical Material"
@@ -128,3 +128,40 @@ pyroclastic_bow:
   name: Pyroclastic Bow
   img: /img/icons/items/pyroclastic_bow.png
   tooltip: "&7A really warm pickaxe"
+
+vote_key:
+  name: Vote Key
+  img: /img/icons/items/vote_key.png
+  tooltip: "&7A key from voting."
+combat_key:
+  name: Combat Key
+  img: /img/icons/items/combat_key.png
+  tooltip: "&7A key from fighting."
+enchanter_key:
+  name: Enchanter Key
+  img: /img/icons/items/enchanter_key.png
+  tooltip: "&7A key for custom enchants."
+farming_key:
+  name: Farming Key
+  img: /img/icons/items/farming_key.png
+  tooltip: "&7A key from farming."
+fishing_key:
+  name: Fishing Key
+  img: /img/icons/items/fishing_key.png
+  tooltip: "&7A key from fishing."
+forest_key:
+  name: Forest Key
+  img: /img/icons/items/forest_key.png
+  tooltip: "&7A key from foraging."
+mining_key:
+  name: Mining Key
+  img: /img/icons/items/mining_key.png
+  tooltip: "&7A key from mining."
+obsidian_key:
+  name: Obsidian Key
+  img: /img/icons/items/obsidian_key.png
+  tooltip: "&7A key from the store."
+bismuth_key:
+  name: Bismuth Key
+  img: /img/icons/items/bismuth_key.png
+  tooltip: "&7A key from vthe store."
