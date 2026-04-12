@@ -407,9 +407,11 @@
 
 .wiki-content h3 {
       font-family:var(--font-title);
-      font-size:.95rem;
+      font-size:.82rem;
+      font-weight:700;
       color:var(--gold);
-      margin:1.5rem 0 .6rem;
+      margin:1.25rem 0 .5rem;
+      letter-spacing:.04em;
       scroll-margin-top:80px
 }
 
@@ -430,9 +432,12 @@
       margin-bottom:.3rem
 }
 .wiki-content hr {
-      border:none;
-      border-top:1px solid var(--border-gold);
-      margin:2rem 0
+      border:0;
+      border-top:1px solid rgba(201,162,39,.3);
+      margin:2rem 0;
+      height:0;
+      overflow:visible;
+      background:none
 }
 
 /* Inline code & pre */
@@ -1009,4 +1014,100 @@
       .sb-section-head{
             padding:.65rem 1.25rem
       }
+}
+
+/* ── CHANGELOG ENTRY BLOCKS ── */
+.cl-entry {
+      margin-bottom:2rem
+}
+.cl-meta {
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      margin-bottom:.75rem;
+      flex-wrap:wrap
+}
+.cl-badge {
+      border-radius:3px;
+      padding:.15rem .6rem;
+      font-size:.72rem;
+      font-weight:700;
+      font-family:var(--font-mono)
+}
+.cl-date {
+      font-family:var(--font-mono);
+      font-size:.78rem;
+      color:var(--text-dim)
+}
+
+/* ── INFOBOX image at any row (not just top) ── */
+.infobox-row-img {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:.55rem .85rem;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      background:var(--bg)
+}
+.infobox-row-img img {
+      max-width:100%;
+      height:auto;
+      display:block
+}
+.infobox-row-img img.mc-icon {
+      width:48px;
+      height:48px;
+      image-rendering:pixelated;
+      image-rendering:crisp-edges
+}
+
+/* ── Infobox: code inside rows/values ── */
+.infobox-row .value code,
+.infobox-row code {
+      background:rgba(var(--violet-rgb),.12);
+      border:1px solid rgba(var(--violet-rgb),.2);
+      border-radius:3px;
+      padding:.12em .42em;
+      font-size:.85em;
+      color:var(--violet-soft);
+      font-family:var(--font-mono)
+}
+
+/* ── Infobox row: linked label+value pair ── */
+.infobox-row-link {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      padding:.45rem .85rem;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      gap:.5rem;
+      color:inherit;
+      transition:background .12s
+}
+.infobox-row-link:hover {
+      background:rgba(255,255,255,.04);
+      text-decoration:none
+}
+.infobox-row-link .label {
+      color:var(--text);
+      font-size:.9rem;
+      flex-shrink:0;
+      padding-top:.05rem
+}
+.infobox-row-link .value {
+      color:var(--teal);
+      text-align:right;
+      font-weight:600;
+      max-width:160px;
+      word-break:break-word;
+      display:flex;
+      align-items:center;
+      gap:.35rem
+}
+.infobox-row-link .value img {
+      width:16px;
+      height:16px;
+      image-rendering:pixelated;
+      image-rendering:crisp-edges;
+      flex-shrink:0
 }

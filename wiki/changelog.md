@@ -21,39 +21,24 @@ see_also:
 
 ## How to Read This Page
 
-Each entry below follows the format:
-
-- **Version / Season** — the patch or season identifier
-- **Date** — approximate date of the update
-- **Type** — `New` · `Change` · `Fix` · `Season`
-- **Summary** — what changed and why it matters to players
+Each entry follows: **Version / Season** · **Date** · **Type** (`New` · `Change` · `Fix` · `Season`) · **Summary**.
 
 ---
 
 ## Season 1
 
-<div style="border-left:2px solid var(--violet);padding-left:1.25rem;margin-bottom:2rem">
-
 ### Pre-Launch — Wiki & Website
 
-<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap">
-  <span style="background:rgba(39,174,96,.15);color:#2ecc71;border-radius:3px;padding:.15rem .6rem;font-size:.72rem;font-weight:700;font-family:var(--font-mono)">NEW</span>
-  <span style="font-family:var(--font-mono);font-size:.78rem;color:var(--text-dim)">2025 · Pre-Launch</span>
-</div>
+{% include changelog-entry.html type="new" date="2025 · Pre-Launch" border="violet" %}
 
 - **Wiki launched** — this very knowledge base went live, covering [Getting Started](/wiki/getting-started/), [Rules](/wiki/rules/), [Land Claims](/wiki/claims/), [Crafting & Items](/wiki/crafting/), [World & Lore](/wiki/worlds/), [Staff & Ranks](/wiki/staff-ranks/), and [Commands](/wiki/commands/).
 - **Website published** — the WitchCraftMC homepage and wiki are now publicly accessible.
 
-</div>
-
-<div style="border-left:2px solid var(--teal);padding-left:1.25rem;margin-bottom:2rem">
+{% include changelog-entry-end.html %}
 
 ### v1.0 — Server Launch
 
-<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap">
-  <span style="background:rgba(var(--violet-rgb),.2);color:var(--violet-soft);border-radius:3px;padding:.15rem .6rem;font-size:.72rem;font-weight:700;font-family:var(--font-mono)">SEASON</span>
-  <span style="font-family:var(--font-mono);font-size:.78rem;color:var(--text-dim)">2025 · Season 1 Start</span>
-</div>
+{% include changelog-entry.html type="season" date="2025 · Season 1 Start" border="teal" %}
 
 - **Server opens to players.** Season 1 begins with a freshly generated world seed.
 - [GriefPrevention](/wiki/claims/) land claiming enabled from day one — [claim your land early](/wiki/claims/#creating-a-claim)!
@@ -61,7 +46,7 @@ Each entry below follows the format:
 - [Rank system](/wiki/staff-ranks/) active — Wanderer through Arcane, with automatic rank-up on playtime milestones.
 - Vote rewards live: `/vote` in-game for links.
 
-</div>
+{% include changelog-entry-end.html %}
 
 ---
 
@@ -72,21 +57,16 @@ Each entry below follows the format:
   <div>The following are planned but not yet confirmed for a specific patch. Watch <strong>#announcements</strong> on Discord for official dates.</div>
 </div>
 
-<div style="border-left:2px solid var(--border);padding-left:1.25rem">
-
 ### Planned Features
 
-<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap">
-  <span style="background:rgba(230,126,34,.12);color:#f39c12;border-radius:3px;padding:.15rem .6rem;font-size:.72rem;font-weight:700;font-family:var(--font-mono)">PLANNED</span>
-  <span style="font-family:var(--font-mono);font-size:.78rem;color:var(--text-dim)">TBD</span>
-</div>
+{% include changelog-entry.html type="planned" date="TBD" border="border" %}
 
 - Player market expansion — additional auction house features
 - Seasonal event content (holidays, special crates)
 - Additional [custom crafting recipes](/wiki/crafting/)
 - Expanded lore content — see [World & Lore](/wiki/worlds/)
 
-</div>
+{% include changelog-entry-end.html %}
 
 ---
 

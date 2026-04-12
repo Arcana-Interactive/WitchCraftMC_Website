@@ -1,0 +1,55 @@
+{% comment %}
+  ╔══════════════════════════════════════════════════════╗
+  ║  item-slot.html                                     ║
+  ║  Renders a single inventory slot with minetip.      ║
+  ╠══════════════════════════════════════════════════════╣
+  ║  Parameters                                         ║
+  ║  ─────────────────────────────────────────────────  ║
+  ║  item      (required) Item object from items.yml    ║
+  ║  count     (optional) Stack count badge number      ║
+  ║  size      (optional) "result" → uses result slot   ║
+  ║                                                     ║
+  ║  items.yml supports:                                ║
+  ║    tooltip: "&7Base description/&7Second line"      ║
+  ║    tags:                                            ║
+  ║      - "&6⚔ Attack Damage: &f+10"                  ║
+  ║      - "&9✦ Custom enchant"                         ║
+  ╚══════════════════════════════════════════════════════╝
+{% endcomment %}
+
+{%- assign _item  = include.item -%}
+{%- assign _count = include.count -%}
+{%- assign _size  = include.size -%}
+
+{%- assign _tip = _item.tooltip | default: "" -%}
+{%- if _item.tags -%}
+  {%- for tag in _item.tags -%}
+    {%- assign _tip = _tip | append: "/" | append: tag -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if _size == "result" -%}
+<div class="mc-result-slot">
+  <div class="invslot">
+    <div class="invslot-item"
+      title="{{ _item.name }}"
+      data-minetip-text="{{ _tip }}">
+      <img src="{{ _item.img }}" alt="{{ _item.name }}">
+      {%- if _count and _count > 1 -%}
+        <span class="invslot-count">{{ _count }}</span>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+{%- else -%}
+<div class="invslot">
+  <div class="invslot-item"
+    title="{{ _item.name }}"
+    data-minetip-text="{{ _tip }}">
+    <img src="{{ _item.img }}" alt="{{ _item.name }}">
+    {%- if _count and _count > 1 -%}
+      <span class="invslot-count">{{ _count }}</span>
+    {%- endif -%}
+  </div>
+</div>
+{%- endif -%}

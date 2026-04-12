@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="{{ '/css/wiki-base.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/wiki-home.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/wiki-search.css' | relative_url }}">
 </head>
 <body>
 
@@ -99,7 +100,7 @@
             <div class="cat-desc">Browse all wiki pages grouped by topic — Guides, Gameplay, Lore, and more.</div>
             <div class="cat-count">→ <span>Guides</span> · Gameplay · Reference</div>
           </a>
-          <div class="no-results" id="noRes"><i class="fas fa-search"></i>No results for "<span id="noResQ"></span>"</div>
+          <div class="no-results" id="noRes"><i class="fas fa-search"></i>No category matches for "<span id="noResQ"></span>"<br><a id="noResLink" href="/wiki/search/" style="font-size:.82rem;margin-top:.5rem;display:inline-block;color:var(--teal)"><i class="fas fa-magnifying-glass" style="margin-right:.3rem"></i>Search the full wiki</a></div>
         </div>
 
         <div class="wiki-article-count">
@@ -116,10 +117,6 @@
         <aside class="side-panel">
           <div class="wiki-clock-wrap">
             <div class="wiki-clock-card">
-              <span class="wcc-corner tl"></span>
-              <span class="wcc-corner tr"></span>
-              <span class="wcc-corner bl"></span>
-              <span class="wcc-corner br"></span>
               <div class="wiki-clock-title">Server Time</div>
               <div class="wiki-clock-time" id="clockTime">12:00 AM</div>
               <div class="wiki-clock-date" id="clockDate"></div>
@@ -195,10 +192,19 @@
     setInterval(tick,1000);
   })();
 
-  const el=document.getElementById('wikiSearch'),cards=document.querySelectorAll('.cat-card'),noRes=document.getElementById('noRes'),noResQ=document.getElementById('noResQ'),form=document.getElementById('wikiSearchForm');
-  // Live filter on category cards
-  el.addEventListener('input',()=>{const q=el.value.trim().toLowerCase();let v=0;cards.forEach(c=>{const m=!q||(c.dataset.s+' '+c.querySelector('.cat-name').textContent+' '+c.querySelector('.cat-desc').textContent).toLowerCase().includes(q);c.style.display=m?'':'none';if(m)v++;});noRes.style.display=(v===0&&q)?'block':'none';noResQ.textContent=q;});
-  // On submit, navigate to the full search page
+  const el=document.getElementById('wikiSearch'),cards=document.querySelectorAll('.cat-card'),noRes=document.getElementById('noRes'),noResQ=document.getElementById('noResQ'),noResLink=document.getElementById('noResLink'),form=document.getElementById('wikiSearchForm');
+  // Live filter on category cards; fall back to full wiki search link when no card matches
+  el.addEventListener('input',()=>{
+    const q=el.value.trim();
+    const ql=q.toLowerCase();
+    let v=0;
+    cards.forEach(c=>{const m=!q||(c.dataset.s+' '+c.querySelector('.cat-name').textContent+' '+c.querySelector('.cat-desc').textContent).toLowerCase().includes(ql);c.style.display=m?'':'none';if(m)v++;});
+    const show=(v===0&&q);
+    noRes.style.display=show?'block':'none';
+    noResQ.textContent=q;
+    if(noResLink) noResLink.href='/wiki/search/?q='+encodeURIComponent(q);
+  });
+  // On submit, always navigate to the full search page
   form.addEventListener('submit', e => { if (!el.value.trim()) e.preventDefault(); });
 
   // IP copy button — copies server address + shows "Copied!" tooltip

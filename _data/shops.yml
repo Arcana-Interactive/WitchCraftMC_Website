@@ -1,0 +1,54 @@
+# ══════════════════════════════════════════════════════
+#  WitchCraftMC — Shop GUI Registry
+#  _data/shops.yml
+# ══════════════════════════════════════════════════════
+#
+#  Each shop entry represents a chest-based GUI interface.
+#  Render a shop on any wiki page with:
+#
+#    {% include shop-gui.html id="blacksmith" %}
+#
+#  Keys
+#  ────
+#  title   Display name shown as the chest GUI title bar
+#  rows    Number of chest rows (1–6). Default: 3
+#  slots   List of occupied slot entries (0-indexed, 0 = top-left)
+#
+#  Slot keys
+#  ─────────
+#  slot    Slot index (0 = row 1 col 1, 8 = row 1 col 9, 9 = row 2 col 1, …)
+#  item    Item key from _data/items.yml
+#  label   (optional) Override the item's display name in the tooltip title
+#  price   (optional) Price string appended to tooltip  e.g. "50 Coins"
+#
+# ══════════════════════════════════════════════════════
+
+# ── Example: Blacksmith shop ───────────────────────────
+blacksmith:
+  title: "Blacksmith"
+  rows: 3
+  slots:
+    - slot: 10
+      item: iron_ingot
+      label: "Iron Ingot"
+      price: "25 Coins"
+    - slot: 11
+      item: gold_ingot
+      label: "Gold Ingot"
+      price: "75 Coins"
+    - slot: 12
+      item: diamond
+      label: "Diamond"
+      price: "500 Coins"
+    - slot: 13
+      item: stick
+      label: "Stick"
+      price: "5 Coins"
+    - slot: 14
+      item: planks
+      label: "Oak Planks"
+      price: "3 Coins"
+    - slot: 15
+      item: stone
+      label: "Stone"
+      price: "2 Coins"

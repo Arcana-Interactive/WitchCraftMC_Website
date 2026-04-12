@@ -238,3 +238,100 @@
   .mc-result-slot .invslot-item { width:39px; height:39px }
   .mc-result-slot .invslot-item img { width:28px; height:28px }
 }
+
+/*****************************
+*        SHOP / CHEST GUI    *
+*                            *
+*  Used by shop-gui.html     *
+*  Usage:                    *
+*  {% include shop-gui.html  *
+*     id="blacksmith" %}     *
+******************************/
+
+.mc-gui {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 1.25rem 0;
+  user-select: none;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.mc-gui-title {
+  background: #c6c6c6;
+  border: 2px solid #555;
+  border-bottom: none;
+  padding: .25rem .6rem;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: .01em;
+}
+
+/* 9-column chest grid — rows controlled by --gui-rows custom property */
+.mc-gui-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 36px);
+  grid-template-rows: repeat(var(--gui-rows, 3), 36px);
+  gap: 2px;
+  background: #8b8b8b;
+  border: 2px solid #555;
+  padding: 6px;
+  box-shadow:
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #373737;
+}
+
+/* Each slot reuses the same .invslot / .invslot-item as the crafting grid */
+.mc-gui .invslot {
+  width: 36px;
+  height: 36px;
+  background: #8b8b8b;
+  box-shadow:
+    inset -1px -1px 0 #fff,
+    inset 1px 1px 0 #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mc-gui .invslot-item {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.mc-gui .invslot-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.22);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mc-gui .invslot-item img {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+
+@media (max-width: 520px) {
+  .mc-gui-grid {
+    grid-template-columns: repeat(9, 28px);
+    grid-template-rows: repeat(var(--gui-rows, 3), 28px);
+    padding: 4px;
+    gap: 1px;
+  }
+  .mc-gui .invslot { width: 28px; height: 28px; }
+  .mc-gui .invslot-item { width: 24px; height: 24px; }
+  .mc-gui .invslot-item img { width: 20px; height: 20px; }
+}

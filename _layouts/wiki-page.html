@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="{{ '/css/wiki-base.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/wiki-article.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/wiki-search.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/minetip.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/crafting.css' | relative_url }}">
 </head>
@@ -38,14 +39,13 @@
   <!-- SIDEBAR -->
   <nav class="wiki-sidebar" id="wikiSidebar">
 
-    <!-- Search -->
+    <!-- Search with live preview -->
     <div class="sb-search">
-      <form action="{{ '/wiki/search/' | relative_url }}" method="get">
-        <div class="sb-search-wrap">
-          <i class="fas fa-search si"></i>
-          <input type="text" name="q" placeholder="Search wiki…" autocomplete="off" spellcheck="false" aria-label="Search wiki">
-        </div>
-      </form>
+      <div class="sb-search-wrap">
+        <i class="fas fa-search si"></i>
+        <input type="text" id="sbSearchInput" placeholder="Search wiki…" autocomplete="off" spellcheck="false" aria-label="Search wiki" role="combobox" aria-expanded="false" aria-controls="sbSearchPreview">
+      </div>
+      <div id="sbSearchPreview" class="sb-search-preview" role="listbox" aria-label="Search suggestions"></div>
     </div>
 
 
@@ -159,11 +159,17 @@
                    - label: "Rarity"
                      value: "Uncommon"
                      rarity: "uncommon"
+                   - image: "/img/items/map.png"     # image at any row position
+                     image_size: "icon"              # optional: "icon" for pixelated 48px
+                   - label: "Sold by"
+                     value: "Auctioneer"
+                     link: "/wiki/npc/auctioneer"    # row label+value as a clickable link
+                     icon: "/img/icons/npc/Heads/Auctioneer.png"  # optional icon next to value
                - heading: "NPCs"
                  links:
                    - text: "Auctioneer"
                      link: "/wiki/npc/Auctioneer"
-                     icon: "/img/icons/npc/auctioneer.png"
+                     icon: "/img/icons/npc/Heads/Auctioneer.png"
     -->
     {% if page.Infobox and page.Infobox.Enabled != false %}
     <div class="infobox">
@@ -180,13 +186,29 @@
           <div class="wiki-label infobox-section">{{ section.heading }}</div>
         {% endif %}
 
-        {% comment %} ── Key-value rows ── {% endcomment %}
+        {% comment %} ── Key-value rows (supports image rows and linked rows) ── {% endcomment %}
         {% if section.rows %}
           {% for row in section.rows %}
-            <div class="infobox-row">
-              <span class="label">{{ row.label }}</span>
-              <span class="value{% if row.rarity %} r-{{ row.rarity }}{% endif %}">{{ row.value }}</span>
-            </div>
+            {% if row.image %}
+              {% comment %} Image row — appears anywhere in the section {% endcomment %}
+              <div class="infobox-row-img">
+                <img src="{{ row.image }}" alt="{{ row.alt | default: '' }}"{% if row.image_size == "icon" %} class="mc-icon"{% endif %}>
+              </div>
+            {% elsif row.link %}
+              {% comment %} Linked row — label + clickable value (optionally with icon) {% endcomment %}
+              <a href="{{ row.link | relative_url }}" class="infobox-row-link">
+                <span class="label">{{ row.label }}</span>
+                <span class="value{% if row.rarity %} r-{{ row.rarity }}{% endif %}">
+                  {% if row.icon %}<img src="{{ row.icon }}" alt="">{% endif %}{{ row.value }}
+                </span>
+              </a>
+            {% else %}
+              {% comment %} Plain label+value row {% endcomment %}
+              <div class="infobox-row">
+                <span class="label">{{ row.label }}</span>
+                <span class="value{% if row.rarity %} r-{{ row.rarity }}{% endif %}">{{ row.value }}</span>
+              </div>
+            {% endif %}
           {% endfor %}
         {% endif %}
 
@@ -263,6 +285,7 @@
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script src="{{ '/js/minetip.js' | relative_url }}"></script>
+<script src="{{ '/js/wiki-search-preview.js' | relative_url }}"></script>
 <script>
   // ── MOBILE SIDEBAR ─────────────────────────────
   (function(){

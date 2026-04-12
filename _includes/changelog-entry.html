@@ -1,0 +1,64 @@
+{% comment %}
+  changelog-entry.html
+  Usage in markdown:
+    {% include changelog-entry.html
+       type="new"        # new | change | fix | season | planned
+       date="2025 · Pre-Launch"
+       border="violet"  # violet | teal | border | gold
+    %}
+  Then write your markdown bullet list immediately after.
+  Close with:  {% include changelog-entry-end.html %}
+
+  Available type values → badge colours:
+    new      → green
+    change   → teal
+    fix      → red
+    season   → violet
+    planned  → orange
+{% endcomment %}
+
+{% assign _type   = include.type   | default: "new" %}
+{% assign _date   = include.date   | default: "" %}
+{% assign _border = include.border | default: "violet" %}
+
+{% if _border == "violet" %}
+  {% assign _border_color = "var(--violet)" %}
+{% elsif _border == "teal" %}
+  {% assign _border_color = "var(--teal)" %}
+{% elsif _border == "gold" %}
+  {% assign _border_color = "var(--gold)" %}
+{% else %}
+  {% assign _border_color = "var(--border)" %}
+{% endif %}
+
+{% if _type == "new" %}
+  {% assign _badge_bg    = "rgba(39,174,96,.15)" %}
+  {% assign _badge_color = "#2ecc71" %}
+  {% assign _badge_text  = "NEW" %}
+{% elsif _type == "change" %}
+  {% assign _badge_bg    = "rgba(var(--teal-rgb),.15)" %}
+  {% assign _badge_color = "var(--teal)" %}
+  {% assign _badge_text  = "CHANGE" %}
+{% elsif _type == "fix" %}
+  {% assign _badge_bg    = "rgba(192,57,43,.15)" %}
+  {% assign _badge_color = "#e74c3c" %}
+  {% assign _badge_text  = "FIX" %}
+{% elsif _type == "season" %}
+  {% assign _badge_bg    = "rgba(var(--violet-rgb),.2)" %}
+  {% assign _badge_color = "var(--violet-soft)" %}
+  {% assign _badge_text  = "SEASON" %}
+{% elsif _type == "planned" %}
+  {% assign _badge_bg    = "rgba(230,126,34,.12)" %}
+  {% assign _badge_color = "#f39c12" %}
+  {% assign _badge_text  = "PLANNED" %}
+{% else %}
+  {% assign _badge_bg    = "rgba(255,255,255,.08)" %}
+  {% assign _badge_color = "var(--text-muted)" %}
+  {% assign _badge_text  = _type | upcase %}
+{% endif %}
+
+<div class="cl-entry" style="border-left:2px solid {{ _border_color }};padding-left:1.25rem;margin-bottom:2rem">
+<div class="cl-meta">
+  <span class="cl-badge" style="background:{{ _badge_bg }};color:{{ _badge_color }}">{{ _badge_text }}</span>
+  {% if _date != "" %}<span class="cl-date">{{ _date }}</span>{% endif %}
+</div>

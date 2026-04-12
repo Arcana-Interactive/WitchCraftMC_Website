@@ -1,0 +1,73 @@
+{% comment %}
+  ╔══════════════════════════════════════════════════════╗
+  ║  shop-gui.html                                      ║
+  ║  Renders a Minecraft chest GUI / shop interface.    ║
+  ╠══════════════════════════════════════════════════════╣
+  ║  Parameters                                         ║
+  ║  ─────────────────────────────────────────────────  ║
+  ║  id      (required) Shop ID from _data/shops.yml    ║
+  ║  label   (optional) Override the GUI title          ║
+  ║                                                     ║
+  ║  shops.yml format                                   ║
+  ║  ─────────────────────────────────────────────────  ║
+  ║  my_shop:                                           ║
+  ║    title: "Blacksmith"           # chest GUI title  ║
+  ║    rows: 3                       # 1–6 rows         ║
+  ║    slots:                        # sparse slot list ║
+  ║      - slot: 0                   # 0-indexed        ║
+  ║        item: iron_ingot          # items.yml key    ║
+  ║        price: "50 coins"         # shown in tooltip ║
+  ║        label: "Buy Iron Ingot"   # overrides name   ║
+  ║      - slot: 4                   # decorative item  ║
+  ║        item: chest               # no price = info  ║
+  ║                                                     ║
+  ║  Usage in any wiki page                             ║
+  ║  ─────────────────────────────────────────────────  ║
+  ║  {% include shop-gui.html id="blacksmith" %}        ║
+  ╚══════════════════════════════════════════════════════╝
+{% endcomment %}
+
+{%- assign shop   = site.data.shops[include.id] -%}
+{%- assign _title = include.label | default: shop.title | default: "Shop" -%}
+{%- assign _rows  = shop.rows | default: 3 -%}
+{%- assign _total = _rows | times: 9 -%}
+
+<div class="mc-gui">
+  <div class="mc-gui-title">{{ _title }}</div>
+  <div class="mc-gui-grid" style="--gui-rows:{{ _rows }}">
+    {%- for i in (0.._total) -%}
+      {%- if i == _total -%}{%- break -%}{%- endif -%}
+      {%- assign _found = nil -%}
+      {%- for slot_data in shop.slots -%}
+        {%- if slot_data.slot == i -%}
+          {%- assign _found = slot_data -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if _found -%}
+        {%- assign _item    = site.data.items[_found.item] -%}
+        {%- assign _display = _found.label | default: _item.name -%}
+        {%- assign _tip     = _item.tooltip | default: "" -%}
+        {%- if _item.tags -%}
+          {%- for tag in _item.tags -%}
+            {%- assign _tip = _tip | append: "/" | append: tag -%}
+          {%- endfor -%}
+        {%- endif -%}
+        {%- if _found.price -%}
+          {%- assign _tip = _tip | append: "/&r&6Price: &f" | append: _found.price -%}
+        {%- endif -%}
+        <div class="invslot">
+          <div class="invslot-item minetip"
+            title="{{ _display }}"
+            data-minetip-text="{{ _tip }}">
+            {%- if _item.img -%}
+              <img src="{{ _item.img }}" alt="{{ _display }}">
+            {%- endif -%}
+          </div>
+        </div>
+      {%- else -%}
+        <div class="invslot"><div class="invslot-item"></div></div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>

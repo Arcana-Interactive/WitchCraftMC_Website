@@ -14,6 +14,14 @@
 #              · Use  /  to start a new line
 #              · Use  &e  &7  &a  etc. for Minecraft colour codes
 #              · First line is the item title (auto-styled)
+#  tags      (optional) List of extra lore lines appended below the tooltip
+#              · Each tag is its own line — use Minecraft colour codes freely
+#              · Rendered after a blank separator from the base tooltip
+#              · Example:
+#                  tags:
+#                    - "&6⚔ Attack Damage: &f+10"
+#                    - "&9✦ Soulbound"
+#                    - "&8Custom Item"
 #
 # ══════════════════════════════════════════════════════
 
@@ -66,14 +74,23 @@ arcanium_fragments:
   name: Arcanium Fragments
   img: /img/icons/items/arcanium_ingot.gif
   tooltip: "&7A rare magical fragment"
+  tags:
+    - "&5✦ &dMagical Material"
+    - "&8Custom Item"
 arcanium_ingot:
   name: Arcanium Ingot
   img: /img/icons/items/arcanium_ingot.gif
   tooltip: "&7A rare magical ingot"
+  tags:
+    - "&5✦ &dMagical Material"
+    - "&8Custom Item"
 arcanium_block:
   name: Arcanium Block
   img: /img/icons/items/arcanium_ingot.png
   tooltip: "&7A rare magical block"
+  tags:
+    - "&5✦ &dMagical Material"
+    - "&8Custom Item"
 
 water_core:
   name: Water Core

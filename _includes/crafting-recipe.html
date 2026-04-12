@@ -29,14 +29,8 @@
       {%- for row in recipe.grid -%}
         {%- for slot in row -%}
           {%- if slot -%}
-            {%- assign item = site.data.items[slot] -%}
-            <div class="invslot">
-              <div class="invslot-item"
-                title="{{ item.name }}"
-                data-minetip-text="{{ item.tooltip }}">
-                <img src="{{ item.img }}" alt="{{ item.name }}">
-              </div>
-            </div>
+            {%- assign _slot_item = site.data.items[slot] -%}
+            {% include item-slot.html item=_slot_item %}
           {%- else -%}
             <div class="invslot"><div class="invslot-item"></div></div>
           {%- endif -%}
@@ -47,17 +41,6 @@
     <div class="mc-arrow-wrap"></div>
 
     <!-- Result slot -->
-    <div class="mc-result-slot">
-      <div class="invslot">
-        <div class="invslot-item"
-          title="{{ result_item.name }}"
-          data-minetip-text="{{ result_item.tooltip }}">
-          <img src="{{ result_item.img }}" alt="{{ result_item.name }}">
-          {%- if recipe.result_count and recipe.result_count > 1 -%}
-            <span class="invslot-count">{{ recipe.result_count }}</span>
-          {%- endif -%}
-        </div>
-      </div>
-    </div>
+    {% include item-slot.html item=result_item count=recipe.result_count size="result" %}
   </div>
 </div>
