@@ -1,17 +1,7 @@
 {% comment %}
-  ╔══════════════════════════════════════════════════════╗
-  ║  crafting-recipe.html                               ║
-  ║  Renders a crafting recipe from _data/recipes.yml   ║
-  ╠══════════════════════════════════════════════════════╣
-  ║  Parameters                                         ║
-  ║  ─────────────────────────────────────────────────  ║
-  ║  id      (required) Recipe ID from recipes.yml      ║
-  ║  label   (optional) Override the recipe label text  ║
-  ║                                                     ║
-  ║  Usage                                              ║
-  ║  ─────────────────────────────────────────────────  ║
-  ║  {% include crafting-recipe.html id="backpack" %}   ║
-  ╚══════════════════════════════════════════════════════╝
+  crafting-recipe.html — Renders a crafting recipe from _data/recipes.yml
+  Usage: include crafting-recipe.html id="backpack"
+  Optional: label="Override label"
 {% endcomment %}
 
 {%- assign recipe      = site.data.recipes[include.id] -%}

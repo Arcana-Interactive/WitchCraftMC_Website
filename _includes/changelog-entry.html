@@ -1,20 +1,11 @@
 {% comment %}
   changelog-entry.html
-  Usage in markdown:
-    {% include changelog-entry.html
-       type="new"        # new | change | fix | season | planned
-       date="2025 · Pre-Launch"
-       border="violet"  # violet | teal | border | gold
-    %}
+  Usage: include changelog-entry.html type="new" date="2025 · Pre-Launch" border="violet"
   Then write your markdown bullet list immediately after.
-  Close with:  {% include changelog-entry-end.html %}
+  Close with:  include changelog-entry-end.html
 
-  Available type values → badge colours:
-    new      → green
-    change   → teal
-    fix      → red
-    season   → violet
-    planned  → orange
+  type values:   new | change | fix | season | planned
+  border values: violet | teal | gold | border
 {% endcomment %}
 
 {% assign _type   = include.type   | default: "new" %}

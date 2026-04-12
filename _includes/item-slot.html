@@ -1,20 +1,14 @@
 {% comment %}
-  ╔══════════════════════════════════════════════════════╗
-  ║  item-slot.html                                     ║
-  ║  Renders a single inventory slot with minetip.      ║
-  ╠══════════════════════════════════════════════════════╣
-  ║  Parameters                                         ║
-  ║  ─────────────────────────────────────────────────  ║
-  ║  item      (required) Item object from items.yml    ║
-  ║  count     (optional) Stack count badge number      ║
-  ║  size      (optional) "result" → uses result slot   ║
-  ║                                                     ║
-  ║  items.yml supports:                                ║
-  ║    tooltip: "&7Base description/&7Second line"      ║
-  ║    tags:                                            ║
-  ║      - "&6⚔ Attack Damage: &f+10"                  ║
-  ║      - "&9✦ Custom enchant"                         ║
-  ╚══════════════════════════════════════════════════════╝
+  item-slot.html — Renders a single inventory slot with minetip tooltip.
+  Parameters:
+    item   (required) Item object from items.yml
+    count  (optional) Stack count badge number
+    size   (optional) "result" to use the larger result slot style
+
+  items.yml tag support:
+    tags:
+      - "&6Attack Damage: &f+10"
+      - "&9Custom enchant"
 {% endcomment %}
 
 {%- assign _item  = include.item -%}

@@ -1,30 +1,17 @@
 {% comment %}
-  ╔══════════════════════════════════════════════════════╗
-  ║  shop-gui.html                                      ║
-  ║  Renders a Minecraft chest GUI / shop interface.    ║
-  ╠══════════════════════════════════════════════════════╣
-  ║  Parameters                                         ║
-  ║  ─────────────────────────────────────────────────  ║
-  ║  id      (required) Shop ID from _data/shops.yml    ║
-  ║  label   (optional) Override the GUI title          ║
-  ║                                                     ║
-  ║  shops.yml format                                   ║
-  ║  ─────────────────────────────────────────────────  ║
-  ║  my_shop:                                           ║
-  ║    title: "Blacksmith"           # chest GUI title  ║
-  ║    rows: 3                       # 1–6 rows         ║
-  ║    slots:                        # sparse slot list ║
-  ║      - slot: 0                   # 0-indexed        ║
-  ║        item: iron_ingot          # items.yml key    ║
-  ║        price: "50 coins"         # shown in tooltip ║
-  ║        label: "Buy Iron Ingot"   # overrides name   ║
-  ║      - slot: 4                   # decorative item  ║
-  ║        item: chest               # no price = info  ║
-  ║                                                     ║
-  ║  Usage in any wiki page                             ║
-  ║  ─────────────────────────────────────────────────  ║
-  ║  {% include shop-gui.html id="blacksmith" %}        ║
-  ╚══════════════════════════════════════════════════════╝
+  shop-gui.html — Renders a Minecraft chest GUI from _data/shops.yml
+  Usage: include shop-gui.html id="blacksmith"
+  Optional: label="Override Title"
+
+  shops.yml format:
+    my_shop:
+      title: "Blacksmith"
+      rows: 3
+      slots:
+        - slot: 0
+          item: iron_ingot
+          price: "50 coins"
+          label: "Buy Iron Ingot"
 {% endcomment %}
 
 {%- assign shop   = site.data.shops[include.id] -%}
