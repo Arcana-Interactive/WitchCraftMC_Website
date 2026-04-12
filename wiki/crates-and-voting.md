@@ -1,8 +1,8 @@
 ---
 layout: wiki-page
-title: Voting
+title: Crates and Voting
 description: "Everything you need to know about the available WitchCraftMC worlds."
-permalink: /wiki/voting/
+permalink: /wiki/crates-and-voting/
 toc: true
 categories: [World, Locations]
 see_also:

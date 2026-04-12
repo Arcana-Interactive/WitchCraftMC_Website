@@ -106,7 +106,7 @@
           <i class="fas fa-file-lines"></i>
           <span><strong>{{ site.pages | where: 'layout', 'wiki-page' | size }}</strong> articles</span>
           <span class="wiki-article-count-sep">·</span>
-          <span>Updated {{ site.time | date: "%b %Y" }}</span>
+          <span>Updated {{ site.time | date: "%b %d, %Y" }}</span>
         </div>
 
         {% if content != '' %}<div style="margin-top:2.5rem">{{ content }}</div>{% endif %}

@@ -1,10 +1,10 @@
 ---
 layout: wiki-page
 title: Economy
-description: "Everything you need to know about the available WitchCraftMC worlds."
+description: "Everything you need to know about earning money."
 permalink: /wiki/economy/
 toc: true
-categories: [World, Locations]
+categories: [Economy]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
@@ -14,37 +14,28 @@ see_also:
     url: /wiki/crafting/
 ---
 
-| Key | How to Get | Notable Rewards |
+The server runs on a mix between server and player-driven economy. For most grinding, it is recommended to sell to the various [NPC Shops](/wiki/npc/), but players can also utilize private trading and the auction house.
+
+To directly pay someone, players can use `/pay <player> <amount>` to send a given amount of money. Keep in mind that scamming players is against the rules!
+
+## NPC Shops
+
+| NPC | Area | What they do |
 |---|---|---|
-| **Novice Key** | [Voting](/wiki/commands/#server-misc) | XP bottles, tools, food |
-| **Adept Key** | Store / Events | Enchanted gear, rare materials |
-| **Arcane Key** | Special Events | Custom items, cosmetics, large cash |
-
-Use a key at the crates near spawn. See [World & Lore → Spawn Town](/wiki/worlds/#spawn-town) for the crate plaza location.
-
-### Vote Rewards
-
-Vote for WitchCraftMC on any of our listed sites to receive:
-
-- **$500 in-game currency**
-- **1 Vote Crate Key**
-- **+50 [claim blocks](/wiki/claims/#earning-claim-blocks)**
-
-Vote at `/vote` in-game for a list of links, or use `/vote` from the [Commands page](/wiki/commands/#server-misc).
-
-## Economy & Shops
-
-WitchCraftMC runs a **player-driven economy** with a server shop as a price anchor. See the full command reference on the [Commands page](/wiki/commands/#economy).
-
-- `/shop` — server buy/sell shop for common items
-- `/market` — player auction house
-- `/ah` — alternative auction command (same as `/market`)
-- `/trade <player>` — safe face-to-face trade with another player
-
-<div class="wiki-callout tip">
-  <span class="callout-icon"><i class="fas fa-coins"></i></span>
-  <div>Set up a player shop by placing a chest, then a sign with your price on top. Check with staff or Discord for the current sign format used by your shop plugin.</div>
-</div>
+| [Captain Saltspring](/wiki/npc/captain-saltspring) | [The Docks](/wiki/spawn#the-docks) | Buys mob drops.|
+| [Matt Allurgy](/wiki/npc/matt-allurgy) | [The Town](/wiki/spawn#the-town) | Buys ores from players.|
+| [Farmer](/wiki/npc/farmer) | [The Farm](/wiki/spawn#the-farm) | Buys harvested crops from players.|
+| [Clara Chairman](/wiki/npc/clara-chairman) | [The Docks](/wiki/spawn#the-docks) | Buys wood from players.|
+| [Fish Merchant](/wiki/npc/fish-merchant) | [The Docks](/wiki/spawn#the-docks) | Buys fished up items.|
 
 ## Auction House
-blabla
+For selling items to other players, the Auction House is a great alternative. After ranking up to [Novice Rank](/wiki/ranks#novice), players can talk to the [Auctioneer](/wiki/npc/auctioneer) in [Spawn](/wiki/spawn#the-town) or use `/ah` to open the auction house.
+
+| Command | Description |
+| --- | --- | :---: |
+| `/ah`| Opens the Auction House. |
+| `/ah sell <price> [amount]`| Lists the held item for auction, for the given price. |
+| `/ah bid <price> [amount]`| Lists the held item for bidding, for the given price. |
+| `/ah view <player>`| Views the given player's active listings. |
+| `/ah expired`| Views items you've listed that expired from the auction house. |
+| `/ah listed`| View all items you are currently selling. |

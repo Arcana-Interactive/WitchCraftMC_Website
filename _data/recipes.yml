@@ -28,14 +28,12 @@ charcoal_block:
     - [charcoal, charcoal, charcoal]
     - [charcoal, charcoal, charcoal]
     - [charcoal, charcoal, charcoal]
-
 arcanium_ingot:
   result: arcanium_ingot
   grid:
-    - [arcanium_fragment, arcanium_fragment, arcanium_fragment]
-    - [arcanium_fragment, arcanium_fragment, arcanium_fragment]
-    - [arcanium_fragment, arcanium_fragment, arcanium_fragment]
-
+    - [arcanium_fragments, arcanium_fragments, arcanium_fragments]
+    - [arcanium_fragments, arcanium_fragments, arcanium_fragments]
+    - [arcanium_fragments, arcanium_fragments, arcanium_fragments]
 arcanium_block:
   result: arcanium_block
   grid:
@@ -43,9 +41,45 @@ arcanium_block:
     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
 
+pyroclastic_sword:
+  result: pyroclastic_sword
+  grid:
+    - [~, arcanium_ingot,~]
+    - [~, pyroclastic_core,~]
+    - [arcanium_ingot,stick,arcanium_ingot]
+pyroclastic_hoe:
+  result: pyroclastic_hoe
+  grid:
+    - [arcanium_ingot, arcanium_ingot,~]
+    - [~, pyroclastic_core,~]
+    - [~,stick,~]
 pyroclastic_axe:
   result: pyroclastic_axe
   grid:
-    - [arcanium_ingot, arcanium_ingot,'']
-    - [arcanium_ingot, pyroclastic_core,'']
-    - ['',stick,'']
+    - [arcanium_ingot, arcanium_ingot,~]
+    - [arcanium_ingot, pyroclastic_core,~]
+    - [~,stick,~]
+pyroclastic_shovel:
+  result: pyroclastic_shovel
+  grid:
+    - [~, arcanium_ingot,~]
+    - [~, pyroclastic_core,~]
+    - [~,stick,~]
+pyroclastic_pickaxe:
+  result: pyroclastic_pickaxe
+  grid:
+    - [arcanium_ingot, arcanium_ingot,arcanium_ingot]
+    - [~, pyroclastic_core,~]
+    - [~,stick,~]
+pyroclastic_rod:
+  result: pyroclastic_rod
+  grid:
+    - [~, ~, pyroclastic_core]
+    - [~, stick,arcanium_ingot]
+    - [stick,~,arcanium_ingot]
+pyroclastic_bow:
+  result: pyroclastic_bow
+  grid:
+    - [~, arcanium_ingot,stick]
+    - [arcanium_ingot, ~,pyroclastic_core]
+    - [~,arcanium_ingot,stick]

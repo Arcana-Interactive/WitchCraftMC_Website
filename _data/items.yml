@@ -4,7 +4,7 @@
 # ══════════════════════════════════════════════════════
 #
 #  Add a new entry here whenever you add a new item
-#  texture to /img/items/.
+#  texture to /img/icons/items/.
 #
 #  Keys
 #  ────
@@ -20,74 +20,94 @@
 # ── Vanilla items ──────────────────────────────────────
 charcoal:
   name: Charcoal
-  img: /img/items/charcoal.png
+  img: /img/icons/items/charcoal.png
   tooltip: "&7A common ore"
 coal_block:
   name: Block of Coal
-  img: /img/items/coal_block.png
+  img: /img/icons/items/coal_block.png
   tooltip: "&7A common block of ore"
 
 stick:
   name: Stick
-  img: /img/items/stick.png
+  img: /img/icons/items/stick.png
   tooltip: "&7Crafted from planks./&7A basic crafting component."
 
 chest:
   name: Chest
-  img: /img/items/chest.png
+  img: /img/icons/items/chest.png
   tooltip: "&7A storage container./&7Holds up to &f27 &7stacks of items."
 iron_ingot:
   name: Iron Ingot
-  img: /img/items/iron_ingot.png
+  img: /img/icons/items/iron_ingot.png
   tooltip: "&7Smelted from iron ore./&7A common crafting material."
 gold_ingot:
   name: Gold Ingot
-  img: /img/items/gold_ingot.png
+  img: /img/icons/items/gold_ingot.png
   tooltip: "&7Smelted from gold ore./&7Used in powered rails, clocks, and more."
 diamond:
   name: Diamond
-  img: /img/items/diamond.png
+  img: /img/icons/items/diamond.png
   tooltip: "&7Found deep underground./&7Used in the strongest tools and armour."
 string:
   name: String
-  img: /img/items/string.png
+  img: /img/icons/items/string.png
   tooltip: "&7Dropped by spiders./&7Used in bows, fishing rods, and more."
 planks:
   name: Oak Planks
-  img: /img/items/planks.png
+  img: /img/icons/items/planks.png
   tooltip: "&7Crafted from logs./&7A versatile building and crafting material."
 stone:
   name: Stone
-  img: /img/items/stone.png
+  img: /img/icons/items/stone.png
   tooltip: "&7Smelted from cobblestone."
 
 # ── WitchCraftMC custom items ──────────────────────────
 arcanium_fragments:
   name: Arcanium Fragments
-  img: /img/items/arcanium_ingot.png
+  img: /img/icons/items/arcanium_ingot.gif
   tooltip: "&7A rare magical fragment"
 arcanium_ingot:
   name: Arcanium Ingot
-  img: /img/items/arcanium_ingot.png
+  img: /img/icons/items/arcanium_ingot.gif
   tooltip: "&7A rare magical ingot"
 arcanium_block:
   name: Arcanium Block
-  img: /img/items/arcanium_ingot.png
+  img: /img/icons/items/arcanium_ingot.png
   tooltip: "&7A rare magical block"
 
 water_core:
   name: Water Core
-  img: /img/items/water_core.png
+  img: /img/icons/items/water_core.png
   tooltip: "&7Crafting Ingredient"
 pyroclastic_core:
   name: Pyroclastic Core
-  img: /img/items/pyroclastic_core.png
+  img: /img/icons/items/pyroclastic_core.png
   tooltip: "&7Crafting Ingredient"
 pyroclastic_pickaxe:
   name: Pyroclastic Pickaxe
-  img: /img/items/pyroclastic_pickaxe.png
+  img: /img/icons/items/pyroclastic_pickaxe.png
   tooltip: "&7A really warm pickaxe"
 pyroclastic_axe:
   name: Pyroclastic Axe
-  img: /img/items/pyroclastic_core.png
+  img: /img/icons/items/pyroclastic_axe.png
   tooltip: "&7A really warm axe"
+pyroclastic_shovel:
+  name: Pyroclastic Shovel
+  img: /img/icons/items/pyroclastic_shovel.png
+  tooltip: "&7A really warm pickaxe"
+pyroclastic_hoe:
+  name: Pyroclastic Hoe
+  img: /img/icons/items/pyroclastic_hoe.png
+  tooltip: "&7A really warm pickaxe"
+pyroclastic_rod:
+  name: Pyroclastic Rod
+  img: /img/icons/items/pyroclastic_rod.png
+  tooltip: "&7A really warm pickaxe"
+pyroclastic_sword:
+  name: Pyroclastic Sword
+  img: /img/icons/items/pyroclastic_sword.png
+  tooltip: "&7A really warm pickaxe"
+pyroclastic_bow:
+  name: Pyroclastic Bow
+  img: /img/icons/items/pyroclastic_bow.png
+  tooltip: "&7A really warm pickaxe"
