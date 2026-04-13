@@ -97,6 +97,17 @@
 
     html = parseCodes( html );
 
+    /* ── Replace {tag_xxx} placeholders with inline images ── */
+    if ( window.WIKI_TAGS ) {
+      html = html.replace( /\{tag_([a-zA-Z0-9_]+)\}/g, function ( m, key ) {
+        var src = window.WIKI_TAGS[ key ];
+        if ( src ) {
+          return '<img src="' + src + '" alt="' + key + '" style="width:16px;height:16px;image-rendering:pixelated;image-rendering:crisp-edges;vertical-align:middle;margin:0 2px">';
+        }
+        return m;
+      } );
+    }
+
     /* ── mount ── */
     tip = document.createElement( 'div' );
     tip.id = 'minetip-tooltip';

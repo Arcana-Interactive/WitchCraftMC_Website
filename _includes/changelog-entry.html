@@ -48,7 +48,7 @@
   {% assign _badge_text  = _type | upcase %}
 {% endif %}
 
-<div class="cl-entry" style="border-left:2px solid {{ _border_color }};padding-left:1.25rem;margin-bottom:2rem">
+<div class="cl-entry" markdown="1" style="border-left:2px solid {{ _border_color }};padding-left:1.25rem;margin-bottom:2rem">
 <div class="cl-meta">
   <span class="cl-badge" style="background:{{ _badge_bg }};color:{{ _badge_color }}">{{ _badge_text }}</span>
   {% if _date != "" %}<span class="cl-date">{{ _date }}</span>{% endif %}

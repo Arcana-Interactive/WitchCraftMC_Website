@@ -27,9 +27,10 @@
       <p class="tagline">Your complete guide to spells, land claims, commands, and everything in between.</p>
       <form class="wiki-search" action="{{ '/wiki/search/' | relative_url }}" method="get" id="wikiSearchForm">
         <i class="fas fa-search si"></i>
-        <input type="text" id="wikiSearch" name="q" placeholder="Search the wiki…" autocomplete="off" spellcheck="false">
+        <input type="text" id="wikiSearch" name="q" placeholder="Search the wiki…" autocomplete="off" spellcheck="false" aria-label="Search wiki" role="combobox" aria-expanded="false" aria-controls="homepageSearchPreview">
         <span class="sh">↵ Search</span>
       </form>
+      <div id="homepageSearchPreview" class="sb-search-preview" role="listbox" aria-label="Search suggestions" style="max-width:600px;margin:0 auto"></div>
     </div>
   </div>
 </header>
@@ -173,6 +174,7 @@
 {% include wiki-footer.html %}
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+<script src="{{ '/js/wiki-search-preview.js' | relative_url }}"></script>
 <script>
   // ── CLOCK ──────────────────────────────────────
   (function(){

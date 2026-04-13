@@ -1,0 +1,21 @@
+# ══════════════════════════════════════════════════════
+#  WitchCraftMC — Tag Image Registry
+#  _data/tags.yml
+# ══════════════════════════════════════════════════════
+#
+#  Define custom tags that can be used as inline images
+#  in item tooltips.
+#
+#  Usage in items.yml tooltip/tags:
+#    tooltip: "&7A cool item/{tag_novice} &7Novice Gear"
+#    tags:
+#      - "{tag_novice} &7Novice Gear"
+#
+#  Each tag key maps to an image path.
+#  Reference in tooltips with {tag_KEY} syntax.
+#
+# ══════════════════════════════════════════════════════
+
+# novice: /img/icons/tags/novice.png
+# adept: /img/icons/tags/adept.png
+# arcane: /img/icons/tags/arcane.png

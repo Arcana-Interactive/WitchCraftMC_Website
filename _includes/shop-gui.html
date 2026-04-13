@@ -7,6 +7,8 @@
     my_shop:
       title: "Blacksmith"
       rows: 3
+      texture: "/img/ui/custom_gui.png"   # optional — custom UI background texture
+      title_color: "#4a412a"              # optional — title text color
       slots:
         - slot: 0
           item: iron_ingot
@@ -19,9 +21,14 @@
 {%- assign _rows  = shop.rows | default: 3 -%}
 {%- assign _total = _rows | times: 9 -%}
 
-<div class="mc-gui">
+<div class="mc-gui{% if shop.texture %} mc-gui-textured{% endif %}">
+  {% if shop.texture %}
+  <div class="mc-gui-title" style="{% if shop.title_color %}color:{{ shop.title_color }};{% endif %}background:transparent;border:none">{{ _title }}</div>
+  <div class="mc-gui-grid mc-gui-grid-textured" style="--gui-rows:{{ _rows }};background-image:url('{{ shop.texture }}')">
+  {% else %}
   <div class="mc-gui-title">{{ _title }}</div>
   <div class="mc-gui-grid" style="--gui-rows:{{ _rows }}">
+  {% endif %}
     {%- for i in (0.._total) -%}
       {%- if i == _total -%}{%- break -%}{%- endif -%}
       {%- assign _found = nil -%}

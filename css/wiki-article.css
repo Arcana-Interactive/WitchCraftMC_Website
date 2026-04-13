@@ -432,12 +432,14 @@
       margin-bottom:.3rem
 }
 .wiki-content hr {
-      border:0;
-      border-top:1px solid rgba(201,162,39,.3);
-      margin:2rem 0;
+      border:none !important;
+      border-top:1px solid var(--border-gold) !important;
+      margin:2rem 0 !important;
       height:0;
       overflow:visible;
-      background:none
+      background:none !important;
+      opacity:1 !important;
+      color:transparent !important
 }
 
 /* Inline code & pre */

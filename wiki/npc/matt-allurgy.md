@@ -34,7 +34,8 @@ Infobox:
 Matt Allurgy is an NPC that serves as the Blacksmith in the [Spawn Town](/wiki/spawn#the-town). Steven buys ores from players for money.
 
 ## Interface
-\<insert blacksmith shop ui\>
+
+    {% include shop-gui.html id="blacksmith" %}
 
 ## Dialogue
 

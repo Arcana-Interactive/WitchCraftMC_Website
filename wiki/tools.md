@@ -1,47 +1,23 @@
 ---
 layout: wiki-page
-title: Items
-description: "All our custom items."
-permalink: /wiki/items/
+title: Tools
+description: "Custom tools available on WitchCraftMC."
+permalink: /wiki/tools/
 toc: true
-categories: [Items]
+categories: [Items, Gameplay]
 see_also:
-  - title: Getting Started
-    url: /wiki/getting-started/
-  - title: Changelog & History
-    url: /wiki/changelog/
+  - title: Items
+    url: /wiki/items/
   - title: Crafting & Items
     url: /wiki/crafting/
 ---
 
-| Key | How to Get | Notable Rewards |
-|---|---|---|
-| **Novice Key** | [Voting](/wiki/commands/#server-misc) | XP bottles, tools, food |
-| **Adept Key** | Store / Events | Enchanted gear, rare materials |
-| **Arcane Key** | Special Events | Custom items, cosmetics, large cash |
+Custom tools in WitchCraftMC offer unique abilities beyond vanilla Minecraft. See each tool set's dedicated page for crafting recipes and full details.
 
-Use a key at the crates near spawn. See [World & Lore → Spawn Town](/wiki/worlds/#spawn-town) for the crate plaza location.
+## Pyroclastic Tools
 
-### Vote Rewards
+The Pyroclastic tool set is forged from rare materials and offers auto-smelting and enhanced durability. See the [Pyroclastic](/wiki/pyroclastic/) page for crafting recipes.
 
-Vote for WitchCraftMC on any of our listed sites to receive:
+## More Coming Soon
 
-- **$500 in-game currency**
-- **1 Vote Crate Key**
-- **+50 [claim blocks](/wiki/claims/#earning-claim-blocks)**
-
-Vote at `/vote` in-game for a list of links, or use `/vote` from the [Commands page](/wiki/commands/#server-misc).
-
-## Economy & Shops
-
-WitchCraftMC runs a **player-driven economy** with a server shop as a price anchor. See the full command reference on the [Commands page](/wiki/commands/#economy).
-
-- `/shop` — server buy/sell shop for common items
-- `/market` — player auction house
-- `/ah` — alternative auction command (same as `/market`)
-- `/trade <player>` — safe face-to-face trade with another player
-
-<div class="wiki-callout tip">
-  <span class="callout-icon"><i class="fas fa-coins"></i></span>
-  <div>Set up a player shop by placing a chest, then a sign with your price on top. Check with staff or Discord for the current sign format used by your shop plugin.</div>
-</div>
+Additional custom tool sets are planned for future updates. Check the [Changelog](/wiki/changelog/) for announcements.

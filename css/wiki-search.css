@@ -204,3 +204,15 @@ mark {
   color: var(--text-dim);
   text-align: center;
 }
+
+/* ── Homepage banner search preview ── */
+.wiki-banner .sb-search-preview,
+.wiki-banner + * .sb-search-preview,
+#homepageSearchPreview {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin-top: .5rem;
+  border-radius: var(--radius);
+}

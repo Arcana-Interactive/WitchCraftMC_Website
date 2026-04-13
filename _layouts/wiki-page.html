@@ -146,30 +146,32 @@
          Add an Infobox block to any page's frontmatter to auto-generate
          an infobox sidebar. Set  Infobox.Enabled: false  to opt out.
 
+         All sections use "rows:" — three row types available:
+
+         1. Label+Value:   - label: "Type"  value: "Merchant"  (+ optional rarity/link/icon)
+         2. Text link:     - text: "Auctioneer"  link: "/wiki/npc/auctioneer"  icon: "..."
+         3. Inline image:  - image: "/img/map.png"  image_size: "icon"
+
          Example YAML:
            Infobox:
-             title: "Backpack"
-             image: "/img/items/backpack.png"
-             image_size: "icon"        # "icon" = 48px pixelated | omit for full-width screenshot
+             title: "Spawn"
+             image: "/img/resources/spawn.png"
              Sections:
-               - heading: "Item Info"
+               - heading: "Information"
                  rows:
                    - label: "Type"
-                     value: "Custom Item"
+                     value: "Hub Area"
                    - label: "Rarity"
                      value: "Uncommon"
                      rarity: "uncommon"
-                   - image: "/img/items/map.png"     # image at any row position
-                     image_size: "icon"              # optional: "icon" for pixelated 48px
-                   - label: "Sold by"
-                     value: "Auctioneer"
-                     link: "/wiki/npc/auctioneer"    # row label+value as a clickable link
-                     icon: "/img/icons/npc/Heads/Auctioneer.png"  # optional icon next to value
+                   - image: "/img/items/map.png"
+                     image_size: "icon"
                - heading: "NPCs"
-                 links:
+                 icon_size: 24
+                 rows:
                    - text: "Auctioneer"
-                     link: "/wiki/npc/Auctioneer"
-                     icon: "/img/icons/npc/Heads/Auctioneer.png"
+                     link: "/wiki/npc/auctioneer"
+                     icon: "/img/icons/npc/Heads/auctioneer.png"
     -->
     {% if page.Infobox and page.Infobox.Enabled != false %}
     <div class="infobox">
@@ -186,7 +188,8 @@
           <div class="wiki-label infobox-section">{{ section.heading }}</div>
         {% endif %}
 
-        {% comment %} ── Key-value rows (supports image rows and linked rows) ── {% endcomment %}
+        {% comment %} ── Unified rows — supports all row types ── {% endcomment %}
+        {% assign _icon_sz = section.icon_size | default: 24 %}
         {% if section.rows %}
           {% for row in section.rows %}
             {% if row.image %}
@@ -194,8 +197,15 @@
               <div class="infobox-row-img">
                 <img src="{{ row.image }}" alt="{{ row.alt | default: '' }}"{% if row.image_size == "icon" %} class="mc-icon"{% endif %}>
               </div>
+            {% elsif row.text %}
+              {% comment %} Text row — icon + text link (replaces old "links" format) {% endcomment %}
+              {% if row.link %}
+                <a href="{{ row.link | relative_url }}" class="infobox-link">{% if row.icon %}<img src="{{ row.icon }}" alt="" width="{{ _icon_sz }}" height="{{ _icon_sz }}" style="image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;">{% endif %}{{ row.text }}</a>
+              {% else %}
+                <span class="infobox-link">{% if row.icon %}<img src="{{ row.icon }}" alt="" width="{{ _icon_sz }}" height="{{ _icon_sz }}" style="image-rendering:pixelated;image-rendering:crisp-edges;flex-shrink:0;">{% endif %}{{ row.text }}</span>
+              {% endif %}
             {% elsif row.link %}
-              {% comment %} Linked row — label + clickable value (optionally with icon) {% endcomment %}
+              {% comment %} Linked label+value row {% endcomment %}
               <a href="{{ row.link | relative_url }}" class="infobox-row-link">
                 <span class="label">{{ row.label }}</span>
                 <span class="value{% if row.rarity %} r-{{ row.rarity }}{% endif %}">
@@ -212,9 +222,8 @@
           {% endfor %}
         {% endif %}
 
-        {% comment %} ── Link list (with optional icons) ── {% endcomment %}
+        {% comment %} ── Legacy link list support (deprecated — use rows with text: instead) ── {% endcomment %}
         {% if section.links %}
-          {% assign _icon_sz = section.icon_size | default: 24 %}
           <div class="infobox-column">
             {% for item in section.links %}
               {% if item.link %}
@@ -284,6 +293,13 @@
 {% include wiki-footer.html %}
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+{% if site.data.tags %}
+<script>
+  window.WIKI_TAGS = {
+    {% for tag in site.data.tags %}{% if tag[1] %}"{{ tag[0] }}":"{{ tag[1] }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+  };
+</script>
+{% endif %}
 <script src="{{ '/js/minetip.js' | relative_url }}"></script>
 <script src="{{ '/js/wiki-search-preview.js' | relative_url }}"></script>
 <script>
