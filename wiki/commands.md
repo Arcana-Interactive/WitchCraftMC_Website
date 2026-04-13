@@ -31,6 +31,7 @@ This page lists every command available to players.
 
 | Command | Description | Requirement |
 | --- | --- | :---: |
+| `/ranks`| View your rank progress.|
 | `/afk`| Mark yourself as AFK|
 | `/profile [username]`| Check a player's profile and see information about them.|
 | `/report <username>`| Report the given player to staff. |
