@@ -168,10 +168,10 @@
 
 /* Tag icons inside tooltips — preserves aspect ratio */
 .minetip-tag-icon {
-	height: 1.25em;
+	height: 1.9em;
 	width: auto;
 	vertical-align: middle;
-	margin: -0.15em 3px 0 0;
+	margin: 0.6em -3em 0 0;
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;
 }

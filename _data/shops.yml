@@ -41,7 +41,8 @@
 # ── Example: Blacksmith shop ───────────────────────────
 blacksmith:
   title: "Blacksmith"
-  rows: 3
+  texture: "/img/icons/gui/shop.png"
+  rows: 6
   slots:
     - slot: 10
       item: iron_ingot
