@@ -14,6 +14,21 @@
 #  rows    Number of chest rows (1–6). Default: 3
 #  slots   List of occupied slot entries (0-indexed, 0 = top-left)
 #
+#  Custom UI texture (optional)
+#  ─────────────────
+#  texture       Path to a GUI background image (replaces the grey chest look)
+#  title_color   Hex colour for the title text when using a custom texture
+#
+#  Example:
+#    my_custom_shop:
+#      title: "Enchanting Table"
+#      rows: 3
+#      texture: "/img/ui/enchanting_gui.png"
+#      title_color: "#4a412a"
+#      slots:
+#        - slot: 0
+#          item: diamond
+#
 #  Slot keys
 #  ─────────
 #  slot    Slot index (0 = row 1 col 1, 8 = row 1 col 9, 9 = row 2 col 1, …)

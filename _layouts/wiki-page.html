@@ -209,7 +209,7 @@
               <a href="{{ row.link | relative_url }}" class="infobox-row-link">
                 <span class="label">{{ row.label }}</span>
                 <span class="value{% if row.rarity %} r-{{ row.rarity }}{% endif %}">
-                  {% if row.icon %}<img src="{{ row.icon }}" alt="">{% endif %}{{ row.value }}
+                  {% if row.icon %}<img src="{{ row.icon }}" alt="" width="{{ _icon_sz }}" height="{{ _icon_sz }}" style="image-rendering:pixelated;image-rendering:crisp-edges">{% endif %}{{ row.value }}
                 </span>
               </a>
             {% else %}

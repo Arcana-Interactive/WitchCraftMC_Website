@@ -127,7 +127,7 @@ pyroclastic_sword:
 pyroclastic_bow:
   name: Pyroclastic Bow
   img: /img/icons/items/pyroclastic_bow.png
-  tooltip: "&7A really warm pickaxe"
+  tooltip: "{tag_novice} &7A really warm pickaxe"
 
 vote_key:
   name: Vote Key

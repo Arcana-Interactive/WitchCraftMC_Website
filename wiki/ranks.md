@@ -21,7 +21,7 @@ The **Initiate** rank is the default rank, given to every new player from the st
 - `/sethome <HomeName>` - 1x saved home.
 - Access to all standard [commands](/wiki/commands/)
 
-Tag: <span class="rank-badge rank-villager">[Initiate]</span>
+Tag: {tag_novice}
 
 ---
 

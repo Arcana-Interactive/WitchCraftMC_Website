@@ -1,0 +1,7 @@
+{% comment %}
+  tag.html — Renders an inline tag icon from _data/tags.yml.
+  Usage:   {% include tag.html id="novice" %}
+  With label:  {% include tag.html id="novice" label="Novice" %}
+{% endcomment %}
+{%- assign _src = site.data.tags[include.id] -%}
+{%- if _src -%}<img src="{{ _src }}" alt="{{ include.label | default: include.id }}" class="wiki-tag-icon">{% if include.label %}<span style="font-size:.85em;font-weight:600">{{ include.label }}</span>{% endif %}{%- endif -%}

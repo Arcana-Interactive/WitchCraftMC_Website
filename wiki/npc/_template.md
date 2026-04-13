@@ -28,70 +28,80 @@ see_also:
     url: /wiki/spawn/
   # - title: Another NPC
   #   url: /wiki/npc/Another NPC
-  # - title: Crafting & Items
-  #   url: /wiki/crafting/
 
 # ── Edit history — add a new entry each time the page changes ──
 history:
   - version: "Survival Release"
     date: "2026-01-01"
     changes: "NPC Name added to Spawn."
-  # - version: "v1.1"
-  #   date: "2026-MM-DD"
-  #   changes: "Description of what changed."
 
 # ═══════════════════════════════════════════════════════════════
 #  INFOBOX
 #  Floats to the right of the article body.
+#  All sections use "rows:" with three row types:
+#
+#  1. Label + Value (key-value pair):
+#       - label: "Type"
+#         value: "Merchant"
+#         rarity: "uncommon"     # optional — colours the value
+#         link: "/wiki/page"     # optional — makes the row clickable
+#         icon: "/img/icon.png"  # optional — icon next to value
+#
+#  2. Text link (icon + name, like NPC lists):
+#       - text: "Auctioneer"
+#         link: "/wiki/npc/auctioneer"
+#         icon: "/img/icons/npc/Heads/auctioneer.png"
+#
+#  3. Inline image (appears mid-infobox, not just at top):
+#       - image: "/img/icons/npc/Body/npc_name.png"
+#         image_size: "icon"     # optional — "icon" for pixelated 48px
+#
+#  Section-level "icon_size: 24" sets the px size for all icons
+#  in that section (text rows and linked label+value rows).
 # ═══════════════════════════════════════════════════════════════
 Infobox:
   Enabled: true
   title: "NPC Name"                            # ← usually same as page title
 
   # Body render image. Path pattern: /img/icons/npc/Body/Name.png
-  # File naming: PascalCase with underscores — "Fish_Merchant.png", "Agent_LemLem.png"
-  # If no body image exists yet, delete this line entirely.
   image: "/img/icons/npc/Body/NPC_Name.png"   # ←
-
-  # Uncomment if the image is a tiny icon rather than a full body render:
-  # image_size: "icon"
 
   Sections:
 
     # ── Key/value rows ─────────────────────────────────────────
-    # Standard rows for NPC pages. Add, remove, or reorder freely.
     - heading: "Details"
       rows:
         - label: "Location"
           value: "Spawn"
-
         - label: "Type"
-          value: "Merchant"      # ← Merchant / Service / Special Merchant / Guard / Quest Giver
+          value: "Merchant"
 
-        # Merchants that accept in-game currency:
-        - label: "Currency"
-          value: "Coins"         # ← Coins / XP / Coins & XP / Tokens / etc.
+    # ── Location with linked icon row ──────────────────────────
+    - heading: "Location"
+      icon_size: 24                            # ← sets icon size for all rows in this section
+      rows:
+        - label: "<strong>Area"
+          value: "The Town"
+          link: "/wiki/spawn"
+          icon: "/img/icons/npc/Heads/npc_name.png"
+        - label: "<strong>Coordinates"
+          value: "<code>x:0 y:70 z:0</code>"
 
-        # If the NPC has a command shortcut:
-        # - label: "Command"
-        #   value: "/command"
-
-        # Rarity colouring on any value field — add  rarity: "X"  to colour the text.
-        # Options: common · uncommon · rare · epic · legendary · mythic · divine · special
-        # Example:
-        # - label: "Status"
-        #   value: "Active"
-        #   rarity: "uncommon"
-
-    # ── Related NPCs link list ──────────────────────────────────
-    # Shows other NPCs with their head icons. All icons must be the
-    # same size; set icon_size at the section level.
-    # Head image path: /img/icons/npc/Heads/Name.png
-    # (same naming rules as Body — PascalCase_Underscores)
+    # ── Mid-infobox image example ──────────────────────────────
+    # You can insert an image at any position in any section:
     #
+    # - heading: "Gallery"
+    #   rows:
+    #     - label: "Status"
+    #       value: "Active"
+    #     - image: "/img/resources/npc_shop.png"
+    #     - label: "Items Sold"
+    #       value: "12"
+
+    # ── NPC link list ──────────────────────────────────────────
     # - heading: "Related NPCs"
     #   icon_size: 24
-    #   links:
+    #   rows:
     #     - text: "Enchanter"
     #       link: "/wiki/npc/Enchanter"
     #       icon: "/img/icons/npc/Heads/Enchanter.png"
@@ -108,9 +118,24 @@ Infobox:
 
 *(What can players buy, sell, or do here? List items, commands, costs.)*
 
-### Sub-section if needed
+<!-- ═══════════════════════════════════════════════════════════
+     SHOP GUI — render a Minecraft-style chest interface
+     Define your shop in _data/shops.yml first, then include:
 
-*(Use H3 for sub-categories within a section — e.g. "Weapons" and "Armour" under Shop.)*
+     {% include shop-gui.html id="my_shop" %}
+
+     For custom UI textures, add to shops.yml:
+       my_shop:
+         title: "My Custom Shop"
+         rows: 3
+         texture: "/img/ui/my_custom_gui.png"
+         title_color: "#4a412a"
+         slots:
+           - slot: 10
+             item: iron_ingot
+             price: "25 Coins"
+
+     ═══════════════════════════════════════════════════════════ -->
 
 ## Notes
 
@@ -120,7 +145,6 @@ Infobox:
 
 <!-- ═══════════════════════════════════════════════════════════
      QUICK REFERENCE — CALLOUT BOXES
-     Copy the block you need into the page body above.
 
 <div class="wiki-callout tip">
   <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>
@@ -141,5 +165,20 @@ Infobox:
   <span class="callout-icon"><i class="fas fa-skull"></i></span>
   <div>Danger text here.</div>
 </div>
+
+     ═══════════════════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     TAG IMAGES — inline tag icons in article content
+
+     Define tags in _data/tags.yml:
+       novice: /img/icons/tags/novice.png
+
+     Use in article body as HTML:
+       <img src="/img/icons/tags/novice.png" alt="Novice" class="wiki-tag-icon"> Novice
+
+     Use in item tooltips (items.yml):
+       tags:
+         - "{tag_novice} &7Novice Gear"
 
      ═══════════════════════════════════════════════════════════ -->

@@ -431,15 +431,19 @@
 .wiki-content li {
       margin-bottom:.3rem
 }
-.wiki-content hr {
+/* Override Bootstrap hr reset (opacity:.25, color:inherit) */
+.wiki-content hr,
+.wiki-article-wrap hr,
+.wiki-article-wrap .wiki-content hr {
       border:none !important;
-      border-top:1px solid var(--border-gold) !important;
+      border-top:1px solid rgba(201,162,39,.45) !important;
       margin:2rem 0 !important;
-      height:0;
-      overflow:visible;
+      height:0 !important;
+      overflow:visible !important;
       background:none !important;
       opacity:1 !important;
-      color:transparent !important
+      color:transparent !important;
+      box-shadow:none !important
 }
 
 /* Inline code & pre */
@@ -699,6 +703,20 @@
       display:inline-block;
       vertical-align:text-bottom;
       margin-right:.2rem
+}
+
+/* Tag icons inline in article content
+ * Usage:  <img src="/img/icons/tags/novice.png" alt="Novice" class="wiki-tag-icon">
+ * Or via include:  {% include tag.html id="novice" %}
+ */
+.wiki-tag-icon {
+      height:1.2em;
+      width:auto;
+      display:inline-block;
+      vertical-align:middle;
+      margin:-0.1em .25rem 0 0;
+      image-rendering:pixelated;
+      image-rendering:crisp-edges
 }
 
 /* Rarity values — add new rarities following the same pattern:
@@ -1107,8 +1125,6 @@
       gap:.35rem
 }
 .infobox-row-link .value img {
-      width:16px;
-      height:16px;
       image-rendering:pixelated;
       image-rendering:crisp-edges;
       flex-shrink:0

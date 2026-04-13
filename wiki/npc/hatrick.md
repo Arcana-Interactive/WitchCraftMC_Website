@@ -24,6 +24,7 @@ Infobox:
         - label: "<strong>Type"
           value: "Merchant"
     - heading: "Location"
+      icon_size: 24
       rows:
         - label: "<strong>Area"
           value: "The Town (Cosmetics Shop)"

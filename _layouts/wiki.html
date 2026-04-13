@@ -101,7 +101,6 @@
             <div class="cat-desc">Browse all wiki pages grouped by topic — Guides, Gameplay, Lore, and more.</div>
             <div class="cat-count">→ <span>Guides</span> · Gameplay · Reference</div>
           </a>
-          <div class="no-results" id="noRes"><i class="fas fa-search"></i>No category matches for "<span id="noResQ"></span>"<br><a id="noResLink" href="/wiki/search/" style="font-size:.82rem;margin-top:.5rem;display:inline-block;color:var(--teal)"><i class="fas fa-magnifying-glass" style="margin-right:.3rem"></i>Search the full wiki</a></div>
         </div>
 
         <div class="wiki-article-count">
@@ -194,20 +193,9 @@
     setInterval(tick,1000);
   })();
 
-  const el=document.getElementById('wikiSearch'),cards=document.querySelectorAll('.cat-card'),noRes=document.getElementById('noRes'),noResQ=document.getElementById('noResQ'),noResLink=document.getElementById('noResLink'),form=document.getElementById('wikiSearchForm');
-  // Live filter on category cards; fall back to full wiki search link when no card matches
-  el.addEventListener('input',()=>{
-    const q=el.value.trim();
-    const ql=q.toLowerCase();
-    let v=0;
-    cards.forEach(c=>{const m=!q||(c.dataset.s+' '+c.querySelector('.cat-name').textContent+' '+c.querySelector('.cat-desc').textContent).toLowerCase().includes(ql);c.style.display=m?'':'none';if(m)v++;});
-    const show=(v===0&&q);
-    noRes.style.display=show?'block':'none';
-    noResQ.textContent=q;
-    if(noResLink) noResLink.href='/wiki/search/?q='+encodeURIComponent(q);
-  });
-  // On submit, always navigate to the full search page
-  form.addEventListener('submit', e => { if (!el.value.trim()) e.preventDefault(); });
+  // On submit, navigate to the full search page
+  const form=document.getElementById('wikiSearchForm');
+  form.addEventListener('submit', e => { if (!document.getElementById('wikiSearch').value.trim()) e.preventDefault(); });
 
   // IP copy button — copies server address + shows "Copied!" tooltip
   const ipBtn = document.getElementById('ipCopyBtn');
