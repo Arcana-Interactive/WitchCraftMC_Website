@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Auctioneer
 description: "Place and bid on player auctions at Spawn."
-permalink: /wiki/npc/Auctioneer
+permalink: /wiki/npc/auctioneer
 categories: [NPCs, Spawn, Economy]
 see_also:
   - title: NPCs
