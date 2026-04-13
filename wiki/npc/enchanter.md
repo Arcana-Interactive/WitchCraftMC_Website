@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Enchanter
 description: "Buy enchantments at Spawn."
-permalink: /wiki/npc/Enchanter
+permalink: /wiki/npc/enchanter
 categories: [NPCs, Spawn]
 see_also:
   - title: NPCs
