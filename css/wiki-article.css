@@ -1062,17 +1062,18 @@
 
 /* ── INFOBOX image at any row (not just top) ── */
 .infobox-row-img {
+      background: var(--bg);
       display:flex;
       justify-content:center;
       align-items:center;
-      padding:.55rem .85rem;
-      border-bottom:1px solid rgba(255,255,255,.04);
-      background:var(--bg)
+      padding:.45rem .85rem;
+      border-bottom: 1px solid var(--border);
+      gap: .5rem
 }
 .infobox-row-img img {
-      max-width:100%;
-      height:auto;
-      display:block
+      max-width:300px;
+      width: auto;
+      flex: 0 0 auto
 }
 .infobox-row-img img.mc-icon {
       width:48px;
