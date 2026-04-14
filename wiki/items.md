@@ -4,7 +4,7 @@ title: Items
 description: "All our custom items."
 permalink: /wiki/items/
 toc: true
-categories: [Items]
+categories: [Items, Blocks]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

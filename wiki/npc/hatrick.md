@@ -3,7 +3,7 @@ layout: wiki-page
 title: Hatrick
 description: "Customise your appearance with cosmetics and vanity items."
 permalink: /wiki/npc/hatrick
-categories: [NPCs, Spawn, Cosmetics]
+categories: [NPCs, Spawn, Cosmetic]
 see_also:
   - title: NPCs
     url: /wiki/npc/

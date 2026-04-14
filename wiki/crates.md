@@ -4,7 +4,7 @@ title: Crates
 description: "Information about the available Crates"
 permalink: /wiki/crates/
 toc: true
-categories: [Items, Economy]
+categories: [Gameplay, Items]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

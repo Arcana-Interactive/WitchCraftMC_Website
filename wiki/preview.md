@@ -4,7 +4,7 @@ title: Preview
 description: "A wiki feature showcase."
 permalink: /wiki/preview/
 toc: true
-categories: [meta]
+categories: [Meta]
 see_also:
   - title: Spawn
     url: /wiki/spawn/

@@ -4,7 +4,7 @@ title: Tags
 description: "Information about the available cosmetics."
 permalink: /wiki/tags/
 toc: true
-categories: [Cosmetic,Equipment]
+categories: [Cosmetic]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

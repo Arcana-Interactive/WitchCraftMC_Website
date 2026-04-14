@@ -4,7 +4,7 @@ title: World Information
 description: "Everything you need to know about the available WitchCraftMC worlds."
 permalink: /wiki/worlds/
 toc: true
-categories: [World, Locations]
+categories: [Locations]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

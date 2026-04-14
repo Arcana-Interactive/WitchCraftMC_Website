@@ -4,7 +4,7 @@ title: Pyroclastic Set
 description: "The Pyroclastic toolset."
 permalink: /wiki/pyroclastic/
 toc: true
-categories: [Items, Tools]
+categories: [Items, Tools, Equipment]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

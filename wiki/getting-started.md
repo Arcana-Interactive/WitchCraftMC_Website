@@ -4,7 +4,7 @@ title: Getting Started
 description: "New to WitchCraftMC? Here's everything you need for your first session."
 permalink: /wiki/getting-started/
 toc: true
-categories: [Guides, Beginner]
+categories: [Guides]
 see_also:
   - title: Rules
     url: /wiki/rules/

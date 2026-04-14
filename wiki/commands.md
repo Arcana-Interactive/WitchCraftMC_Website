@@ -4,7 +4,7 @@ title: Commands
 description: "A complete reference of every player command available on WitchCraftMC."
 permalink: /wiki/commands/
 toc: true
-categories: [Reference, Guides]
+categories: [Reference]
 see_also:
   - title: Land Claims
     url: /wiki/claims/

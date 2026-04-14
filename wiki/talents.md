@@ -4,7 +4,7 @@ title: Talents
 description: "Everything you need to know about the available WitchCraftMC worlds."
 permalink: /wiki/talents/
 toc: true
-categories: [World, Locations]
+categories: [Gameplay, Economy]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

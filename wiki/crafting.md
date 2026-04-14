@@ -4,7 +4,7 @@ title: Crafting Recipes
 description: "Custom recipes exclusive to WitchCraftMC."
 permalink: /wiki/crafting/
 toc: true
-categories: [Gameplay, Economy]
+categories: [Gameplay, Items]
 see_also:
   - title: Commands & Plugins
     url: /wiki/commands/

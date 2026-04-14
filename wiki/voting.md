@@ -1,10 +1,10 @@
 ---
 layout: wiki-page
-title: Crates and Voting
+title: Voting
 description: "Information about voting."
 permalink: /wiki/voting/
 toc: true
-categories: [Items, Economy]
+categories: [Gameplay, Items]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

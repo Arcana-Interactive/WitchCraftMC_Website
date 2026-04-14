@@ -1,10 +1,10 @@
 ---
 layout: wiki-page
 title: Enchantments
-description: "A complete reference of every player command available on WitchCraftMC."
+description: "A complete reference of every custom enchantment."
 permalink: /wiki/enchantments/
 toc: true
-categories: [Reference, Guides]
+categories: [Reference]
 prev_page:
   title: Staff & Ranks
   url: /wiki/staff-ranks/

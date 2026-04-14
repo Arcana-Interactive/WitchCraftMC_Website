@@ -4,7 +4,7 @@ title: Land Claims
 description: "How to protect your builds and manage your territory using GriefPrevention."
 permalink: /wiki/claims/
 toc: true
-categories: [Gameplay, Guides]
+categories: [Gameplay]
 prev_page:
   title: Rules
   url: /wiki/rules/

@@ -4,7 +4,7 @@ title: Tools
 description: "Custom tools available on WitchCraftMC."
 permalink: /wiki/tools/
 toc: true
-categories: [Items, Gameplay]
+categories: [Items, Equipment]
 see_also:
   - title: Items
     url: /wiki/items/

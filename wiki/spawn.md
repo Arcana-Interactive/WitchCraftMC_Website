@@ -4,7 +4,7 @@ title: Spawn
 description: "The Spawn of WitchCraftMC Survival"
 permalink: /wiki/spawn/
 toc: true
-categories: [World, Locations]
+categories: [Locations]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
