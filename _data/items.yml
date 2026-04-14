@@ -73,61 +73,136 @@ stone:
 arcanium_fragments:
   name: Arcanium Fragments
   img: /img/icons/items/arcanium_ingot.gif
-  tooltip: "&7A rare magical fragment"
   tags:
-    - "&5✦ &dMagical Material"
-    - "&8Custom Item"
+    - "&8--"
+    - "{tag_epic}{tag_fragment}"
+    - "--"
 arcanium_ingot:
   name: Arcanium Ingot
   img: /img/icons/items/arcanium_ingot.gif
-  tooltip: "&7A rare magical ingot"
   tags:
-    - "&5✦ &dMagical Material"
-    - "&8Custom Item"
+    - "&8--"
+    - "{tag_epic}{tag_ingot}"
+    - "--"
 arcanium_block:
   name: Arcanium Block
   img: /img/icons/items/arcanium_block.gif
   tooltip: "&7A rare magical block"
   tags:
-    - "&5✦ &dMagical Material"
-    - "&8Custom Item"
+    - "&8--"
+    - "{tag_epic}{tag_block}"
+    - "--"
 
 water_core:
   name: Water Core
   img: /img/icons/items/water_core.png
-  tooltip: "&7Crafting Ingredient"
+  tags:
+    - "&8--"
+    - "{tag_rare}{tag_core}"
+    - "--"
 pyroclastic_core:
   name: Pyroclastic Core
   img: /img/icons/items/pyroclastic_core.png
-  tooltip: "&7Crafting Ingredient"
+  tags:
+    - "&8--"
+    - "{tag_legendary}{tag_core}"
+    - "--"
 pyroclastic_pickaxe:
   name: Pyroclastic Pickaxe
   img: /img/icons/items/pyroclastic_pickaxe.png
-  tooltip: "&7A really warm pickaxe"
+  tags:
+    - "&7Fortune V"
+    - "Efficiency IX"
+    - "Unbreaking IX"
+    - "Mending"
+    - "&8--"
+    - "&oA really warm pickaxe."
+    - "--"
+    - "{tag_legendary}{tag_pickaxe}"
+    - "--"
 pyroclastic_axe:
   name: Pyroclastic Axe
   img: /img/icons/items/pyroclastic_axe.png
-  tooltip: "&7A really warm axe"
+  tags:
+    - "&7Fortune V"
+    - "Efficiency IX"
+    - "Unbreaking IX"
+    - "Mending"
+    - "&8--"
+    - "&oA really warm axe."
+    - "--"
+    - "{tag_legendary}{tag_axe}"
+    - "--"
 pyroclastic_shovel:
   name: Pyroclastic Shovel
   img: /img/icons/items/pyroclastic_shovel.png
-  tooltip: "&7A really warm pickaxe"
+  tags:
+    - "&7Fortune V"
+    - "Efficiency IX"
+    - "Unbreaking IX"
+    - "Mending"
+    - "&8--"
+    - "&oA really warm shovel."
+    - "--"
+    - "{tag_legendary}{tag_shovel}"
+    - "--"
 pyroclastic_hoe:
   name: Pyroclastic Hoe
   img: /img/icons/items/pyroclastic_hoe.png
-  tooltip: "&7A really warm pickaxe"
+  tags:
+    - "&7Fortune V"
+    - "Efficiency IX"
+    - "Unbreaking IX"
+    - "Mending"
+    - "&8--"
+    - "&oA really warm hoe."
+    - "--"
+    - "{tag_legendary}{tag_hoe}"
+    - "--"
 pyroclastic_rod:
   name: Pyroclastic Rod
   img: /img/icons/items/pyroclastic_rod.png
-  tooltip: "&7A really warm pickaxe"
+  tags:
+    - "&7Luck of the Sea V"
+    - "Lure V"
+    - "Unbreaking IX"
+    - "Mending"
+    - "&8--"
+    - "&oA really warm fishing rod."
+    - "--"
+    - "{tag_legendary}{tag_fishing_rod}"
+    - "--"
 pyroclastic_sword:
   name: Pyroclastic Sword
   img: /img/icons/items/pyroclastic_sword.png
-  tooltip: "&7A really warm pickaxe"
+  tags:
+    - "&7Sharpness X"
+    - "Smite VI"
+    - "Bane of Arthropods VI"
+    - "Sweeping Edge III"
+    - "Fire Aspect II"
+    - "Looting V"
+    - "Unbreaking IX"
+    - "Mending"
+    - "&8--"
+    - "&oA really warm sword."
+    - "--"
+    - "{tag_legendary}{tag_sword}"
+    - "--"
 pyroclastic_bow:
   name: Pyroclastic Bow
   img: /img/icons/items/pyroclastic_bow.png
-  tooltip: "{tag_novice} &7A really warm pickaxe"
+  tags:
+    - "&7Power X"
+    - "Flame"
+    - "Unbreaking IX"
+    - "Infinity"
+    - "Mending"
+    - "&8--"
+    - "&oA really warm bow."
+    - "--"
+    - "{tag_legendary}{tag_bow}"
+    - "--"
 
 vote_key:
   name: Vote Key

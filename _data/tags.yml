@@ -16,6 +16,61 @@
 #
 # ══════════════════════════════════════════════════════
 
+initiate: /img/icons/tags/initiate.png
+seeker: /img/icons/tags/seeker.png
 novice: /img/icons/tags/novice.png
-# adept: /img/icons/tags/adept.png
-# arcane: /img/icons/tags/arcane.png
+acolyte: /img/icons/tags/acolyte.png
+adept: /img/icons/tags/adept.png
+sorcerer: /img/icons/tags/sorcerer.png
+elder: /img/icons/tags/elder.png
+
+helper: /img/icons/tags/helper.png
+mod: /img/icons/tags/mod.png
+dev: /img/icons/tags/dev.png
+admin: /img/icons/tags/admin.png
+
+quartz: /img/icons/tags/quartz.png
+jade: /img/icons/tags/jade.png
+topaz: /img/icons/tags/topaz.png
+ruby: /img/icons/tags/ruby.png
+diamond: /img/icons/tags/diamond.png
+
+common: /img/icons/tags/common.png
+rare: /img/icons/tags/rare.png
+epic: /img/icons/tags/epic.png
+legendary: /img/icons/tags/legendary.png
+arcane: /img/icons/tags/arcane.png
+special: /img/icons/tags/special.png
+
+helmet: /img/icons/tags/helmet.png
+chestplate: /img/icons/tags/chestplate.png
+leggings: /img/icons/tags/leggings.png
+boots: /img/icons/tags/boots.png
+elytra: /img/icons/tags/elytra.png
+
+hat: /img/icons/tags/hat.png
+hand_item: /img/icons/tags/hand_item.png
+balloon: /img/icons/tags/balloon.png
+backpack: /img/icons/tags/backpack.png
+
+sword: /img/icons/tags/sword.png
+mace: /img/icons/tags/mace.png
+trident: /img/icons/tags/trident.png
+shield: /img/icons/tags/shield.png
+crossbow: /img/icons/tags/crossbow.png
+bow: /img/icons/tags/bow.png
+
+pickaxe: /img/icons/tags/pickaxe.png
+axe: /img/icons/tags/axe.png
+shovel: /img/icons/tags/shovel.png
+hoe: /img/icons/tags/hoe.png
+fishing_rod: /img/icons/tags/fishing_rod.png
+
+spawner: /img/icons/tags/spawner.png
+fragment: /img/icons/tags/fragment.png
+ingot: /img/icons/tags/ingot.png
+item: /img/icons/tags/item.png
+block: /img/icons/tags/block.png
+enchantment: /img/icons/tags/enchantment.png
+key: /img/icons/tags/key.png
+core: /img/icons/tags/core.png
