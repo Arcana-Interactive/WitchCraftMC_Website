@@ -2,7 +2,7 @@
 layout: wiki-page
 title: Crates and Voting
 description: "Information about voting."
-permalink: /wiki/crates-and-voting/
+permalink: /wiki/voting/
 toc: true
 categories: [Items, Economy]
 see_also:
