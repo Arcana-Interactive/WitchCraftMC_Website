@@ -99,14 +99,14 @@
 
     /* ── Replace {tag_xxx} placeholders with inline images ──
      *  Supports optional pixel shift:  {tag_shovel:-2}
-     *  Negative values pull the next element closer (margin-right).
-     *  Positive values push it away.  No value = default CSS margin.
+     *  Negative values pull the tag closer to its left neighbour.
+     *  Positive values push it further away.  No value = default CSS margin.
      */
     if ( window.WIKI_TAGS ) {
       html = html.replace( /\{tag_([a-zA-Z0-9_]+)(?::(-?[0-9.]+))?\}/g, function ( m, key, shift ) {
         var src = window.WIKI_TAGS[ key ];
         if ( src ) {
-          var style = shift ? ' style="margin-right:' + shift + 'px"' : '';
+          var style = shift ? ' style="margin-left:' + shift + 'px"' : '';
           return '<img src="' + src + '" alt="' + key + '" class="minetip-tag-icon"' + style + '>';
         }
         return m;

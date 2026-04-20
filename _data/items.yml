@@ -82,7 +82,7 @@ arcanium_ingot:
   img: /img/icons/items/arcanium_ingot.gif
   tags:
     - "&8--"
-    - "{tag_epic}{tag_ingot}"
+    - "{tag_epic}{tag_ingot:-70}"
     - "--"
 arcanium_block:
   name: Arcanium Block
@@ -105,7 +105,7 @@ pyroclastic_core:
   img: /img/icons/items/pyroclastic_core.png
   tags:
     - "&8--"
-    - "{tag_legendary}{tag_core}"
+    - "{tag_legendary}{tag_core:-5}"
     - "--"
 pyroclastic_pickaxe:
   name: Pyroclastic Pickaxe
@@ -118,7 +118,7 @@ pyroclastic_pickaxe:
     - "&8--"
     - "&oA really warm pickaxe."
     - "--"
-    - "{tag_legendary}{tag_pickaxe}"
+    - "{tag_legendary}{tag_pickaxe:-5}"
     - "--"
 pyroclastic_axe:
   name: Pyroclastic Axe
@@ -131,7 +131,7 @@ pyroclastic_axe:
     - "&8--"
     - "&oA really warm axe."
     - "--"
-    - "{tag_legendary}{tag_axe}"
+    - "{tag_legendary}{tag_axe:-5}"
     - "--"
 pyroclastic_shovel:
   name: Pyroclastic Shovel
@@ -144,7 +144,7 @@ pyroclastic_shovel:
     - "&8--"
     - "&oA really warm shovel."
     - "--"
-    - "{tag_legendary}{tag_shovel:-2}"
+    - "{tag_legendary}{tag_shovel:-5}"
     - "--"
 pyroclastic_hoe:
   name: Pyroclastic Hoe
@@ -157,7 +157,7 @@ pyroclastic_hoe:
     - "&8--"
     - "&oA really warm hoe."
     - "--"
-    - "{tag_legendary}{tag_hoe}"
+    - "{tag_legendary}{tag_hoe:-5}"
     - "--"
 pyroclastic_rod:
   name: Pyroclastic Rod
@@ -170,7 +170,7 @@ pyroclastic_rod:
     - "&8--"
     - "&oA really warm fishing rod."
     - "--"
-    - "{tag_legendary}{tag_fishing_rod}"
+    - "{tag_legendary}{tag_fishing_rod:-5}"
     - "--"
 pyroclastic_sword:
   name: Pyroclastic Sword
@@ -187,7 +187,7 @@ pyroclastic_sword:
     - "&8--"
     - "&oA really warm sword."
     - "--"
-    - "{tag_legendary}{tag_sword}"
+    - "{tag_legendary}{tag_sword:-5}"
     - "--"
 pyroclastic_bow:
   name: Pyroclastic Bow
@@ -201,7 +201,7 @@ pyroclastic_bow:
     - "&8--"
     - "&oA really warm bow."
     - "--"
-    - "{tag_legendary}{tag_bow}"
+    - "{tag_legendary}{tag_bow:-5}"
     - "--"
 
 vote_key:

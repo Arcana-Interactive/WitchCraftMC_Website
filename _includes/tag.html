@@ -3,8 +3,8 @@
   Usage:   {% include tag.html id="novice" %}
   With label:  {% include tag.html id="novice" label="Novice" %}
   With shift:  {% include tag.html id="novice" shift="-2px" %}
-    shift applies a negative right-margin to pull the next element closer,
+    shift applies a margin-left to pull the tag closer to its left neighbour,
     useful for tags whose source image has extra whitespace.
 {% endcomment %}
 {%- assign _src = site.data.tags[include.id] -%}
-{%- if _src -%}<img src="{{ _src }}" alt="{{ include.label | default: include.id }}" class="wiki-tag-icon"{% if include.shift %} style="margin-right:{{ include.shift }}"{% endif %}>{% if include.label %}<span style="font-size:.85em;font-weight:600">{{ include.label }}</span>{% endif %}{%- endif -%}
+{%- if _src -%}<img src="{{ _src }}" alt="{{ include.label | default: include.id }}" class="wiki-tag-icon"{% if include.shift %} style="margin-left:{{ include.shift }}"{% endif %}>{% if include.label %}<span style="font-size:.85em;font-weight:600">{{ include.label }}</span>{% endif %}{%- endif -%}
