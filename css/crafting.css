@@ -325,37 +325,73 @@
 }
 
 /* ── Custom-textured GUI variant ──
- *  Set  texture: "/img/ui/my_gui.png"  in shops.yml to use a
- *  custom background image instead of the default grey Minecraft look.
- *  The texture should be a full GUI screenshot at 2× scale.
+ *  Set  texture: "/img/icons/gui/my_gui.png"  in shops.yml to use a
+ *  256×256 Minecraft GUI texture instead of the default grey chest look.
+ *
+ *  The background-image is on the outer .mc-gui-textured container,
+ *  rendered at native 256×256. The grid is overlaid with transparent
+ *  slots positioned to match the texture's slot coordinates.
+ *
+ *  Configurable via CSS vars (set in shops.yml):
+ *    --gui-slot       Slot size in 1x pixels (default 18px)
+ *    --gui-grid-top   Grid Y offset (default 18px)
+ *    --gui-grid-left  Grid X offset (default 8px)
  */
 .mc-gui-textured {
-  background: transparent;
+  width: 256px;
+  height: 256px;
   position: relative;
+  background-size: 256px 256px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  overflow: hidden;
 }
 
 .mc-gui-textured .mc-gui-title {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
   background: transparent;
   border: none;
   color: #4a412a;
-  text-align: center;
-  position: relative;
   z-index: 1;
+  font-size: .6rem;
+  padding: 0;
 }
 
 .mc-gui-grid-textured {
-  background-size: 100% 100% !important;
-  background-repeat: no-repeat !important;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+  position: absolute;
+  top: var(--gui-grid-top, 18px);
+  left: var(--gui-grid-left, 8px);
+  display: grid;
+  grid-template-columns: repeat(9, var(--gui-slot, 18px));
+  grid-template-rows: repeat(var(--gui-rows, 3), var(--gui-slot, 18px));
+  gap: 0;
+  padding: 0;
+  background: transparent !important;
   border: none;
   box-shadow: none;
-  padding: 6px;
 }
 
 .mc-gui-grid-textured .invslot {
+  width: var(--gui-slot, 18px);
+  height: var(--gui-slot, 18px);
   background: transparent;
   box-shadow: none;
+}
+
+.mc-gui-textured .invslot-item {
+  width: calc(var(--gui-slot, 18px) - 2px);
+  height: calc(var(--gui-slot, 18px) - 2px);
+}
+
+.mc-gui-textured .invslot-item img {
+  width: calc(var(--gui-slot, 18px) - 4px);
+  height: calc(var(--gui-slot, 18px) - 4px);
 }
 
 @media (max-width: 520px) {
@@ -368,4 +404,17 @@
   .mc-gui .invslot { width: 28px; height: 28px; }
   .mc-gui .invslot-item { width: 24px; height: 24px; }
   .mc-gui .invslot-item img { width: 20px; height: 20px; }
+
+  /* Textured GUI: scale down to 192px (0.75×) on mobile */
+  .mc-gui-textured {
+    width: 192px;
+    height: 192px;
+    background-size: 192px 192px;
+  }
+  .mc-gui-textured .mc-gui-title { font-size: .45rem; top: 4px; }
+  .mc-gui-grid-textured {
+    --gui-slot: 13.5px;
+    top: calc(var(--gui-grid-top, 18px) * 0.75);
+    left: calc(var(--gui-grid-left, 8px) * 0.75);
+  }
 }

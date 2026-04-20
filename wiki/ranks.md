@@ -21,7 +21,7 @@ The **Initiate** rank is the default rank, given to every new player from the st
 - `/sethome <HomeName>` - 1x saved home.
 - Access to all standard [commands](/wiki/commands/)
 
-Tag: {tag_novice}
+Tag: {% include tag.html id="initiate" %}
 
 ---
 
@@ -33,7 +33,7 @@ The **Seeker** rank can be obtained by ranking up at the Archwizard for $10,000.
 - `/sethome <HomeName>` - 2x saved homes.
 - Access to all Initiate perks.
 
-Tag: <span class="rank-badge rank-villager">[Seeker]</span>
+Tag: {% include tag.html id="seeker" %}
 
 ---
 
@@ -46,7 +46,7 @@ The **Novice** rank can be obtained by ranking up at the Archwizard for $20,000.
 - `/ah` - Access to the Auction House.
 - Access to all Seeker perks.
 
-Tag: <span class="rank-badge rank-villager">[Novice]</span>
+Tag: {% include tag.html id="novice" %}
 
 ---
 
@@ -59,7 +59,7 @@ The **Acolyte** rank can be obtained by ranking up at the Archwizard for $50,000
 - `/craft` - open virtual crafting table.
 - Access to all Novice perks.
 
-Tag: <span class="rank-badge rank-villager">[Acolyte]</span>
+Tag: {% include tag.html id="acolyte" %}
 
 ---
 
@@ -73,7 +73,7 @@ The **Adept** rank can be obtained by ranking up at the Archwizard for $100,000.
 - Ability to sell up to 2 items on the Auction House.
 - Access to all Acolyte perks.
 
-Tag: <span class="rank-badge rank-villager">[Adept]</span>
+Tag: {% include tag.html id="adept" %}
 
 ---
 
@@ -86,7 +86,7 @@ The **Sorcerer** rank can be obtained by ranking up at the Archwizard for $250,0
 - `/ec` - opens your enderchest.
 - Access to all Adept perks.
 
-Tag: <span class="rank-badge rank-villager">[Sorcerer]</span>
+Tag: {% include tag.html id="sorcerer" %}
 
 ---
 
@@ -99,4 +99,4 @@ The **Elder** rank can be obtained by ranking up at the Archwizard for $500,000.
 - `/pv` - 3x 6 row playervaults.
 - Access to all Sorcerer perks.
 
-Tag: <span class="rank-badge rank-villager">[Elder]</span>
+Tag: {% include tag.html id="elder" %}

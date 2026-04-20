@@ -35,7 +35,7 @@ Matt Allurgy is an NPC that serves as the Blacksmith in the [Spawn Town](/wiki/s
 
 ## Interface
 
-    {% include shop-gui.html id="blacksmith" %}
+{% include shop-gui.html id="blacksmith" %}
 
 ## Dialogue
 
