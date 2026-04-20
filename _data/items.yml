@@ -14,6 +14,8 @@
 #              · Use  /  to start a new line
 #              · Use  &e  &7  &a  etc. for Minecraft colour codes
 #              · First line is the item title (auto-styled)
+#  wiki      (optional) Wiki page URL — makes the item clickable
+#              · Example:  wiki: /wiki/pyroclastic/
 #  tags      (optional) List of extra lore lines appended below the tooltip
 #              · Each tag is its own line — use Minecraft colour codes freely
 #              · Rendered after a blank separator from the base tooltip
@@ -103,6 +105,7 @@ water_core:
 pyroclastic_core:
   name: Pyroclastic Core
   img: /img/icons/items/pyroclastic_core.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&8--"
     - "{tag_legendary}{tag_core:-5}"
@@ -110,6 +113,7 @@ pyroclastic_core:
 pyroclastic_pickaxe:
   name: Pyroclastic Pickaxe
   img: /img/icons/items/pyroclastic_pickaxe.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&7Fortune V"
     - "Efficiency IX"
@@ -123,6 +127,7 @@ pyroclastic_pickaxe:
 pyroclastic_axe:
   name: Pyroclastic Axe
   img: /img/icons/items/pyroclastic_axe.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&7Fortune V"
     - "Efficiency IX"
@@ -136,6 +141,7 @@ pyroclastic_axe:
 pyroclastic_shovel:
   name: Pyroclastic Shovel
   img: /img/icons/items/pyroclastic_shovel.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&7Fortune V"
     - "Efficiency IX"
@@ -149,6 +155,7 @@ pyroclastic_shovel:
 pyroclastic_hoe:
   name: Pyroclastic Hoe
   img: /img/icons/items/pyroclastic_hoe.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&7Fortune V"
     - "Efficiency IX"
@@ -162,6 +169,7 @@ pyroclastic_hoe:
 pyroclastic_rod:
   name: Pyroclastic Rod
   img: /img/icons/items/pyroclastic_rod.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&7Luck of the Sea V"
     - "Lure V"
@@ -175,6 +183,7 @@ pyroclastic_rod:
 pyroclastic_sword:
   name: Pyroclastic Sword
   img: /img/icons/items/pyroclastic_sword.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&7Sharpness X"
     - "Smite VI"
@@ -192,6 +201,7 @@ pyroclastic_sword:
 pyroclastic_bow:
   name: Pyroclastic Bow
   img: /img/icons/items/pyroclastic_bow.png
+  wiki: /wiki/pyroclastic/
   tags:
     - "&7Power X"
     - "Flame"

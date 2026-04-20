@@ -58,6 +58,15 @@
           {%- assign _tip = _tip | append: "/&r&6Price: &f" | append: _found.price -%}
         {%- endif -%}
         <div class="invslot">
+          {%- if _item.wiki -%}
+          <a href="{{ _item.wiki }}" class="invslot-item invslot-link minetip"
+            title="{{ _display }}"
+            data-minetip-text="{{ _tip }}">
+            {%- if _item.img -%}
+              <img src="{{ _item.img }}" alt="{{ _display }}">
+            {%- endif -%}
+          </a>
+          {%- else -%}
           <div class="invslot-item minetip"
             title="{{ _display }}"
             data-minetip-text="{{ _tip }}">
@@ -65,6 +74,7 @@
               <img src="{{ _item.img }}" alt="{{ _display }}">
             {%- endif -%}
           </div>
+          {%- endif -%}
         </div>
       {%- else -%}
         <div class="invslot"><div class="invslot-item"></div></div>

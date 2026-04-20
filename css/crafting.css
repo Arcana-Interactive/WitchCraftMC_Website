@@ -98,6 +98,16 @@
   border: none;
 }
 
+/* Clickable item — links to a wiki page */
+a.invslot-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+a.invslot-link:hover::after {
+  background: rgba(255,255,255,.35);
+}
+
 .invslot-item:hover::after {
   content: '';
   position: absolute;

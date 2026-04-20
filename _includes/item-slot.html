@@ -9,6 +9,10 @@
     tags:
       - "&6Attack Damage: &f+10"
       - "&9Custom enchant"
+
+  Wiki linking:
+    If the item has a  wiki: /wiki/some-page/  field in items.yml,
+    the slot becomes a clickable link to that wiki page.
 {% endcomment %}
 
 {%- assign _item  = include.item -%}
@@ -25,6 +29,16 @@
 {%- if _size == "result" -%}
 <div class="mc-result-slot">
   <div class="invslot">
+    {%- if _item.wiki -%}
+    <a href="{{ _item.wiki }}" class="invslot-item invslot-link"
+      title="{{ _item.name }}"
+      data-minetip-text="{{ _tip }}">
+      <img src="{{ _item.img }}" alt="{{ _item.name }}">
+      {%- if _count and _count > 1 -%}
+        <span class="invslot-count">{{ _count }}</span>
+      {%- endif -%}
+    </a>
+    {%- else -%}
     <div class="invslot-item"
       title="{{ _item.name }}"
       data-minetip-text="{{ _tip }}">
@@ -33,10 +47,21 @@
         <span class="invslot-count">{{ _count }}</span>
       {%- endif -%}
     </div>
+    {%- endif -%}
   </div>
 </div>
 {%- else -%}
 <div class="invslot">
+  {%- if _item.wiki -%}
+  <a href="{{ _item.wiki }}" class="invslot-item invslot-link"
+    title="{{ _item.name }}"
+    data-minetip-text="{{ _tip }}">
+    <img src="{{ _item.img }}" alt="{{ _item.name }}">
+    {%- if _count and _count > 1 -%}
+      <span class="invslot-count">{{ _count }}</span>
+    {%- endif -%}
+  </a>
+  {%- else -%}
   <div class="invslot-item"
     title="{{ _item.name }}"
     data-minetip-text="{{ _tip }}">
@@ -45,5 +70,6 @@
       <span class="invslot-count">{{ _count }}</span>
     {%- endif -%}
   </div>
+  {%- endif -%}
 </div>
 {%- endif -%}
