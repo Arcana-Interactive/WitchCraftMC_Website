@@ -63,6 +63,9 @@ Infobox:
         - text: "Enchanter"
           link: "/wiki/npc/Enchanter"
           icon: "/img/icons/npc/Heads/enchanter.png"
+        - text: "Vote Trader"
+          link: "/wiki/npc/vote-trader"
+          icon: "/img/icons/npc/Heads/vote_trader.png"
    
 ---
 

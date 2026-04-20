@@ -26,7 +26,7 @@ Infobox:
         - label: "<strong>Area"
           value: "The Docks (Construction Zone)"
         - label: "<strong>Coordinates"
-          value: "<code>x:-134 y:68 z:18</code>"
+          value: "<strong>XYZ:</strong> <code>-134 68 18</code>"
 ---
 
 Rex Timberland is an NPC that works on building projects for [The Spawn](/wiki/spawn).

@@ -28,7 +28,7 @@ Infobox:
         - label: "<strong>Area"
           value: "The Town"
         - label: "<strong>Coordinates"
-          value: "<code>x:33 y:68 z:75</code>"
+          value: "<strong>XYZ:</strong> <code>33 68 75</code>"
 ---
 
 Matt Allurgy is an NPC that serves as the Blacksmith in the [Spawn Town](/wiki/spawn#the-town). Steven buys ores from players for money.

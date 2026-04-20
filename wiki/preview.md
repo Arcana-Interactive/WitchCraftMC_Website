@@ -71,6 +71,10 @@ Agent LemLem is a figure of unclear allegiance who has taken up a post at Spawn.
 
 ## Callout Boxes
 
+## Interfaces
+
+{% include shop-gui.html id="example" %}
+
 Callout boxes are written in raw HTML inside the markdown. Four styles are available: `tip`, `info`, `warning`, and `danger`.
 
 <div class="wiki-callout tip">

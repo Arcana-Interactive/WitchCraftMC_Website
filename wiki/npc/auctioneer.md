@@ -28,13 +28,13 @@ Infobox:
         - label: "<strong>Area"
           value: "The Town (Auction House)"
         - label: "<strong>Coordinates"
-          value: "<code>x-30 y71 z63</code>"
+          value: "<strong>XYZ:</strong> <code>-30 71 63</code>"
 ---
 
 The Auctioneer is an NPC found in the Auction House in the [Spawn Town](/wiki/spawn#the-town). Players can interact with the Auctioneer to view currently active [auctions](/wiki/economy#auction-house).
 
 ## Interface
-\<insert Auction House ui\>
+{% include shop-gui.html id="auctionhouse" %}
 
 ## Dialogue
 

@@ -38,7 +38,7 @@ Once you spawn in, here's what we recommend doing first:
 > *keep in mind that you should only build in the Survival Worlds, and gather resources in the Resource Worlds*
 3. **Claim your land** - before building anything. See the [Claims](/wiki/claims/) guide.
 4. **Set a home** - use `/sethome` once you find your spot to be able to teleport back to your area!
-5. **Gain Money** - You should use `/rtp` to teleport to a Resource World and obtain resources. These can be sold to the various [Shops](/wiki/npc/) in [Spawn](/wiki/spawn/).
+5. **Gain Money** - You should use `/rtp` to teleport to a Resource World and obtain resources. These can be sold to the various [Shops](/wiki/categories/#npcs) in [Spawn](/wiki/spawn/).
 6. **Rank Up** - You can use `/rankup` to teleport to the [Archwizard](/wiki/npc/archwizard/) in Spawn to rank up to the next [rank](/wiki/ranks/)!
 
 ## Useful Beginner Commands

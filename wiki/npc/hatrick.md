@@ -29,13 +29,13 @@ Infobox:
         - label: "<strong>Area"
           value: "The Town (Cosmetics Shop)"
         - label: "<strong>Coordinates"
-          value: "<code>x:-12 y:69 z:26</code>"
+          value: "<strong>XYZ:</strong> <code>-12 69 26</code>"
 ---
 
 Hatrick is an NPC that serves as the resident Cosmeticist in the [Spawn Town](/wiki/spawn#the-town). Players can purchase visual [cosmetics](/wiki/cosmetics) here.
 
 ## Interface
-\<insert furniture shop ui\>
+{% include shop-gui.html id="cosmetics_shop" %}
 
 ## List of Cosmetics
 

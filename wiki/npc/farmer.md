@@ -28,13 +28,13 @@ Infobox:
         - label: "<strong>Area"
           value: "The Farm"
         - label: "<strong>Coordinates"
-          value: "<code>x:-151 y:68 z:-61</code>"
+          value: "<strong>XYZ:</strong> <code>-151 68 -61</code>"
 ---
 
 The Farmer is an NPC located in the [Farm](/wiki/spawn#the-farm) that players can sell their harvested crops to.
 
 ## Interface
-\<insert farmer shop ui\>
+{% include shop-gui.html id="farmer" %}
 
 ## Dialogue
 

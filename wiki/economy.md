@@ -14,7 +14,7 @@ see_also:
     url: /wiki/crafting/
 ---
 
-The server runs on a mix between server and player-driven economy. For most grinding, it is recommended to sell to the various [NPC Shops](/wiki/npc/), but players can also utilize private trading and the auction house.
+The server runs on a mix between server and player-driven economy. For most grinding, it is recommended to sell to the various [NPC Shops](/wiki/categories/#npcs), but players can also utilize private trading and the auction house.
 
 To directly pay someone, players can use `/pay <player> <amount>` to send a given amount of money. Keep in mind that scamming players is against the rules!
 

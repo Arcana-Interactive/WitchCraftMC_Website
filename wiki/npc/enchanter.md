@@ -28,13 +28,10 @@ Infobox:
         - label: "<strong>Area"
           value: "The Town (Wizard's House)"
         - label: "<strong>Coordinates"
-          value: "<code>x:28 y:68 z:22</code>"
+          value: "<strong>XYZ:</strong> <code>28 68 22</code>"
 ---
 
-The enchanter is an NPC in the [Wizard's House](/wiki/spawn#the-town) that sells custom enchantments to players. Enchantments cost EXP Levels and Amethyst.
-
-## Interface
-\<insert enchantment shop ui\>
+The enchanter is an NPC in the [Wizard's House](/wiki/spawn#the-town) <!--that sells custom enchantments to players. Enchantments cost EXP Levels and Amethyst.-->
 
 ## Dialogue
 

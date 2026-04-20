@@ -13,7 +13,6 @@ wiki/
   <page>.md
   ...
   npc/
-    index.md            ← /wiki/npc/  (NPC browse table - update this when adding NPCs)
     _template.md        ← COPY THIS when making a new NPC page (not rendered by Jekyll)
     <npc>.md
     ...

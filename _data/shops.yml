@@ -39,12 +39,11 @@
 # ══════════════════════════════════════════════════════
 
 # ── Example: Blacksmith shop ───────────────────────────
-blacksmith:
-  title: "Blacksmith"
+example:
   texture: "/img/icons/gui/shop.png"
   rows: 6
   slots:
-    - slot: 10
+    - slot: 0
       item: iron_ingot
       label: "Iron Ingot"
       price: "25 Coins"
@@ -64,7 +63,178 @@ blacksmith:
       item: planks
       label: "Oak Planks"
       price: "3 Coins"
-    - slot: 15
+    - slot: 53
       item: stone
       label: "Stone"
       price: "2 Coins"
+blacksmith:
+  texture: "/img/icons/gui/shop_inventory.png"
+  rows: 4
+  slots:
+    - slot: 11
+      item: iron_ingot
+    - slot: 12
+      item: gold_ingot
+    - slot: 13
+      item: copper_ingot
+    - slot: 14
+      item: diamond
+    - slot: 15
+      item: coal
+    - slot: 31
+      item: tasks
+lumberjack:
+  texture: "/img/icons/gui/shop_inventory.png"
+  rows: 4
+  slots:
+    - slot: 10
+      item: oak_log
+    - slot: 11
+      item: birch_log
+    - slot: 12
+      item: spruce_log
+    - slot: 13
+      item: jungle_log
+    - slot: 14
+      item: dark_oak_log
+    - slot: 15
+      item: cherry_log
+    - slot: 16
+      item: acacia_log
+    - slot: 19
+      item: mangrove_log
+    - slot: 20
+      item: pale_oak_log
+    - slot: 21
+      item: warped_stem
+    - slot: 22
+      item: crimson_stem
+    - slot: 31
+      item: tasks
+fish_shop:
+  texture: "/img/icons/gui/shop_inventory.png"
+  rows: 4
+  slots:
+    - slot: 11
+      item: cod
+    - slot: 12
+      item: salmon
+    - slot: 13
+      item: tropical_fish
+    - slot: 14
+      item: pufferfish
+    - slot: 15
+      item: nautilus_shell
+    - slot: 30
+      item: shop_sell
+      label: "&aSell Event Fish"
+    - slot: 32
+      item: tasks
+mob_shop:
+  texture: "/img/icons/gui/shop.png"
+  rows: 6
+  slots:
+    - slot: 10
+      item: phantom_membrane
+    - slot: 48
+      item: shop_sell
+      label: "&aSell Items"
+    - slot: 50
+      item: tasks
+mob_shop_inventory:
+  texture: "/img/icons/gui/shop_inventory.png"
+  rows: 4
+  slots:
+    - slot: 10
+      item: rotten_flesh
+    - slot: 11
+      item: bone
+    - slot: 12
+      item: string
+    - slot: 13
+      item: gunpowder
+    - slot: 14
+      item: ender_pearl
+    - slot: 15
+      item: phantom_membrane
+    - slot: 27
+      item: previous
+      label: "Back"
+farmer:
+  texture: "/img/icons/gui/shop_inventory.png"
+  rows: 4
+  slots:
+    - slot: 10
+      item: wheat
+    - slot: 11
+      item: carrot
+    - slot: 12
+      item: potato
+    - slot: 13
+      item: beetroot
+    - slot: 14
+      item: pumpkin
+    - slot: 15
+      item: melon
+    - slot: 16
+      item: sweet_berries
+    - slot: 19
+      item: cocoa_beans
+    - slot: 20
+      item: chorus_fruit
+    - slot: 31
+      item: tasks
+furniture_shop:
+  texture: "/img/icons/gui/shop.png"
+  rows: 6
+auctionhouse:
+  texture: "/img/icons/gui/auctions.png"
+  rows: 6
+  slots:
+    - slot: 45
+      item: ah_selling
+    - slot: 46
+      label: "&6Collect Expired / Canceled Items"
+      item: collections
+    - slot: 48
+      item: previous
+    - slot: 49
+      item: refresh
+    - slot: 50
+      item: next
+    - slot: 52
+      item: insta_sell
+    - slot: 53
+      item: categories
+cosmetics_shop:
+  texture: "/img/icons/gui/cosmetics_shop.png"
+  rows: 5
+  slots:
+    - slot: 11
+      item: hat_button
+    - slot: 15
+      item: hand_item_button
+    - slot: 22
+      label: "&d???"
+      item: chest
+    - slot: 29
+      item: balloon_button
+    - slot: 33
+      item: backpack_button
+rankup:
+  texture: "/img/icons/gui/rankup.png"
+  rows: 1
+  slots:
+    - slot: 2
+      item: emerald_block
+      label: "&a&lRank Up"
+    - slot: 6
+      item: book
+      label: "&b&lView All Ranks"
+
+# -- Traders --
+#These are unique in the only interfaces that are 512x256 rather than 256x256, 
+#also not a chest, so layout is slightly different
+
+vote_trader:
+  texture: "/img/icons/gui/villager.png"

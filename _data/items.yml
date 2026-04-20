@@ -28,48 +28,239 @@
 # ══════════════════════════════════════════════════════
 
 # ── Vanilla items ──────────────────────────────────────
+# - Stone & Ore -
+coal:
+  name: Coal
+  img: /img/icons/items/coal.png
+  tooltip: "&7A common item."
 charcoal:
   name: Charcoal
   img: /img/icons/items/charcoal.png
-  tooltip: "&7A common ore"
+  tooltip: "&7A common item."
 coal_block:
   name: Block of Coal
   img: /img/icons/items/coal_block.png
-  tooltip: "&7A common block of ore"
-
-stick:
-  name: Stick
-  img: /img/icons/items/stick.png
-  tooltip: "&7Crafted from planks./&7A basic crafting component."
-
-chest:
-  name: Chest
-  img: /img/icons/items/chest.png
-  tooltip: "&7A storage container./&7Holds up to &f27 &7stacks of items."
+  tooltip: "&7A common block."
 iron_ingot:
   name: Iron Ingot
   img: /img/icons/items/iron_ingot.png
-  tooltip: "&7Smelted from iron ore./&7A common crafting material."
+  tooltip: "&7A common item."
+copper_ingot:
+  name: Copper Ingot
+  img: /img/icons/items/copper_ingot.png
+  tooltip: "&7A common item."
 gold_ingot:
   name: Gold Ingot
   img: /img/icons/items/gold_ingot.png
-  tooltip: "&7Smelted from gold ore./&7Used in powered rails, clocks, and more."
+  tooltip: "&7A common item."
 diamond:
   name: Diamond
   img: /img/icons/items/diamond.png
-  tooltip: "&7Found deep underground./&7Used in the strongest tools and armour."
+  tooltip: "&7A common item."
+emerald_block:
+  name: Block of Emerald
+  img: /img/icons/items/emerald_block.png
+  tooltip: "&7A common block."
+
+# - Wood -
+stick:
+  name: Stick
+  img: /img/icons/items/stick.png
+  tooltip: "&7A common item."
+chest:
+  name: Chest
+  img: /img/icons/items/chest.png
+  tooltip: "&7A common container."
+oak_log:
+  name: Oak Log
+  img: /img/icons/items/oak_log.png
+  tooltip: "&7A common block."
+birch_log:
+  name: Birch Log
+  img: /img/icons/items/birch_log.png
+  tooltip: "&7A common block."
+spruce_log:
+  name: Spruce Log
+  img: /img/icons/items/spruce_log.png
+  tooltip: "&7A common block."
+jungle_log:
+  name: Jungle Log
+  img: /img/icons/items/jungle_log.png
+  tooltip: "&7A common block."
+dark_oak_log:
+  name: Dark Oak Log
+  img: /img/icons/items/dark_oak_log.png
+  tooltip: "&7A common block."
+cherry_log:
+  name: Cherry Log
+  img: /img/icons/items/cherry_log.png
+  tooltip: "&7A common block."
+acacia_log:
+  name: Acacia Log
+  img: /img/icons/items/acacia_log.png
+  tooltip: "&7A common block."
+mangrove_log:
+  name: Mangrove Log
+  img: /img/icons/items/mangrove_log.png
+  tooltip: "&7A common block."
+pale_oak_log:
+  name: Pale Oak Log
+  img: /img/icons/items/pale_oak_log.png
+  tooltip: "&7A common block."
+warped_stem:
+  name: Warped Stem
+  img: /img/icons/items/warped_stem.png
+  tooltip: "&7A common block."
+crimson_stem:
+  name: Crimson Stem
+  img: /img/icons/items/crimson_stem.png
+  tooltip: "&7A common block."
+
+# - Food & Fish -
+cod:
+  name: Raw Cod
+  img: /img/icons/items/cod.png
+  tooltip: "&7A common item."
+salmon:
+  name: Raw Salmon
+  img: /img/icons/items/salmon.png
+  tooltip: "&7A common item."
+tropical_fish:
+  name: Tropical Fish
+  img: /img/icons/items/tropical_fish.png
+  tooltip: "&7A common item."
+pufferfish:
+  name: Pufferfish
+  img: /img/icons/items/pufferfish.png
+  tooltip: "&7A common item."
+nautilus_shell:
+  name: Nautilus Shell
+  img: /img/icons/items/nautilus_shell.png
+  tooltip: "&7A common item."
+wheat:
+  name: Wheat
+  img: /img/icons/items/wheat.png
+  tooltip: "&7A common item."
+carrot:
+  name: Carrot
+  img: /img/icons/items/carrot.png
+  tooltip: "&7A common item."
+potato:
+  name: Potato
+  img: /img/icons/items/potato.png
+  tooltip: "&7A common item."
+beetroot:
+  name: beetroot
+  img: /img/icons/items/beetroot.png
+  tooltip: "&7A common item."
+pumpkin:
+  name: Pumpkin
+  img: /img/icons/items/pumpkin.png
+  tooltip: "&7A common item."
+melon:
+  name: Melon
+  img: /img/icons/items/melon.png
+  tooltip: "&7A common item."
+sweet_berries:
+  name: Sweet Berries
+  img: /img/icons/items/sweet_berries.png
+  tooltip: "&7A common item."
+cocoa_beans:
+  name: Cocoa Beans
+  img: /img/icons/items/cocoa_beans.png
+  tooltip: "&7A common item."
+chorus_fruit:
+  name: Chorus Fruit
+  img: /img/icons/items/chorus_fruit.png
+  tooltip: "&7A common item."
+
+# - Mob Drops -
+phantom_membrane:
+  name: Phantom Membrane
+  img: /img/icons/items/phantom_membrane.png
+  tooltip: "&7A common item."
+rotten_flesh:
+  name: Rotten Flesh
+  img: /img/icons/items/rotten_flesh.png
+  tooltip: "&7A common item."
+bone:
+  name: Bone
+  img: /img/icons/items/bone.png
+  tooltip: "&7A common item."
 string:
   name: String
   img: /img/icons/items/string.png
-  tooltip: "&7Dropped by spiders./&7Used in bows, fishing rods, and more."
-planks:
-  name: Oak Planks
-  img: /img/icons/items/planks.png
-  tooltip: "&7Crafted from logs./&7A versatile building and crafting material."
-stone:
-  name: Stone
-  img: /img/icons/items/stone.png
-  tooltip: "&7Smelted from cobblestone."
+  tooltip: "&7A common item."
+gunpowder:
+  name: Gunpowder
+  img: /img/icons/items/gunpowder.png
+  tooltip: "&7A common item."
+ender_pearl:
+  name: Ender Pearl
+  img: /img/icons/items/ender_pearl.png
+  tooltip: "&7A common item."
+
+# - Misc -
+book:
+  name: Book
+  img: /img/icons/items/book.png
+  tooltip: "&7A common item."
+
+# ── WitchCraftMC GUI Items ──────────────────────────
+tasks:
+  name: "&aTasks"
+  img: /img/icons/gui/clipboard.png
+  tags:
+    - "&7Complete tasks to earn"
+    - "rewards and unlock new"
+    - "features"
+ah_selling:
+  name: "&6Items You are Selling"
+  img: /img/icons/gui/ah_selling.png
+  tags:
+    - "&aClick here to view all the items you"
+    - "are currently selling on the auction."
+collections:
+  img: /img/icons/gui/ah_collections.png
+  tags:
+    - "&aClick here to view and collect all of the"
+    - "items you have canceled or has expired."
+previous:
+  name: "&6Previous Page"
+  img: /img/icons/gui/previous.png
+refresh:
+  name: "&6Refresh Page"
+  img: /img/icons/gui/refresh.png
+next:
+  name: "&6Next Page"
+  img: /img/icons/gui/next.png
+insta_sell:
+  name: "&6Instant Sell"
+  img: /img/icons/gui/insta_sell.png
+  tags:
+    - "&7&l(&6!&7)&r &7Click here to see items"
+    - "that you can bid on."
+categories:
+  name: "&6Categories"
+  img: /img/icons/gui/categories.png
+  tags:
+    - "&bCurrent Category: &6&lNone&r"
+    - "&aWant to see items in specific categories?"
+    - "Click here to see all categories of items."
+hat_button:
+  name: "&dHats"
+  img: /img/icons/gui/hat.png
+hand_item_button:
+  name: "&dOffhand Items"
+  img: /img/icons/gui/hand.png
+balloon_button:
+  name: "&dBalloons"
+  img: /img/icons/gui/balloon.png
+backpack_button:
+  name: "&dBackpacks"
+  img: /img/icons/gui/backpack.png
+shop_sell:
+  img: /img/icons/gui/shop_sell_button.png
 
 # ── WitchCraftMC custom items ──────────────────────────
 arcanium_fragments:

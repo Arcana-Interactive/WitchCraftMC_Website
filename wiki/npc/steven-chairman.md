@@ -28,13 +28,13 @@ Infobox:
         - label: "<strong>Area"
           value: "The Town"
         - label: "<strong>Coordinates"
-          value: "<code>x:33 y:68 z:75</code>"
+          value: "<strong>XYZ:</strong> <code>33 68 75</code>"
 ---
 
 Steven Chairman is an NPC that serves as the resident Furniture Merchant in the [Spawn Town](/wiki/spawn#the-town). Steven sells recipes for decorative [furniture](/wiki/furniture).
 
 ## Interface
-\<insert furniture shop ui\>
+{% include shop-gui.html id="furniture_shop" %}
 
 ## Furniture
 

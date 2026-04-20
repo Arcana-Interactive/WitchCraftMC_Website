@@ -55,7 +55,7 @@
           {%- endfor -%}
         {%- endif -%}
         {%- if _found.price -%}
-          {%- assign _tip = _tip | append: "/&r&6Price: &f" | append: _found.price -%}
+          {%- assign _tip = _tip | append: _found.price -%}
         {%- endif -%}
         <div class="invslot">
           {%- if _item.wiki -%}

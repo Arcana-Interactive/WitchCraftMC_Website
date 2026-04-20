@@ -26,7 +26,7 @@ Infobox:
         - label: "<strong>Area"
           value: "The Town (Auction House)"
         - label: "<strong>Coordinates"
-          value: "<code>x-19 y69 z68</code>"
+          value: "<strong>XYZ:</strong> <code>-19 69 68</code>"
 ---
 
 Agent LemLem is an NPC in the [Spawn Town](/wiki/spawn#the-town). She currently resides in the Auction House.
