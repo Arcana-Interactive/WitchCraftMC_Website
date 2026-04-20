@@ -144,7 +144,7 @@ pyroclastic_shovel:
     - "&8--"
     - "&oA really warm shovel."
     - "--"
-    - "{tag_legendary}{tag_shovel}"
+    - "{tag_legendary}{tag_shovel:-2}"
     - "--"
 pyroclastic_hoe:
   name: Pyroclastic Hoe
