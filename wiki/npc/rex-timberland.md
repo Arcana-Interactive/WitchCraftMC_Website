@@ -9,7 +9,7 @@ see_also:
     url: /wiki/spawn/
 history:
   - version: "Survival Release"
-    date: "2026-01-01"
+    date: "Jan 1, 2026"
     changes: "Rex Timberland added to Spawn."
 
 Infobox:

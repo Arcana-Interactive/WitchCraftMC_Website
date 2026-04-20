@@ -11,7 +11,7 @@ see_also:
     url: /wiki/furniture/
 history:
   - version: "Survival Release"
-    date: "2026-01-01"
+    date: "Jan 1, 2026"
     changes: "Furniture Merchant added to Spawn."
 
 Infobox:

@@ -87,7 +87,7 @@ see_also:
     url: /wiki/related-page/
 history:
   - version: "v1.0"
-    date: "2026-01-01"
+    date: "Jan 1, 2026"
     changes: "Page created."
 ---
 ```
@@ -190,12 +190,12 @@ Both are defined in front matter, not the page body.
 **History** renders as a collapsible table at the bottom of the page:
 ```yaml
 history:
-  - version: "Survival Release"
-    date: "2026-01-01"
-    changes: "Page created."
   - version: "v1.1"
-    date: "2026-03-15"
+    date: "Mar 15, 2026"
     changes: "Added shop section."
+  - version: "Survival Release"
+    date: "Jan 1, 2026"
+    changes: "Page created."
 ```
 
 **See Also** renders as a link box below the article:

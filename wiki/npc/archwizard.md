@@ -11,7 +11,7 @@ see_also:
     url: /wiki/ranks/
 history:
   - version: "Survival Release"
-    date: "2026-01-01"
+    date: "Jan 1, 2026"
     changes: "Archwizard added to Spawn."
 
 Infobox:

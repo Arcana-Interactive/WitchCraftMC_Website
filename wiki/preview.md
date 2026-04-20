@@ -13,12 +13,12 @@ see_also:
   - title: Commands
     url: /wiki/commands/
 history:
-  - version: "Survival Release"
-    date: "2026-01-01"
-    changes: "Agent LemLem stationed at Spawn."
   - version: "v1.1"
-    date: "2026-02-15"
+    date: "Feb 15, 2026"
     changes: "Added a second assignment for LemLem — details classified."
+  - version: "Survival Release"
+    date: "Jan 1, 2026"
+    changes: "Agent LemLem stationed at Spawn."
 
 # ─────────────────────────────────────────────
 # INFOBOX

@@ -14,7 +14,7 @@ see_also:
     url: /wiki/crafting/
 history:
   - version: "Survival Release"
-    date: "2026-01-01"
+    date: "Jan 1, 2026"
     changes: "Spawn Island added"
 
 # ── Infobox (rendered automatically by the layout) ──
