@@ -21,17 +21,17 @@ Infobox:
   Sections:
     - heading: "NPC"
       rows:
-        - label: "<strong>Type"
+        - label: "<strong>Type</strong>"
           value: "Merchant"
     - heading: "Location"
       rows:
-        - label: "<strong>Area"
+        - label: "<strong>Area</strong>"
           value: "The Town (Crates)"
-        - label: "<strong>Coordinates"
-          value: "<strong>XYZ:</strong> <code>-7 68 77</code>"
+        - label: "<strong>Coordinates</strong>"
+          value: "<strong>XYZ:</strong> <code>-7 68 77</code></strong>"
 ---
 
-Steven Chairman is an NPC that serves as the resident Furniture Merchant in the [Spawn Town](/wiki/spawn#the-town). Steven sells recipes for decorative [furniture](/wiki/furniture).
+The Vote Trader is an NPC in the [Spawn Town](/wiki/spawn#the-town). Players can trade Vote Shards obtained through [Voting](/wiki/voting) for [Vote Keys](/wiki/crates/).
 
 ## Interface
 {% include shop-gui.html id="vote_trader" %}

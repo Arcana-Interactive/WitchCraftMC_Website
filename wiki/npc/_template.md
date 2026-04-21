@@ -80,12 +80,12 @@ Infobox:
     - heading: "Location"
       icon_size: 24                            # ← sets icon size for all rows in this section
       rows:
-        - label: "<strong>Area"
+        - label: "<strong>Area</strong>"
           value: "The Town"
           link: "/wiki/spawn"
           icon: "/img/icons/npc/Heads/npc_name.png"
-        - label: "<strong>Coordinates"
-          value: "<code>x:0 y:70 z:0</code>"
+        - label: "<strong>Coordinates</strong>"
+          value: "<code>x:0 y:70 z:0</code></strong>"
 
     # ── Mid-infobox image example ──────────────────────────────
     # You can insert an image at any position in any section:

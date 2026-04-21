@@ -29,8 +29,8 @@
 {%- if _size == "result" -%}
 <div class="mc-result-slot">
   <div class="invslot">
-    {%- if _item.wiki -%}
-    <a href="{{ _item.wiki }}" class="invslot-item invslot-link"
+    {%- if _item.link -%}
+    <a href="{{ _item.link }}" class="invslot-item invslot-link"
       title="{{ _item.name }}"
       data-minetip-text="{{ _tip }}">
       <img src="{{ _item.img }}" alt="{{ _item.name }}">
@@ -52,8 +52,8 @@
 </div>
 {%- else -%}
 <div class="invslot">
-  {%- if _item.wiki -%}
-  <a href="{{ _item.wiki }}" class="invslot-item invslot-link"
+  {%- if _item.link -%}
+  <a href="{{ _item.link }}" class="invslot-item invslot-link"
     title="{{ _item.name }}"
     data-minetip-text="{{ _tip }}">
     <img src="{{ _item.img }}" alt="{{ _item.name }}">

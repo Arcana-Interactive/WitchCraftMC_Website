@@ -1,10 +1,10 @@
 ---
 layout: wiki-page
-title: Items
-description: "All our custom items."
-permalink: /wiki/items/
+title: Fishing
+description: "Everything you need to know about the available WitchCraftMC worlds."
+permalink: /wiki/fishing/
 toc: true
-categories: [Items, Blocks]
+categories: [Gameplay, Economy]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/

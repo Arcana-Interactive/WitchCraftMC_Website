@@ -52,7 +52,6 @@ This page lists every command available to players.
 
 | Command | Description | Requirement |
 | --- | --- | :---: |
-| `/tags`| Opens the [Tags](/wiki/tags) menu. |
 | `/cosmetics`| Opens the Cosmetics Menu. |
 | `/cosmetics hide`| Hides your applied cosmetics. |
 | `/cosmetics show`| Reenables your hidden cosmetics. |

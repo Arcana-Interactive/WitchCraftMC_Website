@@ -21,14 +21,14 @@ Infobox:
   Sections:
     - heading: "NPC"
       rows:
-        - label: "<strong>Type"
+        - label: "<strong>Type</strong>"
           value: "Merchant"
     - heading: "Location"
       rows:
-        - label: "<strong>Area"
+        - label: "<strong>Area</strong>"
           value: "The Docks (The Seacrab)"
-        - label: "<strong>Coordinates"
-          value: "<strong>XYZ:</strong> <code>-203 64 69</code>"
+        - label: "<strong>Coordinates</strong>"
+          value: "<strong>XYZ:</strong> <code>-203 64 69</code></strong>"
 ---
 
 Captain Saltspring is the captain of the Seacrab. A small ship at the [Docks](/wiki/spawn#the-docks). Players can sell and buy Mob Drops from this NPC.

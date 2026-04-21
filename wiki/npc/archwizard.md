@@ -21,14 +21,14 @@ Infobox:
   Sections:
     - heading: "NPC"
       rows:
-        - label: "<strong>Type"
+        - label: "<strong>Type</strong>"
           value: "Rank Up"
     - heading: "Location"
       rows:
-        - label: "<strong>Area"
+        - label: "<strong>Area</strong>"
           value: "The Town (Wizard's House)"
-        - label: "<strong>Coordinates"
-          value: "<strong>XYZ:</strong> <code>33 68 75</code>"
+        - label: "<strong>Coordinates</strong>"
+          value: "<strong>XYZ:</strong> <code>33 68 75</code></strong>"
 ---
 
 The Archwizard is an NPC that allows players to rank up when they have enough money. They can be found in the Wizard's House in [Spawn](/wiki/spawn).

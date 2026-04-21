@@ -49,6 +49,7 @@ example:
   rows: 6
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 0
       item: iron_ingot
@@ -79,6 +80,7 @@ blacksmith:
   rows: 4
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 11
       item: iron_ingot
@@ -97,6 +99,7 @@ lumberjack:
   rows: 4
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 10
       item: oak_log
@@ -127,6 +130,7 @@ fish_shop:
   rows: 4
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 11
       item: cod
@@ -148,6 +152,7 @@ mob_shop:
   rows: 6
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 10
       item: phantom_membrane
@@ -161,6 +166,7 @@ mob_shop_inventory:
   rows: 4
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 10
       item: rotten_flesh
@@ -182,6 +188,7 @@ farmer:
   rows: 4
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 10
       item: wheat
@@ -213,6 +220,7 @@ auctionhouse:
   rows: 6
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 45
       item: ah_selling
@@ -234,15 +242,16 @@ cosmetics_shop:
   rows: 5
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 11
       item: hat_button
       lore:
-      - "&7Click to buy Hat Cosmetics.
+      - "&7Click to buy Hat Cosmetics."
     - slot: 15
       item: hand_item_button
       lore:
-      - "&7Click to buy Offhand Cosmetics.
+      - "&7Click to buy Offhand Cosmetics."
     - slot: 22
       item: chest
       label: "&d???"
@@ -251,16 +260,17 @@ cosmetics_shop:
     - slot: 29
       item: balloon_button
       lore:
-      - "&7Click to buy Balloon Cosmetics.
+      - "&7Click to buy Balloon Cosmetics."
     - slot: 33
       item: backpack_button
       lore:
-      - "&7Click to buy Backpack Cosmetics.
+      - "&7Click to buy Backpack Cosmetics."
 rankup:
   texture: "/img/icons/gui/rankup.png"
   rows: 1
   scale: 2
   grid_top: 26
+  grid_left: 7
   slots:
     - slot: 2
       item: emerald_block
@@ -283,4 +293,3 @@ vote_trader:
   width: 512
   height: 256
   scale: 2
-  grid_top: 26

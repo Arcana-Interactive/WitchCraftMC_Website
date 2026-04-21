@@ -21,14 +21,14 @@ Infobox:
   Sections:
     - heading: "NPC"
       rows:
-        - label: "<strong>Type"
+        - label: "<strong>Type</strong>"
           value: "Merchant"
     - heading: "Location"
       rows:
-        - label: "<strong>Area"
+        - label: "<strong>Area</strong>"
           value: "The Docks (Fishmonger)"
-        - label: "<strong>Coordinates"
-          value: "<strong>XYZ:</strong> <code>-105 68 31</code>"
+        - label: "<strong>Coordinates</strong>"
+          value: "<strong>XYZ:</strong> <code>-105 68 31</code></strong>"
 ---
 
 The Fish Merchant is an NPC that serves as the resident Fishmonger at the [Docks](/wiki/spawn#the-docks). Players can sell their fished up items here.

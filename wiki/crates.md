@@ -28,7 +28,7 @@ There are several Crates that can be opened in [Spawn](/wiki/spawn/). Each requi
 | **Fishing Key** | Traded from the [Fish Merchant](/wiki/npc/fish-merchant) for Pufferfish |
 | **Forest Key** | Traded from [Clara Chairman](/wiki/npc/clara-chairman) for Blocks of Resin |
 
-Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, or use `/crates` to teleport.
+Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, or use `/crates` to teleport. They can then head over to the related crate and right-click with the Key to open and receive a reward.
 
 ## Crate Rewards
 

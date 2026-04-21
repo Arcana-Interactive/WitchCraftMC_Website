@@ -21,14 +21,14 @@ Infobox:
   Sections:
     - heading: "NPC"
       rows:
-        - label: "<strong>Type"
+        - label: "<strong>Type</strong>"
           value: "Merchant"
     - heading: "Location"
       rows:
-        - label: "<strong>Area"
+        - label: "<strong>Area</strong>"
           value: "The Docks (Lumberyard)"
-        - label: "<strong>Coordinates"
-          value: "<strong>XYZ:</strong> <code>-95 69 95</code>"
+        - label: "<strong>Coordinates</strong>"
+          value: "<strong>XYZ:</strong> <code>-95 69 95</code></strong>"
 ---
 
 Clara Chairman is an NPC that serves as the Lumber Merchant at the [Docks](/wiki/spawn#the-docks). Players can sell logs of all kinds to Clara for money.
