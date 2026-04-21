@@ -20,7 +20,7 @@
 {% endcomment %}
 
 {%- assign shop   = site.data.shops[include.id] -%}
-{%- assign _title = include.label | default: shop.title | default: "Shop" -%}
+{%- assign _title = include.label | default: shop.title -%}
 {%- assign _rows  = shop.rows | default: 3 -%}
 {%- assign _total = _rows | times: 9 -%}
 
@@ -28,12 +28,12 @@
   {%- assign _slot_size = shop.slot_size | default: 18 -%}
   {%- assign _grid_top  = shop.grid_top  | default: 18 -%}
   {%- assign _grid_left = shop.grid_left | default: 8 -%}
-<div class="mc-gui mc-gui-textured" style="background-image:url('{{ shop.texture }}')">
-  <div class="mc-gui-title" style="{% if shop.title_color %}color:{{ shop.title_color }};{% endif %}">{{ _title }}</div>
+<div class="mc-gui mc-gui-textured" style="background-image:url('{{ shop.texture }}');{% if shop.scale %}--gui-scale:{{ shop.scale }};{% endif %}{% if shop.width %}--gui-width:{{ shop.width }};{% endif %}{% if shop.height %}--gui-height:{{ shop.height }};{% endif %}">
+  {%- if _title -%}<div class="mc-gui-title" style="{% if shop.title_color %}color:{{ shop.title_color }};{% endif %}">{{ _title }}</div>{%- endif -%}
   <div class="mc-gui-grid mc-gui-grid-textured" style="--gui-rows:{{ _rows }};--gui-slot:{{ _slot_size }}px;--gui-grid-top:{{ _grid_top }}px;--gui-grid-left:{{ _grid_left }}px">
 {%- else -%}
 <div class="mc-gui">
-  <div class="mc-gui-title">{{ _title }}</div>
+  <div class="mc-gui-title">{{ _title | default: "Shop" }}</div>
   <div class="mc-gui-grid" style="--gui-rows:{{ _rows }}">
 {%- endif -%}
     {%- for i in (0.._total) -%}
@@ -49,29 +49,41 @@
         {%- assign _item    = site.data.items[_found.item] -%}
         {%- assign _display = _found.label | default: _item.name -%}
         {%- assign _tip     = _item.tooltip | default: "" -%}
-        {%- if _item.tags -%}
+        {%- if _found.lore -%}
+          {%- for line in _found.lore -%}
+            {%- if _tip == "" and forloop.first -%}
+              {%- assign _tip = line -%}
+            {%- else -%}
+              {%- assign _tip = _tip | append: "/" | append: line -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- elsif _item.tags -%}
           {%- for tag in _item.tags -%}
-            {%- assign _tip = _tip | append: "/" | append: tag -%}
+            {%- if _tip == "" and forloop.first -%}
+              {%- assign _tip = tag -%}
+            {%- else -%}
+              {%- assign _tip = _tip | append: "/" | append: tag -%}
+            {%- endif -%}
           {%- endfor -%}
         {%- endif -%}
         {%- if _found.price -%}
-          {%- assign _tip = _tip | append: _found.price -%}
+          {%- assign _tip = _tip | append: "/" | append: _found.price -%}
         {%- endif -%}
         <div class="invslot">
           {%- if _item.wiki -%}
           <a href="{{ _item.wiki }}" class="invslot-item invslot-link minetip"
-            title="{{ _display }}"
+            data-minetip-title="{{ _display }}"
             data-minetip-text="{{ _tip }}">
             {%- if _item.img -%}
-              <img src="{{ _item.img }}" alt="{{ _display }}">
+              <img src="{{ _item.img }}" alt="{{ _display | remove: '&a' | remove: '&b' | remove: '&c' | remove: '&d' | remove: '&e' | remove: '&f' | remove: '&6' | remove: '&7' | remove: '&8' | remove: '&9' | remove: '&0' | remove: '&1' | remove: '&2' | remove: '&3' | remove: '&4' | remove: '&5' | remove: '&l' | remove: '&o' | remove: '&r' }}">
             {%- endif -%}
           </a>
           {%- else -%}
           <div class="invslot-item minetip"
-            title="{{ _display }}"
+            data-minetip-title="{{ _display }}"
             data-minetip-text="{{ _tip }}">
             {%- if _item.img -%}
-              <img src="{{ _item.img }}" alt="{{ _display }}">
+              <img src="{{ _item.img }}" alt="{{ _display | remove: '&a' | remove: '&b' | remove: '&c' | remove: '&d' | remove: '&e' | remove: '&f' | remove: '&6' | remove: '&7' | remove: '&8' | remove: '&9' | remove: '&0' | remove: '&1' | remove: '&2' | remove: '&3' | remove: '&4' | remove: '&5' | remove: '&l' | remove: '&o' | remove: '&r' }}">
             {%- endif -%}
           </div>
           {%- endif -%}

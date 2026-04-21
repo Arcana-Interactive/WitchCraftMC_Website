@@ -18,6 +18,9 @@
 #  ─────────────────
 #  texture       Path to a GUI background image (replaces the grey chest look)
 #  title_color   Hex colour for the title text when using a custom texture
+#  width         Texture width in px (default 256) — use 512 for villager menus
+#  height        Texture height in px (default 256)
+#  scale         Scale multiplier for the entire GUI (e.g. 1.5 = 150% bigger)
 #
 #  Example:
 #    my_custom_shop:
@@ -35,6 +38,8 @@
 #  item    Item key from _data/items.yml
 #  label   (optional) Override the item's display name in the tooltip title
 #  price   (optional) Price string appended to tooltip  e.g. "50 Coins"
+#  lore    (optional) List of lines that replace the item's default tags/tooltip
+#            e.g. lore: ["&7Click to sell", "&eEarns 50 coins"]
 #
 # ══════════════════════════════════════════════════════
 
@@ -70,6 +75,8 @@ example:
 blacksmith:
   texture: "/img/icons/gui/shop_inventory.png"
   rows: 4
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 11
       item: iron_ingot
@@ -238,3 +245,5 @@ rankup:
 
 vote_trader:
   texture: "/img/icons/gui/villager.png"
+  width: 512
+  height: 256

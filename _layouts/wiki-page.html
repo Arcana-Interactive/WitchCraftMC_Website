@@ -122,7 +122,8 @@
         <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
         {% if page.categories %}
         <span class="sep">›</span>
-        <a href="{{ '/wiki/categories/' | relative_url }}">{{ page.categories | first }}</a>
+        {%- assign _bc_cat = page.categories | first -%}
+        <a href="{{ '/wiki/categories/' | relative_url }}#{{ _bc_cat | downcase | replace: ' ', '-' }}">{{ _bc_cat }}</a>
         {% endif %}
         <span class="sep">›</span>
         <span style="color:var(--text)">{{ page.title }}</span>
@@ -260,7 +261,7 @@
             </tr>
           </thead>
           <tbody>
-            {% for entry in page.history reversed %}
+            {% for entry in page.history %}
             <tr>
               <td class="wh-ver">{{ entry.version }}</td>
               <td class="wh-date">{{ entry.date }}</td>
@@ -432,6 +433,52 @@
     window.addEventListener('resize', updateToc, { passive: true });
     updateToc();
   })();
+</script>
+<script>
+// ── Dropdown markers → collapsible <details> ─────────
+// Converts  \- dropdown -  …  \- dropdown end -  pairs in .wiki-content
+// into <details><summary> blocks so markdown tables inside render correctly.
+(function () {
+  var content = document.querySelector('.wiki-content');
+  if (!content) return;
+
+  // Find all <p> elements whose text matches the markers
+  var allP = Array.from(content.querySelectorAll('p'));
+  var opens = [], closes = [];
+  allP.forEach(function (p) {
+    var t = p.textContent.trim();
+    if (t === '- dropdown -') opens.push(p);
+    else if (t === '- dropdown end -') closes.push(p);
+  });
+
+  // Pair them up and wrap the content between each pair
+  var pairs = Math.min(opens.length, closes.length);
+  for (var i = pairs - 1; i >= 0; i--) {
+    var startP = opens[i], endP = closes[i];
+
+    // Collect all sibling nodes between start and end markers
+    var nodes = [];
+    var sibling = startP.nextSibling;
+    while (sibling && sibling !== endP) {
+      nodes.push(sibling);
+      sibling = sibling.nextSibling;
+    }
+
+    // Build the <details> element
+    var details = document.createElement('details');
+    details.className = 'wiki-dropdown';
+    var summary = document.createElement('summary');
+    summary.textContent = 'Click to expand';
+    details.appendChild(summary);
+
+    // Move the content into <details>
+    nodes.forEach(function (n) { details.appendChild(n); });
+
+    // Replace the start marker with <details>, remove end marker
+    startP.parentNode.replaceChild(details, startP);
+    if (endP.parentNode) endP.parentNode.removeChild(endP);
+  }
+})();
 </script>
 <script>
 // ── Dead-link highlighter ───────────────────────────

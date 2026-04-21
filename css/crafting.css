@@ -348,15 +348,17 @@ a.invslot-link:hover::after {
  *    --gui-grid-left  Grid X offset (default 8px)
  */
 .mc-gui-textured {
-  width: 256px;
-  height: 256px;
+  width: calc(var(--gui-width, 256) * 1px);
+  height: calc(var(--gui-height, 256) * 1px);
   position: relative;
-  background-size: 256px 256px;
+  background-size: calc(var(--gui-width, 256) * 1px) calc(var(--gui-height, 256) * 1px);
   background-repeat: no-repeat;
   background-position: top left;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   overflow: hidden;
+  transform: scale(var(--gui-scale, 1));
+  transform-origin: top left;
 }
 
 .mc-gui-textured .mc-gui-title {
@@ -415,16 +417,9 @@ a.invslot-link:hover::after {
   .mc-gui .invslot-item { width: 24px; height: 24px; }
   .mc-gui .invslot-item img { width: 20px; height: 20px; }
 
-  /* Textured GUI: scale down to 192px (0.75×) on mobile */
+  /* Textured GUI: scale down to 0.75× on mobile */
   .mc-gui-textured {
-    width: 192px;
-    height: 192px;
-    background-size: 192px 192px;
+    transform: scale(calc(var(--gui-scale, 1) * 0.75));
   }
   .mc-gui-textured .mc-gui-title { font-size: .45rem; top: 4px; }
-  .mc-gui-grid-textured {
-    --gui-slot: 13.5px;
-    top: calc(var(--gui-grid-top, 18px) * 0.75);
-    left: calc(var(--gui-grid-left, 8px) * 0.75);
-  }
 }

@@ -1006,6 +1006,48 @@
       }
 }
 
+/* ── WIKI DROPDOWNS (collapsible sections) ── */
+.wiki-dropdown {
+      margin:1rem 0;
+      border:1px solid var(--border);
+      border-radius:6px;
+      background:var(--surface);
+      overflow:hidden
+}
+.wiki-dropdown summary {
+      cursor:pointer;
+      padding:.65rem 1rem;
+      font-weight:600;
+      font-size:.88rem;
+      color:var(--gold);
+      list-style:none;
+      user-select:none;
+      display:flex;
+      align-items:center;
+      gap:.5rem
+}
+.wiki-dropdown summary::before {
+      content:'\f078';
+      font-family:'Font Awesome 6 Free';
+      font-weight:900;
+      font-size:.6rem;
+      transition:transform .2s;
+      color:var(--text-dim)
+}
+.wiki-dropdown[open] summary::before {
+      transform:rotate(180deg)
+}
+.wiki-dropdown summary::-webkit-details-marker {
+      display:none
+}
+.wiki-dropdown > :not(summary) {
+      padding:0 1rem
+}
+.wiki-dropdown > table {
+      margin:.5rem 1rem 1rem;
+      width:calc(100% - 2rem)
+}
+
 /* ── MOBILE MISC ── */
 /* Tables scroll horizontally on small screens */
 @media (max-width:860px) {
@@ -1091,7 +1133,12 @@
       padding:.12em .42em;
       font-size:.85em;
       color:var(--violet-soft);
-      font-family:var(--font-mono)
+      font-family:var(--font-mono);
+      vertical-align:middle
+}
+.infobox-row .value strong,
+.infobox-row .label strong {
+      vertical-align:middle
 }
 
 /* ── Infobox row: linked label+value pair ── */
