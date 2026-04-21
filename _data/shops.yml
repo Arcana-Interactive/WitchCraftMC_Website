@@ -47,6 +47,8 @@
 example:
   texture: "/img/icons/gui/shop.png"
   rows: 6
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 0
       item: iron_ingot
@@ -93,6 +95,8 @@ blacksmith:
 lumberjack:
   texture: "/img/icons/gui/shop_inventory.png"
   rows: 4
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 10
       item: oak_log
@@ -121,6 +125,8 @@ lumberjack:
 fish_shop:
   texture: "/img/icons/gui/shop_inventory.png"
   rows: 4
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 11
       item: cod
@@ -140,6 +146,8 @@ fish_shop:
 mob_shop:
   texture: "/img/icons/gui/shop.png"
   rows: 6
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 10
       item: phantom_membrane
@@ -151,6 +159,8 @@ mob_shop:
 mob_shop_inventory:
   texture: "/img/icons/gui/shop_inventory.png"
   rows: 4
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 10
       item: rotten_flesh
@@ -170,6 +180,8 @@ mob_shop_inventory:
 farmer:
   texture: "/img/icons/gui/shop_inventory.png"
   rows: 4
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 10
       item: wheat
@@ -194,9 +206,13 @@ farmer:
 furniture_shop:
   texture: "/img/icons/gui/shop.png"
   rows: 6
+  scale: 2
+  grid_top: 26
 auctionhouse:
   texture: "/img/icons/gui/auctions.png"
   rows: 6
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 45
       item: ah_selling
@@ -216,28 +232,47 @@ auctionhouse:
 cosmetics_shop:
   texture: "/img/icons/gui/cosmetics_shop.png"
   rows: 5
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 11
       item: hat_button
+      lore:
+      - "&7Click to buy Hat Cosmetics.
     - slot: 15
       item: hand_item_button
+      lore:
+      - "&7Click to buy Offhand Cosmetics.
     - slot: 22
-      label: "&d???"
       item: chest
+      label: "&d???"
+      lore:
+      - "&7Coming soon"
     - slot: 29
       item: balloon_button
+      lore:
+      - "&7Click to buy Balloon Cosmetics.
     - slot: 33
       item: backpack_button
+      lore:
+      - "&7Click to buy Backpack Cosmetics.
 rankup:
   texture: "/img/icons/gui/rankup.png"
   rows: 1
+  scale: 2
+  grid_top: 26
   slots:
     - slot: 2
       item: emerald_block
       label: "&a&lRank Up"
+      lore:
+      - "&7Click to rank up to &fSeeker"
+      - "&7Cost: &a$10,000"
     - slot: 6
       item: book
       label: "&b&lView All Ranks"
+      lore:
+      - "&7Click to see all available ranks."
 
 # -- Traders --
 #These are unique in the only interfaces that are 512x256 rather than 256x256, 
@@ -247,3 +282,5 @@ vote_trader:
   texture: "/img/icons/gui/villager.png"
   width: 512
   height: 256
+  scale: 2
+  grid_top: 26

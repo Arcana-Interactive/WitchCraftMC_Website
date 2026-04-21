@@ -156,11 +156,11 @@ beetroot:
 pumpkin:
   name: Pumpkin
   img: /img/icons/items/pumpkin.png
-  tooltip: "&7A common item."
+  tooltip: "&7A common block."
 melon:
   name: Melon
   img: /img/icons/items/melon.png
-  tooltip: "&7A common item."
+  tooltip: "&7A common block."
 sweet_berries:
   name: Sweet Berries
   img: /img/icons/items/sweet_berries.png

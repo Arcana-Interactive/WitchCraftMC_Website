@@ -436,7 +436,7 @@
 </script>
 <script>
 // ── Dropdown markers → collapsible <details> ─────────
-// Converts  \- dropdown -  …  \- dropdown end -  pairs in .wiki-content
+// Converts  {dropdown}  …  {dropdown end}  pairs in .wiki-content
 // into <details><summary> blocks so markdown tables inside render correctly.
 (function () {
   var content = document.querySelector('.wiki-content');
@@ -447,8 +447,8 @@
   var opens = [], closes = [];
   allP.forEach(function (p) {
     var t = p.textContent.trim();
-    if (t === '- dropdown -') opens.push(p);
-    else if (t === '- dropdown end -') closes.push(p);
+    if (t === '{dropdown}') opens.push(p);
+    else if (t === '{dropdown end}') closes.push(p);
   });
 
   // Pair them up and wrap the content between each pair

@@ -34,7 +34,7 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 
 ### Vote Crate
 
-\- dropdown -
+{dropdown}
 
 | Chance | Reward |
 | --- | --- |
@@ -47,14 +47,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 15% | Forest Key |
 | 15% | Combat Key |
 
-\- dropdown end -
+{dropdown end}
 {% include shop-gui.html id="crate_preview_vote" %}
 
 ---
 
 ### Pyrite Crate
 
-\- dropdown -
+{dropdown}
 
 | Chance | Reward |
 | --- | --- |
@@ -69,14 +69,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 20% | Elytra |
 | 23% | Budding Amethyst |
 
-\- dropdown end -
+{dropdown end}
 {% include shop-gui.html id="crate_preview_pyrite" %}
 
 ---
 
 ### Mining Crate
 
-\- dropdown -
+{dropdown}
 
 | Chance | Reward |
 | --- | --- |
@@ -95,14 +95,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 15% | 16x Iron Ingot |
 | 15% | 16x Bottle o' Enchanting |
 
-\- dropdown end -
+{dropdown end}
 {% include shop-gui.html id="crate_preview_mining" %}
 
 ---
 
 ### Farming Crate
 
-\- dropdown -
+{dropdown}
 
 | Chance | Reward |
 | --- | --- |
@@ -122,14 +122,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 13% | Pumpkin Seeds |
 | 15% | 16x Bottle o' Enchanting |
 
-\- dropdown end -
+{dropdown end}
 {% include shop-gui.html id="crate_preview_farming" %}
 
 ---
 
 ### Combat Crate
 
-\- dropdown -
+{dropdown}
 
 | Chance | Reward |
 | --- | --- |
@@ -149,14 +149,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 14% | Shield |
 | 15% | 16x Bottle o' Enchanting |
 
-\- dropdown end -
+{dropdown end}
 {% include shop-gui.html id="crate_preview_combat" %}
 
 ---
 
 ### Fishing Crate
 
-\- dropdown -
+{dropdown}
 
 | Chance | Reward |
 | --- | --- |
@@ -178,14 +178,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 10% | Nautilus Shell|
 | 13% | 16x Bottle o' Enchanting |
 
-\- dropdown end -
+{dropdown end}
 {% include shop-gui.html id="crate_preview_fishing" %}
 
 ---
 
 ### Forest Crate
 
-\- dropdown -
+{dropdown}
 
 | Chance | Reward |
 | --- | --- |
@@ -206,5 +206,5 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 10% | Bundle |
 | 10% | 16x Bottle o' Enchanting |
 
-\- dropdown end -
+{dropdown end}
 {% include shop-gui.html id="crate_preview_forest" %}
