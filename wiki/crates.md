@@ -20,7 +20,7 @@ There are several Crates that can be opened in [Spawn](/wiki/spawn/). Each requi
 
 | Key | Obtained from |
 |---|---|---|
-| **Vote Key** | Traded from the [Vote Trader](/wiki/npc/vote-trader) for [Vote Shards](/wiki/items#vote-shards) |
+| **Vote Key** | Traded from the [Vote Trader](/wiki/npc/vote-trader) for [Vote Shards](/wiki/vote-shards) |
 | **Pyrite Key** | Obtained rarely from the other Crates |
 | **Mining Key** | Traded from [Matt Allurgy](/wiki/npc/matt-allurgy) for Diamond Blocks |
 | **Farming Key** | Traded from the [Farmer](/wiki/npc/farmer) for Hay Bales |

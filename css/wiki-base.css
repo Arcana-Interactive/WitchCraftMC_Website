@@ -29,8 +29,8 @@
       --gold-rgb: 201,162,39;
 
       /* ── Fonts ── */
+      --font-title: "Nimbus Roman No9 L", "Times New Roman", Times, serif;
       --font-body: 'Nunito',sans-serif;
-      --font-title: 'Cinzel',serif;
       --font-mono: 'JetBrains Mono',monospace;
       --radius: 6px;
 
@@ -81,11 +81,11 @@ a:hover {
    .sb-section-head, .see-also-head, .wh-label, .infobox-section, etc.
    Each component adds its own font-size, spacing, and layout. */
 .wiki-label {
-      font-family:var(--font-title);
-      font-weight:700;
-      letter-spacing:.18em;
+      font-family:var(--font-body);
+      font-weight:500;
       text-transform:uppercase;
-      color:var(--gold)
+      color:var(--gold);
+      font-size: 1.1rem
 }
 
 /*****************************
@@ -104,8 +104,8 @@ a:hover {
 }
 
 .navbar-brand {
-      font-family: var(--font-title);
-      font-weight: 700;
+      font-family: var(--font-mono);
+      font-weight: 500;
       font-size: 1.1rem;
       color: var(--text)!important;
       letter-spacing: .04em
@@ -203,11 +203,11 @@ a:hover {
 
 /* Large time "3:50 PM" */
 .wiki-clock-time {
-      font-family:var(--font-title);
+      font-family:var(--font-mono);
       font-size:1.6rem;
-      font-weight:700;
+      font-weight:500;
       color:#fff;
-      letter-spacing:.03em;
+      letter-spacing:.04em;
       line-height:1;
       margin-bottom:.55rem
 }

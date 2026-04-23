@@ -35,7 +35,7 @@ The **Quartz** rank is the first tier of Store Ranks and can be purchased for `$
 - `/rtp` Delay decreased to 15 seconds.
 - `/nightvision` - Toggles permanent nightvision effect.
 
-Tag: <span class="rank-badge rank-villager">[Quartz]</span>
+Tag: [Quartz]
 
 ---
 
@@ -54,7 +54,7 @@ The **Jade** rank is the first tier of Store Ranks and can be purchased for `$34
 - `/rtp` Delay decreased to 10 seconds.
 - Access to all Quartz perks.
 
-Tag: <span class="rank-badge rank-villager">[Jade]</span>
+Tag: [Jade]
 
 ---
 
@@ -72,7 +72,7 @@ The **Topaz** rank is the first tier of Store Ranks and can be purchased for `$7
 - `/rtp` Delay decreased to 5 seconds.
 - Access to all Jade perks.
 
-Tag: <span class="rank-badge rank-villager">[Topaz]</span>
+Tag: [Topaz]
 
 ---
 
@@ -87,7 +87,7 @@ The **Ruby** rank is the first tier of Store Ranks and can be purchased for `$17
 - `/rtp` Delay decreased to 1 seconds.
 - Access to all Topaz perks.
 
-Tag: <span class="rank-badge rank-villager">[Ruby]</span>
+Tag: [Ruby]
 
 ## Subscriptions
 
@@ -101,4 +101,4 @@ Diamond rank can be purchased for `$9.99` per month.
 - `/rtp` Delay decreased to 5 seconds.
 - `/nickname` - Sets a nickname for yourself using HEX colors (&#53cacfNickname \| \<#53cacf>Nickname).
 
-Tag: <span class="rank-badge rank-villager">[+]</span>
+Tag: [+]

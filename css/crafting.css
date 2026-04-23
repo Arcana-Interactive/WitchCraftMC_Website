@@ -34,18 +34,6 @@
   user-select: none;
 }
 
-/*
-.mc-recipe-label {
-  font-family: var(--font-title);
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: .1rem;
-}
-*/
-
 /* ── Texture container — sized to exactly match crafting_bg.png at 2× (116×64 native → 232×128) ── */
 .mc-recipe-row {
   position: relative;

@@ -41,7 +41,7 @@
 }
 
 .wiki-banner h1 {
-      font-family:var(--font-title);
+      font-family:var(--font-mono);
       font-weight:900;
       font-size:clamp(1.9rem,5vw,3.2rem);
       color:#fff;letter-spacing:.02em;
@@ -256,7 +256,7 @@
 }
 
 .cat-name {
-      font-family:var(--font-title);
+      font-family:var(--font-mono);
       font-size:.85rem;
       font-weight:600;
       letter-spacing:.03em;
