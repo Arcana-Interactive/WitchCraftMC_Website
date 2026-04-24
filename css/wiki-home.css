@@ -259,7 +259,7 @@
       font-family:var(--font-mono);
       font-size:.85rem;
       font-weight:600;
-      letter-spacing:.03em;
+      letter-spacing:.04em;
       color:#fff
 }
 
@@ -267,19 +267,6 @@
       font-size:.78rem;
       color:var(--text-muted);
       line-height:1.5
-}
-
-.cat-count {
-      font-size:.7rem;
-      color:var(--text-dim);
-      margin-top:auto;
-      padding-top:.5rem;
-      border-top:1px solid var(--border)
-}
-
-.cat-count span {
-      color:var(--teal);
-      font-weight:600
 }
 
 .ic-start {

@@ -33,9 +33,9 @@ The resource worlds are unique in that they ocassionally are reset. Building is 
 |---|---|
 | Overworld | 25k × 25k Blocks |
 | Nether | 15k × 15k Blocks |
+| The End | 10k × 10k Blocks |
 | Resource Overworld | 10k × 10k Blocks |
 | Resource Nether | 10k × 10k Blocks |
-| The End | 10k × 10k Blocks |
 
 ## Seasons & World Resets
 
