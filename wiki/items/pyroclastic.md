@@ -39,7 +39,7 @@ The **Pyroclastic Tools** are a set of legendary tools obtained by crafting from
 
 ## Stats
 
-\<table with stats\>
+Insert table with stats
 
 ## Obtaining
 
