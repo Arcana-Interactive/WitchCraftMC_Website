@@ -8,10 +8,8 @@ categories: [Gameplay, Economy]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
-  - title: Changelog & History
-    url: /wiki/changelog/
-  - title: Crafting & Items
-    url: /wiki/crafting/
+  - title: Stats
+    url: /wiki/stats/
 ---
 
 Talents is a system for players to perform activities, level them up and receive rewards for their efforts.
@@ -55,7 +53,14 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 4 | Piercing | `[3-57%]` chance for arrows to pierce through mobs.
 | 5 | Stun | `[2-20%]` chance to decrease enemy movement speed by 20% for 2 seconds.
 
-**Total Stats**
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Crit Chance | 96
+| Strength | 48
+
+---
 
 ### Fighting
 
@@ -70,6 +75,16 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 5 | Bleed | `[3-57%]` chance to make the enemy bleed for 3 bleed ticks, dealing `[0.5-9.5]` damage per tick. 2 ticks are added to enemies already bleeding.
 | 6 | Lightning Blade | Increases attack speed by `[5-80%]` for `[5-65]` seconds. **Right click sword and attack a mob to activate ability.**
 
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Crit Damage | 
+| Regeneration | 48
+| Health | 2
+
+---
+
 ### Defense
 
 **Major Perks**
@@ -81,6 +96,15 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 3 | Mob Master | Reduce incoming damage from mobs by `[2-56%]`.
 | 4 | Immunity | `[0.5-7.7%]` chance to completely negate an enemy attack.
 | 5 | No Debuff | `[5-95%]` chance to negate a harfmful potion effect from being applied.
+
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Toughness | 96
+| Health | 2
+
+---
 
 ### Farming
 
@@ -95,6 +119,15 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 5 | Growth Aura | Crops with growth stages within 30 blocks of you grow `[12-228%]` faster.
 | 6 | Replenish | Replants crops automatically for `[5-80]` seconds. **Right click hoe and break crop to activate ability.**
 
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Strength | 48
+| Health | 2
+
+---
+
 ### Foraging
 
 **Major Perks**
@@ -108,6 +141,16 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 5 | Shredder | `[3-57%]` chance to deal triple durability damage with axes.
 | 6 | Treecapitator | Breaks entire trees instantly for `[5-80]` seconds. **Shift + Right click axe and break log to activate ability.**
 
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Strength | 96
+| Toughness | 48
+| Health | 2
+
+---
+
 ### Mining
 
 **Major Perks**
@@ -120,6 +163,18 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 4 | Stamina | Grants `[+1-19]` Toughness while holding a pickaxe.
 | 5 | Hardened Armor | `[3-57%]` chance to negate durability damage on armor.
 | 6 | Speed Mine | Gives haste 10 for `[10-85]` seconds. **Shift + Right click pickaxe and mine block to activate ability.**
+| 15 | Deep Delver | Ability to pick up Reinforced Deepslate.
+| 30 | Careful Hands | Ability to pick up Spawners using Silk Touch.
+
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Toughness | 96
+| Luck | 48
+| Health | 2
+
+---
 
 ### Fishing
 
@@ -134,6 +189,15 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 5 | Epic Catch | `[0.2%-3.8]` added chance to get epic loot from fishing.
 | 6 | Sharp Hook | Deal `[0.5-8]` damage to a hooked entity when left clicking with a fishing rod.
 
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Luck | 96
+| Health | 2
+
+---
+
 ### Excavation
 
 **Major Perks**
@@ -147,6 +211,16 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 5 | Lucky Spades | `[0.1-0.6%]` added chance to get epic loot from digging.
 | 6 | Terraform | When digging, break connected blocks instantly in a 4 block radius horizontally for `[5-65]` seconds. **Shift + Right click shovel and dig block to activate ability.**
 
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Regeneration | 96
+| Strength | 48
+| Health | 2
+
+---
+
 ### Agility
 
 **Major Perks**
@@ -157,6 +231,16 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 2 | Jumper | Earn `[10-190%]` more Agility XP.
 | 3 | Golden Heal | Increases regeneration effect health gain by `[5-113%]`.
 | 4 | Fleeting | Gain `[+5-77]` Speed when below 20% health.
+
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Regeneration | 96
+| Wisdom | 48
+| Health | 2
+
+---
 
 ### Alchemy
 
@@ -170,6 +254,15 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 4 | Golden Heart | Damage done to your absorption hearts is reduced by `[5-59%]`.
 | 5 | Wise Effect | Gain `[+1-19]` Wisdom for every unique active potion effect.
 
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Wisdom | 96
+| Health | 2
+
+---
+
 ### Enchanting
 
 **Major Perks**
@@ -181,3 +274,29 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 3 | Anvil Master | Increases the maximum repair cost of an anvil before it is too expensive to `[43-97]` experience.
 | 4 | Enchanted Strength | Gain `[0.5-9.5]` Strength for every unique enchantment on the item held.
 | 5 | Lucky Table | Items you enchant using the enchantment table have a `[5-23%]` chance of upgrading the enchantment level by 1 if not max level.
+
+**Total Stats at Level 96**
+
+| Stat | Value |
+| --- | --- |
+| Wisdom | 96
+| Luck | 48
+| Health | 2
+
+---
+
+## Total Stat Rewards
+
+If a player manages to reach level 96 in all Talents, these are the base stats a player can expect to have:
+
+| Stat | Base Level | Max Level |
+| --- | --- |
+| Strength | 0 | 240
+| Health | 20 | 40
+| Regeneration | 0 | 240
+| Luck | 0 | 192
+| Wisdom | 0 | 240
+| Toughness | 0 | 240
+| Crit Chance | 0 | 96%
+| Crit Damage | 0 | 96%
+| Speed | 100 | 100
