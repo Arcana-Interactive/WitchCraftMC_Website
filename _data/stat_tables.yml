@@ -1,0 +1,92 @@
+# ══════════════════════════════════════════════════════
+#  WitchCraftMC — Stat Tables
+#  _data/stat_tables.yml
+# ══════════════════════════════════════════════════════
+#
+#  Defines reusable stat / comparison tables that can be
+#  dropped into any wiki page with:
+#
+#    {% include stat-table.html id="pyroclastic_tools" %}
+#
+#  Inspired by Hypixel SkyBlock Wiki's "Armor of Divan"
+#  set table layout — one column per piece, each column
+#  showing an item icon, its display name, and a list of
+#  description / stat lines.
+#
+#  Keys
+#  ────
+#  title       (optional) Caption shown above the table
+#  columns     List of columns. Each column has:
+#                header        Column heading (e.g. "Pickaxe")
+#                item          Item ID from items.yml — renders the icon + tooltip
+#                description   List of stat / lore lines (Markdown allowed)
+#                              · Use Minecraft colour codes (&7, &6, &a …) freely
+#
+#  Optional column key:
+#    label     Override the item's display name shown under the icon
+#
+# ══════════════════════════════════════════════════════
+
+# ── Pyroclastic toolset ────────────────────────────────
+pyroclastic_tools:
+  title: "Pyroclastic Toolset"
+  columns:
+    - header: "Pickaxe"
+      item: pyroclastic_pickaxe
+      description:
+        - "Fortune V"
+        - "Efficiency IX"
+        - "Unbreaking IX"
+        - "Mending"
+    - header: "Axe"
+      item: pyroclastic_axe
+      description:
+        - "Fortune V"
+        - "Efficiency IX"
+        - "Unbreaking IX"
+        - "Mending"
+    - header: "Shovel"
+      item: pyroclastic_shovel
+      description:
+        - "Fortune V"
+        - "Efficiency IX"
+        - "Unbreaking IX"
+        - "Mending"
+    - header: "Hoe"
+      item: pyroclastic_hoe
+      description:
+        - "Fortune V"
+        - "Efficiency IX"
+        - "Unbreaking IX"
+        - "Mending"
+
+# ── Pyroclastic combat / utility set ───────────────────
+pyroclastic_combat:
+  title: "Pyroclastic Combat & Utility"
+  columns:
+    - header: "Sword"
+      item: pyroclastic_sword
+      description:
+        - "Sharpness X"
+        - "Smite VI"
+        - "Bane of Arthropods VI"
+        - "Sweeping Edge III"
+        - "Fire Aspect II"
+        - "Looting V"
+        - "Unbreaking IX"
+        - "Mending"
+    - header: "Bow"
+      item: pyroclastic_bow
+      description:
+        - "Power X"
+        - "Flame"
+        - "Infinity"
+        - "Unbreaking IX"
+        - "Mending"
+    - header: "Fishing Rod"
+      item: pyroclastic_rod
+      description:
+        - "Luck of the Sea V"
+        - "Lure V"
+        - "Unbreaking IX"
+        - "Mending"

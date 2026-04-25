@@ -285,11 +285,33 @@ rankup:
       - "&7Click to see all available ranks."
 
 # -- Traders --
-#These are unique in the only interfaces that are 512x256 rather than 256x256, 
-#also not a chest, so layout is slightly different
+# Villager / trader interfaces use a 512×256 texture and have a layout
+# unlike the chest GUI: a vertical trade list on the left, plus a
+# 3-slot trade preview (input1, input2, output) in the top-middle.
+#
+# Set `gui_type: villager` and replace `slots:` with `trades:`.
+# Each trade is { input1, input2 (optional), output }.
+# Optional `trade_list:` and `preview:` blocks tweak slot positions in
+# source-texture pixels — defaults match the bundled villager.png.
 
 vote_trader:
+  gui_type: villager
   texture: "/img/icons/gui/villager.png"
   width: 512
   height: 256
   scale: 2
+  title: "Vote Trader"
+  trades:
+    - input1: vote_key
+      output: combat_key
+    - input1: vote_key
+      input2: vote_key
+      output: enchanter_key
+    - input1: vote_key
+      output: forest_key
+    - input1: vote_key
+      output: fishing_key
+    - input1: vote_key
+      output: mining_key
+    - input1: vote_key
+      output: farming_key

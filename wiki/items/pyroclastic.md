@@ -39,7 +39,9 @@ The **Pyroclastic Tools** are a set of legendary tools obtained by crafting from
 
 ## Stats
 
-Insert table with stats
+{% include stat-table.html id="pyroclastic_tools" %}
+
+{% include stat-table.html id="pyroclastic_combat" %}
 
 ## Obtaining
 

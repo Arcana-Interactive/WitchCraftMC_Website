@@ -301,7 +301,23 @@
   };
 </script>
 {% endif %}
+{% if site.data.items %}
+<script>
+  // Item registry exposed to JS for the {item:xxx} inline placeholder.
+  // Mirrors the shape used by item-slot.html — name / img / link / tooltip / tags.
+  window.WIKI_ITEMS = {
+    {% for it in site.data.items %}{% if it[1] %}"{{ it[0] }}":{
+      "name":{{ it[1].name | default: it[0] | jsonify }},
+      "img":{{ it[1].img | default: "" | jsonify }},
+      "link":{{ it[1].link | default: "" | jsonify }},
+      "tooltip":{{ it[1].tooltip | default: "" | jsonify }},
+      "tags":{{ it[1].tags | default: empty | jsonify }}
+    }{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+  };
+</script>
+{% endif %}
 <script src="{{ '/js/minetip.js' | relative_url }}"></script>
+<script src="{{ '/js/mc-text.js' | relative_url }}"></script>
 <script src="{{ '/js/wiki-search-preview.js' | relative_url }}"></script>
 <script>
   // ── MOBILE SIDEBAR ─────────────────────────────

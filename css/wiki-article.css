@@ -1112,3 +1112,103 @@
       image-rendering:crisp-edges;
       flex-shrink:0
 }
+
+/* ── Stat tables ────────────────────────────────────────
+   Reusable comparison tables driven by _data/stat_tables.yml.
+   See _includes/stat-table.html.
+*/
+.stat-table-wrap {
+  margin: 1.5rem 0;
+  border: 1px solid var(--border, #2a2a30);
+  border-radius: 8px;
+  background: var(--surface-1, rgba(255,255,255,.02));
+  overflow: hidden;
+}
+.stat-table-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .95rem;
+  color: var(--gold, #d9b066);
+  text-align: center;
+  padding: .75rem 1rem;
+  background: var(--surface-2, rgba(0,0,0,.25));
+  border-bottom: 1px solid var(--border, #2a2a30);
+}
+.stat-table {
+  display: grid;
+  grid-template-columns: repeat(var(--st-cols, 1), minmax(0,1fr));
+  gap: 0;
+}
+.stat-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem .75rem;
+  border-right: 1px solid var(--border, #2a2a30);
+  text-align: center;
+}
+.stat-col:last-child { border-right: none; }
+.stat-col-header {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  color: var(--text, #e6e6ea);
+  margin-bottom: .6rem;
+}
+.stat-col-item {
+  margin-bottom: .4rem;
+}
+.stat-col-item .mc-result-slot {
+  margin: 0;
+}
+.stat-col-name {
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--teal, #6dd6c3);
+  text-decoration: none;
+  margin-bottom: .55rem;
+  display: inline-block;
+}
+a.stat-col-name:hover { text-decoration: underline; }
+.stat-col-desc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem;
+  color: var(--text-dim, #b9b9c2);
+  line-height: 1.45;
+}
+.stat-col-desc li {
+  padding: .15rem 0;
+}
+.stat-col-desc li + li {
+  border-top: 1px dashed rgba(255,255,255,.05);
+}
+.stat-table-missing {
+  padding: .75rem 1rem;
+  color: var(--text-dim, #b9b9c2);
+}
+@media (max-width: 720px) {
+  .stat-table {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+  .stat-col { border-bottom: 1px solid var(--border, #2a2a30); }
+  .stat-col:nth-child(2n) { border-right: none; }
+}
+@media (max-width: 420px) {
+  .stat-table { grid-template-columns: 1fr; }
+  .stat-col { border-right: none; }
+}
+
+/* Minecraft colour-code text in non-tooltip contexts.
+   Parsed at runtime by mc-text.js — formatted spans use the same
+   .format-X classes that minetip uses, so colours match exactly. */
+.mc-text {
+  white-space: normal;
+}

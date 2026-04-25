@@ -1,0 +1,57 @@
+{% comment %}
+  stat-table.html — Renders a stat / comparison table from
+  _data/stat_tables.yml.
+
+  Usage:
+    {% include stat-table.html id="pyroclastic_tools" %}
+
+  Optional:
+    title="Override Title"   — replaces the table's default caption
+{% endcomment %}
+
+{%- assign _t      = site.data.stat_tables[include.id] -%}
+{%- assign _title  = include.title | default: _t.title -%}
+
+{%- if _t -%}
+<div class="stat-table-wrap">
+  {%- if _title -%}
+    <div class="stat-table-title">{{ _title }}</div>
+  {%- endif -%}
+  <div class="stat-table" style="--st-cols:{{ _t.columns | size }}">
+    {%- for col in _t.columns -%}
+      {%- assign _item = site.data.items[col.item] -%}
+      {%- assign _label = col.label | default: _item.name | default: col.header -%}
+      <div class="stat-col">
+        {%- if col.header -%}
+          <div class="stat-col-header">{{ col.header }}</div>
+        {%- endif -%}
+        {%- if _item -%}
+          <div class="stat-col-item">
+            {% include item-slot.html item=_item size="result" %}
+          </div>
+          {%- if _label -%}
+            {%- if _item.link -%}
+              <a href="{{ _item.link | relative_url }}" class="stat-col-name">{{ _label }}</a>
+            {%- else -%}
+              <span class="stat-col-name">{{ _label }}</span>
+            {%- endif -%}
+          {%- endif -%}
+        {%- elsif col.label -%}
+          <span class="stat-col-name">{{ col.label }}</span>
+        {%- endif -%}
+        {%- if col.description -%}
+          <ul class="stat-col-desc">
+            {%- for line in col.description -%}
+              <li class="mc-text">{{ line }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- else -%}
+<div class="stat-table-wrap stat-table-missing">
+  <em>Stat table <code>{{ include.id }}</code> not found in <code>_data/stat_tables.yml</code>.</em>
+</div>
+{%- endif -%}

@@ -411,3 +411,99 @@ a.invslot-link:hover::after {
   }
   .mc-gui-textured .mc-gui-title { font-size: .45rem; top: 4px; }
 }
+
+/* ── Inline item slot ──
+   Used by mc-text.js when expanding {item:xxx} placeholders inline
+   in prose, infobox values, table cells, etc. Sits on a text baseline
+   like an icon — no big crafting-slot frame. */
+.invslot.inline-invslot {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  vertical-align: -6px;
+  margin: 0 1px;
+}
+.inline-invslot .invslot-item {
+  width: 22px;
+  height: 22px;
+}
+.inline-invslot .invslot-item img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Villager / trader GUI ──
+   Different layout from chest GUIs:
+     · Trade list down the LEFT side, one row per trade.
+     · Top-middle preview shows input1, input2, output of selected trade.
+   All positions are in 1× source pixels — the parent scales via
+   --gui-scale, so positions stay aligned at any zoom level. */
+.mc-gui-villager {
+  position: relative;
+  /* Texture sizing/scaling already handled by .mc-gui-textured. */
+}
+
+.villager-trade-list {
+  position: absolute;
+  top: 0;
+  left: var(--tl-x, 5px);
+  width: 60px;        /* visual hint only — content sets its own width */
+  pointer-events: none; /* let individual slots receive hover */
+}
+
+.villager-trade-row {
+  position: absolute;
+  left: 0;
+  height: var(--tl-sz, 20px);
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  pointer-events: auto;
+}
+
+.villager-trade-row .invslot,
+.villager-trade-row .invslot-item {
+  width: calc(var(--tl-sz, 20px) - 4px);
+  height: calc(var(--tl-sz, 20px) - 4px);
+  background: transparent;
+}
+.villager-trade-row .invslot-item img {
+  width: calc(var(--tl-sz, 20px) - 8px);
+  height: calc(var(--tl-sz, 20px) - 8px);
+}
+
+.villager-trade-arrow {
+  font-size: 10px;
+  line-height: 1;
+  color: rgba(0,0,0,.45);
+  font-family: 'Minecraftia', monospace;
+}
+
+.villager-trade-row.active::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+.villager-preview-slot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.villager-preview-slot .invslot,
+.villager-preview-slot .invslot-item {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.villager-preview-slot .invslot-item img {
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+}

@@ -1,41 +1,135 @@
-{% comment %}
-  shop-gui.html — Renders a Minecraft chest GUI from _data/shops.yml
-  Usage: include shop-gui.html id="blacksmith"
+{%- comment -%}
+  shop-gui.html - Renders a Minecraft GUI (chest or villager) from
+  _data/shops.yml. Supports lore-replaces-tooltip and villager trade UIs.
+
+  Usage:   {% raw %}{% include shop-gui.html id="blacksmith" %}{% endraw %}
   Optional: label="Override Title"
 
-  shops.yml format:
+  -- Chest GUI (default) ---------------------------------
     my_shop:
       title: "Blacksmith"
       rows: 3
-      texture: "/img/ui/custom_gui.png"   # optional — 256×256 Minecraft GUI texture
-      title_color: "#4a412a"              # optional — title text color
-      grid_top: 18                        # optional — grid Y offset in texture (1x px)
-      grid_left: 8                        # optional — grid X offset in texture (1x px)
-      slot_size: 18                       # optional — slot size in texture (1x px)
+      texture: "/img/ui/custom_gui.png"
+      title_color: "#4a412a"
+      grid_top: 18
+      grid_left: 8
+      slot_size: 18
       slots:
         - slot: 0
           item: iron_ingot
           price: "50 coins"
           label: "Buy Iron Ingot"
-{% endcomment %}
+          lore:                       # optional - REPLACES the item's
+            - "&7Click to buy"        #   default tooltip + tags entirely
+            - "&eCosts 50 coins"
 
-{%- assign shop   = site.data.shops[include.id] -%}
-{%- assign _title = include.label | default: shop.title -%}
-{%- assign _rows  = shop.rows | default: 3 -%}
-{%- assign _total = _rows | times: 9 -%}
+  -- Villager GUI ----------------------------------------
+    Set `gui_type: villager` and replace `slots:` with `trades:`.
+    Each trade is { input1, input2 (optional), output }.
 
-{%- if shop.texture -%}
-  {%- assign _slot_size = shop.slot_size | default: 18 -%}
-  {%- assign _grid_top  = shop.grid_top  | default: 18 -%}
-  {%- assign _grid_left = shop.grid_left | default: 8 -%}
+    vote_trader:
+      gui_type: villager
+      texture: /img/icons/gui/villager.png
+      width: 512
+      height: 256
+      scale: 2
+      title: "Vote Trader"
+      trade_list:
+        x: 5
+        y: 18
+        slot_size: 20
+        count: 7
+      preview:
+        input1_x: 136
+        input2_x: 162
+        output_x:  220
+        y: 24
+        slot_size: 18
+      trades:
+        - input1: vote_key
+          output: combat_key
+        - input1: vote_key
+          input2: gold_ingot
+          output: enchanter_key
+{%- endcomment -%}
+
+{%- assign shop      = site.data.shops[include.id] -%}
+{%- assign _title    = include.label | default: shop.title -%}
+{%- assign _rows     = shop.rows | default: 3 -%}
+{%- assign _total    = _rows | times: 9 -%}
+{%- assign _gui_type = shop.gui_type | default: "chest" -%}
+
+{%- if _gui_type == "villager" -%}
+  {%- comment -%} Villager / trader GUI {%- endcomment -%}
+  {%- assign _tl_x   = shop.trade_list.x         | default: 5  -%}
+  {%- assign _tl_y   = shop.trade_list.y         | default: 18 -%}
+  {%- assign _tl_sz  = shop.trade_list.slot_size | default: 20 -%}
+  {%- assign _tl_n   = shop.trade_list.count     | default: 7  -%}
+  {%- assign _pv_y   = shop.preview.y            | default: 24 -%}
+  {%- assign _pv_sz  = shop.preview.slot_size    | default: 18 -%}
+  {%- assign _pv_i1  = shop.preview.input1_x     | default: 136 -%}
+  {%- assign _pv_i2  = shop.preview.input2_x     | default: 162 -%}
+  {%- assign _pv_out = shop.preview.output_x     | default: 220 -%}
+  {%- assign _selected_idx = include.trade_index | default: 0 | plus: 0 -%}
+  {%- assign _selected     = shop.trades[_selected_idx] -%}
+
+<div class="mc-gui mc-gui-textured mc-gui-villager"
+     style="background-image:url('{{ shop.texture }}');
+            --gui-width:{{ shop.width  | default: 512 }};
+            --gui-height:{{ shop.height | default: 256 }};
+            --gui-scale:{{ shop.scale  | default: 2 }};
+            --tl-x:{{ _tl_x }}px; --tl-y:{{ _tl_y }}px; --tl-sz:{{ _tl_sz }}px;
+            --pv-y:{{ _pv_y }}px; --pv-sz:{{ _pv_sz }}px;
+            --pv-i1:{{ _pv_i1 }}px; --pv-i2:{{ _pv_i2 }}px; --pv-out:{{ _pv_out }}px;">
+  {%- if _title -%}<div class="mc-gui-title" style="{% if shop.title_color %}color:{{ shop.title_color }};{% endif %}">{{ _title }}</div>{%- endif -%}
+
+  {%- comment -%} Left-side trade list: one row per trade {%- endcomment -%}
+  <div class="villager-trade-list">
+    {%- for trade in shop.trades limit: _tl_n -%}
+      {%- assign _t_in1 = site.data.items[trade.input1] -%}
+      {%- assign _t_out = site.data.items[trade.output] -%}
+      <div class="villager-trade-row {% if forloop.index0 == _selected_idx %}active{% endif %}"
+           style="top:calc(var(--tl-y) + {{ forloop.index0 }} * var(--tl-sz));">
+        {%- if _t_in1 %}{% include item-slot.html item=_t_in1 %}{% endif -%}
+        <span class="villager-trade-arrow">&rarr;</span>
+        {%- if _t_out %}{% include item-slot.html item=_t_out %}{% endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%} Top-middle preview: input1, input2, output of selected trade {%- endcomment -%}
+  {%- if _selected -%}
+    {%- assign _sel_in1 = site.data.items[_selected.input1] -%}
+    {%- assign _sel_in2 = site.data.items[_selected.input2] -%}
+    {%- assign _sel_out = site.data.items[_selected.output] -%}
+    <div class="villager-preview-slot" style="top:var(--pv-y);left:var(--pv-i1);width:var(--pv-sz);height:var(--pv-sz);">
+      {%- if _sel_in1 %}{% include item-slot.html item=_sel_in1 %}{% endif -%}
+    </div>
+    <div class="villager-preview-slot" style="top:var(--pv-y);left:var(--pv-i2);width:var(--pv-sz);height:var(--pv-sz);">
+      {%- if _sel_in2 %}{% include item-slot.html item=_sel_in2 %}{% endif -%}
+    </div>
+    <div class="villager-preview-slot" style="top:var(--pv-y);left:var(--pv-out);width:var(--pv-sz);height:var(--pv-sz);">
+      {%- if _sel_out %}{% include item-slot.html item=_sel_out %}{% endif -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{%- else -%}
+  {%- comment -%} Chest GUI (default) {%- endcomment -%}
+
+  {%- if shop.texture -%}
+    {%- assign _slot_size = shop.slot_size | default: 18 -%}
+    {%- assign _grid_top  = shop.grid_top  | default: 18 -%}
+    {%- assign _grid_left = shop.grid_left | default: 8 -%}
 <div class="mc-gui mc-gui-textured" style="background-image:url('{{ shop.texture }}');{% if shop.scale %}--gui-scale:{{ shop.scale }};{% endif %}{% if shop.width %}--gui-width:{{ shop.width }};{% endif %}{% if shop.height %}--gui-height:{{ shop.height }};{% endif %}">
   {%- if _title -%}<div class="mc-gui-title" style="{% if shop.title_color %}color:{{ shop.title_color }};{% endif %}">{{ _title }}</div>{%- endif -%}
   <div class="mc-gui-grid mc-gui-grid-textured" style="--gui-rows:{{ _rows }};--gui-slot:{{ _slot_size }}px;--gui-grid-top:{{ _grid_top }}px;--gui-grid-left:{{ _grid_left }}px">
-{%- else -%}
+  {%- else -%}
 <div class="mc-gui">
   <div class="mc-gui-title">{{ _title | default: "Shop" }}</div>
   <div class="mc-gui-grid" style="--gui-rows:{{ _rows }}">
-{%- endif -%}
+  {%- endif -%}
+
     {%- for i in (0.._total) -%}
       {%- if i == _total -%}{%- break -%}{%- endif -%}
       {%- assign _found = nil -%}
@@ -48,23 +142,31 @@
       {%- if _found -%}
         {%- assign _item    = site.data.items[_found.item] -%}
         {%- assign _display = _found.label | default: _item.name -%}
-        {%- assign _tip     = _item.tooltip | default: "" -%}
+        {%- comment -%}
+          When `lore:` is provided on a slot, it fully REPLACES the item's
+          default tooltip and tags. Otherwise we fall back to the item's
+          built-in tooltip + tags.
+        {%- endcomment -%}
         {%- if _found.lore -%}
+          {%- assign _tip = "" -%}
           {%- for line in _found.lore -%}
-            {%- if _tip == "" and forloop.first -%}
+            {%- if forloop.first -%}
               {%- assign _tip = line -%}
             {%- else -%}
               {%- assign _tip = _tip | append: "/" | append: line -%}
             {%- endif -%}
           {%- endfor -%}
-        {%- elsif _item.tags -%}
-          {%- for tag in _item.tags -%}
-            {%- if _tip == "" and forloop.first -%}
-              {%- assign _tip = tag -%}
-            {%- else -%}
-              {%- assign _tip = _tip | append: "/" | append: tag -%}
-            {%- endif -%}
-          {%- endfor -%}
+        {%- else -%}
+          {%- assign _tip = _item.tooltip | default: "" -%}
+          {%- if _item.tags -%}
+            {%- for tag in _item.tags -%}
+              {%- if _tip == "" and forloop.first -%}
+                {%- assign _tip = tag -%}
+              {%- else -%}
+                {%- assign _tip = _tip | append: "/" | append: tag -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
         {%- endif -%}
         {%- if _found.price -%}
           {%- assign _tip = _tip | append: "/" | append: _found.price -%}
@@ -94,3 +196,4 @@
     {%- endfor -%}
   </div>
 </div>
+{%- endif -%}
