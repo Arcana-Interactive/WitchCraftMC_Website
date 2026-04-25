@@ -409,6 +409,11 @@ pyroclastic_bow:
     - "{tag_legendary}{tag_bow:-5}"
     - "--"
 
+vote_shards:
+  name: Vote Shards
+  img: /img/icons/items/vote_shards.png
+  link: /wiki/vote-shards/
+  tooltip: "&7Shards from voting."
 vote_key:
   name: Vote Key
   img: /img/icons/items/vote_key.png

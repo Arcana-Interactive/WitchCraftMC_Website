@@ -300,13 +300,14 @@ vote_trader:
   width: 512
   height: 256
   scale: 2
-  title: "Vote Trader"
+  grid_top: 26
+  grid_left: 7
   trades:
-    - input1: vote_key
-      output: combat_key
-    - input1: vote_key
-      input2: vote_key
-      output: enchanter_key
+    - input1: vote_shards
+      output: vote_key
+    - input1: stick
+      input2: iron_ingot
+      output: gold_ingot
     - input1: vote_key
       output: forest_key
     - input1: vote_key
