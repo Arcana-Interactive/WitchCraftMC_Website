@@ -461,15 +461,41 @@ a.invslot-link:hover::after {
   pointer-events: auto;
 }
 
+/* Villager trade rows reuse .invslot / .invslot-item but the texture
+   already paints the slot bevel — strip the default .mc-gui slot
+   background + bevel so items sit cleanly on the texture. */
 .villager-trade-row .invslot,
 .villager-trade-row .invslot-item {
   width: calc(var(--tl-sz, 20px) - 4px);
   height: calc(var(--tl-sz, 20px) - 4px);
   background: transparent;
+  box-shadow: none;
+  border: none;
 }
 .villager-trade-row .invslot-item img {
   width: calc(var(--tl-sz, 20px) - 8px);
   height: calc(var(--tl-sz, 20px) - 8px);
+}
+
+/* Hover indicator: white overlay on the item cell — same effect as
+   chest GUIs, so clickable items in trade rows feel like links. */
+.villager-trade-row .invslot-item {
+  position: relative;
+  overflow: hidden;
+}
+.villager-trade-row a.invslot-link {
+  cursor: pointer;
+}
+.villager-trade-row .invslot-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.22);
+  pointer-events: none;
+  z-index: 2;
+}
+.villager-trade-row a.invslot-link:hover::after {
+  background: rgba(255,255,255,.35);
 }
 
 .villager-trade-arrow {
@@ -501,9 +527,32 @@ a.invslot-link:hover::after {
   width: 100%;
   height: 100%;
   background: transparent;
+  box-shadow: none;
+  border: none;
 }
 
 .villager-preview-slot .invslot-item img {
   width: calc(100% - 4px);
   height: calc(100% - 4px);
+}
+
+/* Preview slots also need the link/hover treatment so the top-middle
+   slots of the villager menu feel just as clickable as the trade rows. */
+.villager-preview-slot .invslot-item {
+  position: relative;
+  overflow: hidden;
+}
+.villager-preview-slot a.invslot-link {
+  cursor: pointer;
+}
+.villager-preview-slot .invslot-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.22);
+  pointer-events: none;
+  z-index: 2;
+}
+.villager-preview-slot a.invslot-link:hover::after {
+  background: rgba(255,255,255,.35);
 }

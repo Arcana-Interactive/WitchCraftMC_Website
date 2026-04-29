@@ -5,50 +5,118 @@
   Usage:
     {% include stat-table.html id="pyroclastic_tools" %}
 
-  Optional:
+  Optional include parameters:
     title="Override Title"   — replaces the table's default caption
+    layout="rows"            — overrides the layout from stat_tables.yml
+                               (one of "rows" | "columns")
+
+  ── Layouts ────────────────────────────────────────────
+    layout: rows     (default — mirrors Hypixel SkyBlock wiki style)
+        Each entry is a horizontal row:
+            [ icon ]  Name
+                      • stat 1
+                      • stat 2
+        Best for sets/lists with a few stat lines per item.
+
+    layout: columns  (legacy, also handy for side-by-side compares)
+        Each entry is a vertical column:
+            ┌────────┐
+            │ header │
+            │ [icon] │
+            │  name  │
+            │ • stat │
+            │ • stat │
+            └────────┘
+        Use when there are 2–4 entries you want to eye-line compare.
 {% endcomment %}
 
-{%- assign _t      = site.data.stat_tables[include.id] -%}
-{%- assign _title  = include.title | default: _t.title -%}
+{%- assign _t       = site.data.stat_tables[include.id] -%}
+{%- assign _title   = include.title  | default: _t.title -%}
+{%- assign _layout  = include.layout | default: _t.layout | default: "rows" -%}
 
 {%- if _t -%}
-<div class="stat-table-wrap">
+<div class="stat-table-wrap stat-table-{{ _layout }}">
   {%- if _title -%}
     <div class="stat-table-title">{{ _title }}</div>
   {%- endif -%}
-  <div class="stat-table" style="--st-cols:{{ _t.columns | size }}">
-    {%- for col in _t.columns -%}
-      {%- assign _item = site.data.items[col.item] -%}
-      {%- assign _label = col.label | default: _item.name | default: col.header -%}
-      <div class="stat-col">
-        {%- if col.header -%}
-          <div class="stat-col-header">{{ col.header }}</div>
-        {%- endif -%}
-        {%- if _item -%}
-          <div class="stat-col-item">
-            {% include item-slot.html item=_item size="result" %}
-          </div>
-          {%- if _label -%}
-            {%- if _item.link -%}
-              <a href="{{ _item.link | relative_url }}" class="stat-col-name">{{ _label }}</a>
-            {%- else -%}
-              <span class="stat-col-name">{{ _label }}</span>
-            {%- endif -%}
+
+  {%- if _layout == "columns" -%}
+    {%- comment -%} ── Legacy columns layout ── {%- endcomment -%}
+    <div class="stat-table stat-table-cols" style="--st-cols:{{ _t.columns | size }}">
+      {%- for col in _t.columns -%}
+        {%- assign _item  = site.data.items[col.item] -%}
+        {%- assign _label = col.label | default: _item.name | default: col.header -%}
+        <div class="stat-col">
+          {%- if col.header -%}
+            <div class="stat-col-header">{{ col.header }}</div>
           {%- endif -%}
-        {%- elsif col.label -%}
-          <span class="stat-col-name">{{ col.label }}</span>
-        {%- endif -%}
-        {%- if col.description -%}
-          <ul class="stat-col-desc">
-            {%- for line in col.description -%}
-              <li class="mc-text">{{ line }}</li>
-            {%- endfor -%}
-          </ul>
-        {%- endif -%}
-      </div>
-    {%- endfor -%}
-  </div>
+          {%- if _item -%}
+            <div class="stat-col-item">
+              {% include item-slot.html item=_item size="result" %}
+            </div>
+            {%- if _label -%}
+              {%- if _item.link -%}
+                <a href="{{ _item.link | relative_url }}" class="stat-col-name">{{ _label }}</a>
+              {%- else -%}
+                <span class="stat-col-name">{{ _label }}</span>
+              {%- endif -%}
+            {%- endif -%}
+          {%- elsif col.label -%}
+            <span class="stat-col-name">{{ col.label }}</span>
+          {%- endif -%}
+          {%- if col.description -%}
+            <ul class="stat-col-desc">
+              {%- for line in col.description -%}
+                <li class="mc-text">{{ line }}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+  {%- else -%}
+    {%- comment -%} ── Default rows layout (Hypixel-style) ── {%- endcomment -%}
+    <div class="stat-table stat-table-rows">
+      {%- for col in _t.columns -%}
+        {%- assign _item  = site.data.items[col.item] -%}
+        {%- assign _label = col.label | default: _item.name | default: col.header -%}
+        <div class="stat-row">
+          {%- comment -%} Icon cell — always rendered, even if item missing {%- endcomment -%}
+          <div class="stat-row-icon">
+            {%- if _item -%}
+              {% include item-slot.html item=_item size="result" %}
+            {%- endif -%}
+          </div>
+
+          {%- comment -%} Name + stats column {%- endcomment -%}
+          <div class="stat-row-body">
+            {%- if col.header or _label -%}
+              <div class="stat-row-head">
+                {%- if col.header -%}
+                  <span class="stat-row-header">{{ col.header }}</span>
+                {%- endif -%}
+                {%- if _label and col.header != _label -%}
+                  {%- if _item.link -%}
+                    <a href="{{ _item.link | relative_url }}" class="stat-row-name">{{ _label }}</a>
+                  {%- else -%}
+                    <span class="stat-row-name">{{ _label }}</span>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if col.description -%}
+              <ul class="stat-row-desc">
+                {%- for line in col.description -%}
+                  <li class="mc-text">{{ line }}</li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
 </div>
 {%- else -%}
 <div class="stat-table-wrap stat-table-missing">

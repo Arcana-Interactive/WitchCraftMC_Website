@@ -60,9 +60,17 @@
 {%- assign _gui_type = shop.gui_type | default: "chest" -%}
 
 {%- if _gui_type == "villager" -%}
-  {%- comment -%} Villager / trader GUI {%- endcomment -%}
-  {%- assign _tl_x   = shop.trade_list.x         | default: 5  -%}
-  {%- assign _tl_y   = shop.trade_list.y         | default: 18 -%}
+  {%- comment -%}
+    Villager / trader GUI.
+    Position fall-back chain (most → least specific):
+      trade_list.x  →  grid_left  →  default
+      trade_list.y  →  grid_top   →  default
+    This lets villager menus use the same grid_top / grid_left fields
+    that chest GUIs use, while still allowing fine-grained overrides
+    via the trade_list / preview blocks.
+  {%- endcomment -%}
+  {%- assign _tl_x   = shop.trade_list.x         | default: shop.grid_left | default: 5  -%}
+  {%- assign _tl_y   = shop.trade_list.y         | default: shop.grid_top  | default: 18 -%}
   {%- assign _tl_sz  = shop.trade_list.slot_size | default: 20 -%}
   {%- assign _tl_n   = shop.trade_list.count     | default: 7  -%}
   {%- assign _pv_y   = shop.preview.y            | default: 24 -%}
@@ -83,14 +91,21 @@
             --pv-i1:{{ _pv_i1 }}px; --pv-i2:{{ _pv_i2 }}px; --pv-out:{{ _pv_out }}px;">
   {%- if _title -%}<div class="mc-gui-title" style="{% if shop.title_color %}color:{{ shop.title_color }};{% endif %}">{{ _title }}</div>{%- endif -%}
 
-  {%- comment -%} Left-side trade list: one row per trade {%- endcomment -%}
+  {%- comment -%}
+    Left-side trade list: one row per trade.
+    Each row shows input1 (+ optional input2) → output, exactly like
+    the in-game villager UI. input2 is omitted when the trade only
+    has a single input.
+  {%- endcomment -%}
   <div class="villager-trade-list">
     {%- for trade in shop.trades limit: _tl_n -%}
       {%- assign _t_in1 = site.data.items[trade.input1] -%}
+      {%- assign _t_in2 = site.data.items[trade.input2] -%}
       {%- assign _t_out = site.data.items[trade.output] -%}
       <div class="villager-trade-row {% if forloop.index0 == _selected_idx %}active{% endif %}"
            style="top:calc(var(--tl-y) + {{ forloop.index0 }} * var(--tl-sz));">
         {%- if _t_in1 %}{% include item-slot.html item=_t_in1 %}{% endif -%}
+        {%- if _t_in2 %}{% include item-slot.html item=_t_in2 %}{% endif -%}
         <span class="villager-trade-arrow">&rarr;</span>
         {%- if _t_out %}{% include item-slot.html item=_t_out %}{% endif -%}
       </div>

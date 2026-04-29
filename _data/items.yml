@@ -25,6 +25,26 @@
 #                    - "&9✦ Soulbound"
 #                    - "&8Custom Item"
 #
+#  ── Using items inline (in articles & infoboxes) ────
+#
+#  Once an item is defined here, you can drop it into any wiki-page
+#  body (or infobox value) using one of these placeholders. They
+#  render as clickable inventory slots with the full minetip tooltip:
+#
+#      {item:pyroclastic_pickaxe}        ← explicit form, always works
+#      {pyroclastic_pickaxe}             ← bare alias, if the id is unique
+#                                          and not also a {tag_*} or
+#                                          {dropdown} marker
+#
+#  Examples (drop into a markdown wiki page):
+#      Trade a {vote_key} at the {item:vote_trader} for prizes.
+#      | Reward | Cost            |
+#      |--------|-----------------|
+#      | {pyroclastic_pickaxe} | 12 {pyroclastic_core} |
+#
+#  Both forms work inside `Infobox.Sections[*].rows[*].value`, regular
+#  prose, table cells, and `<span class="mc-text">…</span>` blocks.
+#
 # ══════════════════════════════════════════════════════
 
 # ── Vanilla items ──────────────────────────────────────

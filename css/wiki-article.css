@@ -1116,6 +1116,12 @@
 /* ── Stat tables ────────────────────────────────────────
    Reusable comparison tables driven by _data/stat_tables.yml.
    See _includes/stat-table.html.
+
+   Two layouts:
+     · rows     (default, Hypixel-style) — one row per item, icon left,
+                stats stacked to the right. Best for sets/enchant lists.
+     · columns  (legacy)                 — one column per item, icon
+                on top, stats below. Best for 2–4 side-by-side compares.
 */
 .stat-table-wrap {
   margin: 1.5rem 0;
@@ -1136,7 +1142,91 @@
   background: var(--surface-2, rgba(0,0,0,.25));
   border-bottom: 1px solid var(--border, #2a2a30);
 }
-.stat-table {
+
+/* ── Rows layout (default, Hypixel-style) ────────────── */
+.stat-table-rows {
+  display: flex;
+  flex-direction: column;
+}
+.stat-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border, #2a2a30);
+}
+.stat-row:last-child { border-bottom: none; }
+
+.stat-row-icon {
+  flex-shrink: 0;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stat-row-icon .mc-result-slot {
+  margin: 0;
+}
+
+.stat-row-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.stat-row-head {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: .35rem;
+}
+.stat-row-header {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: var(--text-dim, #b9b9c2);
+}
+.stat-row-name {
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--teal, #6dd6c3);
+  text-decoration: none;
+}
+a.stat-row-name:hover {
+  text-decoration: underline;
+}
+.stat-row-desc {
+  list-style: disc;
+  padding: 0 0 0 1.25rem;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  color: var(--text, #e6e6ea);
+  line-height: 1.55;
+}
+.stat-row-desc li {
+  padding: .05rem 0;
+}
+
+/* On narrow viewports, stack icon above the stats column. */
+@media (max-width: 540px) {
+  .stat-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+  }
+  .stat-row-head { justify-content: center; }
+  .stat-row-desc {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+/* ── Columns layout (legacy) ─────────────────────────── */
+.stat-table-cols {
   display: grid;
   grid-template-columns: repeat(var(--st-cols, 1), minmax(0,1fr));
   gap: 0;
@@ -1195,14 +1285,14 @@ a.stat-col-name:hover { text-decoration: underline; }
   color: var(--text-dim, #b9b9c2);
 }
 @media (max-width: 720px) {
-  .stat-table {
+  .stat-table-cols {
     grid-template-columns: repeat(2, minmax(0,1fr));
   }
   .stat-col { border-bottom: 1px solid var(--border, #2a2a30); }
   .stat-col:nth-child(2n) { border-right: none; }
 }
 @media (max-width: 420px) {
-  .stat-table { grid-template-columns: 1fr; }
+  .stat-table-cols { grid-template-columns: 1fr; }
   .stat-col { border-right: none; }
 }
 

@@ -2,9 +2,20 @@
  * mc-text.js — Parses Minecraft colour codes inside .mc-text elements.
  *
  * Uses the same parseCodes logic as minetip.js so colours look identical
- * in tooltips and inline text. Also supports {tag_xxx} placeholders the
- * way tooltips do, and {item:xxx} placeholders that expand to full
- * inventory slots (see WIKI_ITEMS).
+ * in tooltips and inline text. Also supports inline placeholder shortcodes:
+ *
+ *   {tag_<name>}        — expands to a tag icon (see WIKI_TAGS).
+ *                         Optional :shift offsets, e.g. {tag_legendary:-5}.
+ *
+ *   {item:<id>}         — expands to a full inventory slot for item <id>
+ *   {<id>}              — same as {item:<id>}, but only when <id> matches
+ *                         a known item ID in WIKI_ITEMS. Unknown braced
+ *                         strings are left alone.
+ *
+ *   Examples (work in markdown bodies, infobox values, table cells):
+ *       Use the {pyroclastic_pickaxe} to mine ore quickly.
+ *       Trade a {item:vote_key} for rewards.
+ *       {tag_legendary:-5} — places a tag icon shifted 5px left.
  *
  * Runs once on DOMContentLoaded. Idempotent — sets a data flag so
  * elements aren't double-parsed if other scripts re-render content.
@@ -97,6 +108,29 @@
   }
 
   /**
+   * Bare-id alias: turn {pyroclastic_pickaxe} into the same slot HTML
+   * as {item:pyroclastic_pickaxe}. Only fires when the braced string is
+   * a known item ID — anything else (e.g. {dropdown}, {tag_legendary},
+   * arbitrary placeholders, snippets of code) is left untouched so we
+   * never accidentally rewrite something the author meant literally.
+   *
+   * MUST run AFTER expandTagPlaceholders so {tag_xxx} matches its own
+   * pattern first; by that point the curly braces around tag tokens
+   * have been replaced with <img> tags and won't reach this regex.
+   */
+  function expandShortItemPlaceholders(html) {
+    if (!window.WIKI_ITEMS) return html;
+    return html.replace(/\{([a-zA-Z][a-zA-Z0-9_]*)\}/g, function (m, id) {
+      // Skip pseudo-markers handled elsewhere (the dropdown script
+      // runs before us, but be defensive in case ordering ever
+      // changes — these strings should never become item slots).
+      if (id === 'dropdown') return m;
+      var slot = buildItemSlotHTML(id);
+      return slot || m;
+    });
+  }
+
+  /**
    * Walk text nodes inside `root` and apply transformations to each.
    * Skips nodes inside elements that already carry data-minetip-text
    * (those are tooltips and handled separately by minetip.js).
@@ -119,7 +153,15 @@
         }
         var t = node.nodeValue;
         if (!t) return NodeFilter.FILTER_REJECT;
-        if (t.indexOf('{item:') === -1 && t.indexOf('{tag_') === -1) {
+        // Quick reject for text that obviously contains no placeholder.
+        // The bare {xxx} form is identified by *any* "{" in the text —
+        // expandShortItemPlaceholders does its own item-id whitelist
+        // so unrelated braces are no-ops.
+        if (
+          t.indexOf('{item:') === -1 &&
+          t.indexOf('{tag_') === -1 &&
+          t.indexOf('{')      === -1
+        ) {
           return NodeFilter.FILTER_REJECT;
         }
         return NodeFilter.FILTER_ACCEPT;
@@ -132,8 +174,12 @@
 
     batch.forEach(function (node) {
       var html = esc(node.nodeValue);
+      // Order matters: the explicit item: prefix consumes its own
+      // braces first, then tag_ tokens, and finally the bare {id}
+      // alias only matches what's left over.
       html = expandItemPlaceholders(html);
       html = expandTagPlaceholders(html);
+      html = expandShortItemPlaceholders(html);
       // Re-decode the angle brackets we escaped above so legitimate
       // characters round-trip; { and } weren't touched.
       var span = document.createElement('span');
@@ -149,9 +195,12 @@
     nodes.forEach(function (el) {
       if (el.dataset.mcParsed === '1') return;
       var html = el.innerHTML;
-      // Allow {item:...} and {tag_...} inside .mc-text too
+      // Allow {item:...}, {tag_...}, and the bare {<id>} alias inside
+      // .mc-text too. Same ordering as processTextNodes — explicit
+      // prefixes resolve first so they always win the race.
       html = expandItemPlaceholders(html);
       html = expandTagPlaceholders(html);
+      html = expandShortItemPlaceholders(html);
       // Now apply colour codes. We don't double-escape — assume the
       // input is plain text + simple HTML emitted by Liquid.
       el.innerHTML = parseCodes(html);

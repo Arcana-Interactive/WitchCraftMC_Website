@@ -9,21 +9,27 @@
 #    {% include stat-table.html id="pyroclastic_tools" %}
 #
 #  Inspired by Hypixel SkyBlock Wiki's "Armor of Divan"
-#  set table layout — one column per piece, each column
+#  set table layout — one entry per piece, each entry
 #  showing an item icon, its display name, and a list of
 #  description / stat lines.
 #
 #  Keys
 #  ────
 #  title       (optional) Caption shown above the table
-#  columns     List of columns. Each column has:
-#                header        Column heading (e.g. "Pickaxe")
+#  layout      (optional) "rows" (default, Hypixel-style — one
+#              horizontal row per item) or "columns" (legacy,
+#              best for 2–4 side-by-side compares)
+#  columns     List of entries. Each entry has:
+#                header        Heading (e.g. "Pickaxe")
 #                item          Item ID from items.yml — renders the icon + tooltip
 #                description   List of stat / lore lines (Markdown allowed)
 #                              · Use Minecraft colour codes (&7, &6, &a …) freely
 #
-#  Optional column key:
-#    label     Override the item's display name shown under the icon
+#  Optional entry key:
+#    label     Override the item's display name shown next to the icon
+#
+#  Override at include time:
+#    {% include stat-table.html id="..." layout="columns" %}
 #
 # ══════════════════════════════════════════════════════
 
