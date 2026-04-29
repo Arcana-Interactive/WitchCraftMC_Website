@@ -157,6 +157,7 @@ a.invslot-link:hover::after {
    smaller than the crafting hero. Sized so the row layout doesn't break. */
 .stat-row-icon .mc-result-slot,
 .stat-col-item .mc-result-slot,
+.stat-cell-icon .mc-result-slot,
 .infobox .mc-result-slot {
   position: relative;
   top: auto;
@@ -167,6 +168,8 @@ a.invslot-link:hover::after {
 .stat-row-icon .mc-result-slot .invslot-item,
 .stat-col-item .mc-result-slot .invslot,
 .stat-col-item .mc-result-slot .invslot-item,
+.stat-cell-icon .mc-result-slot .invslot,
+.stat-cell-icon .mc-result-slot .invslot-item,
 .infobox .mc-result-slot .invslot,
 .infobox .mc-result-slot .invslot-item {
   width: 48px;
@@ -176,6 +179,7 @@ a.invslot-link:hover::after {
 }
 .stat-row-icon .mc-result-slot .invslot-item img,
 .stat-col-item .mc-result-slot .invslot-item img,
+.stat-cell-icon .mc-result-slot .invslot-item img,
 .infobox .mc-result-slot .invslot-item img {
   width: 40px;
   height: 40px;

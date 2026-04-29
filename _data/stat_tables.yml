@@ -8,25 +8,34 @@
 #
 #    {% include stat-table.html id="pyroclastic_tools" %}
 #
-#  Inspired by Hypixel SkyBlock Wiki's "Armor of Divan"
-#  set table layout — one entry per piece, each entry
-#  showing an item icon, its display name, and a list of
-#  description / stat lines.
+#  Inspired by the Hypixel SkyBlock Wiki "Armor of Divan"
+#  set table — a grid of cells, each with a centered
+#  header, an icon, the item's display name, and a list
+#  of stat / lore lines.
 #
 #  Keys
 #  ────
 #  title       (optional) Caption shown above the table
-#  layout      (optional) "rows" (default, Hypixel-style — one
-#              horizontal row per item) or "columns" (legacy,
-#              best for 2–4 side-by-side compares)
+#  layout      (optional) "table"   (default — grid)
+#                         "rows"    (legacy — one row per item)
+#                         "columns" (legacy — side-by-side compares)
+#  cols        (optional, table layout only) Cells per row.
+#              Default 2.
 #  columns     List of entries. Each entry has:
-#                header        Heading (e.g. "Pickaxe")
-#                item          Item ID from items.yml — renders the icon + tooltip
-#                description   List of stat / lore lines (Markdown allowed)
-#                              · Use Minecraft colour codes (&7, &6, &a …) freely
+#                header        Heading shown above the cell
+#                              (e.g. "Pickaxe")
+#                item          Item ID from items.yml — renders the
+#                              icon + tooltip
+#                description   List of stat / lore lines (Markdown
+#                              + Minecraft colour codes &7, &6, &a
+#                              all work)
+#  total       (optional, table layout only) Renders a final cell
+#              spanning the full width. Same fields as a column
+#              entry plus an optional `header` (defaults to "Total").
 #
 #  Optional entry key:
-#    label     Override the item's display name shown next to the icon
+#    label     Override the item's display name shown next to the
+#              icon
 #
 #  Override at include time:
 #    {% include stat-table.html id="..." layout="columns" %}
@@ -36,58 +45,60 @@
 # ── Pyroclastic toolset ────────────────────────────────
 pyroclastic_set:
   title: "Pyroclastic Set"
+  layout: table
+  cols: 2
   columns:
     - header: "Pickaxe"
       item: pyroclastic_pickaxe
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "&7Fortune V"
+        - "&7Efficiency IX"
+        - "&7Unbreaking IX"
+        - "&7Mending"
     - header: "Axe"
       item: pyroclastic_axe
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "&7Fortune V"
+        - "&7Efficiency IX"
+        - "&7Unbreaking IX"
+        - "&7Mending"
     - header: "Shovel"
       item: pyroclastic_shovel
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "&7Fortune V"
+        - "&7Efficiency IX"
+        - "&7Unbreaking IX"
+        - "&7Mending"
     - header: "Hoe"
       item: pyroclastic_hoe
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "&7Fortune V"
+        - "&7Efficiency IX"
+        - "&7Unbreaking IX"
+        - "&7Mending"
     - header: "Sword"
       item: pyroclastic_sword
       description:
-        - "Sharpness X"
-        - "Smite VI"
-        - "Bane of Arthropods VI"
-        - "Sweeping Edge III"
-        - "Fire Aspect II"
-        - "Looting V"
-        - "Unbreaking IX"
-        - "Mending"
+        - "&7Sharpness X"
+        - "&7Smite VI"
+        - "&7Bane of Arthropods VI"
+        - "&7Sweeping Edge III"
+        - "&7Fire Aspect II"
+        - "&7Looting V"
+        - "&7Unbreaking IX"
+        - "&7Mending"
     - header: "Bow"
       item: pyroclastic_bow
       description:
-        - "Power X"
-        - "Flame"
-        - "Infinity"
-        - "Unbreaking IX"
-        - "Mending"
+        - "&7Power X"
+        - "&7Flame"
+        - "&7Infinity"
+        - "&7Unbreaking IX"
+        - "&7Mending"
     - header: "Fishing Rod"
       item: pyroclastic_rod
       description:
-        - "Luck of the Sea V"
-        - "Lure V"
-        - "Unbreaking IX"
-        - "Mending"
+        - "&7Luck of the Sea V"
+        - "&7Lure V"
+        - "&7Unbreaking IX"
+        - "&7Mending"

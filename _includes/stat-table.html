@@ -8,31 +8,42 @@
   Optional include parameters:
     title="Override Title"   — replaces the table's default caption
     layout="rows"            — overrides the layout from stat_tables.yml
-                               (one of "rows" | "columns")
+                               (one of "table" | "rows" | "columns")
 
   ── Layouts ────────────────────────────────────────────
-    layout: rows     (default — mirrors Hypixel SkyBlock wiki style)
-        Each entry is a horizontal row:
-            [ icon ]  Name
-                      • stat 1
-                      • stat 2
-        Best for sets/lists with a few stat lines per item.
+    layout: table    (default — Hypixel SkyBlock wiki style)
+        Items are arranged in a grid of cells. Each cell has a
+        centered header at the top and an icon-left / stats-right
+        body below. Width is capped so the table never stretches
+        edge-to-edge on wide screens.
 
-    layout: columns  (legacy, also handy for side-by-side compares)
-        Each entry is a vertical column:
-            ┌────────┐
-            │ header │
-            │ [icon] │
-            │  name  │
-            │ • stat │
-            │ • stat │
-            └────────┘
-        Use when there are 2–4 entries you want to eye-line compare.
+            ┌──────────────────────┬──────────────────────┐
+            │       Pickaxe        │         Axe          │
+            ├──────────────────────┼──────────────────────┤
+            │ [icon] Pyroclastic… │ [icon] Pyroclastic… │
+            │        · stat 1     │        · stat 1      │
+            ├──────────────────────┴──────────────────────┤
+            │                  Total                       │
+            ├──────────────────────────────────────────────┤
+            │ [icon] Pyroclastic Set                       │
+            │        · summed stat                         │
+            └──────────────────────────────────────────────┘
+
+        Set `cols: 2|3|4` on the table to control columns.
+        Add an optional `total:` block to summarise the set.
+
+    layout: rows     (legacy Hypixel-rows variant)
+        Each entry is a horizontal row, full width.
+
+    layout: columns  (legacy)
+        Each entry is a vertical column. Best for 2-4 side-by-side
+        compares.
 {% endcomment %}
 
 {%- assign _t       = site.data.stat_tables[include.id] -%}
 {%- assign _title   = include.title  | default: _t.title -%}
-{%- assign _layout  = include.layout | default: _t.layout | default: "rows" -%}
+{%- assign _layout  = include.layout | default: _t.layout | default: "table" -%}
+{%- assign _cols    = _t.cols        | default: 2 -%}
 
 {%- if _t -%}
 <div class="stat-table-wrap stat-table-{{ _layout }}">
@@ -40,7 +51,75 @@
     <div class="stat-table-title">{{ _title }}</div>
   {%- endif -%}
 
-  {%- if _layout == "columns" -%}
+  {%- if _layout == "table" -%}
+    {%- comment -%} ── Hypixel-style grid layout ── {%- endcomment -%}
+    <div class="stat-table stat-table-grid" style="--st-cols:{{ _cols }}">
+      {%- for col in _t.columns -%}
+        {%- assign _item  = site.data.items[col.item] -%}
+        {%- assign _label = col.label | default: _item.name | default: col.header -%}
+        <div class="stat-cell">
+          {%- if col.header -%}
+            <div class="stat-cell-head">{{ col.header }}</div>
+          {%- endif -%}
+          <div class="stat-cell-body">
+            {%- if _item -%}
+              <div class="stat-cell-icon">
+                {% include item-slot.html item=_item size="result" %}
+              </div>
+            {%- endif -%}
+            <div class="stat-cell-info">
+              {%- if _label -%}
+                {%- if _item.link -%}
+                  <a href="{{ _item.link | relative_url }}" class="stat-cell-name">{{ _label }}</a>
+                {%- else -%}
+                  <span class="stat-cell-name">{{ _label }}</span>
+                {%- endif -%}
+              {%- endif -%}
+              {%- if col.description -%}
+                <ul class="stat-cell-desc">
+                  {%- for line in col.description -%}
+                    <li class="mc-text">{{ line }}</li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+
+      {%- if _t.total -%}
+        {%- assign _total_item = site.data.items[_t.total.item] -%}
+        {%- assign _total_label = _t.total.label | default: _total_item.name | default: "Total" -%}
+        <div class="stat-cell stat-cell-total">
+          <div class="stat-cell-head">{{ _t.total.header | default: "Total" }}</div>
+          <div class="stat-cell-body">
+            {%- if _total_item -%}
+              <div class="stat-cell-icon">
+                {% include item-slot.html item=_total_item size="result" %}
+              </div>
+            {%- endif -%}
+            <div class="stat-cell-info">
+              {%- if _total_label -%}
+                {%- if _total_item.link -%}
+                  <a href="{{ _total_item.link | relative_url }}" class="stat-cell-name">{{ _total_label }}</a>
+                {%- else -%}
+                  <span class="stat-cell-name">{{ _total_label }}</span>
+                {%- endif -%}
+              {%- endif -%}
+              {%- if _t.total.description -%}
+                <ul class="stat-cell-desc">
+                  {%- for line in _t.total.description -%}
+                    <li class="mc-text">{{ line }}</li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+
+  {%- elsif _layout == "columns" -%}
     {%- comment -%} ── Legacy columns layout ── {%- endcomment -%}
     <div class="stat-table stat-table-cols" style="--st-cols:{{ _t.columns | size }}">
       {%- for col in _t.columns -%}
@@ -76,7 +155,7 @@
     </div>
 
   {%- else -%}
-    {%- comment -%} ── Default rows layout (Hypixel-style) ── {%- endcomment -%}
+    {%- comment -%} ── Legacy rows layout ── {%- endcomment -%}
     <div class="stat-table stat-table-rows">
       {%- for col in _t.columns -%}
         {%- assign _item  = site.data.items[col.item] -%}

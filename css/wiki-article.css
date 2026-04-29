@@ -1117,14 +1117,19 @@
    Reusable comparison tables driven by _data/stat_tables.yml.
    See _includes/stat-table.html.
 
-   Two layouts:
-     · rows     (default, Hypixel-style) — one row per item, icon left,
-                stats stacked to the right. Best for sets/enchant lists.
-     · columns  (legacy)                 — one column per item, icon
-                on top, stats below. Best for 2–4 side-by-side compares.
+   Three layouts:
+     · table    (default, Hypixel-style) — grid of cells, each with a
+                centered header on top and icon-left / stats-right body
+                below. Optional Total cell spans the full width at the
+                bottom. Width is capped so the table doesn't stretch
+                edge-to-edge on wide viewports.
+     · rows     (legacy)  — one row per item, full width.
+     · columns  (legacy)  — one column per item, icon on top, stats
+                below. Best for 2–4 side-by-side compares.
 */
 .stat-table-wrap {
   margin: 1.5rem 0;
+  max-width: 720px;
   border: 1px solid var(--border, #2a2a30);
   border-radius: 8px;
   background: var(--surface-1, rgba(255,255,255,.02));
@@ -1141,6 +1146,110 @@
   padding: .75rem 1rem;
   background: var(--surface-2, rgba(0,0,0,.25));
   border-bottom: 1px solid var(--border, #2a2a30);
+}
+
+/* ── Hypixel-style grid layout (default) ──────────────────────────
+   Uses CSS-grid gap + a coloured grid background to draw the inner
+   cell separators. This avoids the per-cell border-right/last-child
+   gymnastics needed when nth-child() can't take a CSS variable. */
+.stat-table-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--st-cols, 2), minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border, #2a2a30);
+}
+
+.stat-cell {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-1, rgba(255,255,255,.02));
+}
+
+/* Total row spans the full width at the bottom of the grid */
+.stat-cell-total {
+  grid-column: 1 / -1;
+}
+
+/* Solo trailing cell (odd count) spans full width like the total row,
+   so a 7-item set in 2 cols ends with a clean full-width row instead
+   of a half-width orphan. */
+.stat-table-grid > .stat-cell:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.stat-cell-head {
+  background: var(--surface-2, rgba(0,0,0,.25));
+  padding: .5rem 1rem;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  color: var(--text, #e6e6ea);
+  border-bottom: 1px solid var(--border, #2a2a30);
+}
+
+.stat-cell-body {
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  padding: .85rem 1rem;
+  flex: 1;
+}
+
+.stat-cell-icon {
+  flex-shrink: 0;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stat-cell-icon .mc-result-slot {
+  margin: 0;
+}
+
+.stat-cell-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.stat-cell-name {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: .92rem;
+  color: var(--gold, #d9b066);
+  text-decoration: none;
+  margin-bottom: .35rem;
+  letter-spacing: .02em;
+}
+a.stat-cell-name:hover {
+  color: var(--teal, #6dd6c3);
+  text-decoration: none;
+}
+
+.stat-cell-desc {
+  list-style: disc;
+  padding: 0 0 0 1.1rem;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: .85rem;
+  color: var(--text, #e6e6ea);
+  line-height: 1.55;
+}
+.stat-cell-desc li {
+  padding: .05rem 0;
+}
+
+/* On narrow screens collapse to one column so cells stay readable */
+@media (max-width: 540px) {
+  .stat-table-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-table-grid > .stat-cell {
+    border-right: none;
+  }
 }
 
 /* ── Rows layout (default, Hypixel-style) ────────────── */
