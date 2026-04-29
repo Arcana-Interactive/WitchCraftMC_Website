@@ -91,8 +91,16 @@
    * The loop runs until no recognisable code remains, capped at 30
    * passes to defend against pathological input. A trailing `&r` is
    * inserted then stripped so each span gets cleanly terminated.
+   *
+   * Liquid + kramdown HTML-encodes `&` to `&amp;` when stat-table
+   * descriptions and other Liquid-emitted bodies pass through the
+   * markdown pipeline. Without normalising first, `&amp;7Fortune V`
+   * matches `&a` (green) and the text "mp;7Fortune V" leaks through.
+   * Decoding the entity here keeps `&7` codes working regardless of
+   * which pipeline produced the HTML.
    */
   function parseCodes(html) {
+    html = String(html).replace(/&amp;/g, '&');
     var n = 0;
     while (
       /&(?:[0-9a-jl-qs-vyz]|#[0-9a-fA-F]{6}|\$[0-9a-fA-F]{3})/.test(html)
