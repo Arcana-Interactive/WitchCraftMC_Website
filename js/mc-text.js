@@ -1,8 +1,14 @@
 /**
- * mc-text.js — Parses Minecraft colour codes inside .mc-text elements.
+ * mc-text.js — Parses Minecraft colour codes inside .mc-text elements
+ * and expands inline placeholder shortcodes inside wiki article bodies
+ * and infoboxes.
  *
- * Uses the same parseCodes logic as minetip.js so colours look identical
- * in tooltips and inline text. Also supports inline placeholder shortcodes:
+ * All string transformation is delegated to /js/lib/placeholders.js so
+ * the same logic can be exercised in Node tests; this file is the thin
+ * DOM-walking glue that calls those helpers and swaps the rewritten
+ * HTML back into the page.
+ *
+ * Inline placeholder shortcodes:
  *
  *   {tag_<name>}        — expands to a tag icon (see WIKI_TAGS).
  *                         Optional :shift offsets, e.g. {tag_legendary:-5}.
@@ -23,111 +29,17 @@
 (function () {
   'use strict';
 
-  var ESC = { '\\&': '&#38;', '<': '&#60;', '>': '&#62;' };
-
-  function esc(t) {
-    return t
-      .replace(/\\\\/g, '&#92;')
-      .replace(/\\&|[<>]/g, function (c) { return ESC[c]; });
-  }
-
-  function parseCodes(html) {
-    var n = 0;
-    while (
-      /&(?:[0-9a-jl-qs-vyz]|#[0-9a-fA-F]{6}|\$[0-9a-fA-F]{3})/.test(html)
-      && n++ < 30
-    ) {
-      html = html
-        .replace(
-          /&([0-9a-jl-qs-vyz])([\s\S]*?)(&r|$)/g,
-          '<span class="format-$1">$2</span>&r'
-        )
-        .replace(
-          /&(?:#([0-9a-fA-F]{6})|\$([0-9a-fA-F]{3}))([\s\S]*?)(&r|$)/g,
-          '<span style="color:#$1$2">$3</span>&r'
-        );
+  // Pull every pure helper from the shared module. Loaded as a separate
+  // <script> tag in the wiki layout, ahead of this file.
+  var P = window.WikiPlaceholders;
+  if (!P) {
+    // Fail loud-but-graceful: log so the missing script tag is obvious
+    // in devtools, then bail before we touch the DOM.
+    if (window.console && console.error) {
+      console.error('mc-text.js: window.WikiPlaceholders not found — ' +
+                    'is /js/lib/placeholders.js loaded before this file?');
     }
-    return html.replace(/&r/g, '');
-  }
-
-  function expandTagPlaceholders(html) {
-    if (!window.WIKI_TAGS) return html;
-    return html.replace(/\{tag_([a-zA-Z0-9_]+)(?::(-?[0-9.]+))?\}/g, function (m, key, shift) {
-      var src = window.WIKI_TAGS[key];
-      if (!src) return m;
-      var style = shift ? ' style="margin-left:' + shift + 'px"' : '';
-      return '<img src="' + src + '" alt="' + key + '" class="wiki-tag-icon"' + style + '>';
-    });
-  }
-
-  function buildItemTip(item) {
-    var tip = item.tooltip || '';
-    if (item.tags && item.tags.length) {
-      for (var i = 0; i < item.tags.length; i++) {
-        tip = tip ? tip + '/' + item.tags[i] : item.tags[i];
-      }
-    }
-    return tip;
-  }
-
-  function attrEsc(s) {
-    return String(s)
-      .replace(/&/g, '&amp;')
-      .replace(/"/g, '&quot;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
-  }
-
-  function buildItemSlotHTML(id) {
-    if (!window.WIKI_ITEMS) return null;
-    var item = window.WIKI_ITEMS[id];
-    if (!item) return null;
-    var tip = buildItemTip(item);
-    var altText = (item.name || id).replace(/&[0-9a-fA-Fk-orK-OR]/g, '');
-    var img = item.img
-      ? '<img src="' + attrEsc(item.img) + '" alt="' + attrEsc(altText) + '">'
-      : '';
-    var attrs =
-      ' title="' + attrEsc(item.name || id) + '"' +
-      ' data-minetip-text="' + attrEsc(tip) + '"';
-    if (item.link) {
-      return '<span class="invslot inline-invslot">' +
-             '<a href="' + attrEsc(item.link) + '" class="invslot-item invslot-link"' + attrs + '>' +
-             img + '</a></span>';
-    }
-    return '<span class="invslot inline-invslot">' +
-           '<span class="invslot-item"' + attrs + '>' +
-           img + '</span></span>';
-  }
-
-  function expandItemPlaceholders(html) {
-    return html.replace(/\{item:([a-zA-Z0-9_]+)\}/g, function (m, id) {
-      var slot = buildItemSlotHTML(id);
-      return slot || m;
-    });
-  }
-
-  /**
-   * Bare-id alias: turn {pyroclastic_pickaxe} into the same slot HTML
-   * as {item:pyroclastic_pickaxe}. Only fires when the braced string is
-   * a known item ID — anything else (e.g. {dropdown}, {tag_legendary},
-   * arbitrary placeholders, snippets of code) is left untouched so we
-   * never accidentally rewrite something the author meant literally.
-   *
-   * MUST run AFTER expandTagPlaceholders so {tag_xxx} matches its own
-   * pattern first; by that point the curly braces around tag tokens
-   * have been replaced with <img> tags and won't reach this regex.
-   */
-  function expandShortItemPlaceholders(html) {
-    if (!window.WIKI_ITEMS) return html;
-    return html.replace(/\{([a-zA-Z][a-zA-Z0-9_]*)\}/g, function (m, id) {
-      // Skip pseudo-markers handled elsewhere (the dropdown script
-      // runs before us, but be defensive in case ordering ever
-      // changes — these strings should never become item slots).
-      if (id === 'dropdown') return m;
-      var slot = buildItemSlotHTML(id);
-      return slot || m;
-    });
+    return;
   }
 
   /**
@@ -173,13 +85,11 @@
     while ((n = walker.nextNode())) batch.push(n);
 
     batch.forEach(function (node) {
-      var html = esc(node.nodeValue);
+      var html = P.esc(node.nodeValue);
       // Order matters: the explicit item: prefix consumes its own
       // braces first, then tag_ tokens, and finally the bare {id}
       // alias only matches what's left over.
-      html = expandItemPlaceholders(html);
-      html = expandTagPlaceholders(html);
-      html = expandShortItemPlaceholders(html);
+      html = P.expandAll(html, window.WIKI_ITEMS, window.WIKI_TAGS);
       // Re-decode the angle brackets we escaped above so legitimate
       // characters round-trip; { and } weren't touched.
       var span = document.createElement('span');
@@ -198,12 +108,10 @@
       // Allow {item:...}, {tag_...}, and the bare {<id>} alias inside
       // .mc-text too. Same ordering as processTextNodes — explicit
       // prefixes resolve first so they always win the race.
-      html = expandItemPlaceholders(html);
-      html = expandTagPlaceholders(html);
-      html = expandShortItemPlaceholders(html);
+      html = P.expandAll(html, window.WIKI_ITEMS, window.WIKI_TAGS);
       // Now apply colour codes. We don't double-escape — assume the
       // input is plain text + simple HTML emitted by Liquid.
-      el.innerHTML = parseCodes(html);
+      el.innerHTML = P.parseCodes(html);
       el.dataset.mcParsed = '1';
     });
   }
