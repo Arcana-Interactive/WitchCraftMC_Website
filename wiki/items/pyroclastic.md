@@ -17,6 +17,9 @@ Infobox:
   title: "Pyroclastic Set"
   image: "/img/icons/items/pyroclastic_pickaxe.png"
   Sections:
+    - heading: ""
+      rows:
+        - label: "{pyroclastic_pickaxe}{pyroclastic_axe}{pyroclastic_shovel}{pyroclastic_hoe}{pyroclastic_rod}{pyroclastic_sword}{pyroclastic_bow}"
     - heading: "Information"
       rows:
         - label: "<strong>Type</strong>"
@@ -35,13 +38,12 @@ Infobox:
           value: "Yes"
 ---
 
+
 The **Pyroclastic Tools** are a set of legendary tools obtained by crafting from Pyroclastic Cores and arcanium.
 
 ## Stats
 
-{% include stat-table.html id="pyroclastic_tools" %}
-
-{% include stat-table.html id="pyroclastic_combat" %}
+{% include stat-table.html id="pyroclastic_set" %}
 
 ## Obtaining
 

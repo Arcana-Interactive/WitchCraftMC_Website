@@ -43,5 +43,5 @@ Captain Saltspring is the captain of the Seacrab. A small ship at the [Docks](/w
 |:---:|:---|
 | First interaction | <span class="minefont"><span class="format-3">[NPC] Captain Saltspring</span> » Ahoy <span class="format-7">\<player\></span>!</span>|
 | | <span class="minefont"><span class="format-3">[NPC] Captain Saltspring</span> » I am Captain Saltspring.</span> | 
-| | <span class="minefont"><span class="format-3">[NPC] Captain Saltspring</span> » I'm the foremost privateer of the Wiccan Sea.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Captain Saltspring</span> » I'm the foremost privateer of the Whispering Sea.</span> |
 | | <span class="minefont"><span class="format-3">[NPC] Captain Saltspring</span> » Sell your mob drops to me!</span> |

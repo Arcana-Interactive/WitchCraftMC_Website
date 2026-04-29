@@ -70,16 +70,14 @@
     via the trade_list / preview blocks.
   {%- endcomment -%}
   {%- assign _tl_x   = shop.trade_list.x         | default: shop.grid_left | default: 5  -%}
-  {%- assign _tl_y   = shop.trade_list.y         | default: shop.grid_top  | default: 18 -%}
-  {%- assign _tl_sz  = shop.trade_list.slot_size | default: 20 -%}
+  {%- assign _tl_y   = shop.trade_list.y         | default: shop.grid_top  | default: 17 -%}
+  {%- assign _tl_sz  = shop.trade_list.slot_size | default: 18 -%}
   {%- assign _tl_n   = shop.trade_list.count     | default: 7  -%}
-  {%- assign _pv_y   = shop.preview.y            | default: 24 -%}
+  {%- assign _pv_y   = shop.preview.y            | default: 36 -%}
   {%- assign _pv_sz  = shop.preview.slot_size    | default: 18 -%}
   {%- assign _pv_i1  = shop.preview.input1_x     | default: 136 -%}
   {%- assign _pv_i2  = shop.preview.input2_x     | default: 162 -%}
-  {%- assign _pv_out = shop.preview.output_x     | default: 220 -%}
-  {%- assign _selected_idx = include.trade_index | default: 0 | plus: 0 -%}
-  {%- assign _selected     = shop.trades[_selected_idx] -%}
+  {%- assign _pv_out = shop.preview.output_x     | default: 219 -%}
 
 <div class="mc-gui mc-gui-textured mc-gui-villager"
      style="background-image:url('{{ shop.texture }}');
@@ -106,28 +104,10 @@
            style="top:calc(var(--tl-y) + {{ forloop.index0 }} * var(--tl-sz));">
         {%- if _t_in1 %}{% include item-slot.html item=_t_in1 %}{% endif -%}
         {%- if _t_in2 %}{% include item-slot.html item=_t_in2 %}{% endif -%}
-        <span class="villager-trade-arrow">&rarr;</span>
         {%- if _t_out %}{% include item-slot.html item=_t_out %}{% endif -%}
       </div>
     {%- endfor -%}
   </div>
-
-  {%- comment -%} Top-middle preview: input1, input2, output of selected trade {%- endcomment -%}
-  {%- if _selected -%}
-    {%- assign _sel_in1 = site.data.items[_selected.input1] -%}
-    {%- assign _sel_in2 = site.data.items[_selected.input2] -%}
-    {%- assign _sel_out = site.data.items[_selected.output] -%}
-    <div class="villager-preview-slot" style="top:var(--pv-y);left:var(--pv-i1);width:var(--pv-sz);height:var(--pv-sz);">
-      {%- if _sel_in1 %}{% include item-slot.html item=_sel_in1 %}{% endif -%}
-    </div>
-    <div class="villager-preview-slot" style="top:var(--pv-y);left:var(--pv-i2);width:var(--pv-sz);height:var(--pv-sz);">
-      {%- if _sel_in2 %}{% include item-slot.html item=_sel_in2 %}{% endif -%}
-    </div>
-    <div class="villager-preview-slot" style="top:var(--pv-y);left:var(--pv-out);width:var(--pv-sz);height:var(--pv-sz);">
-      {%- if _sel_out %}{% include item-slot.html item=_sel_out %}{% endif -%}
-    </div>
-  {%- endif -%}
-</div>
 
 {%- else -%}
   {%- comment -%} Chest GUI (default) {%- endcomment -%}
