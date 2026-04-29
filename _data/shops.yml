@@ -299,7 +299,6 @@ vote_trader:
   texture: "/img/icons/gui/villager.png"
   width: 512
   height: 256
-  grid_left: 7
   trades:
     - input1: vote_shards
       output: vote_key
