@@ -71,7 +71,11 @@
   {%- endcomment -%}
   {%- assign _tl_x   = shop.trade_list.x         | default: shop.grid_left | default: 5  -%}
   {%- assign _tl_y   = shop.trade_list.y         | default: shop.grid_top  | default: 17 -%}
-  {%- assign _tl_sz  = shop.trade_list.slot_size | default: 18 -%}
+  {%- comment -%}
+    --tl-sz controls the vertical pitch of trade rows. With trade_button.png
+    as the row backdrop, rows stack flush at its native height (20px).
+  {%- endcomment -%}
+  {%- assign _tl_sz  = shop.trade_list.slot_size | default: 20 -%}
   {%- assign _tl_n   = shop.trade_list.count     | default: 7  -%}
   {%- assign _pv_y   = shop.preview.y            | default: 36 -%}
   {%- assign _pv_sz  = shop.preview.slot_size    | default: 18 -%}
@@ -102,9 +106,9 @@
       {%- assign _t_out = site.data.items[trade.output] -%}
       <div class="villager-trade-row {% if forloop.index0 == _selected_idx %}active{% endif %}"
            style="top:calc(var(--tl-y) + {{ forloop.index0 }} * var(--tl-sz));">
-        {%- if _t_in1 %}{% include item-slot.html item=_t_in1 %}{% endif -%}
-        {%- if _t_in2 %}{% include item-slot.html item=_t_in2 %}{% endif -%}
-        {%- if _t_out %}{% include item-slot.html item=_t_out %}{% endif -%}
+        {%- if _t_in1 -%}<div class="tb-slot tb-input1">{% include item-slot.html item=_t_in1 %}</div>{%- endif -%}
+        {%- if _t_in2 -%}<div class="tb-slot tb-input2">{% include item-slot.html item=_t_in2 %}</div>{%- endif -%}
+        {%- if _t_out -%}<div class="tb-slot tb-output">{% include item-slot.html item=_t_out %}</div>{%- endif -%}
       </div>
     {%- endfor -%}
   </div>

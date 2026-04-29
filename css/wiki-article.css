@@ -696,13 +696,13 @@
 
 /* Inline icon next to any text — use class .wiki-icon in content */
 .wiki-icon {
-      width:16px;
-      height:16px;
+      width:24px;
+      height:24px;
       image-rendering:pixelated;
       image-rendering:crisp-edges;
       display:inline-block;
-      vertical-align:text-bottom;
-      margin-right:.2rem
+      vertical-align:middle;
+      margin-right:.25rem
 }
 
 /* Tag icons inline in article content

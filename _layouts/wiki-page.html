@@ -190,7 +190,7 @@
         {% endif %}
 
         {% comment %} ── Unified rows — supports all row types ── {% endcomment %}
-        {% assign _icon_sz = section.icon_size | default: 24 %}
+        {% assign _icon_sz = section.icon_size | default: 32 %}
         {% if section.rows %}
           {% for row in section.rows %}
             {% if row.image %}
