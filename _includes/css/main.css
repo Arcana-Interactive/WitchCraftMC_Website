@@ -354,17 +354,14 @@ header .intro-text .name {
 /* Server splash icon — large, square-ish hero image at the top of the home page */
 .splash-icon {
       width:auto;
-      height:260px;
+      height:380px;
       max-width:90vw;
-      object-fit:contain;
-      border-radius:12px;
-      filter:drop-shadow(0 6px 24px rgba(var(--violet-rgb),.35))
-             drop-shadow(0 2px 6px rgba(0,0,0,.45))
+      object-fit:contain
 }
 
 @media(max-width:767px) {
       .splash-icon{
-            height:180px
+            height:240px
       }
 }
 
