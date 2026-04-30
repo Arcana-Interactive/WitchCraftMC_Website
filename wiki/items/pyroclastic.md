@@ -17,9 +17,14 @@ Infobox:
   title: "Pyroclastic Set"
   image: "/img/icons/items/pyroclastic_pickaxe.png"
   Sections:
-    - heading: ""
-      rows:
-        - label: "{pyroclastic_pickaxe}{pyroclastic_axe}{pyroclastic_shovel}{pyroclastic_hoe}{pyroclastic_rod}{pyroclastic_sword}{pyroclastic_bow}"
+    - items:
+        - pyroclastic_pickaxe
+        - pyroclastic_axe
+        - pyroclastic_shovel
+        - pyroclastic_hoe
+        - pyroclastic_rod
+        - pyroclastic_sword
+        - pyroclastic_bow
     - heading: "Information"
       rows:
         - label: "<strong>Type</strong>"

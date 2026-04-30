@@ -189,6 +189,30 @@
           <div class="wiki-label infobox-section">{{ section.heading }}</div>
         {% endif %}
 
+        {% comment %} ── Items grid — centered, wraps to next line ──
+             Use this for showing a set of related items.
+
+             Each entry may be:
+               · a plain item id      (e.g.  - pyroclastic_pickaxe)
+               · a quoted braced form (e.g.  - "{pyroclastic_pickaxe}")
+               · a quoted plain id    (e.g.  - "pyroclastic_pickaxe")
+
+             Example YAML:
+               Sections:
+                 - items:
+                     - pyroclastic_pickaxe
+                     - pyroclastic_axe
+                     - pyroclastic_shovel
+        {% endcomment %}
+        {% if section.items %}
+          <div class="infobox-items">
+            {%- for it in section.items -%}
+              {%- assign _id = it | strip | remove: "{" | remove: "}" -%}
+              {{ "{" }}{{ _id }}{{ "}" }}
+            {%- endfor -%}
+          </div>
+        {% endif %}
+
         {% comment %} ── Unified rows — supports all row types ── {% endcomment %}
         {% assign _icon_sz = section.icon_size | default: 32 %}
         {% if section.rows %}

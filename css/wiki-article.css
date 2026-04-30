@@ -660,6 +660,29 @@
       padding:.25rem 0;
 }
 
+/* ── Centered, wrapping grid of item slots ──
+   Used by  Sections[*].items  in the YAML infobox to display
+   a set of related items. Slots are centered horizontally and
+   overflow onto the next line when they exceed the row width. */
+.infobox-items {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      gap:.25rem .35rem;
+      padding:.55rem .65rem;
+      border-bottom:1px solid rgba(255,255,255,.04)
+}
+
+.infobox-items .invslot,
+.infobox-items .mc-inline {
+      flex:0 0 auto
+}
+
+.infobox-items:last-child {
+      border-bottom:none
+}
+
 .info-link {
       display:flex;
       align-items:center;
