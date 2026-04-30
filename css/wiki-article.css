@@ -561,6 +561,8 @@
       display: flex;
       flex-direction:column;
       justify-content:center;
+      width:320px;
+      max-width:100%;
       margin:0 0 1.5rem 1.5rem;
       background:var(--surface-2);
       border:1px solid var(--border);
@@ -665,17 +667,21 @@
    a set of related items. Slots are centered horizontally and
    overflow onto the next line when they exceed the row width. */
 .infobox-items {
+      padding:.55rem 0;
+      border-bottom:1px solid rgba(255,255,255,.04)
+}
+
+.infobox-items-inner {
       display:flex;
       flex-wrap:wrap;
       justify-content:center;
       align-items:center;
-      gap:.25rem .35rem;
-      padding:.55rem .65rem;
-      border-bottom:1px solid rgba(255,255,255,.04)
+      gap:0;
+      max-width:calc(36px * 7);
+      margin:0 auto
 }
 
-.infobox-items .invslot,
-.infobox-items .mc-inline {
+.infobox-items .invslot {
       flex:0 0 auto
 }
 

@@ -205,13 +205,16 @@
                      - pyroclastic_shovel
         {% endcomment %}
         {% if section.items %}
-          {%- assign _lb = '{' -%}
-          {%- assign _rb = '}' -%}
           <div class="infobox-items">
-            {%- for it in section.items -%}
-              {%- assign _id = it | strip | remove: '{' | remove: '}' -%}
-              {{ _lb }}{{ _id }}{{ _rb }}
-            {%- endfor -%}
+            <div class="infobox-items-inner">
+              {%- for it in section.items -%}
+                {%- assign _id = it | strip | remove: '{' | remove: '}' -%}
+                {%- assign _item = site.data.items[_id] -%}
+                {%- if _item -%}
+                  {% include item-slot.html item=_item %}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
           </div>
         {% endif %}
 
