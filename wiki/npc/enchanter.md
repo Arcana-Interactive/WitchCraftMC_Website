@@ -8,7 +8,7 @@ see_also:
   - title: NPCs
     url: /wiki/categories/#npcs
   - title: Enchantments
-    url: /wiki/npc/enchantments
+    url: /wiki/enchantments/
 history:
   - version: "Survival Release"
     date: "Jan 1, 2026"

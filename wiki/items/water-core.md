@@ -28,7 +28,7 @@ Infobox:
           value: "Yes"
 ---
 
-The Aquatic Core is a Core that can be used in the crafting of the [Aquatic Set](/wiki/aquatic/).
+The Aquatic Core is a Core that can be used in the crafting of the Aquatic Set.
 
 ## Obtaining
 

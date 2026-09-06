@@ -39,7 +39,7 @@ Once you spawn in, here's what we recommend doing first:
 3. **Claim your land** - before building anything. See the [Claims](/wiki/claims/) guide.
 4. **Set a home** - use `/sethome` once you find your spot to be able to teleport back to your area!
 5. **Gain Money** - You should use `/rtp` to teleport to a Resource World and obtain resources. These can be sold to the various [Shops](/wiki/categories/#npcs) in [Spawn](/wiki/spawn/).
-6. **Rank Up** - You can use `/rankup` to teleport to the [Archwizard](/wiki/npc/archwizard/) in Spawn to rank up to the next [rank](/wiki/ranks/)!
+6. **Rank Up** - You can use `/rankup` to teleport to the [Archwizard](/wiki/npc/archwizard) in Spawn to rank up to the next [rank](/wiki/ranks/)!
 
 ## Useful Beginner Commands
 
@@ -53,7 +53,7 @@ Once you spawn in, here's what we recommend doing first:
 | `/spawn` | Teleport to the server spawn |
 | `/tpa <player>` | Request to teleport to another player |
 | `/bal` | Check your current balance |
-| `/rankup` | Teleport to the [Archwizard](/wiki/npc/archwizard/) so you can rank up to the next [rank](/wiki/ranks/).|
+| `/rankup` | Teleport to the [Archwizard](/wiki/npc/archwizard) so you can rank up to the next [rank](/wiki/ranks/).|
 
 For the full command list, see the [Commands & Plugins](/wiki/commands/) page.
 

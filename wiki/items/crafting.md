@@ -16,7 +16,7 @@ see_also:
 
 ## Overview
 
-WitchCraftMC keeps vanilla crafting intact but adds a handful of **custom recipes** and [items](/wiki/items/).
+WitchCraftMC keeps vanilla crafting intact but adds a handful of **custom recipes** and [items](/wiki/categories/#items).
 
 <div class="wiki-callout info">
   <span class="callout-icon"><i class="fas fa-info-circle"></i></span>

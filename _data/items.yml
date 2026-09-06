@@ -312,7 +312,7 @@ arcanium_block:
 water_core:
   name: Water Core
   img: /img/icons/items/water_core.png
-  link: /wiki/water-core/
+  link: /wiki/aquatic-core/
   tags:
     - "&8--"
     - "{tag_rare}{tag_core}"

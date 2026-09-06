@@ -28,7 +28,7 @@ history:
 Infobox:
   Enabled: true
   title: "Agent LemLem"
-  image: "/img/icons/npc/Body/Agent_LemLem.png"
+  image: "/img/icons/npc/Body/agent_lemlem.png"
   Sections:
 
     # ── Key-value rows ──
@@ -54,11 +54,11 @@ Infobox:
       icon_size: 24
       links:
         - text: "Archwizard"
-          link: "/wiki/npc/Archwizard"
-          icon: "/img/icons/npc/Heads/Archwizard.png"
+          link: "/wiki/npc/archwizard"
+          icon: "/img/icons/npc/Heads/archwizard.png"
         - text: "Enchanter"
-          link: "/wiki/npc/Enchanter"
-          icon: "/img/icons/npc/Heads/Enchanter.png"
+          link: "/wiki/npc/enchanter"
+          icon: "/img/icons/npc/Heads/enchanter.png"
 ---
 
 ## Overview

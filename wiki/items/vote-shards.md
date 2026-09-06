@@ -32,4 +32,4 @@ When a player [votes](/wiki/voting/) for the server on one of the [Vote Sites](h
 
 ## Usage
 
-5x Vote Shards can be traded at the [Vote Trader](/wiki/npc/vote-trader/) for a [Vote Key](/wiki/crate-keys#vote-key).
+5x Vote Shards can be traded at the [Vote Trader](/wiki/npc/vote-trader) for a [Vote Key](/wiki/crate-keys/#vote-key).
