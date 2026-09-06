@@ -6,7 +6,7 @@ permalink: /wiki/npc/steven-chairman
 categories: [NPCs, Spawn, Furniture]
 see_also:
   - title: NPCs
-    url: /wiki/npc/
+    url: /wiki/categories/#npcs
   - title: Furniture
     url: /wiki/furniture/
 history:

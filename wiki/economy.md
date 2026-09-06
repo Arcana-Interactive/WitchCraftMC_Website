@@ -26,7 +26,7 @@ To directly pay someone, players can use `/pay <player> <amount>` to send a give
 | [Matt Allurgy](/wiki/npc/matt-allurgy) | [The Town](/wiki/spawn#the-town) | Buys ores from players.|
 | [Farmer](/wiki/npc/farmer) | [The Farm](/wiki/spawn#the-farm) | Buys harvested crops from players.|
 | [Clara Chairman](/wiki/npc/clara-chairman) | [The Docks](/wiki/spawn#the-docks) | Buys wood from players.|
-| [Fish Merchant](/wiki/npc/fish-merchant) | [The Docks](/wiki/spawn#the-docks) | Buys fished up items.|
+| [Old Man Eyebrows](/wiki/npc/fish-merchant) | [The Docks](/wiki/spawn#the-docks) | Buys fished up items.|
 
 ## Auction House
 For selling items to other players, the Auction House is a great alternative. After ranking up to [Novice Rank](/wiki/ranks#novice), players can talk to the [Auctioneer](/wiki/npc/auctioneer) in [Spawn](/wiki/spawn#the-town) or use `/ah` to open the auction house.

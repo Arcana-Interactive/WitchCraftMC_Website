@@ -6,16 +6,16 @@
 #  don't need, and you're done.
 #
 #  File naming rule:  wiki/npc/npc-name.md
-#  URL naming rule:   permalink uses the NPC's exact display name
-#                     with spaces kept as-is (Jekyll handles them).
-#                     e.g.  /wiki/npc/Fish Merchant
+#  URL naming rule:   permalink uses lowercase words with hyphens.
+#                     Links must match the permalink exactly.
+#                     e.g.  /wiki/npc/npc-name
 # ═══════════════════════════════════════════════════════════════
 
 layout: wiki-page
 title: "NPC Name"                              # ← exact display name
 description: "One-line summary of what they do."  # ← shown under the page title
 
-permalink: /wiki/npc/NPC Name                  # ← match title exactly, spaces are fine
+permalink: /wiki/npc/npc-name                  # ← lowercase with hyphens
 
 categories: [NPCs, Spawn]                      # keep both; used for the sidebar category list
 

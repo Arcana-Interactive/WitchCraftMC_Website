@@ -47,7 +47,7 @@ Copy `wiki/npc/_template.md` and rename it `npc-name.md` (lowercase, hyphens).
 
 ```
 wiki/npc/fish-merchant.md   ← file name (lowercase-hyphens)
-permalink: /wiki/npc/Fish Merchant   ← exact display name, spaces are fine
+permalink: /wiki/npc/fish-merchant   ← lowercase with hyphens; links must match
 ```
 
 Fill in every field in the template. The comments explain each one.
@@ -58,7 +58,7 @@ Open `wiki/spawn.md` and add an entry to the infobox NPCs list:
 
 ```yaml
 - text: "NPC Name"
-  link: "/wiki/npc/NPC Name"
+  link: "/wiki/npc/npc-name"
   icon: "/img/icons/npc/Heads/NPC_Name.png"
 ```
 

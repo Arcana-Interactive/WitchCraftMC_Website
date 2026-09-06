@@ -6,7 +6,7 @@ permalink: /wiki/npc/enchanter
 categories: [NPCs, Spawn]
 see_also:
   - title: NPCs
-    url: /wiki/npc/
+    url: /wiki/categories/#npcs
   - title: Enchantments
     url: /wiki/npc/enchantments
 history:

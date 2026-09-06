@@ -25,7 +25,7 @@ There are several Crates that can be opened in [Spawn](/wiki/spawn/). Each requi
 | **Mining Key** | Traded from [Matt Allurgy](/wiki/npc/matt-allurgy) for Diamond Blocks |
 | **Farming Key** | Traded from the [Farmer](/wiki/npc/farmer) for Hay Bales |
 | **Combat Key** | Traded from [Captain Saltspring](/wiki/npc/captain-saltspring) for Nether Stars |
-| **Fishing Key** | Traded from the [Fish Merchant](/wiki/npc/fish-merchant) for Pufferfish |
+| **Fishing Key** | Traded from the [Old Man Eyebrows](/wiki/npc/fish-merchant) for Pufferfish |
 | **Forest Key** | Traded from [Clara Chairman](/wiki/npc/clara-chairman) for Blocks of Resin |
 
 Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, or use `/crates` to teleport. They can then head over to the related crate and right-click with the Key to open and receive a reward.

@@ -6,7 +6,7 @@ permalink: /wiki/npc/vote-trader
 categories: [NPCs, Spawn, Items]
 see_also:
   - title: NPCs
-    url: /wiki/npc/
+    url: /wiki/categories/#npcs
   - title: Voting
     url: /wiki/voting/
 history:

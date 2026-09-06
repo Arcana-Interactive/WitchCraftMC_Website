@@ -6,7 +6,7 @@ permalink: /wiki/npc/agent-lemlem
 categories: [NPCs, Spawn]
 see_also:
   - title: NPCs
-    url: /wiki/npc/
+    url: /wiki/categories/#npcs
 history:
   - version: "Survival Release"
     date: "Jan 1, 2026"

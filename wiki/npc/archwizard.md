@@ -6,7 +6,7 @@ permalink: /wiki/npc/archwizard
 categories: [NPCs, Spawn]
 see_also:
   - title: NPCs
-    url: /wiki/npc/
+    url: /wiki/categories/#npcs
   - title: In-Game Ranks
     url: /wiki/ranks/
 history:

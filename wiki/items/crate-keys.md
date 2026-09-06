@@ -66,7 +66,7 @@ Combat Keys can be obtained by trading 5x Nether Stars from [Captain Saltspring]
 
 ### Fishing Key
 
-Fishing Keys can be obtained by trading 64x Pufferfish from the [Fish Merchant](/wiki/npc/fish-merchant/) or from the [Vote Crate](/wiki/crates#vote-crate/).
+Fishing Keys can be obtained by trading 64x Pufferfish from the [Old Man Eyebrows](/wiki/npc/fish-merchant/) or from the [Vote Crate](/wiki/crates#vote-crate/).
 
 ---
 

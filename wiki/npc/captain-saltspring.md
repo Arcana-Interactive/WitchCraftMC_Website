@@ -6,7 +6,7 @@ permalink: /wiki/npc/captain-saltspring
 categories: [NPCs, Spawn, Economy]
 see_also:
   - title: NPCs
-    url: /wiki/npc/
+    url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
 history:

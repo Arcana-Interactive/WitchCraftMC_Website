@@ -120,7 +120,7 @@
     {%- assign _slot_size = shop.slot_size | default: 18 -%}
     {%- assign _grid_top  = shop.grid_top  | default: 18 -%}
     {%- assign _grid_left = shop.grid_left | default: 8 -%}
-<div class="mc-gui mc-gui-textured" style="background-image:url('{{ shop.texture }}');{% if shop.scale %}--gui-scale:{{ shop.scale }};{% endif %}{% if shop.width %}--gui-width:{{ shop.width }};{% endif %}{% if shop.height %}--gui-height:{{ shop.height }};{% endif %}">
+<div class="mc-gui mc-gui-textured" style="background-image:url('{{ shop.texture }}');{% if shop.scale %}--gui-scale:{{ shop.scale }};{% endif %}{% if shop.width %}--gui-width:{{ shop.width }};{% endif %}{% if shop.height %}--gui-height:{{ shop.height }};{% endif %}{% if shop.content_height %}--gui-content-height:{{ shop.content_height }};{% endif %}">
   {%- if _title -%}<div class="mc-gui-title" style="{% if shop.title_color %}color:{{ shop.title_color }};{% endif %}">{{ _title }}</div>{%- endif -%}
   <div class="mc-gui-grid mc-gui-grid-textured" style="--gui-rows:{{ _rows }};--gui-slot:{{ _slot_size }}px;--gui-grid-top:{{ _grid_top }}px;--gui-grid-left:{{ _grid_left }}px">
   {%- else -%}

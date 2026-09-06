@@ -377,8 +377,12 @@ a.invslot-link:hover::after {
  *    --gui-grid-left  Grid X offset (default 8px)
  */
 .mc-gui-textured {
+  --gui-effective-scale: var(--gui-scale, 1);
+  display: flex;
+  /* Transforms do not reserve layout space for the enlarged panel. */
+  margin-bottom: calc(1.25rem + var(--gui-content-height, var(--gui-height, 256)) * (var(--gui-effective-scale) - 1) * 1px);
   width: calc(var(--gui-width, 256) * 1px);
-  height: calc(var(--gui-height, 256) * 1px);
+  height: calc(var(--gui-content-height, var(--gui-height, 256)) * 1px);
   position: relative;
   background-size: calc(var(--gui-width, 256) * 1px) calc(var(--gui-height, 256) * 1px);
   background-repeat: no-repeat;
@@ -386,7 +390,7 @@ a.invslot-link:hover::after {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   overflow: hidden;
-  transform: scale(var(--gui-scale, 1));
+  transform: scale(var(--gui-effective-scale));
   transform-origin: top left;
 }
 
@@ -448,7 +452,7 @@ a.invslot-link:hover::after {
 
   /* Textured GUI: scale down to 0.75× on mobile */
   .mc-gui-textured {
-    transform: scale(calc(var(--gui-scale, 1) * 0.75));
+    --gui-effective-scale: calc(var(--gui-scale, 1) * 0.75);
   }
   .mc-gui-textured .mc-gui-title { font-size: .45rem; top: 4px; }
 }

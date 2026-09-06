@@ -149,6 +149,7 @@ fish_shop:
       item: tasks
 mob_shop:
   texture: "/img/icons/gui/shop.png"
+  content_height: 143 # Visible panel height; texture has transparent padding.
   rows: 6
   scale: 2
   grid_top: 26
@@ -163,6 +164,7 @@ mob_shop:
       item: tasks
 mob_shop_inventory:
   texture: "/img/icons/gui/shop_inventory.png"
+  content_height: 107
   rows: 4
   scale: 2
   grid_top: 26

@@ -48,20 +48,20 @@ Infobox:
         - text: "Clara Chairman"
           link: "/wiki/npc/clara-chairman"
           icon: "/img/icons/npc/Heads/clara_chairman.png"
-        - text: "Fish Merchant"
+        - text: "Old Man Eyebrows"
           link: "/wiki/npc/fish-merchant"
           icon: "/img/icons/npc/Heads/fish_merchant.png"
         - text: "Rex Timberland"
-          link: "/wiki/npc/Rex Timberland"
+          link: "/wiki/npc/rex-timberland"
           icon: "/img/icons/npc/Heads/rex_timberland.png"
         - text: "Archwizard"
-          link: "/wiki/npc/Archwizard"
+          link: "/wiki/npc/archwizard"
           icon: "/img/icons/npc/Heads/archwizard.png"
         - text: "Agent LemLem"
-          link: "/wiki/npc/Agent LemLem"
+          link: "/wiki/npc/agent-lemlem"
           icon: "/img/icons/npc/Heads/agent_lemlem.png"
         - text: "Enchanter"
-          link: "/wiki/npc/Enchanter"
+          link: "/wiki/npc/enchanter"
           icon: "/img/icons/npc/Heads/enchanter.png"
         - text: "Vote Trader"
           link: "/wiki/npc/vote-trader"
@@ -71,7 +71,7 @@ Infobox:
 
 The Spawn is the main hub on the server. It is sepparated from the Survival and Resource Worlds, and players cannot build or mine in it.
 
-The spawn contains various [NPCs](/wiki/npc) and Merchants that can be visited. Merchants can be talked to if a player wishes to sell or buy items for In-Game Money.
+The spawn contains various [NPCs](/wiki/categories/#npcs) and Merchants that can be visited. Merchants can be talked to if a player wishes to sell or buy items for In-Game Money.
 
 ## Locations
 
@@ -94,8 +94,8 @@ Coordinates: `-101, 69, 57`
 
 The docks are a great trading hub. It features:
 - The **Lumberyard** — A small area ran by [Clara Chairman](/wiki/npc/clara-chairman)
-- The **Fishmonger** — A shop run by [The Fish Merchant](/wiki/npc/fish-merchant) for players to sell their fished goods.
-- The **Seacrab** — This ship is captained by [The Mob Merchant](/wiki/npc/mob-merchant), and will let players sell their obtained mobdrops.
+- The **Fishmonger** — A shop run by [Old Man Eyebrows](/wiki/npc/fish-merchant) for players to sell their fished goods.
+- The **Seacrab** — This ship is captained by [Captain Saltspring](/wiki/npc/captain-saltspring), and will let players sell their obtained mobdrops.
 
 ### The Farm
 

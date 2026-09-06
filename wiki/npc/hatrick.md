@@ -6,7 +6,7 @@ permalink: /wiki/npc/hatrick
 categories: [NPCs, Spawn, Cosmetic]
 see_also:
   - title: NPCs
-    url: /wiki/npc/
+    url: /wiki/categories/#npcs
   - title: Cosmetics
     url: /wiki/cosmetics/
 history:
