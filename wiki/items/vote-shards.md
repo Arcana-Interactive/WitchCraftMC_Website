@@ -28,7 +28,7 @@ Infobox:
           value: "Yes"
 ---
 
-When a player [votes](/wiki/voting/) for the server on one of the [Vote Sites](https://www.witchcraftmc.com/#votes), they will receive 1x Vote Shards per vote.
+When a player [votes](/wiki/voting/) for the server on one of the [Vote Sites](/wiki/voting/#vote-sites), they will receive 1x Vote Shards per vote.
 
 ## Usage
 

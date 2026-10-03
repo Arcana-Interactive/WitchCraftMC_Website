@@ -1028,42 +1028,6 @@ footer .subtitle {
 }
 
 /*****************************
-*       VOTE BUTTONS         *
-******************************/
-
-.voteBox-Wrapper {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:.5rem
-}
-
-.voteBox {
-      display:block;
-      width:fit-content;
-      padding:.7rem 2rem;
-      background:rgba(var(--violet-rgb),.15);
-      border:1px solid rgba(var(--violet-rgb),.3);
-      border-radius:var(--radius);
-      transition:all .3s ease;
-      text-decoration:none;
-      color:var(--violet-soft);
-      font-family:var(--font-body);
-      font-weight:600
-}
-
-.voteBox:hover {
-      background:rgba(var(--violet-rgb),.25);
-      border-color:var(--violet);
-      text-decoration:none;
-      color:#fff
-}
-
-.voteBox strong {
-      color:inherit
-}
-
-/*****************************
 *     DECORATIVE STARS       *
 ******************************/
 

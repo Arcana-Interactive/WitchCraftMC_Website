@@ -831,6 +831,39 @@
       font-size:.7rem
 }
 
+/* ── VOTE SITE BUTTONS (wiki/voting.md) ── */
+.vote-sites {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+      gap:.6rem;
+      margin:1.25rem 0 1.75rem
+}
+
+.wiki-content a.vote-site {
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+      padding:.8rem 1rem;
+      background:rgba(var(--violet-rgb),.15);
+      border:1px solid rgba(var(--violet-rgb),.3);
+      border-radius:var(--radius);
+      color:var(--violet-soft);
+      font-weight:600;
+      transition:background .15s,border-color .15s,color .15s
+}
+
+.wiki-content a.vote-site:hover,
+.wiki-content a.vote-site:active {
+      background:rgba(var(--violet-rgb),.25);
+      border-color:var(--violet);
+      color:#fff
+}
+
+/* Push the external-link arrow to the right edge of the button */
+.wiki-content a.vote-site::after {
+      margin-left:auto
+}
+
 /* ── PAGE HISTORY MODULE ── */
 .wiki-history {
       clear:right;

@@ -22,6 +22,12 @@
 
     <!-- Deep-link: open a portfolio modal if the URL hash matches one on load or navigation -->
     <script>
+      // The vote sites moved from a pop-up to the wiki's Voting page.
+      // Old links (witchcraftmc.com/#votes, e.g. in Discord or in-game) are sent there instead.
+      if (window.location.hash === '#votes') {
+        window.location.replace('/wiki/voting/#vote-sites');
+      }
+
       function tryOpenModal(hash) {
         if (!hash) return;
         var $el = $(hash);

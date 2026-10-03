@@ -1,5 +1,7 @@
 <!-- portfolio Modals -->
+<!-- Only posts with a modal-id get a pop-up; the others are plain links on the signpost -->
 {% for post in site.posts %}
+{% if post.modal-id %}
 <div class="portfolio-modal modal fade" id="{{ post.modal-id }}" tabindex="-1" role="dialog"
   aria-hidden="true">
   <div class="modal-content">
@@ -47,4 +49,5 @@
     </div>
   </div>
 </div>
+{% endif %}
 {% endfor %}

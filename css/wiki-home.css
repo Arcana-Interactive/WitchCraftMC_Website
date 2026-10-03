@@ -303,6 +303,11 @@
       color:#3498db
 }
 
+.ic-vote {
+      background:rgba(232,67,147,.12);
+      color:#e84393
+}
+
 .no-results {
       display:none;
       text-align:center;
