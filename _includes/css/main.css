@@ -356,7 +356,10 @@ header .intro-text .name {
       width:auto;
       height:380px;
       max-width:90vw;
-      object-fit:contain
+      object-fit:contain;
+      /* The logo artwork is drawn off-centre in icon.png (its middle is at 52.4% of the width), */
+      /* so nudge it left to line up with the page centre, the signpost pole and the About heading */
+      transform:translateX(-2.41%)
 }
 
 @media(max-width:767px) {
@@ -408,7 +411,11 @@ section h2 {
 ******************************/
 
 #portfolio {
-      background:var(--bg)
+      background:var(--bg);
+      /* No bottom padding, so the signpost pole stands on the bottom edge of the section */
+      padding-bottom:0;
+      /* Clip the signpost glow where the pole meets that edge */
+      overflow:hidden
 }
 
 #portfolio .portfolio-item {
@@ -509,7 +516,10 @@ section h2 {
       /* On short, wide screens (e.g. phone in landscape) shrink so the whole signpost fits on screen */
       /* 1.2667 = image aspect ratio (1900 / 1500) */
       max-width:min(900px, max(320px, calc((100vh - 80px) * 1.2667)));
-      margin:0 auto
+      margin:0 auto;
+      /* The pole is drawn off-centre in MainPageButtons.png (its middle is at 48.2% of the width), */
+      /* so nudge the whole signpost right to put the pole on the page centre, under the logo */
+      transform:translateX(1.82%)
 }
 
 .signpost .signpost-image {
