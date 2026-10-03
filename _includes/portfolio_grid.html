@@ -2,22 +2,31 @@
 <section id="portfolio">
   <div class="container">
     <!--
-      Signpost image with one clickable area per sign.
-      Each link pulls its target from the matching post in _posts/,
-      and is positioned over its sign by the .sign-<caption> classes
-      in css/main.css (PAGES SIGNPOST section).
+      Signpost with one clickable sign per page.
+      Each link pulls its target from the matching post in _posts/.
+
+      Desktop / tablet: the full signpost image is shown, and each link is
+      positioned over its sign by the .sign-<caption> classes in css/main.css.
+
+      Phones: the full image is hidden and each link shows its own sign
+      (img/signs/<caption>.png) instead, stacked in one column.
+
+      All images use loading="lazy", so the hidden ones are never downloaded.
+      ontouchstart="" is needed for iOS Safari to show the tap (:active) effect.
     -->
-    <div class="signpost">
-      <img src="img/MainPageButtons.png" class="signpost-image" alt="Signpost with signs for Vote Sites, Store, Rules and Wiki">
+    <div class="signpost" ontouchstart="">
+      <img src="img/MainPageButtons.png" class="signpost-image" width="1900" height="1500" loading="lazy" alt="Signpost with signs for Vote Sites, Store, Rules and Wiki">
 
       {% for post in site.posts %}
         {% assign sign-class = post.caption | slugify %}
         {% if post.modal-id %}
           <a href="#{{ post.modal-id }}" class="signpost-link sign-{{ sign-class }}" data-toggle="modal" aria-label="{{ post.caption }}">
+            <img src="img/signs/{{ sign-class }}.png" class="signpost-sign" width="720" height="494" loading="lazy" alt="">
             <span class="sr-only">{{ post.caption }}</span>
           </a>
         {% else %}
           <a href="{{ post.redirect }}" class="signpost-link sign-{{ sign-class }}" aria-label="{{ post.caption }}">
+            <img src="img/signs/{{ sign-class }}.png" class="signpost-sign" width="720" height="494" loading="lazy" alt="">
             <span class="sr-only">{{ post.caption }}</span>
           </a>
         {% endif %}

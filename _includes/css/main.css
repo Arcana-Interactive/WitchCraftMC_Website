@@ -364,7 +364,11 @@ header .intro-text .name {
 
 @media(max-width:767px) {
       .splash-icon{
-            height:240px
+            height:240px;
+            /* Scale with the screen width on phones, so the logo artwork fills about 80% of the width. */
+            /* Never larger than the desktop size, and never taller than the screen (phone held sideways). */
+            /* The line above is the fallback for old browsers without min() support */
+            height:min(88vw, 380px, calc(100vh - 140px))
       }
 }
 
@@ -541,9 +545,15 @@ section h2 {
 }
 
 .signpost .signpost-link:hover,
-.signpost .signpost-link:focus-visible {
+.signpost .signpost-link:focus-visible,
+.signpost .signpost-link:active {
       backdrop-filter:brightness(1.2) saturate(1.15);
       outline:none
+}
+
+/* ── Single sign images, only used by the stacked phone layout below ── */
+.signpost .signpost-sign {
+      display:none
 }
 
 /* ── Sign positions (percent of MainPageButtons.png, 1900×1500) ── */
@@ -573,6 +583,63 @@ section h2 {
       top:61%;
       width:36.84%;
       height:31.33%
+}
+
+/* ── Phones: the signs stacked in one column instead of the full signpost ── */
+/* Also used on phones held sideways (touch screen with a short height) */
+@media (max-width:767px), (hover:none) and (max-height:500px) {
+      #portfolio{
+            /* Normal section padding again, since no pole stands on the bottom edge here */
+            padding-top:60px;
+            padding-bottom:60px
+      }
+      .signpost{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:18px;
+            max-width:400px;
+            transform:none
+      }
+      .signpost .signpost-image{
+            display:none
+      }
+      .signpost .signpost-link{
+            position:static;
+            width:100%;
+            height:auto;
+            clip-path:none
+      }
+      .signpost .signpost-link:hover,
+      .signpost .signpost-link:focus-visible,
+      .signpost .signpost-link:active{
+            backdrop-filter:none
+      }
+      .signpost .signpost-sign{
+            display:block;
+            width:100%;
+            height:auto;
+            filter:drop-shadow(0 0 1px rgba(221,216,232,.55)) drop-shadow(0 0 6px rgba(var(--violet-rgb),.3));
+            transition:transform .15s,filter .15s
+      }
+      /* Tap / hover feedback: the sign lights up and presses in slightly */
+      .signpost .signpost-link:hover .signpost-sign,
+      .signpost .signpost-link:focus-visible .signpost-sign,
+      .signpost .signpost-link:active .signpost-sign{
+            filter:brightness(1.15) drop-shadow(0 0 1px rgba(221,216,232,.55)) drop-shadow(0 0 10px rgba(var(--violet-rgb),.5))
+      }
+      .signpost .signpost-link:active .signpost-sign{
+            transform:scale(.97)
+      }
+}
+
+/* ── Phones held sideways: two signs per row, so each sign doesn't fill the whole screen ── */
+@media (hover:none) and (max-height:500px) and (min-width:568px) {
+      .signpost{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            max-width:640px
+      }
 }
 
 /*****************************
