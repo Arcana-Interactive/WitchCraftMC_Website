@@ -499,6 +499,73 @@ section h2 {
 }
 
 /*****************************
+*      PAGES SIGNPOST        *
+******************************/
+
+/* ── Signpost wrapper (links are positioned relative to this) ── */
+.signpost {
+      position:relative;
+      max-width:900px;
+      /* On short, wide screens (e.g. phone in landscape) shrink so the whole signpost fits on screen */
+      /* 1.2667 = image aspect ratio (1900 / 1500) */
+      max-width:min(900px, max(320px, calc((100vh - 80px) * 1.2667)));
+      margin:0 auto
+}
+
+.signpost .signpost-image {
+      display:block;
+      width:100%;
+      height:auto;
+      /* Soft light outline so the black chains stand out on the dark background */
+      filter:drop-shadow(0 0 1px rgba(221,216,232,.55)) drop-shadow(0 0 6px rgba(var(--violet-rgb),.3))
+}
+
+/* ── Clickable sign areas ── */
+.signpost .signpost-link {
+      position:absolute;
+      display:block;
+      border-radius:4% 4% 0 0;
+      /* Trim the bottom corners to follow the notched sign shape */
+      clip-path:polygon(0 0,100% 0,100% 72%,86% 100%,14% 100%,0 72%);
+      transition:backdrop-filter .25s
+}
+
+.signpost .signpost-link:hover,
+.signpost .signpost-link:focus-visible {
+      backdrop-filter:brightness(1.2) saturate(1.15);
+      outline:none
+}
+
+/* ── Sign positions (percent of MainPageButtons.png, 1900×1500) ── */
+.signpost .sign-vote-sites {
+      left:4.47%;
+      top:15.47%;
+      width:36.84%;
+      height:31.2%
+}
+
+.signpost .sign-store {
+      left:53.79%;
+      top:13.8%;
+      width:37.26%;
+      height:31%
+}
+
+.signpost .sign-rules {
+      left:5.79%;
+      top:57.47%;
+      width:37.26%;
+      height:31.87%
+}
+
+.signpost .sign-wiki {
+      left:52.63%;
+      top:61%;
+      width:36.84%;
+      height:31.33%
+}
+
+/*****************************
 *       ABOUT SECTION        *
 ******************************/
 

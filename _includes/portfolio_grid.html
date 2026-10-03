@@ -1,34 +1,32 @@
 <!-- portfolio Grid Section -->
 <section id="portfolio">
-  <div class="container portfolio-flex-grid">
+  <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>Pages<br></h2>
       </div>
     </div>
-    <div class="portfolio-flex-row">
+
+    <!--
+      Signpost image with one clickable area per sign.
+      Each link pulls its target from the matching post in _posts/,
+      and is positioned over its sign by the .sign-<caption> classes
+      in css/main.css (PAGES SIGNPOST section).
+    -->
+    <div class="signpost">
+      <img src="img/MainPageButtons.png" class="signpost-image" alt="Signpost with signs for Vote Sites, Store, Rules and Wiki">
+
       {% for post in site.posts %}
-      <div class="portfolio-flex-item portfolio-item">
+        {% assign sign-class = post.caption | slugify %}
         {% if post.modal-id %}
-          <a href="#{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-              <div class="caption-content">
-                <h3>{{ post.caption }}</h3>
-              </div>
-            </div>
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive rounded" alt="{{ post.alt }}">
+          <a href="#{{ post.modal-id }}" class="signpost-link sign-{{ sign-class }}" data-toggle="modal" aria-label="{{ post.caption }}">
+            <span class="sr-only">{{ post.caption }}</span>
           </a>
         {% else %}
-          <a href="{{ post.redirect }}" class="portfolio-link">
-            <div class="caption">
-              <div class="caption-content">
-                <h3>{{ post.caption }}</h3>
-              </div>
-            </div>
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive rounded" alt="{{ post.alt }}">
+          <a href="{{ post.redirect }}" class="signpost-link sign-{{ sign-class }}" aria-label="{{ post.caption }}">
+            <span class="sr-only">{{ post.caption }}</span>
           </a>
         {% endif %}
-      </div>
       {% endfor %}
     </div>
   </div>
