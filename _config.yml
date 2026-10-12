@@ -39,8 +39,8 @@ social:
     url: http://discord.gg/5gHJtxrMZS
   - title: youtube
     url: https://youtube.com/@witchcraftserver
-  - title: tiktok
-    url: https://www.tiktok.com/@thewitchcraftserver
+  #- title: tiktok
+  #  url: https://www.tiktok.com/@thewitchcraftserver
   - title: twitch
     url: https://www.twitch.tv/witchcraftmc
   - title: kick
@@ -48,7 +48,7 @@ social:
   - title: instagram
     url: https://www.instagram.com/witchcraftserver/
   - title: twitter
-    url: https://x.com/WitchCraftMC
+    url: https://x.com/TheWitchCraftMC
     
 # Build settings
 markdown: kramdown
