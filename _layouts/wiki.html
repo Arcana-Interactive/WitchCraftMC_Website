@@ -173,7 +173,6 @@
 <script>
   // ── CLOCK ──────────────────────────────────────
   (function(){
-    var SEASONS = ['Early Spring','Spring','Late Spring','Early Summer','Summer','Late Summer','Early Autumn','Autumn','Late Autumn','Early Winter','Winter','Late Winter'];
     function ordinal(n){var s=['th','st','nd','rd'],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0]);}
     function pad(n){return String(n).padStart(2,'0');}
     function tick(){
@@ -182,8 +181,6 @@
       var ampm=h>=12?'PM':'AM';
       var h12=h%12||12;
       document.getElementById('clockTime').textContent=h12+':'+pad(m)+' '+ampm;
-      document.getElementById('clockDate').textContent=
-        ordinal(now.getDate())+' of '+SEASONS[now.getMonth()]+', '+now.getFullYear();
     }
     tick();
     setInterval(tick,1000);

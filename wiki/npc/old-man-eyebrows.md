@@ -2,17 +2,17 @@
 layout: wiki-page
 title: Old Man Eyebrows
 description: "Sell your catch for money!"
-permalink: /wiki/npc/fish-merchant
+permalink: /wiki/npc/old-man-eyebrows
 categories: [NPCs, Spawn, Economy]
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Old Man Eyebrows added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Old Man Eyebrows added to Spawn."
 
 Infobox:
   Enabled: true

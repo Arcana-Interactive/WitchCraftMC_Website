@@ -44,6 +44,6 @@ Clara Chairman is an NPC that serves as the Lumber Merchant at the [Docks](/wiki
 | | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » I am the lumberjack.</span> | 
 | | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » You can sell your wood to me!</span> |
 
-## Trivia
+<!--## Trivia
 
-* Clara Chairman is the sister of the Furniture Merchant, [Steven chairman](/wiki/npc/steven-chairman)
+* Clara Chairman is the sister of the Furniture Merchant, [Steven chairman](/wiki/npc/steven-chairman)-->

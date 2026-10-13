@@ -4,7 +4,7 @@ title: Pyroclastic Core
 description: "The Pyroclastic Core."
 permalink: /wiki/pyroclastic-core/
 toc: true
-categories: [Items, Cores, Legendary Items]
+categories: [Items]
 Infobox:
   Enabled: true
   title: "Pyroclastic Core"
@@ -17,7 +17,7 @@ Infobox:
         - label: "<strong>Rarity</strong>"
           value: "Legendary"
         - label: "<strong>Obtained from</strong>"
-          value: "Crafting"
+          value: "Pyrite Crate"
     - heading: "Properties"
       rows:
         - label: "<strong>Enchantable</strong>"
@@ -28,7 +28,12 @@ Infobox:
           value: "Yes"
 ---
 
-The Pyroclastic Core is a Core that can be used in the crafting of the [Pyroclastic Set](/wiki/pyroclastic/).
+<div class="wiki-callout warning">
+  <span class="callout-icon"><i class="fas fa-triangle-exclamation"></i></span>
+  <div>Custom Items are in beta and may change.</div>
+</div>
+
+The Pyroclastic Core is an item that can be used in the crafting of [Pyroclastic](/wiki/pyroclastic/) Items.
 
 ## Obtaining
 

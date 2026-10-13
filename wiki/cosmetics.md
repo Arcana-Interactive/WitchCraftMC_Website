@@ -23,16 +23,21 @@ On the rare occassion of a [Season Reset](/wiki/worlds#seasons--world-resets), c
 
 | Type | Information |
 |:---:|:---|
-| **Hats** | Cosmetics appear on player's head. Players with [Quartz Rank](/wiki/store-ranks#quartz) can also use `/hat` to equip any held item onto their head.|
+| **Hats** | Cosmetics appear on player's head. Players with [Quartz Rank](/wiki/store-ranks#quartz) can also use `/hat` to equip any held item onto their head, though those replace helmets.|
 | **Backpacks** | Cosmetics appear on the back of the player.|
 | **Hand Items** |Cosmetics appear in the player's offhand slot.|
 | **Balloons** | Cosmetics appear floating above the player.|
 
 ## How to obtain
 
-Cosmetics can be purchased from [Hatrick](/wiki/npc/hatrick) in Spawn. Some Cosmetics may be unlocked through progression, recipes or limited-time events.
+<div class="wiki-callout info">
+  <span class="callout-icon"><i class="fas fa-circle-info"></i></span>
+  <div>Cosmetics are a WIP feature, and more info will release.</div>
+</div>
 
-## List of Cosmetics
+Cosmetics can be purchased from [Hatrick](/wiki/npc/hatrick) in [**Spawn**](/wiki/spawn). Some Cosmetics may be unlocked through progression, recipes or limited-time events.
+
+<!-- ## List of Cosmetics
 
 ### Hats
 
@@ -64,4 +69,4 @@ Cosmetics can be purchased from [Hatrick](/wiki/npc/hatrick) in Spawn. Some Cosm
 | Cosmetic | Name | How to Unlock |
 |:---:|:---:|:---:|
 | image | Garbage Truck | Purchased from [Hatrick](/wiki/npc/hatrick) for `$10,000` |
-| image | Kite | Purchased from [Hatrick](/wiki/npc/hatrick) for `$10,000` |
+| image | Kite | Purchased from [Hatrick](/wiki/npc/hatrick) for `$10,000` | -->

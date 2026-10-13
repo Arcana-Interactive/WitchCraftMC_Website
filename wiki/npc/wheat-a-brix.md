@@ -1,18 +1,18 @@
 ---
 layout: wiki-page
-title: Farmer
+title: Wheat A. Brix
 description: "Sell crops for money!"
-permalink: /wiki/npc/farmer
+permalink: /wiki/npc/wheat-a-brix
 categories: [NPCs, Spawn, Economy]
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Farmer added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Farmer added to Spawn."
 
 Infobox:
   Enabled: true

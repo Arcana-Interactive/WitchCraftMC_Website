@@ -13,11 +13,17 @@ see_also:
   - title: Crafting & Items
     url: /wiki/crafting/
 ---
-WitchCraftMC has several pieces of furniture. These can be crafted once a player unlocks their respective recipe. Once crafted, furniture can be placed as decoration around players' bases.
 
-Recipes can be unlocked by talking to [Steven Chairman](/wiki/npc/steven-chairman) in [**Spawn**](/wiki/spawn), where various recipes are sold.
+<div class="wiki-callout info">
+  <span class="callout-icon"><i class="fas fa-circle-info"></i></span>
+  <div>Furniture is an upcoming feature.</div>
+</div>
 
-## How to Unlock Recipes
+Furniture can be crafted once a player unlocks a piece's respective recipe. Once crafted, furniture can be placed as decoration around a player's base.
+
+Recipes can be unlocked by talking to [Steven Chairman](/wiki/npc/steven-chairman) in [**Spawn**](/wiki/spawn), or by completing challenges.
+
+<!--## How to Unlock Recipes
 
 | Cosmetic | Name | How to Unlock |
 |:---:|:---:|:---:|
@@ -42,4 +48,4 @@ Recipes can be unlocked by talking to [Steven Chairman](/wiki/npc/steven-chairma
 | image | Minecart with Redstone | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
 | image | Minecart with Emeralds | Purchased from [Steven Chairman](/wiki/npc/steven-chairman) for `$10,000` |
 
-## Recipes
+## Recipes -->

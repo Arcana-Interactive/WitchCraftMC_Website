@@ -12,11 +12,11 @@ see_also:
     url: /wiki/ranks/
 ---
 
-The Staff Team is here to help the playerbase on WitchCraftMC and each role has distinct purposes and responsibilities.
+The Staff Team is here to help the playerbase on the server, and each role has distinct purposes and responsibilities.
 
 ## How to Apply for Staff
 
-If you wish to join the staff team, you can head over to our #support channel on discord and open a Staff Application ticket.
+If you wish to join the staff team, you can head over to our **#support** channel on discord and open a Staff Application ticket.
 
 1. Remember to fill out the application honestly! We can tell if applications are exaggerated.
 2. Applications are reviewed by our team as quickly as possible. You'll hear back within **1–2 weeks**.
@@ -68,7 +68,7 @@ Application slots for these roles open much rarer than for staff.
 
 ### Developer
 
-Developers are tasked with managing and developing custom plugins for WitchCraftMC.
+Developers are tasked with managing and developing custom plugins for the server.
 
 <!--
 ### Builder
@@ -78,4 +78,8 @@ Builders build structures and areas for the server.
 ### Artist
 
 Artists design textures and icons.
+
+### Creator
+
+Creators are content creators (Youtube, Twitch) that are affiliated with the server.
 -->

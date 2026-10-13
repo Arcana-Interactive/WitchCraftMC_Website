@@ -28,7 +28,7 @@ Infobox:
           value: "Yes"
 ---
 
-When a player [votes](/wiki/voting/) for the server on one of the [Vote Sites](/wiki/voting/#vote-sites), they will receive 1x Vote Shards per vote.
+Vote Shards can be obtained by voting or from [Vote Parties](/wiki/voting/#vote-parties). Players receive 1x Vote Shard per [vote](/wiki/voting/) on one of the [Vote Sites](/wiki/voting/#vote-sites).
 
 ## Usage
 

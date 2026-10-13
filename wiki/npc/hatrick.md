@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Cosmetics
     url: /wiki/cosmetics/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Hatrick added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Hatrick added to Spawn."
 
 Infobox:
   Enabled: true
@@ -32,12 +32,17 @@ Infobox:
           value: "<strong>XYZ:</strong> <code>-12 69 26</code></strong>"
 ---
 
+<div class="wiki-callout info">
+  <span class="callout-icon"><i class="fas fa-circle-info"></i></span>
+  <div>Cosmetics are a WIP feature, and more info will release.</div>
+</div>
+
 Hatrick is an NPC that serves as the resident Cosmeticist in the [Spawn Town](/wiki/spawn#the-town). Players can purchase visual [cosmetics](/wiki/cosmetics) here.
 
 ## Interface
 {% include shop-gui.html id="cosmetics_shop" %}
 
-## List of Cosmetics
+<!-- ## List of Cosmetics
 
 ### Hats
 
@@ -69,12 +74,15 @@ Hatrick is an NPC that serves as the resident Cosmeticist in the [Spawn Town](/w
 | Cosmetic | Name | How to Unlock |
 |:---:|:---:|:---:|
 | image | Garbage Truck | `$10,000` |
-| image | Kite | `$10,000` |
+| image | Kite | `$10,000` | -->
 
 ## Dialogue
 
+<!-- Put this in the column next to the first line: First interaction-->
+
 | Condition | Dialogue |
 |:---:|:---|
-| First interaction | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » I am Hatrick, the Cosmeticist.</span> | 
-| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » You can buy wearable cosmetics from me!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » Hello, unfashionable one.</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » I am Hatrick, the famous cosmeticist.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » Alas, pirates stole my last shipment.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Hatrick</span> » Come back later and we will enhance you.</span> |

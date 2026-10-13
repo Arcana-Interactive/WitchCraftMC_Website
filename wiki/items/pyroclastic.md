@@ -43,6 +43,11 @@ Infobox:
           value: "Yes"
 ---
 
+<div class="wiki-callout warning">
+  <span class="callout-icon"><i class="fas fa-triangle-exclamation"></i></span>
+  <div>Custom Items are in beta and may change.</div>
+</div>
+
 
 The **Pyroclastic Tools** are a set of legendary tools obtained by crafting from Pyroclastic Cores and arcanium.
 

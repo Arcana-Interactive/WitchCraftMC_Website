@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Auctioneer added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Auctioneer added to Spawn."
 
 Infobox:
   Enabled: true
@@ -36,9 +36,9 @@ The Auctioneer is an NPC found in the Auction House in the [Spawn Town](/wiki/sp
 ## Interface
 {% include shop-gui.html id="auctionhouse" %}
 
-## Dialogue
+<!--## Dialogue
 
 | Condition | Dialogue |
 |:---:|:---|
 | First interaction | <span class="minefont"><span class="format-3">[NPC] Auctioneer</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Auctioneer</span> » Test Conversation!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Auctioneer</span> » Test Conversation!</span> |-->

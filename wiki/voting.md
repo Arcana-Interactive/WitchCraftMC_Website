@@ -14,13 +14,11 @@ see_also:
     url: /wiki/crafting/
 ---
 
-Players can vote up to 5 times per real life day, rewarding them with Vote Keys. Much like the other [Crate Keys](/wiki/crates), Vote Keys can be used to open Vote Crates.
+Players can vote up to 5 times per real life day. Each vote rewards the player with 1x [Vote Shard](/wiki/vote-shards/). 5x Vote Shards can be traded for a Vote Key at the [Vote Trader](/wiki/npc/vote-trader).
 
 ## Vote Sites
 
-When you vote for WitchCraftMC, you're helping more players discover our world, which means more friends to team up with, and a richer, friendlier community for everyone.
-
-Every single click helps us make WitchCraftMC an even friendlier, more exciting place to play, one where new and veteran players alike feel at home the second they join.
+Voting for the server helps with making more players discover us, which means more friends to team up with, and a stronger community for everyone!
 
 <!-- Vote site buttons: replace each example.com link and "Vote Site" name with a real vote site -->
 <div class="vote-sites">
@@ -36,16 +34,19 @@ Every single click helps us make WitchCraftMC an even friendlier, more exciting 
 | Chance | Reward |
 | --- | --- |
 | 1% | Arcanium Fragments |
-| 9% | 8x Vote Shards |
-| 15% | 4x Vote Shards |
-| 15% | Mining Key |
-| 15% | Fishing Key |
-| 15% | Farming Key |
-| 15% | Forest Key |
-| 15% | Combat Key |
+| 9% | 1x Enchanter Key |
+| 10% | 8x Vote Shards |
+| 20% | 2x Pearl Key |
+| 25% | 4x Vote Shards |
+| 35% | 1x Pearl Key |
 
 ## Vote Parties
 
-Once `x` votes has been reached, a Vote Party will begin. While a Vote Party is active, all online players will receive one of the following rewards:
+Once `30` votes has been reached, a Vote Party will begin. While a Vote Party is active, all online players will receive a Vote Party Crate which grants one of the following rewards:
 
-* \<insert\>
+| --- |
+|6x Vote Shards |
+|2x Pearl Keys |
+|1x Pearl Key, 1 Enchanter Key |
+|1x Arcanium Fragment|
+|1x Emerald Block |

@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: wiki-page
 title: Aquatic Core
 description: "The Aquatic Core."
@@ -32,4 +32,4 @@ The Aquatic Core is a Core that can be used in the crafting of the Aquatic Set.
 
 ## Obtaining
 
-The Aquatic Core can currently not be obtained.
+The Aquatic Core can currently not be obtained. -->

@@ -11,7 +11,14 @@ see_also:
   - title: Staff Ranks
     url: /wiki/staff-ranks/
 ---
-Ranks are earned by ranking up through the [Archwizard](/wiki/npc/archwizard) in [Spawn](/wiki/spawn/). Each rank unlocks additional perks and quality-of-life features. You can check your current progress with `/ranks`.
+<div class="wiki-callout tip">
+  <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>
+  <div>In-game Ranks are sepparate from <a href="/wiki/store-ranks/">Store Ranks</a>.</div>
+</div>
+
+Players start out as Initiate rank. To rank up from there, they can talk to the [Archwizard](/wiki/npc/archwizard) in [Spawn](/wiki/spawn/) and purchase one provided they have enough In-game money and Exp levels. Each rank unlocks additional perks and quality-of-life features. You can check your current progress with `/ranks`.
+
+Each rankup costs 30 Exp levels.
 
 ### Initiate
 
@@ -55,8 +62,8 @@ Tag: {% include tag.html id="novice" %}
 The **Acolyte** rank can be obtained by ranking up at the Archwizard for $50,000.
 
 **Perks:**
-- `/sethome <HomeName>` - 3x saved homes.
 - `/craft` - open virtual crafting table.
+- `/sethome <HomeName>` - 3x saved homes.
 - Access to all Novice perks.
 
 Tag: {% include tag.html id="acolyte" %}
@@ -82,8 +89,8 @@ Tag: {% include tag.html id="adept" %}
 The **Sorcerer** rank can be obtained by ranking up at the Archwizard for $250,000.
 
 **Perks:**
-- `/sethome <HomeName>` - 4x saved homes.
 - `/ec` - opens your enderchest.
+- `/sethome <HomeName>` - 4x saved homes.
 - Access to all Adept perks.
 
 Tag: {% include tag.html id="sorcerer" %}
@@ -95,8 +102,8 @@ Tag: {% include tag.html id="sorcerer" %}
 The **Elder** rank can be obtained by ranking up at the Archwizard for $500,000.
 
 **Perks:**
-- `/sethome <HomeName>` - 5x saved homes.
 - `/pv` - 3x 6 row playervaults.
+- `/sethome <HomeName>` - 5x saved homes.
 - Access to all Sorcerer perks.
 
 Tag: {% include tag.html id="elder" %}

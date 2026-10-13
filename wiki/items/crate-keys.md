@@ -30,7 +30,7 @@ Infobox:
 
 There are several Keys that can be obtained from [Traders](/wiki/categories/#npcs).
 
-Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, or use `/crates` to teleport. They can then head over to the related crate and right-click with the Key to open and receive a reward.
+Once a player has obtained a key, they can right click the crate near their respective trader to open them. Players can also sneak while right clicking to bulk-open multiple crates at once.
 
 ## Obtaining
 
@@ -40,36 +40,48 @@ Vote Keys can be obtained by trading 5x [Vote Shards](/wiki/vote-shards/) at the
 
 ---
 
+### Pearl Key
+
+Pearl Keys can be obtained from the [[Vote Crate]](/wiki/crates/#vote-crate), and [Vote Parties](/wiki/voting/#vote-parties).
+
+---
+
+### Enchanter Key
+
+Enchanter Keys can be obtained from [[Vote Crates]](/wiki/crates/#vote-crate), [Pearl Crates](/wiki/crates/#pearl-crate), [Pyrite Crates](/wiki/crates/#pyrite-crate) and [Vote Parties](/wiki/voting/#vote-parties).
+
+---
+
 ### Pyrite Key
 
-Pyrite Keys can be obtained rarely from the [Mining Crate](/wiki/crates/#mining-crate), [Farming Crate](/wiki/crates/#farming-crate), [Combat Crate](/wiki/crates/#combat-crate), [Fishing Crate](/wiki/crates/#fishing-crate), and [Forest Crate](/wiki/crates/#forest-crate).
+Pyrite Keys can be obtained rarely from the [Pearl Crate](/wiki/crates/#pearl-crate), [Mining Crate](/wiki/crates/#mining-crate), [Farming Crate](/wiki/crates/#farming-crate), [Combat Crate](/wiki/crates/#combat-crate), [Fishing Crate](/wiki/crates/#fishing-crate), and [Forest Crate](/wiki/crates/#forest-crate).
 
 ---
 
 ### Mining Key
 
-Mining Keys can be obtained by trading 64x Diamond Blocks from [Matt Allurgy](/wiki/npc/matt-allurgy) or from the [Vote Crate](/wiki/crates/#vote-crate).
+Mining Keys can be obtained by trading 64x Diamond Blocks with [Matt Allurgy](/wiki/npc/matt-allurgy).
 
 ---
 
 ### Farming Key
 
-Farming Keys can be obtained by trading 128x Hay Bales from the [Farmer](/wiki/npc/farmer) or from the [Vote Crate](/wiki/crates/#vote-crate).
+Farming Keys can be obtained by trading 128x Hay Bales with [Wheat A. Brix](/wiki/npc/wheat-a-brix).
 
 ---
 
 ### Combat Key
 
-Combat Keys can be obtained by trading 5x Nether Stars from [Captain Saltspring](/wiki/npc/captain-saltspring) or from the [Vote Crate](/wiki/crates/#vote-crate).
+Combat Keys can be obtained by trading 5x Nether Stars from [Captain Saltspring](/wiki/npc/captain-saltspring).
 
 ---
 
 ### Fishing Key
 
-Fishing Keys can be obtained by trading 64x Pufferfish from the [Old Man Eyebrows](/wiki/npc/fish-merchant) or from the [Vote Crate](/wiki/crates/#vote-crate).
+Fishing Keys can be obtained by spending 2,500 [Scales](/wiki/scales) at [Old Man Eyebrows](/wiki/npc/old-man-eyebrows).
 
 ---
 
 ### Forest Key
 
-Forest Keys can be obtained by trading 64x Resin Blocks from [Clara Chairman](/wiki/npc/clara-chairman) or from the [Vote Crate](/wiki/crates/#vote-crate).
+Forest Keys can be obtained by trading 64x Resin Blocks from [Clara Chairman](/wiki/npc/clara-chairman).

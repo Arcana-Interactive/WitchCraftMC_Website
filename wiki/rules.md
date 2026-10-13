@@ -32,8 +32,8 @@ see_also:
 
 ## Chat Rules
 - **Stay appropriate** - Do not share inappropriate content in any chat. This also includes religion and politics as they can cause heated discussion.
-- No inappropriate nicknames or usernames.
-- Staff have final say on what is appropriate in chat.
+  - No inappropriate nicknames or usernames.
+  - Staff have final say on what is appropriate in chat.
 - **English only** in main chat. Private messages are fine to be in any language.
 - **No spamming** - this includes repeated messages, excessive caps, or character spam.
 
@@ -44,8 +44,8 @@ see_also:
 </div>
 
 - **Do not Grief** - Do not break, or otherwise alter other players’ builds without their permission.
+  - Killing mobs that are clearly owned by another player is still considered grief.
 - **No Border-Griefing** - Do not build, or deform the terrain near other players’ claims without their permission.
-- Killing mobs that are clearly owned by another player is still considered grief.
 - **Use the Resource Worlds** - Only deform the Main world’s terrain for building purposes. Collecting resources should be done in the resource world.
 - **No Theft** - Do not take items from another player without their permission.
 

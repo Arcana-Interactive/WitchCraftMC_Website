@@ -69,6 +69,6 @@ Steven Chairman is an NPC that serves as the resident Furniture Merchant in the 
 | | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » I am the Furniture Merchant.</span> | 
 | | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » You can buy cosmetic furniture from me!</span> |
 
-## Trivia
+<!--## Trivia
 
-* Steven Chairman is the brother of the Lumber Merchant, [Clara chairman](/wiki/npc/clara-chairman)
+* Steven Chairman is the brother of the Lumber Merchant, [Clara chairman](/wiki/npc/clara-chairman)-->

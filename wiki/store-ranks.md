@@ -11,7 +11,12 @@ see_also:
   - title: Staff Ranks
     url: /wiki/staff-ranks/
 ---
-The Store Ranks can be purchased from our [Server Store](https://witchcraftmc.tebex.io/). Each rank contains quality-of-life features, but no gameplay advantage.
+<div class="wiki-callout tip">
+  <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>
+  <div>Store Ranks are sepparate from <a href="/wiki/ranks/">In-game Ranks</a>.</div>
+</div>
+
+The Store Ranks can be purchased from our [Server Store](https://witchcraftmc.tebex.io/). Each rank contains primarily quality-of-life features and cosmetics.
 
 Players can either choose to buy any rank immediately, or buy a rank and then later upgrade. Upgrading a rank costs the difference between the given ranks.
 
@@ -27,13 +32,14 @@ The **Quartz** rank is the first tier of Store Ranks and can be purchased for `$
 - `/sit` - Makes your character sit on the block you're standing on.
 - `/spin` - Makes your character spin in place.
 - `/craft` - open virtual crafting table.
-- Ability to talk in the **#In-Game-Chat** channel on discord.
 - `/pweather` - Changes the weather your client sees. (This does not affect mechanics.)
-- `/sethome <HomeName>` - 5x saved homes.
-- `/pv` - 3x 6 row playervaults.
 - `/trash` - open a virtual container to instantly dispose of items.
-- `/rtp` Delay decreased to 15 seconds.
 - `/nightvision` - Toggles permanent nightvision effect.
+- Ability to talk in the **#In-Game-Chat** channel on discord.
+- `/sethome <HomeName>` - 5x saved homes.
+- Ability to list 2 items on the auction house at once.
+- `/pv` - 3x 6 row playervaults.
+- `/rtp` Delay decreased to 15 seconds.
 
 Tag: [Quartz]
 
@@ -50,6 +56,7 @@ The **Jade** rank is the first tier of Store Ranks and can be purchased for `$34
 - `/condense` - Condenses items in your inventory to their most condensed form (ingots to blocks).
 - `/nickname` - Sets a nickname for yourself without colour.
 - `/sethome <HomeName>` - 7x saved homes.
+- Ability to list 3 items on the auction house at once.
 - `/pv` - 4x 6 row playervaults.
 - `/rtp` Delay decreased to 10 seconds.
 - Access to all Quartz perks.
@@ -64,11 +71,12 @@ The **Topaz** rank is the first tier of Store Ranks and can be purchased for `$7
 
 **Perks:**
 - `/bellyflop` - Makes your character lay on their stomach.
-- `/lay` - Makes your character lay on their sback.
-- `/nickname` - Sets a nickname for yourself using solid colors (&cNickname \| \<red\>Nickname).
-- `/sethome <HomeName>` - 10x saved homes.
-- `/pv` - 5x 6 row playervaults.
+- `/lay` - Makes your character lay on their back.
 - `/hat` - Puts any held item onto your head-slot.
+- `/nickname` - Sets a nickname for yourself using solid colors (\<red\>Nickname), see `/colormini`.
+- `/sethome <HomeName>` - 10x saved homes.
+- Ability to list 4 items on the auction house at once.
+- `/pv` - 5x 6 row playervaults.
 - `/rtp` Delay decreased to 5 seconds.
 - Access to all Jade perks.
 
@@ -82,9 +90,12 @@ The **Ruby** rank is the first tier of Store Ranks and can be purchased for `$17
 
 **Perks:**
 - `/crawl` - Makes your crawl on the floor.
+- `/fish sellall` - Instantly sells all fish in your inventory.
 - `/sethome <HomeName>` - 15x saved homes.
+- Ability to list 5 items on the auction house at once.
 - `/pv` - 9x 6 row playervaults.
 - `/rtp` Delay decreased to 1 seconds.
+- Keep Inventory and Exp on death.
 - Access to all Topaz perks.
 
 Tag: [Ruby]
@@ -94,11 +105,11 @@ Tag: [Ruby]
 ### Diamond
 
 The **Diamond** rank is the only subscription based rank, and is only meant as a way for players to give extra support to the server if they wish. 
-Diamond rank can be purchased for `$9.99` per month.
+Diamond rank can be purchased for `$9.99` per month, but requires the player to have an existing store rank as well.
 
 **Perks:**
+- `/nickname` - Sets a nickname for yourself using HEX colors (&#53cacfNickname \| \<#53cacf>Nickname).
 - Ability to right click players to sit on them.
 - `/rtp` Delay decreased to 5 seconds.
-- `/nickname` - Sets a nickname for yourself using HEX colors (&#53cacfNickname \| \<#53cacf>Nickname).
 
 Tag: [+]
