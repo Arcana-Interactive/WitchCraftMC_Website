@@ -7,10 +7,10 @@ categories: [NPCs, Spawn]
 see_also:
   - title: Spawn
     url: /wiki/spawn/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Rex Timberland added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Rex Timberland added to Spawn."
 
 Infobox:
   Enabled: true

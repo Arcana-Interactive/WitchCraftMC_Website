@@ -281,6 +281,8 @@ backpack_button:
   img: /img/icons/gui/backpack.png
 shop_sell:
   img: /img/icons/gui/shop_sell_button.png
+scales:
+  img: /img/icons/gui/scales.png
 
 # ── WitchCraftMC custom items ──────────────────────────
 arcanium_fragments:

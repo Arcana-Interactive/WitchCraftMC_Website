@@ -1,16 +1,10 @@
 ---
 layout: wiki-page
 title: Land Claims
-description: "How to protect your builds and manage your territory using GriefPrevention."
+description: "Protecting your builds and managing your territory."
 permalink: /wiki/claims/
 toc: true
 categories: [Gameplay]
-prev_page:
-  title: Rules
-  url: /wiki/rules/
-next_page:
-  title: Crafting & Items
-  url: /wiki/crafting/
 see_also:
   - title: Commands & Plugins
     url: /wiki/commands/
@@ -20,10 +14,6 @@ see_also:
     url: /wiki/getting-started/
 ---
 
-<div class="wiki-callout warning">
-  <span class="callout-icon"><i class="fas fa-triangle-exclamation"></i></span>
-  <div><i>SCS will likely be removed, this page might change.</i></div>
-</div>
 <div class="wiki-callout tip">
   <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>
   <div>Claim your land <strong>before</strong> you start building, not after. Anything you build on unclaimed land is at risk — see the <a href="/wiki/rules/#griefing--theft">Rules on Griefing</a>.</div>

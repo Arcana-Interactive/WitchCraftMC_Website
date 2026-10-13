@@ -12,10 +12,10 @@ see_also:
     url: /wiki/changelog/
   - title: Crafting & Items
     url: /wiki/crafting/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Spawn Island added"
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Spawn Island added"
 
 # ── Infobox (rendered automatically by the layout) ──
 # Add an icon per NPC by setting: icon: "/img/icons/npc/Heads/name.png"

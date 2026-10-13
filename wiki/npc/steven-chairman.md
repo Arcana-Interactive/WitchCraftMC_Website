@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Furniture
     url: /wiki/furniture/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Furniture Merchant added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Furniture Merchant added to Spawn."
 
 Infobox:
   Enabled: true
@@ -31,9 +31,15 @@ Infobox:
           value: "<strong>XYZ:</strong> <code>33 68 75</code></strong>"
 ---
 
+<div class="wiki-callout info">
+  <span class="callout-icon"><i class="fas fa-circle-info"></i></span>
+  <div>Furniture is an upcoming feature.</div>
+</div>
+
 Steven Chairman is an NPC that serves as the resident Furniture Merchant in the [Spawn Town](/wiki/spawn#the-town). Steven sells recipes for decorative [furniture](/wiki/furniture).
 
-## Interface
+<!-- ## Interface
+
 {% include shop-gui.html id="furniture_shop" %}
 
 ## Furniture
@@ -61,13 +67,16 @@ Steven Chairman is an NPC that serves as the resident Furniture Merchant in the 
 | image | Minecart with Redstone | `$10,000` |
 | image | Minecart with Emeralds | `$10,000` |
 
+-->
+
 ## Dialogue
 
 | Condition | Dialogue |
 |:---:|:---|
-| First interaction | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » I am the Furniture Merchant.</span> | 
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » You can buy cosmetic furniture from me!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » Hello <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » I am a carpenter.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » Normally you'd be able to buy Furniture Recipes from me!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » However, my sister hasn't provided me with resources to make anything yet..</span> |
 
 <!--## Trivia
 

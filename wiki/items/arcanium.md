@@ -4,7 +4,7 @@ title: Arcanium
 description: "The Arcanium items."
 permalink: /wiki/arcanium/
 toc: true
-categories: [Items, Epic Items]
+categories: [Items]
 Infobox:
   Enabled: true
   title: "Arcanium"

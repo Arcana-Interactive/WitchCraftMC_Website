@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: wiki-page
 title: Preview
 description: "A wiki feature showcase."
@@ -19,7 +19,7 @@ history:
   - version: "Survival Release"
     date: "Jan 1, 2026"
     changes: "Agent LemLem stationed at Spawn."
-
+-->
 # ─────────────────────────────────────────────
 # INFOBOX
 # The infobox floats to the right of the article.

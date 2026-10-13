@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Lumberjack added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Lumberjack added to Spawn."
 
 Infobox:
   Enabled: true
@@ -31,7 +31,7 @@ Infobox:
           value: "<strong>XYZ:</strong> <code>-95 69 95</code></strong>"
 ---
 
-Clara Chairman is an NPC that serves as the Lumber Merchant at the [Docks](/wiki/spawn#the-docks). Players can sell logs of all kinds to Clara for money.
+Clara Chairman is an NPC that serves as the Lumber Merchant at the [Docks](/wiki/spawn#the-docks). Players can sell harvested logs to Clara for money.
 
 ## Interface
 {% include shop-gui.html id="lumberjack" %}
@@ -40,9 +40,9 @@ Clara Chairman is an NPC that serves as the Lumber Merchant at the [Docks](/wiki
 
 | Condition | Dialogue |
 |:---:|:---|
-| First interaction | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » I am the lumberjack.</span> | 
-| | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » You can sell your wood to me!</span> |
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » Hi <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » I am the outpost's trusty lumberjack!</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Clara Chairman</span> » I'll buy any wood you have!</span> |
 
 <!--## Trivia
 

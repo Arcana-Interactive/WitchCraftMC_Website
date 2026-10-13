@@ -31,8 +31,7 @@ Infobox:
           value: "<strong>XYZ:</strong> <code>-105 68 31</code></strong>"
 ---
 
-Old Man Eyebrows is an NPC that serves as the resident Fishmonger at the [Docks](/wiki/spawn#the-docks). Players can sell their fished up items here.
-
+Old Man Eyebrows is an NPC that serves as the resident Fishmonger at the [Docks](/wiki/spawn#the-docks). Here, players can sell their caught fish, or buy items for [Scales](/wiki/scales).
 ## Interface
 {% include shop-gui.html id="fish_shop" %}
 
@@ -40,6 +39,6 @@ Old Man Eyebrows is an NPC that serves as the resident Fishmonger at the [Docks]
 
 | Condition | Dialogue |
 |:---:|:---|
-| First interaction | <span class="minefont"><span class="format-3">[NPC] Old Man Eyebrows</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Old Man Eyebrows</span> » I am the local fish merchant.</span> |
-| | <span class="minefont"><span class="format-3">[NPC] Old Man Eyebrows</span> » You can sell your fish to me!</span> |
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Old Man Eyebrows</span> » Hello, <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Old Man Eyebrows</span> » I am the local Fishmonger around here.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Old Man Eyebrows</span> » You can sell your fish to me, or buy items with <span class="format-b">Scales</span>!</span> |

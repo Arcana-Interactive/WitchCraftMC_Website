@@ -16,7 +16,7 @@ see_also:
 
 Infobox:
   Enabled: true
-  title: "Farmer"
+  title: "Wheat A. Brix"
   image: "/img/icons/npc/Body/farmer.png"
   Sections:
     - heading: "NPC"
@@ -31,7 +31,7 @@ Infobox:
           value: "<strong>XYZ:</strong> <code>-151 68 -61</code></strong>"
 ---
 
-The Farmer is an NPC located in the [Farm](/wiki/spawn#the-farm) that players can sell their harvested crops to.
+Wheat A. Brix is an NPC located in the [Farm](/wiki/spawn#the-farm) that players can sell their harvested crops to.
 
 ## Interface
 {% include shop-gui.html id="farmer" %}
@@ -40,6 +40,11 @@ The Farmer is an NPC located in the [Farm](/wiki/spawn#the-farm) that players ca
 
 | Condition | Dialogue |
 |:---:|:---|
-| First interaction | <span class="minefont"><span class="format-3">[NPC] Farmer</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Farmer</span> » I am the Farmer.</span> | 
-| | <span class="minefont"><span class="format-3">[NPC] Farmer</span> » You can sell your crops to me!</span> |
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Wheat A. Brix</span> » Howdy, Farmer!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Wheat A. Brix</span> » I am the Farmer here in the outpost.</span> | 
+| | <span class="minefont"><span class="format-3">[NPC] Wheat A. Brix</span> » You can sell your farmed goods to me!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Wheat A. Brix</span> » I will also take Kernels if you have any, when my stock is ready!</span> |
+
+<!--## Trivia
+
+* The A. stands for Alfred-->

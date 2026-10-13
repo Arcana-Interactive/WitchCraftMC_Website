@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Matt Allurgy added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Matt Allurgy added to Spawn."
 
 Infobox:
   Enabled: true

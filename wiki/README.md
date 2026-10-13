@@ -85,10 +85,10 @@ categories: [Category]
 see_also:
   - title: Related Page
     url: /wiki/related-page/
-history:
-  - version: "v1.0"
-    date: "Jan 1, 2026"
-    changes: "Page created."
+#history:
+#  - version: "v1.0"
+#    date: "Jan 1, 2026"
+#    changes: "Page created."
 ---
 ```
 

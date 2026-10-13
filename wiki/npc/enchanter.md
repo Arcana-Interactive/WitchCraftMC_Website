@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Enchantments
     url: /wiki/enchantments/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Enchanter added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Enchanter added to Spawn."
 
 Infobox:
   Enabled: true

@@ -115,7 +115,6 @@ This page lists every command available to players.
 | `/spawn`| Teleport to [Spawn](/wiki/spawn/). |
 | `/warp <warp>`| Teleport to the given warp. |
 | `/warps`| Lists all available warps. |
-| `/crates`| Teleport to the crates area. |
 | `/hub`| Teleport to the Hub. |
 | `/sethome [name]`| Saves the current location as a home. |
 | `/home [name]`| Teleports to the given home. |

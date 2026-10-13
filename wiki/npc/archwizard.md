@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: In-Game Ranks
     url: /wiki/ranks/
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Archwizard added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Archwizard added to Spawn."
 
 Infobox:
   Enabled: true

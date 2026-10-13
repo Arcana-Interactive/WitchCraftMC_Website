@@ -126,27 +126,24 @@ lumberjack:
     - slot: 31
       item: tasks
 fish_shop:
-  texture: "/img/icons/gui/shop_inventory.png"
-  rows: 4
+  texture: "/img/icons/gui/fish_shop.png"
+  rows: 1
   scale: 2
   grid_top: 26
   grid_left: 7
   slots:
-    - slot: 11
-      item: cod
-    - slot: 12
-      item: salmon
-    - slot: 13
-      item: tropical_fish
-    - slot: 14
-      item: pufferfish
-    - slot: 15
-      item: nautilus_shell
-    - slot: 30
+    - slot: 3
+      item: scales
+      label: "&aScales Shop"
+      lore:
+      - "&7Earn scales by catching fish"
+      - "&7and buy fishing enchants and keys."
+    - slot: 5
       item: shop_sell
-      label: "&aSell Event Fish"
-    - slot: 32
-      item: tasks
+      label: "&aSell Fish"
+      lore:
+      - "&7Sell your fish here"
+      - "&7for money."
 mob_shop:
   texture: "/img/icons/gui/shop.png"
   content_height: 143 # Visible panel height; texture has transparent padding.
@@ -155,7 +152,15 @@ mob_shop:
   grid_top: 26
   grid_left: 7
   slots:
-    - slot: 10
+    - slot: 11
+      item: phantom_membrane
+    - slot: 12
+      item: phantom_membrane
+    - slot: 13
+      item: phantom_membrane
+    - slot: 14
+      item: phantom_membrane
+    - slot: 15
       item: phantom_membrane
     - slot: 48
       item: shop_sell

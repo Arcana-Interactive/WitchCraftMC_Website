@@ -4,7 +4,7 @@ title: Crate Keys
 description: "The Crate keys."
 permalink: /wiki/crate-keys/
 toc: true
-categories: [Items, Common Items, Rare Items, Epic Items, Legendary Items]
+categories: [Items]
 Infobox:
   Enabled: true
   title: "Crate Keys"

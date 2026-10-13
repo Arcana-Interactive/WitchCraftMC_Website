@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: wiki-page
 title: Agent LemLem
 description: "A shady character."
@@ -7,10 +7,10 @@ categories: [NPCs, Spawn]
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs
-history:
-  - version: "Survival Release"
-    date: "Jan 1, 2026"
-    changes: "Agent LemLem added to Spawn."
+#history:
+#  - version: "Survival Release"
+#    date: "Jan 1, 2026"
+#    changes: "Agent LemLem added to Spawn."
 
 Infobox:
   Enabled: true
@@ -43,3 +43,4 @@ Agent LemLem is an NPC in the [Spawn Town](/wiki/spawn#the-town). She currently 
 ## Trivia
 
 * Agent LemLem is based off of one of the Owners, LemonBeee
+-->

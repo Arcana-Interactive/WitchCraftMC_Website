@@ -9,10 +9,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Voting
     url: /wiki/voting/
-history:
-  - version: "Survival Pre-Release"
-    date: "19 Apr. 2026"
-    changes: "Vote Trader added to Spawn."
+#history:
+#  - version: "Survival Pre-Release"
+#    date: "19 Apr. 2026"
+#    changes: "Vote Trader added to Spawn."
 
 Infobox:
   Enabled: true
