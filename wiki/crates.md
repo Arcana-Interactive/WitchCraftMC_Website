@@ -14,27 +14,36 @@ see_also:
     url: /wiki/crafting/
 ---
 
-There are several Crates that can be opened in [Spawn](/wiki/spawn/). Each require their own unique key.
-
-## Obtaining
-
-| Key | Obtained from |
-|---|---|---|
-| **Vote Key** | Traded from the [Vote Trader](/wiki/npc/vote-trader) for [Vote Shards](/wiki/vote-shards) |
-| **Pyrite Key** | Obtained rarely from the other Crates |
-| **Mining Key** | Traded from [Matt Allurgy](/wiki/npc/matt-allurgy) for Diamond Blocks |
-| **Farming Key** | Traded from the [Farmer](/wiki/npc/farmer) for Hay Bales |
-| **Combat Key** | Traded from [Captain Saltspring](/wiki/npc/captain-saltspring) for Nether Stars |
-| **Fishing Key** | Traded from the [Old Man Eyebrows](/wiki/npc/fish-merchant) for Pufferfish |
-| **Forest Key** | Traded from [Clara Chairman](/wiki/npc/clara-chairman) for Blocks of Resin |
-
-Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, or use `/crates` to teleport. They can then head over to the related crate and right-click with the Key to open and receive a reward.
+There are several Crates that can be opened in [Spawn](/wiki/spawn/). Each require their own unique [Key](/wiki/crate-keys/).
 
 ## Crate Rewards
 
 ### Vote Crate
 
 {dropdown}
+
+Found at: **XYZ:** `5 69 93`
+
+| Chance | Reward |
+| --- | --- |
+| 1% | Arcanium Fragments |
+| 9% | Enchanter Key |
+| 15% | 4x Vote Shards |
+| 15% | Mining Key |
+| 15% | Fishing Key |
+| 15% | Farming Key |
+| 15% | Forest Key |
+| 15% | Combat Key |
+
+{dropdown end}
+
+---
+
+### Pearl Crate
+
+{dropdown}
+
+Found at: **XYZ:** `5 68 78`
 
 | Chance | Reward |
 | --- | --- |
@@ -48,13 +57,35 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 15% | Combat Key |
 
 {dropdown end}
-{% include shop-gui.html id="crate_preview_vote" %}
+
+---
+
+### Enchanter Crate
+
+{dropdown}
+
+Found at: **XYZ:** `5 68 78`
+
+| Chance | Reward |
+| --- | --- |
+| 1% | Arcanium Fragments |
+| 9% | 8x Vote Shards |
+| 15% | 4x Vote Shards |
+| 15% | Mining Key |
+| 15% | Fishing Key |
+| 15% | Farming Key |
+| 15% | Forest Key |
+| 15% | Combat Key |
+
+{dropdown end}
 
 ---
 
 ### Pyrite Crate
 
 {dropdown}
+
+Found at: **XYZ:** `5 68 78`
 
 | Chance | Reward |
 | --- | --- |
@@ -70,13 +101,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 23% | Budding Amethyst |
 
 {dropdown end}
-{% include shop-gui.html id="crate_preview_pyrite" %}
 
 ---
 
 ### Mining Crate
 
 {dropdown}
+
+Found at: **XYZ:** `5 68 78`
 
 | Chance | Reward |
 | --- | --- |
@@ -96,13 +128,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 15% | 16x Bottle o' Enchanting |
 
 {dropdown end}
-{% include shop-gui.html id="crate_preview_mining" %}
 
 ---
 
 ### Farming Crate
 
 {dropdown}
+
+Found at: **XYZ:** `5 68 78`
 
 | Chance | Reward |
 | --- | --- |
@@ -123,13 +156,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 15% | 16x Bottle o' Enchanting |
 
 {dropdown end}
-{% include shop-gui.html id="crate_preview_farming" %}
 
 ---
 
 ### Combat Crate
 
 {dropdown}
+
+Found at: **XYZ:** `5 68 78`
 
 | Chance | Reward |
 | --- | --- |
@@ -150,13 +184,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 15% | 16x Bottle o' Enchanting |
 
 {dropdown end}
-{% include shop-gui.html id="crate_preview_combat" %}
 
 ---
 
 ### Fishing Crate
 
 {dropdown}
+
+Found at: **XYZ:** `5 68 78`
 
 | Chance | Reward |
 | --- | --- |
@@ -179,13 +214,14 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 13% | 16x Bottle o' Enchanting |
 
 {dropdown end}
-{% include shop-gui.html id="crate_preview_fishing" %}
 
 ---
 
 ### Forest Crate
 
 {dropdown}
+
+Found at: **XYZ:** `5 68 78`
 
 | Chance | Reward |
 | --- | --- |
@@ -207,4 +243,3 @@ Once a player has obtained a key, they can head to **XYZ:** `5 68 78` in Spawn, 
 | 10% | 16x Bottle o' Enchanting |
 
 {dropdown end}
-{% include shop-gui.html id="crate_preview_forest" %}

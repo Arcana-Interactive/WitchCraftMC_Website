@@ -50,3 +50,14 @@ Arcanium Ingots can be further condensed into an Arcanium Block!
 {% include crafting-recipe.html id="arcanium_block" %}
 
 **Usage:** Arcanium Blocks can be placed down as a decorative block and as a beacon base block.
+
+### Pyroclastic Tools
+See the [Pyroclastic Tools](/wiki/pyroclastic/) Page for more information.
+
+{% include crafting-recipe.html id="pyroclastic_pickaxe" %}
+{% include crafting-recipe.html id="pyroclastic_axe" %}
+{% include crafting-recipe.html id="pyroclastic_shovel" %}
+{% include crafting-recipe.html id="pyroclastic_hoe" %}
+{% include crafting-recipe.html id="pyroclastic_rod" %}
+{% include crafting-recipe.html id="pyroclastic_sword" %}
+{% include crafting-recipe.html id="pyroclastic_bow" %}
