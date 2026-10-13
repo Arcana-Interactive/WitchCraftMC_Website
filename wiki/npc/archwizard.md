@@ -52,7 +52,7 @@ The Archwizard is an NPC that allows players to rank up when they have enough mo
 
 | Condition | Dialogue |
 |:---:|:---|
-| First interaction | <span class="minefont"><span class="format-3">[NPC] Archwizard</span> » Hey <span class="format-7">\<player\></span>!</span>|
+| First interaction | <span class="minefont"><span class="format-3">[NPC] Archwizard</span> » Hello <span class="format-7">\<rank\></span>!</span>|
 | | <span class="minefont"><span class="format-3">[NPC] Archwizard</span> » Im the Archmage. You can rank up here, for a cost...</span> |
 
 <!--

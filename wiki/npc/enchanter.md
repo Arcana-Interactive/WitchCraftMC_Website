@@ -37,5 +37,5 @@ The enchanter is an NPC in the [Wizard's House](/wiki/spawn#the-town) <!--that s
 
 | Condition | Dialogue |
 |:---:|:---|
-| First interaction | <span class="minefont"><span class="format-3">[NPC] Enchanter</span> » Hey <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Enchanter</span> » Test Conversation!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Enchanter</span> » Hello, <span class="format-7">\<rank\></span>!./span>|
+| | <span class="minefont"><span class="format-3">[NPC] Enchanter</span> » I am currently out of stock. Please come back later.</span> |
