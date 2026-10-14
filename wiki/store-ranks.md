@@ -35,7 +35,6 @@ The **Quartz** rank is the first tier of Store Ranks and can be purchased for `$
 - `/pweather` - Changes the weather your client sees. (This does not affect mechanics.)
 - `/trash` - open a virtual container to instantly dispose of items.
 - `/nightvision` - Toggles permanent nightvision effect.
-- Ability to talk in the **#In-Game-Chat** channel on discord.
 - `/sethome <HomeName>` - 5x saved homes.
 - Ability to list 2 items on the auction house at once.
 - `/pv` - 3x 6 row playervaults.
