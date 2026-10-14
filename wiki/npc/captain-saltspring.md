@@ -4,6 +4,8 @@ title: Captain Saltspring
 description: "Buy and sell Mob Drops for money!"
 permalink: /wiki/npc/captain-saltspring
 categories: [NPCs, Spawn, Economy]
+redirects:
+  - Mob Merchant
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs

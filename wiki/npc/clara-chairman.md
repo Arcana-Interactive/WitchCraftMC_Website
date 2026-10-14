@@ -4,6 +4,8 @@ title: Clara Chairman
 description: "Sell wood for money!"
 permalink: /wiki/npc/clara-chairman
 categories: [NPCs, Spawn, Economy]
+redirects:
+  - Lumber Merchant
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs

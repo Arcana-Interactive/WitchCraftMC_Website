@@ -51,54 +51,44 @@ pyroclastic_set:
     - header: "Pickaxe"
       item: pyroclastic_pickaxe
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "Fortune III"
+        - "Efficiency V"
+        - "Unbreaking III"
     - header: "Axe"
       item: pyroclastic_axe
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "Fortune III"
+        - "Efficiency V"
+        - "Unbreaking III"
     - header: "Shovel"
       item: pyroclastic_shovel
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "Fortune III"
+        - "Efficiency V"
+        - "Unbreaking III"
     - header: "Hoe"
       item: pyroclastic_hoe
       description:
-        - "Fortune V"
-        - "Efficiency IX"
-        - "Unbreaking IX"
-        - "Mending"
+        - "Fortune III"
+        - "Efficiency V"
+        - "Unbreaking III"
     - header: "Sword"
       item: pyroclastic_sword
       description:
-        - "Sharpness X"
-        - "Smite VI"
-        - "Bane of Arthropods VI"
-        - "Sweeping Edge III"
-        - "Fire Aspect II"
-        - "Looting V"
-        - "Unbreaking IX"
-        - "Mending"
+        - "Sharpness V"
+        - "Looting III"
+        - "Unbreaking III"
     - header: "Bow"
       item: pyroclastic_bow
       description:
-        - "Power X"
-        - "Flame"
-        - "Infinity"
-        - "Unbreaking IX"
-        - "Mending"
+        - "Power V"
+        - "Unbreaking III"
     - header: "Fishing Rod"
       item: pyroclastic_rod
       description:
-        - "Luck of the Sea V"
-        - "Lure V"
-        - "Unbreaking IX"
+        - "Lure III"
+        - "Unbreaking III"
+    - header: "Elytra"
+      label: "Pyroclastic Elytra"   # no icon yet — add pyroclastic_elytra to items.yml once there is one
+      description:
         - "Mending"

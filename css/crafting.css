@@ -439,6 +439,25 @@ a.invslot-link:hover::after {
   height: calc(var(--gui-slot, 18px) - 4px);
 }
 
+/* Stack size (amount: in shops.yml) — drawn like the item count in
+ * Minecraft: bottom-right corner of the slot, in the Minecraft font,
+ * one texture pixel per font pixel. Sizes are in texture pixels, the
+ * whole GUI is then scaled up by --gui-scale. */
+.mc-gui-textured .invslot-item {
+  overflow: visible;
+}
+
+.mc-gui-textured .invslot-count {
+  right: -1px;
+  bottom: 0;
+  font-family: 'Minecraftia', monospace;
+  font-size: 8px;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 1px 1px 0 #3f3f3f;
+}
+
 @media (max-width: 520px) {
   .mc-gui-grid {
     grid-template-columns: repeat(9, 28px);

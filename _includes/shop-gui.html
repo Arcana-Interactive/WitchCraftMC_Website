@@ -17,6 +17,8 @@
       slots:
         - slot: 0
           item: iron_ingot
+          amount: 8                   # optional - stack size shown in the
+                                      #   bottom-right corner (like in-game)
           price: "50 coins"
           label: "Buy Iron Ingot"
           lore:                       # optional - REPLACES the item's
@@ -25,7 +27,9 @@
 
   -- Villager GUI ----------------------------------------
     Set `gui_type: villager` and replace `slots:` with `trades:`.
-    Each trade is { input1, input2 (optional), output }.
+    Each trade is { input1, input2 (optional), output }, and each of
+    them can have a stack size: input1_amount, input2_amount,
+    output_amount.
 
     vote_trader:
       gui_type: villager
@@ -46,8 +50,9 @@
         y: 24
         slot_size: 18
       trades:
-        - input1: vote_key
-          output: combat_key
+        - input1: vote_shards
+          input1_amount: 5
+          output: vote_key
         - input1: vote_key
           input2: gold_ingot
           output: enchanter_key
@@ -104,11 +109,15 @@
       {%- assign _t_in1 = site.data.items[trade.input1] -%}
       {%- assign _t_in2 = site.data.items[trade.input2] -%}
       {%- assign _t_out = site.data.items[trade.output] -%}
+      {%- comment -%} "| plus: 0" turns "5" into 5, and a missing amount into 0 {%- endcomment -%}
+      {%- assign _t_in1_n = trade.input1_amount | plus: 0 -%}
+      {%- assign _t_in2_n = trade.input2_amount | plus: 0 -%}
+      {%- assign _t_out_n = trade.output_amount | plus: 0 -%}
       <div class="villager-trade-row {% if forloop.index0 == _selected_idx %}active{% endif %}"
            style="top:calc(var(--tl-y) + {{ forloop.index0 }} * var(--tl-sz));">
-        {%- if _t_in1 -%}<div class="tb-slot tb-input1">{% include item-slot.html item=_t_in1 %}</div>{%- endif -%}
-        {%- if _t_in2 -%}<div class="tb-slot tb-input2">{% include item-slot.html item=_t_in2 %}</div>{%- endif -%}
-        {%- if _t_out -%}<div class="tb-slot tb-output">{% include item-slot.html item=_t_out %}</div>{%- endif -%}
+        {%- if _t_in1 -%}<div class="tb-slot tb-input1">{% include item-slot.html item=_t_in1 count=_t_in1_n %}</div>{%- endif -%}
+        {%- if _t_in2 -%}<div class="tb-slot tb-input2">{% include item-slot.html item=_t_in2 count=_t_in2_n %}</div>{%- endif -%}
+        {%- if _t_out -%}<div class="tb-slot tb-output">{% include item-slot.html item=_t_out count=_t_out_n %}</div>{%- endif -%}
       </div>
     {%- endfor -%}
   </div>
@@ -141,6 +150,8 @@
       {%- if _found -%}
         {%- assign _item    = site.data.items[_found.item] -%}
         {%- assign _display = _found.label | default: _item.name -%}
+        {%- comment -%} Stack size; "| plus: 0" turns "8" into 8, and a missing amount into 0 {%- endcomment -%}
+        {%- assign _amount  = _found.amount | plus: 0 -%}
         {%- comment -%}
           When `lore:` is provided on a slot, it fully REPLACES the item's
           default tooltip and tags. Otherwise we fall back to the item's
@@ -178,6 +189,7 @@
             {%- if _item.img -%}
               <img src="{{ _item.img }}" alt="{{ _display | remove: '&a' | remove: '&b' | remove: '&c' | remove: '&d' | remove: '&e' | remove: '&f' | remove: '&6' | remove: '&7' | remove: '&8' | remove: '&9' | remove: '&0' | remove: '&1' | remove: '&2' | remove: '&3' | remove: '&4' | remove: '&5' | remove: '&l' | remove: '&o' | remove: '&r' }}">
             {%- endif -%}
+            {%- if _amount > 1 -%}<span class="invslot-count">{{ _amount }}</span>{%- endif -%}
           </a>
           {%- else -%}
           <div class="invslot-item minetip"
@@ -186,6 +198,7 @@
             {%- if _item.img -%}
               <img src="{{ _item.img }}" alt="{{ _display | remove: '&a' | remove: '&b' | remove: '&c' | remove: '&d' | remove: '&e' | remove: '&f' | remove: '&6' | remove: '&7' | remove: '&8' | remove: '&9' | remove: '&0' | remove: '&1' | remove: '&2' | remove: '&3' | remove: '&4' | remove: '&5' | remove: '&l' | remove: '&o' | remove: '&r' }}">
             {%- endif -%}
+            {%- if _amount > 1 -%}<span class="invslot-count">{{ _amount }}</span>{%- endif -%}
           </div>
           {%- endif -%}
         </div>

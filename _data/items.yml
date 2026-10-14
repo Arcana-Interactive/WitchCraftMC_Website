@@ -332,10 +332,9 @@ pyroclastic_pickaxe:
   img: /img/icons/items/pyroclastic_pickaxe.png
   link: /wiki/pyroclastic/
   tags:
-    - "&7Fortune V"
-    - "Efficiency IX"
-    - "Unbreaking IX"
-    - "Mending"
+    - "&7Fortune III"
+    - "Efficiency V"
+    - "Unbreaking III"
     - "&8--"
     - "&oA really warm pickaxe."
     - "--"
@@ -346,10 +345,9 @@ pyroclastic_axe:
   img: /img/icons/items/pyroclastic_axe.png
   link: /wiki/pyroclastic/
   tags:
-    - "&7Fortune V"
-    - "Efficiency IX"
-    - "Unbreaking IX"
-    - "Mending"
+    - "&7Fortune III"
+    - "Efficiency V"
+    - "Unbreaking III"
     - "&8--"
     - "&oA really warm axe."
     - "--"
@@ -360,10 +358,9 @@ pyroclastic_shovel:
   img: /img/icons/items/pyroclastic_shovel.png
   link: /wiki/pyroclastic/
   tags:
-    - "&7Fortune V"
-    - "Efficiency IX"
-    - "Unbreaking IX"
-    - "Mending"
+    - "&7Fortune III"
+    - "Efficiency V"
+    - "Unbreaking III"
     - "&8--"
     - "&oA really warm shovel."
     - "--"
@@ -374,10 +371,9 @@ pyroclastic_hoe:
   img: /img/icons/items/pyroclastic_hoe.png
   link: /wiki/pyroclastic/
   tags:
-    - "&7Fortune V"
-    - "Efficiency IX"
-    - "Unbreaking IX"
-    - "Mending"
+    - "&7Fortune III"
+    - "Efficiency V"
+    - "Unbreaking III"
     - "&8--"
     - "&oA really warm hoe."
     - "--"
@@ -388,10 +384,8 @@ pyroclastic_rod:
   img: /img/icons/items/pyroclastic_rod.png
   link: /wiki/pyroclastic/
   tags:
-    - "&7Luck of the Sea V"
-    - "Lure V"
-    - "Unbreaking IX"
-    - "Mending"
+    - "&7Lure III"
+    - "Unbreaking III"
     - "&8--"
     - "&oA really warm fishing rod."
     - "--"
@@ -402,14 +396,9 @@ pyroclastic_sword:
   img: /img/icons/items/pyroclastic_sword.png
   link: /wiki/pyroclastic/
   tags:
-    - "&7Sharpness X"
-    - "Smite VI"
-    - "Bane of Arthropods VI"
-    - "Sweeping Edge III"
-    - "Fire Aspect II"
-    - "Looting V"
-    - "Unbreaking IX"
-    - "Mending"
+    - "&7Sharpness V"
+    - "Looting III"
+    - "Unbreaking III"
     - "&8--"
     - "&oA really warm sword."
     - "--"
@@ -420,11 +409,8 @@ pyroclastic_bow:
   img: /img/icons/items/pyroclastic_bow.png
   link: /wiki/pyroclastic/
   tags:
-    - "&7Power X"
-    - "Flame"
-    - "Unbreaking IX"
-    - "Infinity"
-    - "Mending"
+    - "&7Power V"
+    - "Unbreaking III"
     - "&8--"
     - "&oA really warm bow."
     - "--"

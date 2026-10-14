@@ -4,6 +4,8 @@ title: Steven Chairman
 description: "Buy decorative furniture for your builds."
 permalink: /wiki/npc/steven-chairman
 categories: [NPCs, Spawn, Furniture]
+redirects:
+  - Furniture Merchant
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs

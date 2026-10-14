@@ -209,6 +209,28 @@ see_also:
 
 ---
 
+## Redirects & alternate names
+
+Give a page extra names with `redirects:` in its front matter:
+
+```yaml
+redirects:
+  - Fish Merchant
+  - Fishmonger
+```
+
+Searching for any of these names finds the page, and each name also gets its own URL that forwards to it (e.g. `/wiki/npc/fish-merchant` → Old Man Eyebrows). The page then shows "(Redirected from Fish Merchant)" under its title. A name is skipped if a real page already uses that URL.
+
+---
+
+## Broken links
+
+Every build, `_plugins/wiki-broken-links.rb` checks the links on all wiki pages. Pages linking to a missing page or section are listed at the bottom of [Categories](/wiki/categories/#pages-with-broken-links).
+
+Plugins in `_plugins/` only load when Jekyll starts, so restart `preview.bat` after adding or changing one.
+
+---
+
 ## Agent LemLem page
 
 `wiki/npc/agent-lemlem.md` is a live feature showcase — it demonstrates every infobox feature, callout style, table type, and formatting option on a real rendered page. If you want to see what something looks like before using it, check there first.

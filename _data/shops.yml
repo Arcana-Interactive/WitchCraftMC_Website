@@ -36,6 +36,8 @@
 #  ─────────
 #  slot    Slot index (0 = row 1 col 1, 8 = row 1 col 9, 9 = row 2 col 1, …)
 #  item    Item key from _data/items.yml
+#  amount  (optional) Stack size, shown in the slot's bottom-right corner
+#            like in-game. Leave it out for a single item.
 #  label   (optional) Override the item's display name in the tooltip title
 #  price   (optional) Price string appended to tooltip  e.g. "50 Coins"
 #  lore    (optional) List of lines that replace the item's default tags/tooltip
@@ -154,17 +156,38 @@ mob_shop:
   slots:
     - slot: 11
       item: phantom_membrane
+      lore:
+      - "&7Click to buy"
+      - "&7Cost: &a$1,000"
     - slot: 12
       item: phantom_membrane
+      amount: 8
+      lore:
+      - "&7Click to buy"
+      - "&7Cost: &a$8,000"
     - slot: 13
       item: phantom_membrane
+      amount: 16
+      lore:
+      - "&7Click to buy"
+      - "&7Cost: &a$16,000"
     - slot: 14
       item: phantom_membrane
+      amount: 32
+      lore:
+      - "&7Click to buy"
+      - "&7Cost: &a$32,000"
     - slot: 15
       item: phantom_membrane
+      amount: 64
+      lore:
+      - "&7Click to buy"
+      - "&7Cost: &a$64,000"
     - slot: 48
       item: shop_sell
       label: "&aSell Items"
+      lore:
+      - "&7Click to sell items"
     - slot: 50
       item: tasks
 mob_shop_inventory:
@@ -298,6 +321,8 @@ rankup:
 #
 # Set `gui_type: villager` and replace `slots:` with `trades:`.
 # Each trade is { input1, input2 (optional), output }.
+# Stack sizes go in input1_amount, input2_amount and output_amount
+# (e.g. 5 Vote Shards for 1 Vote Key below).
 # Optional `trade_list:` and `preview:` blocks tweak slot positions in
 # source-texture pixels — defaults match the bundled villager.png.
 
@@ -308,15 +333,5 @@ vote_trader:
   height: 256
   trades:
     - input1: vote_shards
+      input1_amount: 5
       output: vote_key
-    - input1: stick
-      input2: iron_ingot
-      output: gold_ingot
-    - input1: vote_key
-      output: forest_key
-    - input1: vote_key
-      output: fishing_key
-    - input1: vote_key
-      output: mining_key
-    - input1: vote_key
-      output: farming_key

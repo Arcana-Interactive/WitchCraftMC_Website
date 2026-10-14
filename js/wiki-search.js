@@ -2,6 +2,8 @@
  * wiki-search.js
  * Full-page search for /wiki/search/.
  * Title matches are prioritised over description > categories > content.
+ * A page's redirects (other names, see "redirects:" in its front matter)
+ * count the same as its title.
  */
 (function () {
   'use strict';
@@ -56,16 +58,32 @@
     return highlight(s, q);
   }
 
-  function score(p, ql) {
+  // Redirect name that matches the search — exact match first
+  function matchedRedirect(p, ql) {
+    var names = p.redirects || [];
+    if (typeof names === 'string') names = [names];
+    var i;
+    for (i = 0; i < names.length; i++) {
+      if (names[i].toLowerCase() === ql) return names[i];
+    }
+    for (i = 0; i < names.length; i++) {
+      if (names[i].toLowerCase().includes(ql)) return names[i];
+    }
+    return null;
+  }
+
+  function score(p, ql, via) {
     var s = 0;
-    if (p.title       && p.title.toLowerCase().includes(ql))       s += 10;
+    // A matching redirect scores like the title
+    var name = via ? via.toLowerCase() : (p.title || '').toLowerCase();
+    if (name.includes(ql))                                          s += 10;
     if (p.description && p.description.toLowerCase().includes(ql)) s += 4;
     if (p.categories  && p.categories.toLowerCase().includes(ql))  s += 3;
     if (p.content     && p.content.toLowerCase().includes(ql))     s += 1;
     // Exact title match bonus
-    if (p.title && p.title.toLowerCase() === ql) s += 20;
+    if (name === ql) s += 20;
     // Title starts with query bonus
-    if (p.title && p.title.toLowerCase().startsWith(ql)) s += 5;
+    if (name.startsWith(ql)) s += 5;
     return s;
   }
 
@@ -78,10 +96,13 @@
     var ql = q.toLowerCase();
 
     var matched = pages
-      .map(function (p) { return { p: p, s: score(p, ql) }; })
+      .map(function (p) {
+        // Only mention a redirect when the title itself doesn't match
+        var via = (p.title || '').toLowerCase().includes(ql) ? null : matchedRedirect(p, ql);
+        return { p: p, via: via, s: score(p, ql, via) };
+      })
       .filter(function (x) { return x.s > 0; })
-      .sort(function (a, b) { return b.s - a.s; })
-      .map(function (x) { return x.p; });
+      .sort(function (a, b) { return b.s - a.s; });
 
     status.textContent = matched.length
       ? matched.length + ' result' + (matched.length > 1 ? 's' : '') + ' for "' + q + '"'
@@ -94,11 +115,14 @@
       return;
     }
 
-    results.innerHTML = matched.map(function (p) {
+    results.innerHTML = matched.map(function (x) {
+      var p = x.p;
       var snip = snippet(p.content, q);
       var cats = p.categories ? p.categories.split(',').map(function (c) { return c.trim(); }).filter(Boolean) : [];
-      return '<a href="' + p.url + '" class="sr-card">' +
+      var href = x.via ? p.url + '?redirectedfrom=' + encodeURIComponent(x.via) : p.url;
+      return '<a href="' + href + '" class="sr-card">' +
         '<div class="sr-title">' + highlight(p.title || 'Untitled', q) + '</div>' +
+        (x.via ? '<div class="sr-redirect"><i class="fas fa-share"></i>Redirected from ' + highlight(x.via, q) + '</div>' : '') +
         (p.description ? '<div class="sr-desc">' + highlight(p.description, q) + '</div>' : '') +
         (snip ? '<div class="sr-snippet">' + snip + '</div>' : '') +
         '<div class="sr-meta">' +

@@ -10,7 +10,7 @@ see_also:
     url: /wiki/rules/
   - title: Land Claims
     url: /wiki/claims/
-  - title: Commands & Plugins
+  - title: Commands
     url: /wiki/commands/
   - title: Staff & Ranks
     url: /wiki/staff-ranks/
@@ -18,7 +18,7 @@ see_also:
 
 ## Welcome to WitchCraftMC
 
-WitchCraftMC is a **Survival** server with a focus on rpg elements, community, exploration, and building. Whether you're a seasoned veteran or stepping into Minecraft for the first time, this guide will get you on your feet.
+WitchCraftMC is a **Survival** server with a focus on RPG elements, community, exploration, and building. Whether you're a seasoned veteran or stepping into Minecraft for the first time, this guide will get you on your feet.
 <div class="wiki-callout warning">
   <span class="callout-icon"><i class="fas fa-triangle-exclamation"></i></span>
   <div>Before doing anything else, read the <a href="/wiki/rules/">Rules</a>. Breaking them, even unknowingly, can result in a ban</div>
@@ -48,6 +48,8 @@ Once you spawn in, here's what we recommend doing first:
 | `/help` | Open the Help GUI for an in-game command list. |
 | `/vote` | Get the Vote Links to vote for the server for rewards | 
 | `/rtp` | Teleport to a random location within our available worlds. |
+| `/t create <name>` | Creates a *town*, so you can claim land. |
+| `/claim` | Claims the current chunk you're in for your *town*. |
 | `/sethome <HomeName>` | Save your current location as a home, so it can be teleported to. |
 | `/home <HomeName>` | Teleport back to a saved home |
 | `/spawn` | Teleport to the server spawn |
@@ -55,7 +57,7 @@ Once you spawn in, here's what we recommend doing first:
 | `/bal` | Check your current balance |
 | `/rankup` | Teleport to the [Archwizard](/wiki/npc/archwizard) so you can rank up to the next [rank](/wiki/ranks/).|
 
-For the full command list, see the [Commands & Plugins](/wiki/commands/) page.
+For the full command list, see the [Commands](/wiki/commands/) page.
 
 ## Tips for New Players
 

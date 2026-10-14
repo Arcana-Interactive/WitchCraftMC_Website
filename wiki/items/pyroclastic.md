@@ -6,12 +6,14 @@ permalink: /wiki/pyroclastic/
 toc: true
 categories: [Items, Tools]
 see_also:
-  - title: Getting Started
-    url: /wiki/getting-started/
-  - title: Changelog & History
-    url: /wiki/changelog/
-  - title: Crafting & Items
+  - title: Pyroclastic Core
+    url: /wiki/pyroclastic-core/
+  - title: Arcanium
+    url: /wiki/arcanium/
+  - title: Crafting Recipes
     url: /wiki/crafting/
+  - title: Crates
+    url: /wiki/crates/
 Infobox:
   Enabled: true
   title: "Pyroclastic Set"
@@ -56,6 +58,8 @@ The **Pyroclastic Tools** are a set of legendary tools obtained by crafting from
 {% include stat-table.html id="pyroclastic_set" %}
 
 ## Obtaining
+
+The Pyroclastic Elytra is not crafted, it can only be found in the [Pyrite Crate](/wiki/crates/#pyrite-crate).
 
 {% include crafting-recipe.html id="pyroclastic_pickaxe" %}
 {% include crafting-recipe.html id="pyroclastic_axe" %}

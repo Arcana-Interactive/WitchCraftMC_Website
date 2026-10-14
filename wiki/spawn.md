@@ -39,8 +39,8 @@ Infobox:
         - text: "Hatrick"
           link: "/wiki/npc/hatrick"
           icon: "/img/icons/npc/Heads/hatrick.png"
-        - text: "Farmer"
-          link: "/wiki/npc/farmer"
+        - text: "Wheat A. Brix"
+          link: "/wiki/npc/wheat-a-brix"
           icon: "/img/icons/npc/Heads/farmer.png"
         - text: "Captain Saltspring"
           link: "/wiki/npc/captain-saltspring"
@@ -49,7 +49,7 @@ Infobox:
           link: "/wiki/npc/clara-chairman"
           icon: "/img/icons/npc/Heads/clara_chairman.png"
         - text: "Old Man Eyebrows"
-          link: "/wiki/npc/fish-merchant"
+          link: "/wiki/npc/old-man-eyebrows"
           icon: "/img/icons/npc/Heads/fish_merchant.png"
         - text: "Rex Timberland"
           link: "/wiki/npc/rex-timberland"
@@ -58,7 +58,6 @@ Infobox:
           link: "/wiki/npc/archwizard"
           icon: "/img/icons/npc/Heads/archwizard.png"
         - text: "Agent LemLem"
-          link: "/wiki/npc/agent-lemlem"
           icon: "/img/icons/npc/Heads/agent_lemlem.png"
         - text: "Enchanter"
           link: "/wiki/npc/enchanter"
@@ -69,7 +68,7 @@ Infobox:
    
 ---
 
-The Spawn is the main hub on the server. It is sepparated from the Survival and Resource Worlds, and players cannot build or mine in it.
+The Spawn is the main hub on the server. It is separated from the Survival and Resource Worlds, and players cannot build or mine in it.
 
 The spawn contains various [NPCs](/wiki/categories/#npcs) and Merchants that can be visited. Merchants can be talked to if a player wishes to sell or buy items for In-Game Money.
 
@@ -82,8 +81,8 @@ Coordinates: `5, 72, 33`
 The Town is the core location where players will spawn in the Spawn Island. The Town features:
 
 - The **Auction House** — A place where players can quickly sell and buy items from each other.
-- The **Crates** — An area to open crates using keys found while playing on the server.
-- The **Wizards' House** — rules, info boards, and a starter kit station (use `/kit starter`)
+- The **Crates** — An area to open [crates](/wiki/crates/) using keys found while playing on the server. The [Vote Trader](/wiki/npc/vote-trader) can also be found here.
+- The **Wizards' House** — rules, info boards, the [Archwizard](/wiki/npc/archwizard) to rank up, and the [Enchanter](/wiki/npc/enchanter).
 - The **Blacksmith** — A shop run by [Matt Allurgy](/wiki/npc/matt-allurgy) for players to sell their ores.
 - The **Furniture Shop** — A shop run by [Steven Chairman](/wiki/npc/steven-chairman) for players to buy cosmetic [Furniture](/wiki/furniture)!
 - The **Cosmetics Shop** — A shop run by [Hatrick](/wiki/npc/hatrick) for players to buy aesthetic [Cosmetics](/wiki/cosmetics) for themselves. Also contains the **Wardrobe**, where players can preview owned cosmetics.
@@ -94,14 +93,14 @@ Coordinates: `-101, 69, 57`
 
 The docks are a great trading hub. It features:
 - The **Lumberyard** — A small area ran by [Clara Chairman](/wiki/npc/clara-chairman)
-- The **Fishmonger** — A shop run by [Old Man Eyebrows](/wiki/npc/fish-merchant) for players to sell their fished goods.
+- The **Fishmonger** — A shop run by [Old Man Eyebrows](/wiki/npc/old-man-eyebrows) for players to sell their fished goods.
 - The **Seacrab** — This ship is captained by [Captain Saltspring](/wiki/npc/captain-saltspring), and will let players sell their obtained mobdrops.
 
 ### The Farm
 
 Coordinates: `-152, 68, -8`
 
-The Farm is to the North West of spawn. It has the **Barn**, where players can talk to [The Farmer](/wiki/npc/farmer) to sell their harvested crops.
+The Farm is to the North West of spawn. It has the **Barn**, where players can talk to [Wheat A. Brix](/wiki/npc/wheat-a-brix) to sell their harvested crops.
 
 <!--### The Lake
 

@@ -19,7 +19,7 @@ Talents is a system for players to perform activities, level them up and receive
 There are 11 available Talents for players to level up:
 
 * Archery - Earns XP when killing mobs using a projectile.
-* Fighting - Earns XP when killing mobs using melee atacks.
+* Fighting - Earns XP when killing mobs using melee attacks.
 * Defense - Earns XP when receiving damage.
 * Farming - Earns XP when harvesting crops.
 * Foraging - Earns XP when cutting down logs.
@@ -52,6 +52,7 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 3 | Bow Master | Deal `[3-39%]` more damage with bows. 
 | 4 | Piercing | `[3-57%]` chance for arrows to pierce through mobs.
 | 5 | Stun | `[2-20%]` chance to decrease enemy movement speed by 20% for 2 seconds.
+| 6 | Charged Shot | Arrows you shoot will deal more damage based on how far the bow was pulled back, consuming mana in the process. Does `[0.5-2%]` more damage per mana consumed. **Left click a bow to toggle charged shot mode.**
 
 **Total Stats at Level 96**
 
@@ -79,7 +80,7 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 
 | Stat | Value |
 | --- | --- |
-| Crit Damage | 
+| Crit Damage | 96
 | Regeneration | 48
 | Health | 2
 
@@ -95,7 +96,8 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 2 | Defender | Earn `[10-190%]` more Defense XP.
 | 3 | Mob Master | Reduce incoming damage from mobs by `[2-56%]`.
 | 4 | Immunity | `[0.5-7.7%]` chance to completely negate an enemy attack.
-| 5 | No Debuff | `[5-95%]` chance to negate a harfmful potion effect from being applied.
+| 5 | No Debuff | `[5-95%]` chance to negate a harmful potion effect from being applied.
+| 6 | Absorption | Incoming damage will decrease mana by 2x Minecraft damage instead of your health for `[2-47]` seconds. Mana will not regenerate while Absorption is active. **Left click shield and take damage to activate ability.**
 
 **Total Stats at Level 96**
 
@@ -139,7 +141,7 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 3 | Axe Master | Increases damage from axes by `[4-58%]`.
 | 4 | Valor | Grants `[+1-19]` Strength while holding an axe.
 | 5 | Shredder | `[3-57%]` chance to deal triple durability damage with axes.
-| 6 | Treecapitator | Breaks entire trees instantly for `[5-80]` seconds. **Shift + Right click axe and break log to activate ability.**
+| 15 | Tree Feller | Ability to use the [Tree Feller](/wiki/enchantments/#legendary) enchantment.
 
 **Total Stats at Level 96**
 
@@ -162,7 +164,7 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 3 | Pick Master | Deal `[3-39%]` more damage with pickaxes.
 | 4 | Stamina | Grants `[+1-19]` Toughness while holding a pickaxe.
 | 5 | Hardened Armor | `[3-57%]` chance to negate durability damage on armor.
-| 6 | Speed Mine | Gives haste 10 for `[10-85]` seconds. **Shift + Right click pickaxe and mine block to activate ability.**
+| 6 | Speed Mine | Gives haste 10 for `[10-85]` seconds. **Right click pickaxe and mine block to activate ability.**
 | 15 | Deep Delver | Ability to pick up Reinforced Deepslate.
 | 30 | Careful Hands | Ability to pick up Spawners using Silk Touch.
 
@@ -186,8 +188,14 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 2 | Fisher | Earn `[10-190%]` more Fishing XP.
 | 3 | Treasure Hunter | `[0.5-9.5%]` higher chance to get rare loot from fishing.
 | 4 | Grappler | Hook entities with `[50-1850%]` more speed.
-| 5 | Epic Catch | `[0.2%-3.8]` added chance to get epic loot from fishing.
+| 5 | Epic Catch | `[0.2-3.8%]` added chance to get epic loot from fishing.
+| 5 | Fish Shop | Unlocks `/fish shop`.
 | 6 | Sharp Hook | Deal `[0.5-8]` damage to a hooked entity when left clicking with a fishing rod.
+| 10 | Rare Fish | Ability to catch Rare fish.
+| 20 | Epic Fish | Ability to catch Epic fish.
+| 30 | Legendary Fish | Ability to catch Legendary fish.
+| 40 | Mythical Fish | Ability to catch Mythical fish.
+| 50 | Abyssal Fish | Ability to catch Abyssal fish.
 
 **Total Stats at Level 96**
 
@@ -209,7 +217,7 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | 3 | Spade Master | Deal `[3-39%]` more damage with shovels.
 | 4 | Metal Detector | `[0.3-5.7%]` added chance to get rare loot from digging.
 | 5 | Lucky Spades | `[0.1-0.6%]` added chance to get epic loot from digging.
-| 6 | Terraform | When digging, break connected blocks instantly in a 4 block radius horizontally for `[5-65]` seconds. **Shift + Right click shovel and dig block to activate ability.**
+| 6 | Terraform | When digging, break connected blocks instantly in a 4 block radius horizontally for `[5-65]` seconds. **Right click shovel and dig block to activate ability.**
 
 **Total Stats at Level 96**
 
@@ -290,7 +298,7 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 If a player manages to reach level 96 in all Talents, these are the base stats a player can expect to have:
 
 | Stat | Base Level | Max Level |
-| --- | --- |
+| --- | --- | --- |
 | Strength | 0 | 240
 | Health | 20 | 40
 | Regeneration | 0 | 240

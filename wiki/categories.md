@@ -4,6 +4,7 @@ title: Categories
 description: "Browse all wiki articles organised by category."
 permalink: /wiki/categories/
 categories: [Reference]
+broken_links_report: true   # filled in by _plugins/wiki-broken-links.rb, see the bottom of this page
 see_also:
   - title: Wiki Home
     url: /wiki/
@@ -64,6 +65,35 @@ see_also:
 </div>
 
 {% endfor %}
+
+---
+
+{% comment %}
+  Pages with Broken Links.
+  Not a real category: _plugins/wiki-broken-links.rb checks every wiki
+  page after the site is built and passes the results in as
+  page.broken_links. Each entry has a title, a url, and a list of links
+  (href + problem: "missing page" or "missing section").
+{% endcomment %}
+
+<div class="cat-section" data-cat="pages-with-broken-links">
+<h2 id="pages-with-broken-links"><i class="fas fa-link-slash" style="color:#e74c3c;margin-right:.5rem"></i>Pages with Broken Links</h2>
+
+{% if page.broken_links and page.broken_links.size == 0 %}
+<p style="color:var(--text-muted);font-size:.85rem">No broken links right now.</p>
+{% elsif page.broken_links %}
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;margin:1rem 0 1.5rem">
+  {% for p in page.broken_links %}
+  <a href="{{ p.url | relative_url }}" class="see-also-link" style="display:flex;flex-direction:column;gap:.3rem;padding:.85rem 1rem;align-items:flex-start">
+    <span style="font-weight:700;color:#fff">{{ p.title }}</span>
+    {% for link in p.links %}
+    <span style="font-size:.78rem;color:var(--text-muted);word-break:break-all"><code style="color:#e74c3c">{{ link.href }}</code> {{ link.problem }}</span>
+    {% endfor %}
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+</div>
 
 <script>
 (function() {

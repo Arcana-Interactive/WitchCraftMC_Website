@@ -4,6 +4,8 @@ title: Archwizard
 description: "An NPC to help with ranking up!"
 permalink: /wiki/npc/archwizard
 categories: [NPCs, Spawn]
+redirects:
+  - Archmage
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs

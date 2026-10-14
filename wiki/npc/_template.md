@@ -19,6 +19,10 @@ permalink: /wiki/npc/npc-name                  # ← lowercase with hyphens
 
 categories: [NPCs, Spawn]                      # keep both; used for the sidebar category list
 
+# redirects:                                   # optional — other names people might search for,
+#   - Old Name                                 # e.g. what the NPC's shop is called.
+#                                              # Each name also gets its own URL that forwards here.
+
 toc: true                                      # shows "On This Page" sidebar if page has
                                                # more than 2 headings. Safe to leave on always.
 

@@ -31,7 +31,7 @@ Infobox:
           value: "<strong>XYZ:</strong> <code>-7 68 77</code></strong>"
 ---
 
-The Vote Trader is an NPC in the [Spawn Town](/wiki/spawn#the-town). Players can trade Vote Shards obtained through [Voting](/wiki/voting) for [Vote Keys](/wiki/crates/).
+The Vote Trader is an NPC in the [Spawn Town](/wiki/spawn#the-town). Players can trade [Vote Shards](/wiki/vote-shards/) obtained through [Voting](/wiki/voting) for [Vote Keys](/wiki/crate-keys/#vote-key).
 
 ## Interface
 {% include shop-gui.html id="vote_trader" %}

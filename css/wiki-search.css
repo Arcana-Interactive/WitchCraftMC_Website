@@ -31,6 +31,19 @@
   margin-bottom: .3rem;
 }
 
+/* "Redirected from …" — the search matched one of the page's redirects */
+.sr-redirect {
+  font-size: .78rem;
+  color: var(--text-muted);
+  margin: -.1rem 0 .4rem;
+}
+
+.sr-redirect i {
+  font-size: .65rem;
+  color: var(--text-dim);
+  margin-right: .35rem;
+}
+
 .sr-desc {
   font-size: .83rem;
   color: var(--text-muted);
@@ -153,6 +166,18 @@ mark {
 .sbp-item:hover .sbp-title,
 .sbp-item.sbp-active .sbp-title {
   color: var(--teal);
+}
+
+/* "Redirected from …" — the search matched one of the page's redirects */
+.sbp-redirect {
+  font-size: .7rem;
+  color: var(--text-muted);
+}
+
+.sbp-redirect i {
+  font-size: .6rem;
+  color: var(--text-dim);
+  margin-right: .3rem;
 }
 
 .sbp-desc {

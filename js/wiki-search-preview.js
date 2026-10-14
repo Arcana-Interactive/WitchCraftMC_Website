@@ -1,7 +1,8 @@
 /**
  * wiki-search-preview.js
  * Live search preview dropdown — works on both sidebar and homepage.
- * Navigates to /wiki/search/?q=... on Enter/submit.
+ * Navigates to /wiki/search/?q=... on Enter/submit, or straight to the
+ * page when the search is exactly a page name (or one of its redirects).
  * Keyboard: ArrowUp/Down to move through results, Escape to close.
  */
 (function () {
@@ -32,6 +33,44 @@
     );
   }
 
+  /* ── Redirects (other names for a page) ──
+     Listed under "redirects:" in a page's front matter, e.g.
+     Old Man Eyebrows → Fish Merchant. They are searched like the
+     title, and the result says which name matched. */
+  function redirectsOf(p) {
+    var r = p.redirects || [];
+    return typeof r === 'string' ? [r] : r;
+  }
+
+  // The redirect name that matches the search — exact match first
+  function matchedRedirect(p, ql) {
+    var names = redirectsOf(p);
+    var i;
+    for (i = 0; i < names.length; i++) {
+      if (names[i].toLowerCase() === ql) return names[i];
+    }
+    for (i = 0; i < names.length; i++) {
+      if (names[i].toLowerCase().includes(ql)) return names[i];
+    }
+    return null;
+  }
+
+  // Link to a result; tells the page which redirect name was used
+  function resultUrl(p, via) {
+    return via ? p.url + '?redirectedfrom=' + encodeURIComponent(via) : p.url;
+  }
+
+  // Page whose title or redirect is exactly the search, or null
+  function exactMatch(ql) {
+    for (var i = 0; i < pages.length; i++) {
+      var p = pages[i];
+      if (p.title && p.title.toLowerCase() === ql) return resultUrl(p, null);
+      var via = matchedRedirect(p, ql);
+      if (via && via.toLowerCase() === ql) return resultUrl(p, via);
+    }
+    return null;
+  }
+
   /* ── Bind a search preview to an input+preview pair ── */
   function initSearchPreview(input, preview) {
     if (!input || !preview) return;
@@ -47,14 +86,18 @@
 
       var scored = pages.map(function (p) {
         var score = 0;
-        if (p.title && p.title.toLowerCase().includes(ql)) score += 3;
+        var title = (p.title || '').toLowerCase();
+        // Only mention a redirect when the title itself doesn't match
+        var via = title.includes(ql) ? null : matchedRedirect(p, ql);
+        if (title.includes(ql) || via) score += 3;
+        if (title === ql || (via && via.toLowerCase() === ql)) score += 4;  // exact name first
         if (p.description && p.description.toLowerCase().includes(ql)) score += 2;
         if (p.content && p.content.toLowerCase().includes(ql)) score += 1;
-        return { p: p, score: score };
+        return { p: p, via: via, score: score };
       }).filter(function (x) { return x.score > 0; });
 
       scored.sort(function (a, b) { return b.score - a.score; });
-      var matched = scored.slice(0, MAX_ITEMS).map(function (x) { return x.p; });
+      var matched = scored.slice(0, MAX_ITEMS);
 
       if (!matched.length) {
         preview.innerHTML = '<div class="sbp-empty">No results</div>';
@@ -62,10 +105,12 @@
         return;
       }
 
-      preview.innerHTML = matched.map(function (p, i) {
+      preview.innerHTML = matched.map(function (x, i) {
+        var p = x.p;
         var cats = p.categories ? p.categories.split(',').map(function (c) { return c.trim(); }).filter(Boolean) : [];
-        return '<a href="' + esc(p.url) + '" class="sbp-item" data-idx="' + i + '" role="option">' +
+        return '<a href="' + esc(resultUrl(p, x.via)) + '" class="sbp-item" data-idx="' + i + '" role="option">' +
           '<span class="sbp-title">' + highlight(p.title || 'Untitled', q) + '</span>' +
+          (x.via ? '<span class="sbp-redirect"><i class="fas fa-share"></i>Redirected from ' + highlight(x.via, q) + '</span>' : '') +
           (p.description ? '<span class="sbp-desc">' + highlight(p.description, q) + '</span>' : '') +
           (cats.length ? '<span class="sbp-cat">' + esc(cats[0]) + '</span>' : '') +
           '</a>';
@@ -118,7 +163,10 @@
           items[activeIdx].click();
         } else {
           var q = input.value.trim();
-          if (q) window.location.href = '/wiki/search/?q=' + encodeURIComponent(q);
+          // An exact page name or redirect goes straight to the page
+          var exact = q ? exactMatch(q.toLowerCase()) : null;
+          if (exact) window.location.href = exact;
+          else if (q) window.location.href = SEARCH_URL + '?q=' + encodeURIComponent(q);
           e.preventDefault();
         }
       } else if (e.key === 'Escape') {

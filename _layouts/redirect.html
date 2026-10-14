@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>{{ page.redirect_title }} — Wiki | {{ site.title }}</title>
+
+  <!-- ── Redirect page ──
+       Made by _plugins/wiki-redirects.rb for every name listed under
+       "redirects:" in a page's front matter. It forwards the visitor
+       to the real page and tells it which name was used, so the page
+       can show "(Redirected from …)" under its title. -->
+  <link rel="canonical" href="{{ page.redirect_to | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <script>
+    location.replace("{{ page.redirect_to | relative_url }}?redirectedfrom=" + encodeURIComponent({{ page.title | jsonify }}) + location.hash);
+  </script>
+</head>
+<body>
+  <p>{{ page.title }} has moved to <a href="{{ page.redirect_to | relative_url }}">{{ page.redirect_title }}</a>.</p>
+</body>
+</html>

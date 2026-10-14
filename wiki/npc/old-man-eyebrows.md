@@ -4,6 +4,9 @@ title: Old Man Eyebrows
 description: "Sell your catch for money!"
 permalink: /wiki/npc/old-man-eyebrows
 categories: [NPCs, Spawn, Economy]
+redirects:
+  - Fish Merchant
+  - Fishmonger
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs

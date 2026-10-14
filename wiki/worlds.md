@@ -16,9 +16,9 @@ see_also:
 
 ## The Worlds of WitchCraftMC
 
-On WitchCraftMC, appart from the [**Spawn**](/wiki/spawn), there are 5 available worlds that players can play on. All worlds except the end can be reached through the use of ***`/rtp`***. The End on the other hand must be reached through a stronghold, *though there is a rumour that one existed in the Spawn once.*
+On WitchCraftMC, apart from the [**Spawn**](/wiki/spawn), there are 5 available worlds that players can play on. All worlds except the end can be reached through the use of ***`/rtp`***. The End on the other hand must be reached through a stronghold, *though there is a rumour that one existed in the Spawn once.*
 
-The resource worlds are unique in that they ocassionally are reset. Building is not encouraged in these worlds, but are excellent for resource gathering.
+The resource worlds are unique in that they occasionally are reset. Building is not encouraged in these worlds, but they are excellent for resource gathering.
 
 <!-- Example of Callout for later
 <div class="wiki-callout info">
@@ -39,10 +39,10 @@ The resource worlds are unique in that they ocassionally are reset. Building is 
 
 ## Seasons & World Resets
 
-WitchCraftMC Survival, does have **seasons**. These are however not based on time, but only when it is required, such as a major minecraft world-generation update. At the time of a season reset:
+WitchCraftMC Survival does have **seasons**. These are however not based on time, but only when it is required, such as a major Minecraft world-generation update. At the time of a season reset:
 
 1. The current Overworld is **archived** and made available for download.
 2. A fresh map is generated with a new seed.
-3. [Store Ranks](/wiki/staff-ranks/) and unlocked [cosmetics](/wiki/cosmetics/) carry over. Anything else does not.
+3. [Store Ranks](/wiki/store-ranks/) and unlocked [cosmetics](/wiki/cosmetics/) carry over. Anything else does not.
 
 Season resets are announced at least a few months before on Discord.

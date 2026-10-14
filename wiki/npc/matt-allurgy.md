@@ -4,6 +4,8 @@ title: Matt Allurgy
 description: "Sell your ores for money!"
 permalink: /wiki/npc/matt-allurgy
 categories: [NPCs, Spawn, Economy]
+redirects:
+  - Blacksmith
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs

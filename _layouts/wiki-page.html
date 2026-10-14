@@ -131,6 +131,7 @@
       </div>
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p class="desc">{{ page.description }}</p>{% endif %}
+      <p class="redirect-note" id="redirectNote" hidden></p>
       {% if page.categories %}
       <div class="page-meta">
         {% for cat in page.categories %}
@@ -383,6 +384,24 @@
         if(window.innerWidth <= 860) closeSidebar();
       });
     });
+  })();
+
+  // ── "REDIRECTED FROM" NOTE ─────────────────────
+  // Redirect pages (see _plugins/wiki-redirects.rb) and search results that
+  // matched one of this page's redirects add ?redirectedfrom=Name to the
+  // address. Show that name under the title, then tidy up the address bar.
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var from   = params.get('redirectedfrom');
+    var note   = document.getElementById('redirectNote');
+    if (!from || !note) return;
+
+    note.textContent = '(Redirected from ' + from + ')';
+    note.hidden = false;
+
+    params.delete('redirectedfrom');
+    var rest = params.toString();
+    history.replaceState(null, '', window.location.pathname + (rest ? '?' + rest : '') + window.location.hash);
   })();
 
   // History module toggle

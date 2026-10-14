@@ -12,11 +12,11 @@ see_also:
     url: /wiki/talents/
 ---
 
-When leveling up [Talents](/wiki/talents)., or when obtaining special items. Players will gain stat boosts. There are 9 available Stats for players to gain boosts in.
+When leveling up [Talents](/wiki/talents), or when obtaining special items, players will gain stat boosts. There are 9 available Stats for players to gain boosts in.
 
 ## Strength
 
-Strength is a stat that increases attack damage with various weapons. Players gain 0.4 Attack Damage per 1 Strength. At Level 96 in all Talents, players will have a base Strength of 240 or a 96 Attack Damage Trait.
+Strength is a stat that increases attack damage with various weapons. Players gain 0.4% Attack Damage per 1 Strength. At Level 96 in all Talents, players will have a base Strength of 240 or a 96% Attack Damage Trait.
 
 **Sources:**
 
@@ -45,7 +45,7 @@ Health is a stat that increases the available HP pool for a player. At Level 96 
 
 ## Regeneration
 
-Regeneration is a stat that increases how fast you recover health and saturation. Players gain 0.02 Saturation- and Hunger Regeneration per 1 Regeneration. At Level 96 in all Talents, players will have a base Regeneration of 240 and 4.8 Hunger- and Saturation Regeneration Trait.
+Regeneration is a stat that increases how fast you recover health, saturation and mana. Players gain 0.02 Saturation-, Hunger- and Mana Regeneration per 1 Regeneration. At Level 96 in all Talents, players will have a base Regeneration of 240 and 4.8 Hunger-, Saturation- and Mana Regeneration Trait.
 
 **Sources:**
 
@@ -70,9 +70,10 @@ Luck is a stat that increases the chance of extra drops in gathering Talents. Pl
 
 ## Wisdom
 
-Wisdom is a stat that increases experience gain and decreases anvil costs. Players gain 0.4 Experience Bonus, and 0.1 Anvil Discount, per 1 Wisdom. At Level 96 in all Talents, players will have a base Wisdom of 240 and
+Wisdom is a stat that increases experience gain and max mana, and decreases anvil costs. Players gain 0.4 Experience Bonus, 0.1 Anvil Discount, and 2 Max Mana, per 1 Wisdom. At Level 96 in all Talents, players will have a base Wisdom of 240 and
 - 96 Experience Bonus
 - 24 Anvil Discount (44% Effective Anvil Discount)
+- 480 Max Mana (500 Max Mana in total)
 
 **Sources:**
 
@@ -110,7 +111,7 @@ Crit Damage is a stat that increases the damage when dealing a critical hit. At 
 
 ## Speed
 
-Speed is a stat that increases how fast a player moves. Players gain 0.4 Attack Damage per 1 Strength. It does not increase at level up of a Talent. The only source is from the Fleeting perk from [Agility](/wiki/talents#agility).
+Speed is a stat that increases how fast a player moves. Players gain 1 Movement Speed per 1 Speed. It does not increase at level up of a Talent. The only source is from the Fleeting perk from [Agility](/wiki/talents#agility).
 
 Base Speed is a speed of 100.
 
@@ -125,7 +126,7 @@ Base Speed is a speed of 100.
 If a player manages to reach level 96 in all Talents, these are the base stats a player can expect to have:
 
 | Stat | Base Level | Max Level |
-| --- | --- |
+| --- | --- | --- |
 | Strength | 0 | 240
 | Health | 20 | 40
 | Regeneration | 0 | 240

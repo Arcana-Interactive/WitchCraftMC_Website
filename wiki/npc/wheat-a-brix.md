@@ -4,6 +4,8 @@ title: Wheat A. Brix
 description: "Sell crops for money!"
 permalink: /wiki/npc/wheat-a-brix
 categories: [NPCs, Spawn, Economy]
+redirects:
+  - Farmer
 see_also:
   - title: NPCs
     url: /wiki/categories/#npcs

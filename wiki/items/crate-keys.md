@@ -42,13 +42,13 @@ Vote Keys can be obtained by trading 5x [Vote Shards](/wiki/vote-shards/) at the
 
 ### Pearl Key
 
-Pearl Keys can be obtained from the [[Vote Crate]](/wiki/crates/#vote-crate), and [Vote Parties](/wiki/voting/#vote-parties).
+Pearl Keys can be obtained from the [Vote Crate](/wiki/crates/#vote-crate), and [Vote Parties](/wiki/voting/#vote-parties).
 
 ---
 
 ### Enchanter Key
 
-Enchanter Keys can be obtained from [[Vote Crates]](/wiki/crates/#vote-crate), [Pearl Crates](/wiki/crates/#pearl-crate), [Pyrite Crates](/wiki/crates/#pyrite-crate) and [Vote Parties](/wiki/voting/#vote-parties).
+Enchanter Keys can be obtained from [Vote Crates](/wiki/crates/#vote-crate), [Pearl Crates](/wiki/crates/#pearl-crate), [Pyrite Crates](/wiki/crates/#pyrite-crate) and [Vote Parties](/wiki/voting/#vote-parties).
 
 ---
 
