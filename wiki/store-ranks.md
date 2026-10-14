@@ -40,7 +40,7 @@ The **Quartz** rank is the first tier of Store Ranks and can be purchased for `$
 - `/pv` - 3x 6 row playervaults.
 - `/rtp` Delay decreased to 15 seconds.
 
-Tag: [Quartz]
+Tag: {% include tag.html id="quartz" %}
 
 ---
 
@@ -60,7 +60,7 @@ The **Jade** rank is the first tier of Store Ranks and can be purchased for `$34
 - `/rtp` Delay decreased to 10 seconds.
 - Access to all Quartz perks.
 
-Tag: [Jade]
+Tag: {% include tag.html id="jade" %}
 
 ---
 
@@ -79,7 +79,7 @@ The **Topaz** rank is the first tier of Store Ranks and can be purchased for `$7
 - `/rtp` Delay decreased to 5 seconds.
 - Access to all Jade perks.
 
-Tag: [Topaz]
+Tag: {% include tag.html id="topaz" %}
 
 ---
 
@@ -97,7 +97,7 @@ The **Ruby** rank is the first tier of Store Ranks and can be purchased for `$17
 - Keep Inventory and Exp on death.
 - Access to all Topaz perks.
 
-Tag: [Ruby]
+Tag: {% include tag.html id="ruby" %}
 
 ## Subscriptions
 
@@ -111,4 +111,4 @@ Diamond rank can be purchased for `$9.99` per month, but requires the player to 
 - Ability to right click players to sit on them.
 - `/rtp` Delay decreased to 5 seconds.
 
-Tag: [+]
+Tag: {% include tag.html id="diamond" %}
