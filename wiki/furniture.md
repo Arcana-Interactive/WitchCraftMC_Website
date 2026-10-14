@@ -8,8 +8,6 @@ categories: [Cosmetic,Furniture,Blocks]
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
-  - title: Changelog & History
-    url: /wiki/changelog/
   - title: Crafting & Items
     url: /wiki/crafting/
 ---

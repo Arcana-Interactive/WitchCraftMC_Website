@@ -8,8 +8,8 @@ broken_links_report: true   # filled in by _plugins/wiki-broken-links.rb, see th
 see_also:
   - title: Wiki Home
     url: /wiki/
-  - title: Changelog
-    url: /wiki/changelog/
+#  - title: Changelog
+#    url: /wiki/changelog/
 ---
 
 <p id="catIntro">All wiki pages grouped by topic. Click any article to jump straight to it, or use the sidebar search to find something specific.</p>
