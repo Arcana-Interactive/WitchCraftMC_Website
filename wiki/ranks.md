@@ -64,6 +64,7 @@ The **Acolyte** rank can be obtained by ranking up at the Archwizard for $50,000
 **Perks:**
 - `/craft` - open virtual crafting table.
 - `/sethome <HomeName>` - 3x saved homes.
+- `/back` - Return to your previous locations, be it death or teleportation.
 - Access to all Novice perks.
 
 Tag: {% include tag.html id="acolyte" %}
