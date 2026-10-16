@@ -20,10 +20,10 @@ Voting for the server helps with making more players discover us, which means mo
 
 <!-- Vote site buttons: replace each example.com link and "Vote Site" name with a real vote site -->
 <div class="vote-sites">
-  <a href="https://example.com" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 1</a>
-  <a href="https://example.com" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 2</a>
-  <a href="https://example.com" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 3</a>
-  <a href="https://example.com" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 4</a>
+  <a href="https://minecraftservers.org/vote/694636" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 1</a>
+  <a href="https://minecraft.buzz/vote/witchcraftmc" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 2</a>
+  <a href="https://minecraft-mp.com/server/365355/vote/" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 3</a>
+  <a href="https://minecraft-server-list.com/server/524118/vote/ " class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 4</a>
   <a href="https://example.com" class="vote-site" target="_blank" rel="noopener"><i class="fas fa-vote-yea"></i>Vote Site 5</a>
 </div>
 
