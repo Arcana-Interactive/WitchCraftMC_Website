@@ -67,6 +67,7 @@ see_also:
 -   Claim Owners can ban any player from their claims for any reason. However if the player has builds or items within the claim, the Claim Owner still has to follow the above rules for retrieval.
 
 ## Gameplay rules:
+-   **No bypassing punishments** If you are punished in any way, you are not permitted to bypass the punishment. Communicating through #in-game chat on discord, through auction house or showcases when muted or banned may lead to a permanent ban.
 - **No inappropriate builds** (including pixel, and map art.)
 - **No lag machines.** - If your build causes significant server lag it will be removed without warning.
 -   **No exploiting bugs.** - If you find a glitch or exploit, report it to a Staff Member immediately or make a bug report on discord. Abusing exploits or glitches may result in a permanent ban. Vanilla glitches and exploits also fall under this.
