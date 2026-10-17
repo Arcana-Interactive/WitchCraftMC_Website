@@ -69,7 +69,8 @@ see_also:
 ## Gameplay rules:
 - **No inappropriate builds** (including pixel, and map art.)
 - **No lag machines.** - If your build causes significant server lag it will be removed without warning.
--   **No exploiting bugs.** - If you find a glitch or exploit, report it to a Staff Member immediately or make a bug report on discord. Abusing exploits or glitches will result in a permanent ban. Vanilla glitches and exploits also fall under this.
+-   **No exploiting bugs.** - If you find a glitch or exploit, report it to a Staff Member immediately or make a bug report on discord. Abusing exploits or glitches may result in a permanent ban. Vanilla glitches and exploits also fall under this.
+    - Using pi-ray to find spawners, or using methods like the Clay Diamond Trick from earlier versions is still considered a vanilla exploit.   
 -   **No Automatic farms** where you do not need to actively interact with it. Ask Staff if you are unsure if one is allowed.
 - **No blacklisted modifications** - See the below list for some examples.
 
