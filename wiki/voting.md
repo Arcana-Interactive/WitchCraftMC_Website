@@ -12,7 +12,7 @@ see_also:
     url: /wiki/crafting/
 ---
 
-Players can vote up to 5 times per real life day. Each vote rewards the player with 2x [Vote Shard](/wiki/vote-shards/). 5x Vote Shards can be traded for a Vote Key at the [Vote Trader](/wiki/npc/vote-trader).
+Players can vote up to 5 times per real life day. Each vote rewards the player with 2x [Vote Shards](/wiki/vote-shards/). 5x Vote Shards can be traded for a Vote Key at the [Vote Trader](/wiki/npc/vote-trader).
 
 ## Vote Sites
 
