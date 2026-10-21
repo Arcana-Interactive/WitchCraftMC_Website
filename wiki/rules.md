@@ -38,13 +38,19 @@ see_also:
 - **No spamming** - this includes repeated messages, excessive caps, or character spam.
 
 ## Griefing & Theft
-<div class="wiki-callout info">
+<!--<div class="wiki-callout info">
   <span class="callout-icon"><i class="fas fa-shield-halved"></i></span>
   <div>While griefing is disallowed, the best protection is to <a href="/wiki/claims/">claim your land.</a></div>
+</div>-->
+
+<div class="wiki-callout info">
+  <span class="callout-icon"><i class="fas fa-shield-halved"></i></span>
+  <div>Griefing is allowed, but discouraged outside of claims, the best protection is to <a href="/wiki/claims/">claim your land.</a></div>
 </div>
 
-- **Do not Grief** - Do not break, or otherwise alter other players’ builds without their permission.
+- **Do not Grief** - Do not break, or otherwise alter other players’ builds within claims without their permission.
   - Killing mobs that are clearly owned by another player is still considered grief.
+  - Taking items from or Griefing builds that a player is clearly working on is still disallowed.
 - **No Border-Griefing** - Do not build, or deform the terrain near other players’ claims without their permission.
 - **Use the Resource Worlds** - Only deform the Main world’s terrain for building purposes. Collecting resources should be done in the resource world.
 - **No Theft** - Do not take items from another player without their permission.

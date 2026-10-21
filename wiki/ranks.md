@@ -25,8 +25,8 @@ Each rankup costs 30 Exp levels.
 The **Initiate** rank is the default rank, given to every new player from the start.
 
 **Perks:**
-- `/sethome <HomeName>` - 1x saved home.
 - Access to all standard [commands](/wiki/commands/)
+- `/sethome <HomeName>` - 1x saved home.
 
 Tag: {% include tag.html id="initiate" %}
 
@@ -34,11 +34,12 @@ Tag: {% include tag.html id="initiate" %}
 
 ### Seeker
 
-The **Seeker** rank can be obtained by ranking up at the Archwizard for $10,000.
+The **Seeker** rank can be obtained by ranking up at the Archwizard for $50,000 and 30 Exp levels.
 
 **Perks:**
-- `/sethome <HomeName>` - 2x saved homes.
 - Access to all Initiate perks.
+- `/sethome <HomeName>` - 2x saved homes.
+- `/hdb` - Opens head database for decorational heads.
 
 Tag: {% include tag.html id="seeker" %}
 
@@ -46,12 +47,13 @@ Tag: {% include tag.html id="seeker" %}
 
 ### Novice
 
-The **Novice** rank can be obtained by ranking up at the Archwizard for $20,000.
+The **Novice** rank can be obtained by ranking up at the Archwizard for $100,000 and 30 Exp levels.
 
 **Perks:**
+- Access to all Seeker perks.
 - `/pv` - 1x 6 row playervault.
 - `/ah` - Access to the Auction House.
-- Access to all Seeker perks.
+- `/trash` - Opens a menu for disposing items (Warning: trashed items cannot be retrieved.)
 
 Tag: {% include tag.html id="novice" %}
 
@@ -59,13 +61,13 @@ Tag: {% include tag.html id="novice" %}
 
 ### Acolyte
 
-The **Acolyte** rank can be obtained by ranking up at the Archwizard for $50,000.
+The **Acolyte** rank can be obtained by ranking up at the Archwizard for $350,000 and 30 Exp levels.
 
 **Perks:**
+- Access to all Novice perks.
 - `/craft` - open virtual crafting table.
 - `/sethome <HomeName>` - 3x saved homes.
-- `/back` - Return to your previous locations, be it death or teleportation.
-- Access to all Novice perks.
+- `/top` - Teleports you to the topmost block above you.
 
 Tag: {% include tag.html id="acolyte" %}
 
@@ -73,13 +75,14 @@ Tag: {% include tag.html id="acolyte" %}
 
 ### Adept
 
-The **Adept** rank can be obtained by ranking up at the Archwizard for $100,000.
+The **Adept** rank can be obtained by ranking up at the Archwizard for $1.500,000 and 30 Exp levels.
 
 **Perks:**
+- Access to all Acolyte perks.
 - `/pv` - 2x 6 row playervaults.
+- `/back` - Return to your previous locations, be it death or teleportation.
 - `/trash` - open a virtual container to instantly dispose of items.
 - Ability to sell up to 2 items on the Auction House.
-- Access to all Acolyte perks.
 
 Tag: {% include tag.html id="adept" %}
 
@@ -87,12 +90,12 @@ Tag: {% include tag.html id="adept" %}
 
 ### Sorcerer
 
-The **Sorcerer** rank can be obtained by ranking up at the Archwizard for $250,000.
+The **Sorcerer** rank can be obtained by ranking up at the Archwizard for $3,000,000 and 30 Exp levels.
 
 **Perks:**
+- Access to all Adept perks.
 - `/ec` - opens your enderchest.
 - `/sethome <HomeName>` - 4x saved homes.
-- Access to all Adept perks.
 
 Tag: {% include tag.html id="sorcerer" %}
 
@@ -100,11 +103,11 @@ Tag: {% include tag.html id="sorcerer" %}
 
 ### Elder
 
-The **Elder** rank can be obtained by ranking up at the Archwizard for $500,000.
+The **Elder** rank can be obtained by ranking up at the Archwizard for $10,000,000 and 30 Exp levels.
 
 **Perks:**
+- Access to all Sorcerer perks.
 - `/pv` - 3x 6 row playervaults.
 - `/sethome <HomeName>` - 5x saved homes.
-- Access to all Sorcerer perks.
 
 Tag: {% include tag.html id="elder" %}

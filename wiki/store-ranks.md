@@ -39,6 +39,7 @@ The **Quartz** rank is the first tier of Store Ranks and can be purchased for `$
 - Ability to list 2 items on the auction house at once.
 - `/pv` - 3x 6 row playervaults.
 - `/rtp` Delay decreased to 15 seconds.
+- `/hdb` - Opens head database for decorational heads.
 
 Tag: {% include tag.html id="quartz" %}
 
@@ -49,6 +50,7 @@ Tag: {% include tag.html id="quartz" %}
 The **Jade** rank is the first tier of Store Ranks and can be purchased for `$34.39`.
 
 **Perks:**
+- Access to all Quartz perks.
 - `/ec` - opens your enderchest.
 - `/back` - Teleports to your last teleport location.
 - `/ptime` - Changes the personal time your client sees. (This does not affect mechanics.)
@@ -58,7 +60,6 @@ The **Jade** rank is the first tier of Store Ranks and can be purchased for `$34
 - Ability to list 3 items on the auction house at once.
 - `/pv` - 4x 6 row playervaults.
 - `/rtp` Delay decreased to 10 seconds.
-- Access to all Quartz perks.
 
 Tag: {% include tag.html id="jade" %}
 
@@ -69,6 +70,7 @@ Tag: {% include tag.html id="jade" %}
 The **Topaz** rank is the first tier of Store Ranks and can be purchased for `$78.62`.
 
 **Perks:**
+- Access to all Jade perks.
 - `/bellyflop` - Makes your character lay on their stomach.
 - `/lay` - Makes your character lay on their back.
 - `/hat` - Puts any held item onto your head-slot.
@@ -77,7 +79,7 @@ The **Topaz** rank is the first tier of Store Ranks and can be purchased for `$7
 - Ability to list 4 items on the auction house at once.
 - `/pv` - 5x 6 row playervaults.
 - `/rtp` Delay decreased to 5 seconds.
-- Access to all Jade perks.
+- `/top` - Teleports you to the topmost block above you.
 
 Tag: {% include tag.html id="topaz" %}
 
@@ -88,6 +90,7 @@ Tag: {% include tag.html id="topaz" %}
 The **Ruby** rank is the first tier of Store Ranks and can be purchased for `$171.97`.
 
 **Perks:**
+- Access to all Topaz perks.
 - `/crawl` - Makes your crawl on the floor.
 - `/fish sellall` - Instantly sells all fish in your inventory.
 - `/sethome <HomeName>` - 15x saved homes.
@@ -95,7 +98,6 @@ The **Ruby** rank is the first tier of Store Ranks and can be purchased for `$17
 - `/pv` - 9x 6 row playervaults.
 - `/rtp` Delay decreased to 1 seconds.
 - Keep Inventory and Exp on death.
-- Access to all Topaz perks.
 
 Tag: {% include tag.html id="ruby" %}
 
