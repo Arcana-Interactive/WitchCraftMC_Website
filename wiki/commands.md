@@ -99,18 +99,21 @@ This page lists every command available to players.
 | `/ignorelist`| See all players you are currently ignoring.|
 | `/chat`| Opens a menu to turn Global and Local Chat on or off.|
 | `/togglechat [global/local]`| Mutes or unmutes the given chat channel. If no channel is given, mutes or unmutes both.|
-| `/g [message]` | Toggles the chat channel to Global Chat. If a message is written afterwards, sends a message into global chat without toggling channel. |
-| `/lc [message]` | Toggles the chat channel to Local Chat. If a message is written afterwards, sends a message into local chat without toggling channel. |
+| `/g [message]` | Toggles the chat channel to Global Chat. If a message is written afterwards, sends a message into Global Chat without toggling channel. |
+| `/tc [message]` | Toggles the chat channel to Town Chat. If a message is written afterwards, sends a message into Town Chat without toggling channel. |
+| `/lc [message]` | Toggles the chat channel to Local Chat. If a message is written afterwards, sends a message into Local Chat without toggling channel. |
+| `/mail send <username> <message>` | Sends a message to a player's inbox. Helpful for offline players.|
+| `/mail read` | Read your inbox of received mail. |
+| `/mail clear` | Clear your inbox for mail. |
+
+<!--
 | `/pc [message]` | Toggles the chat channel to Party Chat. If a message is written afterwards, sends a message into party chat without toggling channel. |
 | `/party create <name>` | Creates a party with the given name |
 | `/party invite <player>` | Invites the given player to your party |
 | `/party disband` | Disbands your party |
 | `/party accept` | Accept a received party invite |
 | `/party leave` | Leave your party |
-| `/party` | Shows the list of players in your party. |
-| `/mail send <username> <message>` | Sends a message to a player's inbox. Helpful for offline players.|
-| `/mail read` | Read your inbox of received mail. |
-| `/mail clear` | Clear your inbox for mail. |
+| `/party` | Shows the list of players in your party. |-->
 
 
 ## Teleportation
