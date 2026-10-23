@@ -98,12 +98,12 @@ All fishing enchantments apply to Fishing Rods. See [Scales](/wiki/scales) for t
 
 | Enchantment | Rarity | Max Level | Incompatible With | Information |
 | --- | --- | --- | --- | --- |
-| Trawler | Rare | III | | Grants extra experience every time you catch a fish. |
-| Pyroclasm | Rare | V | Spiked Hook | Increases damage dealt to magmatic mobs. |
-| Trawl | Epic | I | | Every catch reels in two fish. |
-| Dredge | Epic | III | | Chance to reel in ores when fishing. |
-| Spiked Hook | Epic | III | Pyroclasm | Deals more damage to monsters. |
-| Angler's Delight | Legendary | III | | Chance to gain extra Fishing skill EXP when catching fish. |
+| Experienced Fisher | Rare | III | | Grants extra experience every time you catch a fish. |
+| Extinguish | Rare | V | Barbed | Increases damage dealt to magmatic mobs. |
+| Bountiful | Epic | I | | Every catch reels in two fish. |
+| Prospector | Epic | III | | Chance to reel in ores when fishing. |
+| Barbed | Epic | III | Extinguish | Deals more damage to monsters. |
+| Skillful Fisher | Legendary | III | | Chance to gain extra Fishing talent XP when catching fish. |
 | Angler | Legendary | V | | Higher chance to catch rarer fish. Angler V can catch Abyssal fish. |
 | Bait | Arcane | I | Lure, Pay to Play | Makes fish bite faster, like a stronger Lure. |
 | Pay to Play | Arcane | III | Lure, Bait | Greatly increases how often you catch fish and how rare they are, but every catch costs you money. |

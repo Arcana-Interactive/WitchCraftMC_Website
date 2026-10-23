@@ -26,11 +26,11 @@ Players can use their Scales at [Old Man Eyebrows](/wiki/npc/old-man-eyebrows) t
 |---|---|
 |Fishing Key | 2,500|
 |Bait Book | 7,000|
-|Trawl Book | 6,000|
-|Angler's Delight Book | 10,000|
-|Dredge Book | 5,000|
-|Trawler Book | 6,000|
-|Pyroclasm Book | 3,000|
-|Spiked Hook Book | 3,000|
+|Bountiful Book | 6,000|
+|Skillfull Fisher Book | 10,000|
+|Prospector Book | 5,000|
+|Experienced Fisher Book | 6,000|
+|Extinguish Book | 3,000|
+|Barbed Book | 3,000|
 |Pay to Play Book | 7,000|
 |Angler Book | 6,000|
