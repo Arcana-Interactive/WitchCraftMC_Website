@@ -27,6 +27,8 @@ Infobox:
       rows:
         - label: "<strong>Area</strong>"
           value: "The Town (Auction House)"
+        - label: "<strong>Warp</strong>"
+          value: "<code>/warp Auction</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>-30 71 63</code></strong>"
 ---

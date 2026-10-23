@@ -29,6 +29,8 @@ Infobox:
       rows:
         - label: "<strong>Area</strong>"
           value: "The Town"
+        - label: "<strong>Warp</strong>"
+          value: "<code>/warp Blacksmith</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>33 68 75</code></strong>"
 ---

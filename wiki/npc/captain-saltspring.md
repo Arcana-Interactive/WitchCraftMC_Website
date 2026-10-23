@@ -29,6 +29,8 @@ Infobox:
       rows:
         - label: "<strong>Area</strong>"
           value: "The Docks (The Seacrab)"
+        - label: "<strong>Warp</strong>"
+          value: "<code>/warp Seacrab</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>-203 64 69</code></strong>"
 ---

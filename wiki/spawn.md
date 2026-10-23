@@ -80,7 +80,7 @@ The Town is the core location where players will spawn in the Spawn Island. The 
 
 - The **Auction House** — A place where players can quickly sell and buy items from each other.
 - The **Crates** — An area to open [crates](/wiki/crates/) using keys found while playing on the server. The [Vote Trader](/wiki/npc/vote-trader) can also be found here.
-- The **Wizards' House** — rules, info boards, the [Archwizard](/wiki/npc/archwizard) to rank up, and the [Enchanter](/wiki/npc/enchanter).
+- The **Enchanter's Building** — rules, info boards, the [Archwizard](/wiki/npc/archwizard) to rank up, and the [Enchanter](/wiki/npc/enchanter).
 - The **Blacksmith** — A shop run by [Matt Allurgy](/wiki/npc/matt-allurgy) for players to sell their ores.
 - The **Furniture Shop** — A shop run by [Steven Chairman](/wiki/npc/steven-chairman) for players to buy cosmetic [Furniture](/wiki/furniture)!
 - The **Cosmetics Shop** — A shop run by [Hatrick](/wiki/npc/hatrick) for players to buy aesthetic [Cosmetics](/wiki/cosmetics) for themselves. Also contains the **Wardrobe**, where players can preview owned cosmetics.

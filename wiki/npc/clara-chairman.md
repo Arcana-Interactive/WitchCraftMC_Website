@@ -29,6 +29,8 @@ Infobox:
       rows:
         - label: "<strong>Area</strong>"
           value: "The Docks (Lumberyard)"
+        - label: "<strong>Warp</strong>"
+          value: "<code>/warp Lumberyard</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>-95 69 95</code></strong>"
 ---

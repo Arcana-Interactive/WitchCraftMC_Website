@@ -28,12 +28,14 @@ Infobox:
     - heading: "Location"
       rows:
         - label: "<strong>Area</strong>"
-          value: "The Town (Wizard's House)"
+          value: "The Town (Enchanter's Building)"
+        - label: "<strong>Warp</strong>"
+          value: "<code>/warp Archwizard</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>33 68 75</code></strong>"
 ---
 
-The Archwizard is an NPC that allows players to rank up when they have enough money. They can be found in the Wizard's House in [Spawn](/wiki/spawn).
+The Archwizard is an NPC that allows players to rank up when they have enough money. They can be found in the Enchanter's Building in [Spawn](/wiki/spawn).
 
 ## Interface
 {% include shop-gui.html id="rankup" %}

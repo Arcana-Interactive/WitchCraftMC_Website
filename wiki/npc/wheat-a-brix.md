@@ -29,6 +29,8 @@ Infobox:
       rows:
         - label: "<strong>Area</strong>"
           value: "The Farm"
+        - label: "<strong>Warp</strong>"
+          value: "<code>/warp Farm</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>-151 68 -61</code></strong>"
 ---

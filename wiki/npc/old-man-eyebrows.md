@@ -30,6 +30,8 @@ Infobox:
       rows:
         - label: "<strong>Area</strong>"
           value: "The Docks (Fishmonger)"
+        - label: "<strong>Warp</strong>"
+          value: "<code>/warp Fishmonger</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>-105 68 31</code></strong>"
 ---
