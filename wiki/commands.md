@@ -32,6 +32,7 @@ This page lists every command available to players.
 | Command | Description | Requirement |
 | --- | --- | :---: |
 | `/ranks`| View your rank progress.|
+| `/settings` | Toggle personal settings for yourself.|
 | `/afk`| Mark yourself as AFK|
 | `/profile [username]`| Check a player's profile and see information about them.|
 | `/report <username>`| Report the given player to staff. |
@@ -46,7 +47,6 @@ This page lists every command available to players.
 | `/pweather <weather>`| Sets the weather for your client. This does not affect any mechanics on the server. | [Quartz](/wiki/store-ranks#quartz) |
 | `/nv`| Toggles permanent nightvision | [Quartz](/wiki/store-ranks#quartz) |
 | `/condense`| Condenses items in your inventory (Ingots become blocks). | [Jade](/wiki/store-ranks#jade) |
-| `/invisframe`| Sets the itemframe you're looking at to be invisible. | [Ruby](/wiki/store-ranks#ruby) |
 | `/pantpocket`| Opens your Pant Pockets, an extra playervault. | [Pant Pockets](/wiki/enchantments/#epic) on your leggings |
 
 ## Cosmetics
