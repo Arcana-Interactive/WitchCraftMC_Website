@@ -79,6 +79,7 @@ see_also:
 -   **No exploiting bugs.** - If you find a glitch or exploit, report it to a Staff Member immediately or make a bug report on discord. Abusing exploits or glitches may result in a permanent ban. Vanilla glitches and exploits also fall under this.
     - Using pi-ray to find spawners, or using methods like the Clay Diamond Trick from earlier versions is still considered a vanilla exploit.   
 -   **No Automatic farms** where you do not need to actively interact with it. Ask Staff if you are unsure if one is allowed.
+    - Froglight farms are an exception to this rule.   
 - **No blacklisted modifications** - See the below list for some examples.
 
 <div class="wiki-callout info">
