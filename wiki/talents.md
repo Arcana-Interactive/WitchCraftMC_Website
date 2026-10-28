@@ -10,6 +10,10 @@ see_also:
     url: /wiki/getting-started/
   - title: Stats
     url: /wiki/stats/
+history:
+  - version: "Alpha"
+    date: "Oct 21, 2026"
+    changes: "Disabled Treasure Hunter and Epic Catch abilities from fishing."
 ---
 
 Talents is a system for players to perform activities, level them up and receive rewards for their efforts.
@@ -186,9 +190,7 @@ Every Talent (except Archery) rewards players with an extra half-heart at level 
 | --- | --- | --- |
 | 1 | Lucky Catch | Grants `[+5-100]` Fishing Luck, which increases the chance for extra drops.
 | 2 | Fisher | Earn `[10-190%]` more Fishing XP.
-| 3 | Treasure Hunter | `[0.5-9.5%]` higher chance to get rare loot from fishing.
 | 4 | Grappler | Hook entities with `[50-1850%]` more speed.
-| 5 | Epic Catch | `[0.2-3.8%]` added chance to get epic loot from fishing.
 | 5 | Fish Shop | Unlocks `/fish shop`.
 | 6 | Sharp Hook | Deal `[0.5-8]` damage to a hooked entity when left clicking with a fishing rod.
 | 10 | Rare Fish | Ability to catch Rare fish.

@@ -10,6 +10,10 @@ see_also:
     url: /wiki/ranks/
   - title: Staff Ranks
     url: /wiki/staff-ranks/
+history:
+  - version: "Alpha"
+    date: "Oct 22, 2026"
+    changes: "<code>/top</code> has been added to Topaz rank, as well as <code>/hdb</code> to Quartz rank."
 ---
 <div class="wiki-callout tip">
   <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>

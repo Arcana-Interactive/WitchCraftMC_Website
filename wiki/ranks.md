@@ -10,6 +10,19 @@ see_also:
     url: /wiki/store-ranks/
   - title: Staff Ranks
     url: /wiki/staff-ranks/
+history:
+  - version: "Alpha"
+    date: "Oct 17, 2026"
+    changes: "All in-game ranks' costs have been halved."
+  - version: "Alpha"
+    date: "Oct 19, 2026"
+    changes: "Costs for Acolyte, Adept, Sorcerer and Elder Ranks have been increased."
+  - version: "Alpha"
+    date: "Oct 22, 2026"
+    changes: "<code>/top</code> has been added to Acolyte rank, as well as <code>/hdb</code> to Seeker rank."
+  - version: "Alpha"
+    date: "Oct 22, 2026"
+    changes: "<code>/back</code> has been moved to adept rank, as well as <code>/trash</code> being moved to novice rank."
 ---
 <div class="wiki-callout tip">
   <span class="callout-icon"><i class="fas fa-lightbulb"></i></span>

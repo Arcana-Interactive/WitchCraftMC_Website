@@ -11,10 +11,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-#history:
-#  - version: "Survival Release"
-#    date: "Jan 1, 2026"
-#    changes: "Matt Allurgy added to Spawn."
+history:
+  - version: "Alpha"
+    date: "Oct 17, 2026"
+    changes: "Sell prices for Diamonds, Emeralds and Netherite Ingots has been decreased."
 
 Infobox:
   Enabled: true

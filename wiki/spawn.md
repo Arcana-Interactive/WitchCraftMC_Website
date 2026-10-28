@@ -10,10 +10,13 @@ see_also:
     url: /wiki/getting-started/
   - title: Crafting & Items
     url: /wiki/crafting/
-#history:
-#  - version: "Survival Release"
-#    date: "Jan 1, 2026"
-#    changes: "Spawn Island added"
+history:
+  - version: "Alpha"
+    date: "Oct 22, 2026"
+    changes: "An End portal has been placed at the back of the Enchanter's Building within the catacombs."
+  - version: "Alpha"
+    date: "Oct 27, 2026"
+    changes: "<code>/warp endportal</code> has been added."
 
 # ── Infobox (rendered automatically by the layout) ──
 # Add an icon per NPC by setting: icon: "/img/icons/npc/Heads/name.png"

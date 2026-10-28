@@ -33,6 +33,10 @@ Infobox:
           value: "<code>/warp Lumberyard</code>"
         - label: "<strong>Coordinates</strong>"
           value: "<strong>XYZ:</strong> <code>-95 69 95</code></strong>"
+history:
+  - version: "Alpha"
+    date: "Oct 19, 2026"
+    changes: "Poplar logs can now be sold."
 ---
 
 Clara Chairman is an NPC that serves as the Lumber Merchant at the [Docks](/wiki/spawn#the-docks). Players can sell harvested logs to Clara for money.

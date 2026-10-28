@@ -12,6 +12,22 @@ see_also:
     url: /wiki/talents
   - title: Old Man Eyebrows
     url: /wiki/npc/old-man-eyebrows
+history:
+  - version: "Alpha"
+    date: "Oct 16, 2026"
+    changes: "Players can now catch various rusty buckets."
+  - version: "Alpha"
+    date: "Oct 17, 2026"
+    changes: "Increased how much players earn from selling fish."
+  - version: "Alpha"
+    date: "Oct 21, 2026"
+    changes: "Disabled Treasure Hunter and Epic Catch abilities from fishing."
+  - version: "Alpha"
+    date: "Oct 22, 2026"
+    changes: "Rusty Sulfur Cube Bucket can now be catched as a Junk Fish."
+  - version: "Alpha"
+    date: "Oct 26, 2026"
+    changes: "Fish rarity unlocks are now every 10 levels, rather than every 15."
 ---
 
 <div class="wiki-callout warning">

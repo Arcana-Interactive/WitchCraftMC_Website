@@ -27,6 +27,7 @@ Infobox:
         - pyroclastic_rod
         - pyroclastic_sword
         - pyroclastic_bow
+        - pyroclastic_elytra
     - heading: "Information"
       rows:
         - label: "<strong>Type</strong>"
@@ -43,6 +44,10 @@ Infobox:
           value: "No"
         - label: "<strong>Auctionable</strong>"
           value: "Yes"
+history:
+  - version: "Alpha"
+    date: "Oct 26, 2026"
+    changes: "Pyroclastic Elytra now has an item and 3D texture."
 ---
 
 <div class="wiki-callout warning">

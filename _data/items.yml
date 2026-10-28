@@ -290,43 +290,33 @@ arcanium_fragments:
   img: /img/icons/items/arcanium_ingot.gif
   link: /wiki/arcanium/
   tags:
-    - "&8--"
     - "{tag_epic}{tag_fragment}"
-    - "--"
 arcanium_ingot:
   name: Arcanium Ingot
   img: /img/icons/items/arcanium_ingot.gif
   link: /wiki/arcanium/
   tags:
-    - "&8--"
     - "{tag_epic}{tag_ingot:-70}"
-    - "--"
 arcanium_block:
   name: Arcanium Block
   img: /img/icons/items/arcanium_block.gif
   link: /wiki/arcanium/
   tooltip: "&7A rare magical block"
   tags:
-    - "&8--"
     - "{tag_epic}{tag_block}"
-    - "--"
 
 water_core:
   name: Water Core
   img: /img/icons/items/water_core.png
   link: /wiki/aquatic-core/
   tags:
-    - "&8--"
     - "{tag_rare}{tag_core}"
-    - "--"
 pyroclastic_core:
   name: Pyroclastic Core
   img: /img/icons/items/pyroclastic_core.png
   link: /wiki/pyroclastic-core/
   tags:
-    - "&8--"
     - "{tag_legendary}{tag_core:-5}"
-    - "--"
 pyroclastic_pickaxe:
   name: Pyroclastic Pickaxe
   img: /img/icons/items/pyroclastic_pickaxe.png
@@ -335,11 +325,10 @@ pyroclastic_pickaxe:
     - "&7Fortune III"
     - "Efficiency V"
     - "Unbreaking III"
-    - "&8--"
-    - "&oA really warm pickaxe."
-    - "--"
+    - ""
+    - "&8&oA really warm pickaxe."
+    - ""
     - "{tag_legendary}{tag_pickaxe:-5}"
-    - "--"
 pyroclastic_axe:
   name: Pyroclastic Axe
   img: /img/icons/items/pyroclastic_axe.png
@@ -348,11 +337,10 @@ pyroclastic_axe:
     - "&7Fortune III"
     - "Efficiency V"
     - "Unbreaking III"
-    - "&8--"
-    - "&oA really warm axe."
-    - "--"
+    - ""
+    - "&8&oA really warm axe."
+    - ""
     - "{tag_legendary}{tag_axe:-5}"
-    - "--"
 pyroclastic_shovel:
   name: Pyroclastic Shovel
   img: /img/icons/items/pyroclastic_shovel.png
@@ -361,11 +349,10 @@ pyroclastic_shovel:
     - "&7Fortune III"
     - "Efficiency V"
     - "Unbreaking III"
-    - "&8--"
-    - "&oA really warm shovel."
-    - "--"
+    - ""
+    - "&8&oA really warm shovel."
+    - ""
     - "{tag_legendary}{tag_shovel:-5}"
-    - "--"
 pyroclastic_hoe:
   name: Pyroclastic Hoe
   img: /img/icons/items/pyroclastic_hoe.png
@@ -374,11 +361,10 @@ pyroclastic_hoe:
     - "&7Fortune III"
     - "Efficiency V"
     - "Unbreaking III"
-    - "&8--"
-    - "&oA really warm hoe."
-    - "--"
+    - ""
+    - "&8&oA really warm hoe."
+    - ""
     - "{tag_legendary}{tag_hoe:-5}"
-    - "--"
 pyroclastic_rod:
   name: Pyroclastic Rod
   img: /img/icons/items/pyroclastic_rod.png
@@ -386,11 +372,10 @@ pyroclastic_rod:
   tags:
     - "&7Lure III"
     - "Unbreaking III"
-    - "&8--"
-    - "&oA really warm fishing rod."
-    - "--"
+    - ""
+    - "&8&oA really warm fishing rod."
+    - ""
     - "{tag_legendary}{tag_fishing_rod:-5}"
-    - "--"
 pyroclastic_sword:
   name: Pyroclastic Sword
   img: /img/icons/items/pyroclastic_sword.png
@@ -399,11 +384,10 @@ pyroclastic_sword:
     - "&7Sharpness V"
     - "Looting III"
     - "Unbreaking III"
-    - "&8--"
-    - "&oA really warm sword."
-    - "--"
+    - ""
+    - "&8&oA really warm sword."
+    - ""
     - "{tag_legendary}{tag_sword:-5}"
-    - "--"
 pyroclastic_bow:
   name: Pyroclastic Bow
   img: /img/icons/items/pyroclastic_bow.png
@@ -411,59 +395,74 @@ pyroclastic_bow:
   tags:
     - "&7Power V"
     - "Unbreaking III"
-    - "&8--"
-    - "&oA really warm bow."
-    - "--"
+    - ""
+    - "&8&oA really warm bow."
+    - ""
     - "{tag_legendary}{tag_bow:-5}"
-    - "--"
+pyroclastic_elytra:
+  name: Pyroclastic Elytra
+  img: /img/icons/items/pyroclastic_elytra.png
+  link: /wiki/pyroclastic/
+  tags:
+    - "&7Mending"
+    - ""
+    - "&8&oA really warm pair of wings."
+    - ""
+    - "{tag_legendary}{tag_elytra:-5}"
 
 vote_shards:
   name: Vote Shards
   img: /img/icons/items/vote_shards.png
   link: /wiki/vote-shards/
-  tooltip: "&7Shards from voting."
+  tooltip: "{tag_common}{tag_fragment:-38}"
 vote_key:
   name: Vote Key
   img: /img/icons/items/vote_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from voting."
+  tooltip: "{tag_common}{tag_key:-38}"
 combat_key:
   name: Combat Key
   img: /img/icons/items/combat_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from fighting."
+  tooltip: "{tag_rare}{tag_key:-38}"
 enchanter_key:
   name: Enchanter Key
   img: /img/icons/items/enchanter_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key for custom enchants."
+  tooltip: "{tag_rare}{tag_key:-38}"
 farming_key:
   name: Farming Key
   img: /img/icons/items/farming_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from farming."
+  tooltip: "{tag_rare}{tag_key:-38}"
 fishing_key:
   name: Fishing Key
   img: /img/icons/items/fishing_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from fishing."
+  tooltip: "{tag_rare}{tag_key:-38}"
 forest_key:
   name: Forest Key
   img: /img/icons/items/forest_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from foraging."
+  tooltip: "{tag_rare}{tag_key:-38}"
 mining_key:
   name: Mining Key
   img: /img/icons/items/mining_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from mining."
+  tooltip: "{tag_rare}{tag_key:-38}"
 obsidian_key:
   name: Obsidian Key
   img: /img/icons/items/obsidian_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from the store."
+  tags: 
+    -"&8&oMagmatic!"
+    - ""
+    - "{tag_epic}{tag_key:-5}"
 bismuth_key:
   name: Bismuth Key
   img: /img/icons/items/bismuth_key.png
   link: /wiki/crate-keys/
-  tooltip: "&7A key from vthe store."
+  tags: 
+    -"&8&oForged by a mighty dragon."
+    - ""
+    - "{tag_Legendary}{tag_key:-5}"

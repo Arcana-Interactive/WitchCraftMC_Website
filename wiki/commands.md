@@ -14,6 +14,16 @@ see_also:
     url: /wiki/crafting/
   - title: Staff & Ranks
     url: /wiki/staff-ranks/
+history:
+  - version: "Alpha"
+    date: "Oct 16, 2026"
+    changes: "<code>/profile</code> now shows Kernel and Scales balance, as well as talent levels."
+  - version: "Alpha"
+    date: "Oct 26, 2026"
+    changes: "Added <code>/settings</code> which allows players to toggle personal settings."
+  - version: "Alpha"
+    date: "Oct 27, 2026"
+    changes: "<code>/playtime</code>Now shows current session's and weekly playtime."
 ---
 
 ## Overview
@@ -48,6 +58,10 @@ This page lists every command available to players.
 | `/nv`| Toggles permanent nightvision | [Quartz](/wiki/store-ranks#quartz) |
 | `/condense`| Condenses items in your inventory (Ingots become blocks). | [Jade](/wiki/store-ranks#jade) |
 | `/pantpocket`| Opens your Pant Pockets, an extra playervault. | [Pant Pockets](/wiki/enchantments/#epic) on your leggings |
+| `/salvage` | Opens the salvage menu to recycle unwanted enchantments. |
+| `/dustforge` | Opens the dustforge menu to craft enchantment shards or upgrading enchantment dust. |
+| `/vp claim` | Claims vote shards gained if a player voted while offline. |
+| `/settings` | Opens a gui where you can access personal settings for yourself.|
 
 ## Cosmetics
 

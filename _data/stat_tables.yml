@@ -89,6 +89,6 @@ pyroclastic_set:
         - "Lure III"
         - "Unbreaking III"
     - header: "Elytra"
-      label: "Pyroclastic Elytra"   # no icon yet — add pyroclastic_elytra to items.yml once there is one
+      item: pyroclastic_elytra
       description:
         - "Mending"

@@ -4,14 +4,16 @@ title: Enchantments
 description: "A complete reference of every custom Enchantment."
 permalink: /wiki/enchantments/
 toc: true
-categories: [Reference, Items]
+categories: [Reference, Enchantments]
 see_also:
-  - title: Crates
-    url: /wiki/crates/
-  - title: Scales
-    url: /wiki/scales
-  - title: Talents
-    url: /wiki/talents/
+  - title: Voidglass
+    url: /wiki/voidglass
+  - title: Dustforge
+    url: /wiki/dustforge
+history:
+  - version: "Alpha"
+    date: "Oct 24, 2026"
+    changes: "<bold>Pyroclasm, Spiked Hook, Dredge, Angler's Delight, Trawl</bold> and <bold>Trawler</bold> has been renamed to <bold>Extinguish, Barbed, Prospector, Skillful Fisher, Bountiful</bold> and <bold>Experienced Fisher</bold>."
 ---
 
 This page lists every custom Enchantment available to players. Enchantments you have discovered can also be viewed in-game with `/enchantjournal`.

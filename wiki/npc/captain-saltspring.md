@@ -11,10 +11,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-#history:
-#  - version: "Survival Release"
-#    date: "Jan 1, 2026"
-#    changes: "Mob Merchant added to Spawn."
+history:
+  - version: "Alpha"
+    date: "Oct 21, 2026"
+    changes: "Prices for bones, rotten flesh, string, wool, gunpowder, and enderpearls has been reduced."
 
 Infobox:
   Enabled: true

@@ -12,6 +12,10 @@ see_also:
     url: /wiki/rules/
   - title: Getting Started
     url: /wiki/getting-started/
+history:
+  - version: "Alpha"
+    date: "Oct 21, 2026"
+    changes: "Claiming land now costs $10 per chunk."
 ---
 
 <div class="wiki-callout warning">

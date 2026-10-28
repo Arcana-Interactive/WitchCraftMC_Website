@@ -12,10 +12,10 @@ see_also:
     url: /wiki/categories/#npcs
   - title: Economy
     url: /wiki/economy/
-#history:
-#  - version: "Survival Release"
-#    date: "Jan 1, 2026"
-#    changes: "Old Man Eyebrows added to Spawn."
+history:
+  - version: "Alpha"
+    date: "Oct 15, 2026"
+    changes: "Cod, Salmon and Pufferfish has been added to Scales Shop."
 
 Infobox:
   Enabled: true

@@ -5,11 +5,29 @@ description: "Information about voting."
 permalink: /wiki/voting/
 toc: true
 categories: [Gameplay, Items]
+redirects:
+  - Vote
 see_also:
   - title: Getting Started
     url: /wiki/getting-started/
   - title: Crafting & Items
     url: /wiki/crafting/
+history:
+  - version: "Alpha"
+    date: "Oct 16, 2026"
+    changes: "Vote Sites 1 through 4 have been added."
+  - version: "Alpha"
+    date: "Oct 17, 2026"
+    changes: "Vote Sites 5 has been added."
+  - version: "Alpha"
+    date: "Oct 19, 2026"
+    changes: "Vote Party crates are now HDB heads rather than chests."
+  - version: "Alpha"
+    date: "Oct 22, 2026"
+    changes: "Votesites are now set to United Kingdom rather than Norway."
+  - version: "Alpha"
+    date: "Oct 24, 2026"
+    changes: "Players can now vote while offline, and claim the rewards using <code>/vp claim</code>"
 ---
 
 Players can vote up to 5 times per real life day. Each vote rewards the player with 2x [Vote Shards](/wiki/vote-shards/). 5x Vote Shards can be traded for a Vote Key at the [Vote Trader](/wiki/npc/vote-trader).

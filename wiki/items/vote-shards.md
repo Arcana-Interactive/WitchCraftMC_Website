@@ -4,7 +4,7 @@ title: Vote Shards
 description: "The Vote Shards."
 permalink: /wiki/vote-shards/
 toc: true
-categories: [Items, Common Items]
+categories: [Items]
 Infobox:
   Enabled: true
   title: "Vote Shards"

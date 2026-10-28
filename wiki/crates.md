@@ -10,6 +10,10 @@ see_also:
     url: /wiki/getting-started/
   - title: Crafting & Items
     url: /wiki/crafting/
+history:
+  - version: "Alpha"
+    date: "Oct 28, 2026"
+    changes: "Cracked Voidglass has been added to Pyrite and Enchanter crates."
 ---
 
 There are several Crates that can be opened in [Spawn](/wiki/spawn/). Each require their own unique [Key](/wiki/crate-keys/).
@@ -67,9 +71,10 @@ Found at: **XYZ:** `16 73 17`
 | --- | --- |
 | 1% | Arcane Enchantment Shard |
 | 4% | Legendary Enchantment Shard |
+| 4% | Cracked Voidglass |
 | 15% | Epic Enchantment Shard |
-| 30% | Rare Enchantment Shard |
-| 50% | Common Enchantment Shard |
+| 31% | Rare Enchantment Shard |
+| 45% | Common Enchantment Shard |
 
 Right click a shard to open it for a random [enchantment](/wiki/enchantments/) of that rarity.
 
@@ -88,14 +93,15 @@ Found at: **XYZ:** `-3 69 87`
 | 1% | Pyroclastic Core |
 | 1% | Pyroclastic Elytra |
 | 3% | 2x Arcanium Fragments |
-| 5% | 5x Enchanter Key |
 | 5% | Iron Golem Spawner |
-| 10% | 1x Arcanium Fragments |
+| 5% | 5x Enchanter Key |
+| 5% | Cracked Voidglass |
+| 9% | 1x Arcanium Fragments |
+| 9% | Blaze Spawner |
+| 9% | Breeze Spawner |
+| 9% | Magma Cube Spawner |
 | 10% | 2x Enchanter Key |
-| 10% | Blaze Spawner |
-| 10% | Magma Cube Spawner |
-| 10% | Breeze Spawner |
-| 15% | Elytra |
+| 14% | Elytra |
 | 20% | Enchanter Key |
 
 {dropdown end}
