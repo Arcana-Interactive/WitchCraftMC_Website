@@ -287,10 +287,10 @@ scales:
 # ── WitchCraftMC custom items ──────────────────────────
 arcanium_fragments:
   name: Arcanium Fragments
-  img: /img/icons/items/arcanium_ingot.gif
+  img: /img/icons/items/arcanium_fragments.gif
   link: /wiki/arcanium/
   tags:
-    - "{tag_epic}{tag_fragment}"
+    - "{tag_epic}{tag_fragment:-70}"
 arcanium_ingot:
   name: Arcanium Ingot
   img: /img/icons/items/arcanium_ingot.gif
