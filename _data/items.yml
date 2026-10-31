@@ -303,14 +303,14 @@ arcanium_block:
   link: /wiki/arcanium/
   tooltip: "&7A rare magical block"
   tags:
-    - "{tag_epic}{tag_block}"
+    - "{tag_epic}{tag_block:-70}"
 
 water_core:
   name: Water Core
   img: /img/icons/items/water_core.png
   link: /wiki/aquatic-core/
   tags:
-    - "{tag_rare}{tag_core}"
+    - "{tag_rare}{tag_core:-62}"
 pyroclastic_core:
   name: Pyroclastic Core
   img: /img/icons/items/pyroclastic_core.png
