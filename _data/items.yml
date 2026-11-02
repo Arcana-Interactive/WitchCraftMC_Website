@@ -52,11 +52,9 @@
 coal:
   name: Coal
   img: /img/icons/items/coal.png
-  tooltip: "&7A common item."
 charcoal:
   name: Charcoal
   img: /img/icons/items/charcoal.png
-  tooltip: "&7A common item."
 coal_block:
   name: Block of Coal
   img: /img/icons/items/coal_block.png
@@ -64,19 +62,15 @@ coal_block:
 iron_ingot:
   name: Iron Ingot
   img: /img/icons/items/iron_ingot.png
-  tooltip: "&7A common item."
 copper_ingot:
   name: Copper Ingot
   img: /img/icons/items/copper_ingot.png
-  tooltip: "&7A common item."
 gold_ingot:
   name: Gold Ingot
   img: /img/icons/items/gold_ingot.png
-  tooltip: "&7A common item."
 diamond:
   name: Diamond
   img: /img/icons/items/diamond.png
-  tooltip: "&7A common item."
 emerald_block:
   name: Block of Emerald
   img: /img/icons/items/emerald_block.png
@@ -86,7 +80,6 @@ emerald_block:
 stick:
   name: Stick
   img: /img/icons/items/stick.png
-  tooltip: "&7A common item."
 chest:
   name: Chest
   img: /img/icons/items/chest.png
@@ -140,39 +133,30 @@ crimson_stem:
 cod:
   name: Raw Cod
   img: /img/icons/items/cod.png
-  tooltip: "&7A common item."
 salmon:
   name: Raw Salmon
   img: /img/icons/items/salmon.png
-  tooltip: "&7A common item."
 tropical_fish:
   name: Tropical Fish
   img: /img/icons/items/tropical_fish.png
-  tooltip: "&7A common item."
 pufferfish:
   name: Pufferfish
   img: /img/icons/items/pufferfish.png
-  tooltip: "&7A common item."
 nautilus_shell:
   name: Nautilus Shell
   img: /img/icons/items/nautilus_shell.png
-  tooltip: "&7A common item."
 wheat:
   name: Wheat
   img: /img/icons/items/wheat.png
-  tooltip: "&7A common item."
 carrot:
   name: Carrot
   img: /img/icons/items/carrot.png
-  tooltip: "&7A common item."
 potato:
   name: Potato
   img: /img/icons/items/potato.png
-  tooltip: "&7A common item."
 beetroot:
   name: beetroot
   img: /img/icons/items/beetroot.png
-  tooltip: "&7A common item."
 pumpkin:
   name: Pumpkin
   img: /img/icons/items/pumpkin.png
@@ -184,47 +168,43 @@ melon:
 sweet_berries:
   name: Sweet Berries
   img: /img/icons/items/sweet_berries.png
-  tooltip: "&7A common item."
 cocoa_beans:
   name: Cocoa Beans
   img: /img/icons/items/cocoa_beans.png
-  tooltip: "&7A common item."
 chorus_fruit:
   name: Chorus Fruit
   img: /img/icons/items/chorus_fruit.png
-  tooltip: "&7A common item."
 
 # - Mob Drops -
 phantom_membrane:
   name: Phantom Membrane
   img: /img/icons/items/phantom_membrane.png
-  tooltip: "&7A common item."
 rotten_flesh:
   name: Rotten Flesh
   img: /img/icons/items/rotten_flesh.png
-  tooltip: "&7A common item."
 bone:
   name: Bone
   img: /img/icons/items/bone.png
-  tooltip: "&7A common item."
 string:
   name: String
   img: /img/icons/items/string.png
-  tooltip: "&7A common item."
 gunpowder:
   name: Gunpowder
   img: /img/icons/items/gunpowder.png
-  tooltip: "&7A common item."
 ender_pearl:
   name: Ender Pearl
   img: /img/icons/items/ender_pearl.png
-  tooltip: "&7A common item."
+blaze_rod:
+  name: Blaze Rod
+  img: /img/icons/items/blaze_rod.png
+breeze_rod:
+  name: Breeze Rod
+  img: /img/icons/items/breeze_rod.png
 
 # - Misc -
 book:
   name: Book
   img: /img/icons/items/book.png
-  tooltip: "&7A common item."
 
 # ── WitchCraftMC GUI Items ──────────────────────────
 tasks:

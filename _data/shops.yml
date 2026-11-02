@@ -210,6 +210,10 @@ mob_shop_inventory:
       item: ender_pearl
     - slot: 15
       item: phantom_membrane
+    - slot: 16
+      item: blaze_rod
+    - slot: 22
+      item: breeze_rod
     - slot: 27
       item: previous
       label: "Back"

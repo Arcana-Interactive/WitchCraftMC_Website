@@ -15,6 +15,9 @@ history:
   - version: "Alpha"
     date: "Oct 21, 2026"
     changes: "Prices for bones, rotten flesh, string, wool, gunpowder, and enderpearls has been reduced."
+  - version: "Alpha"
+    date: "Oct 31, 2026"
+    changes: "Breeze rods and blaze rods can now be sold to Captain Saltspring."
 
 Infobox:
   Enabled: true

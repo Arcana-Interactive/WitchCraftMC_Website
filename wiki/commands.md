@@ -25,8 +25,14 @@ history:
     date: "Oct 27, 2026"
     changes: "<code>/playtime</code>Now shows current session's and weekly playtime."
   - version: "Alpha"
+    date: "Oct 31, 2026"
+    changes: "Fishing scoreboard now displays daily fish caught."
+  - version: "Alpha"
     date: "Nov 2, 2026"
     changes: "Added <code>/recipes</code> which shows all custom crafting recipes."
+  - version: "Alpha"
+    date: "Nov 2, 2026"
+    changes: "<code>/settings</code> now has an option for \"notifications\", allowing players to toggle various in-game notifications."
 ---
 
 ## Overview
@@ -45,7 +51,7 @@ This page lists every command available to players.
 | Command | Description | Requirement |
 | --- | --- | :---: |
 | `/ranks`| View your rank progress.|
-| `/settings` | Toggle personal settings for yourself.|
+| `/settings` | Opens a gui where you can access personal settings for yourself.|
 | `/afk`| Mark yourself as AFK|
 | `/profile [username]`| Check a player's profile and see information about them.|
 | `/report <username>`| Report the given player to staff. |
@@ -65,7 +71,6 @@ This page lists every command available to players.
 | `/salvage` | Opens the salvage menu to recycle unwanted enchantments. |
 | `/dustforge` | Opens the dustforge menu to craft enchantment shards or upgrading enchantment dust. |
 | `/vp claim` | Claims vote shards gained if a player voted while offline. |
-| `/settings` | Opens a gui where you can access personal settings for yourself.|
 
 ## Cosmetics
 
@@ -211,6 +216,7 @@ Land is claimed through towns. `/t` and `/town` are the same command. See [Land 
 | `/t settime <time>`| Change the time shown inside your town. This changes the appearance for players. |
 | `/t setweather <weather>`| Change the weather shown inside your town. This changes the appearance for players. |
 | `/t delete confirm`| Permanently delete your selected town. Removes all its claims and member access. |
+| `/t killmsg <option>` | Sets where mob kill messages within towns is displayed. Can be toggled off, displayed in chat, or shown in the actionbar. | 
 
 ---
 

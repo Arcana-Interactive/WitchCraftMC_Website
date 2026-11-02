@@ -38,7 +38,7 @@ This means you can for example have 16 zombies and 16 skeletons within 16 blocks
 - Hoppers are limited to 32 hoppers per chunk.
 - Spawners are limited to 5 per chunk.
 - Redstone is limited to 64 components per chunk.
-- Noteblocks are disabled.
+- Noteblocks are mostly non-functional. This is to allow for custom blocks.
 
 ## Mobs
 
@@ -48,5 +48,5 @@ Villagers, wandering traders, bats, and phantoms are disabled and do not spawn i
 
 ### Drops
 
-- Shulkers do not drop anything.
+- Shulkers do not drop anything except exp.
 - [Fishing](/wiki/fishing) does not grant vanilla drops or fish, only custom drops. Salmon, Cod and pufferfish can however be bought with [Scales](/wiki/scales).
