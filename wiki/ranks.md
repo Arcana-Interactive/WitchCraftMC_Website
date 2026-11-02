@@ -24,7 +24,7 @@ history:
     date: "Oct 22, 2026"
     changes: "<code>/back</code> has been moved to adept rank, as well as <code>/trash</code> being moved to novice rank."
   - version: "Alpha"
-    date: "Oct 30, 2026"
+    date: "Oct 31, 2026"
     changes: "Every in-game rank now gets one more home: Initiate 2, Seeker 3, Acolyte 4, Sorcerer 5 and Elder 6."
 ---
 <div class="wiki-callout tip">

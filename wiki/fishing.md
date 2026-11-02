@@ -28,6 +28,9 @@ history:
   - version: "Alpha"
     date: "Oct 26, 2026"
     changes: "Fish rarity unlocks are now every 10 levels, rather than every 15."
+  - version: "Alpha"
+    date: "Oct 31, 2026"
+    changes: "Fishing scoreboard now displays daily fish caught."
 ---
 
 <div class="wiki-callout warning">

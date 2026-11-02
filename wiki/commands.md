@@ -24,6 +24,12 @@ history:
   - version: "Alpha"
     date: "Oct 27, 2026"
     changes: "<code>/playtime</code>Now shows current session's and weekly playtime."
+  - version: "Alpha"
+    date: "Oct 31, 2026"
+    changes: "Fishing scoreboard now displays daily fish caught."
+  - version: "Alpha"
+    date: "Nov 2, 2026"
+    changes: "<code>/settings</code> now has an option for \"notifications\", allowing players to toggle various in-game notifications."
 ---
 
 ## Overview
