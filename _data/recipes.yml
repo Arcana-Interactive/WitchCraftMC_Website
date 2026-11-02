@@ -13,6 +13,8 @@
 #                  Shows a label — items can go in any slot.
 #  grid            3 rows of exactly 3 slots each.
 #                  Use ~ for an empty slot.
+#                  An item with a cycle list in items.yml rotates
+#                  through those items (e.g. any_egg).
 #
 #  Usage in any wiki page
 #  ──────────────────────
@@ -83,3 +85,154 @@ pyroclastic_bow:
     - [~, arcanium_ingot,stick]
     - [arcanium_ingot, ~,pyroclastic_core]
     - [~,arcanium_ingot,stick]
+
+# ── Furniture recipes ──────────────────────────────────
+
+glass_bottle:
+  result: glass_bottle
+  grid:
+    - [~, glass, ~]
+    - [glass, ~, glass]
+    - [glass, glass, glass]
+glass_bottle_liquid:
+  result: glass_bottle_liquid
+  grid:
+    - [~, glass, ~]
+    - [glass, water_bottle, glass]
+    - [glass, glass, glass]
+glass_bottle_small:
+  result: glass_bottle_small
+  grid:
+    - [~, ~, ~]
+    - [~, glass, ~]
+    - [glass, ~, glass]
+glass_bottle_small_liquid:
+  result: glass_bottle_small_liquid
+  grid:
+    - [~, ~, ~]
+    - [~, glass, ~]
+    - [glass, water_bottle, glass]
+pumpkin_pie:
+  result: pumpkin_pie
+  grid:
+    - [pumpkin, pumpkin, pumpkin]
+    - [sugar, sugar, sugar]
+    - [any_egg, any_egg, any_egg]
+pumpkin_pie_eaten:
+  result: pumpkin_pie_eaten
+  grid:
+    - [pumpkin, pumpkin, ~]
+    - [sugar, sugar, ~]
+    - [any_egg, any_egg, ~]
+furniture_axolotl_bucket:
+  result: furniture_axolotl_bucket
+  shapeless: true
+  grid:
+    - [axolotl_bucket, ~, ~]
+    - [~, ~, ~]
+    - [~, ~, ~]
+furniture_book:
+  result: furniture_book
+  shapeless: true
+  grid:
+    - [book, ~, ~]
+    - [~, ~, ~]
+    - [~, ~, ~]
+book_open:
+  result: book_open
+  shapeless: true
+  grid:
+    - [furniture_book, ~, ~]
+    - [~, ~, ~]
+    - [~, ~, ~]
+book_closed:
+  result: furniture_book
+  shapeless: true
+  grid:
+    - [book_open, ~, ~]
+    - [~, ~, ~]
+    - [~, ~, ~]
+bookstack_horizontal:
+  result: bookstack_horizontal
+  grid:
+    - [furniture_book, furniture_book, ~]
+    - [furniture_book, furniture_book, ~]
+    - [furniture_book, furniture_book, ~]
+bookstack_vertical:
+  result: bookstack_vertical
+  grid:
+    - [~, ~, ~]
+    - [furniture_book, furniture_book, furniture_book]
+    - [furniture_book, furniture_book, furniture_book]
+spruce_striped_bench:
+  result: spruce_striped_bench
+  grid:
+    - [~, ~, ~]
+    - [stripped_spruce_wood, stripped_spruce_wood, stripped_spruce_wood]
+    - [iron_ingot, ~, iron_ingot]
+grand_desk:
+  result: grand_desk
+  grid:
+    - [~, ~, ~]
+    - [stripped_dark_oak_wood, netherite_block, stripped_dark_oak_wood]
+    - [stripped_dark_oak_wood, ~, stripped_dark_oak_wood]
+minecart:
+  result: minecart
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, ~, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_chest:
+  result: minecart_chest
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, chest, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_coal:
+  result: minecart_coal
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, coal_block, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_copper:
+  result: minecart_copper
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, copper_ore, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_iron:
+  result: minecart_iron
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, iron_ore, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_redstone:
+  result: minecart_redstone
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, redstone_ore, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_lapis:
+  result: minecart_lapis
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, lapis_ore, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_gold:
+  result: minecart_gold
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, gold_ore, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_emerald:
+  result: minecart_emerald
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, emerald_ore, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]
+minecart_diamond:
+  result: minecart_diamond
+  grid:
+    - [~, ~, ~]
+    - [oak_planks, diamond_ore, oak_planks]
+    - [iron_ingot, iron_ingot, iron_ingot]

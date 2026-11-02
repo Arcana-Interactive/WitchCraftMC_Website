@@ -1,7 +1,7 @@
 ---
 layout: wiki-page
 title: Steven Chairman
-description: "Buy decorative furniture for your builds."
+description: "Buy furniture recipes for your builds."
 permalink: /wiki/npc/steven-chairman
 categories: [NPCs, Spawn, Furniture]
 redirects:
@@ -35,52 +35,46 @@ Infobox:
           value: "<strong>XYZ:</strong> <code>33 68 75</code></strong>"
 ---
 
-<div class="wiki-callout info">
-  <span class="callout-icon"><i class="fas fa-circle-info"></i></span>
-  <div>Furniture is an upcoming feature.</div>
-</div>
-
 Steven Chairman is an NPC that serves as the resident Furniture Merchant in the [Spawn Town](/wiki/spawn#the-town). Steven sells recipes for decorative [furniture](/wiki/furniture).
-
-<!-- ## Interface
-
-{% include shop-gui.html id="furniture_shop" %}
 
 ## Furniture
 
-| Cosmetic | Name | Cost |
-|:---:|:---:|:---:|
-| image | Glass Bottle | `$10,000` |
-| image | Small Glass Bottle | `$10,000` |
-| image | Filled Glass Bottle | `$10,000` |
-| image | Filled Small Glass Bottle | `$10,000` |
-| image | Solid Bench | `$10,000` |
-| image | Plank Bench | `$10,000` |
-| image | Bookstack (Vertical) | `$10,000` |
-| image | Bookstack (Horizontal) | `$10,000` |
-| image | Book | `$10,000` |
-| image | Book (Open) | `$10,000` |
-| image | Minecart | `$10,000` |
-| image | Minecart with Chest | `$10,000` |
-| image | Minecart with Diamonds | `$10,000` |
-| image | Minecart with Coal | `$10,000` |
-| image | Minecart with Gold | `$10,000` |
-| image | Minecart with Iron | `$10,000` |
-| image | Minecart with Copper | `$10,000` |
-| image | Minecart with Lapis Lazuli | `$10,000` |
-| image | Minecart with Redstone | `$10,000` |
-| image | Minecart with Emeralds | `$10,000` |
+Buying a design from Steven unlocks its crafting recipe for good. See the [Furniture](/wiki/furniture/) page for what each piece takes to craft.
 
--->
+| Item | Name | Unlock Price |
+|:---:|:---|:---:|
+| {item:glass_bottle} | Glass Bottle | `$6,000` |
+| {item:glass_bottle_small} | Small Glass Bottle | `$5,000` |
+| {item:glass_bottle_liquid} | Filled Glass Bottle | `$8,000` |
+| {item:glass_bottle_small_liquid} | Small Filled Glass Bottle | `$7,000` |
+| {item:pumpkin_pie} | Pumpkin Pie | `$7,500` |
+| {item:pumpkin_pie_eaten} | Eaten Pumpkin Pie | `$7,500` |
+| {item:furniture_book} | Book | `$5,000` |
+| {item:book_open} | Open Book | `$6,000` |
+| {item:bookstack_horizontal} | Horizontal Book Stack | `$10,000` |
+| {item:bookstack_vertical} | Vertical Book Stack | `$10,000` |
+| {item:furniture_axolotl_bucket} | Axolotl Bucket | `$15,000` |
+| {item:spruce_striped_bench} | Spruce Bench | `$20,000` |
+| {item:grand_desk} | Grand Desk | `$50,000` |
+| {item:minecart} | Minecart | `$15,000` |
+| {item:minecart_chest} | Chest Minecart | `$18,000` |
+| {item:minecart_coal} | Coal Minecart | `$20,000` |
+| {item:minecart_copper} | Copper Minecart | `$22,000` |
+| {item:minecart_iron} | Iron Minecart | `$25,000` |
+| {item:minecart_redstone} | Redstone Minecart | `$28,000` |
+| {item:minecart_lapis} | Lapis Minecart | `$30,000` |
+| {item:minecart_gold} | Gold Minecart | `$35,000` |
+| {item:minecart_emerald} | Emerald Minecart | `$40,000` |
+| {item:minecart_diamond} | Diamond Minecart | `$45,000` |
 
 ## Dialogue
 
 | Condition | Dialogue |
 |:---:|:---|
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » Hello <span class="format-7">\<player\></span>!</span>|
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » I am a carpenter.</span> |
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » Normally you'd be able to buy Furniture Recipes from me!</span> |
-| | <span class="minefont"><span class="format-3">[NPC] Matt Allurgy</span> » However, my sister hasn't provided me with resources to make anything yet..</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Steven Chairman</span> » Hello <span class="format-7">\<player\></span>!</span>|
+| | <span class="minefont"><span class="format-3">[NPC] Steven Chairman</span> » I am a carpenter.</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Steven Chairman</span> » My sister finally sent me the resources I needed!</span> |
+| | <span class="minefont"><span class="format-3">[NPC] Steven Chairman</span> » Buy a Furniture Recipe from me, and you can craft it yourself as often as you like!</span> |
 
 <!--## Trivia
 

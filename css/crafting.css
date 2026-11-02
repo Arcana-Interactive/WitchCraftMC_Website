@@ -95,6 +95,11 @@ a.invslot-link {
 a.invslot-link:hover::after {
   background: rgba(255,255,255,.35);
 }
+/* Drop the underline wiki links get from .wiki-content a */
+.wiki-content a.invslot-link,
+.wiki-content a.invslot-link:hover {
+  border-bottom: none;
+}
 
 .invslot-item:hover::after {
   content: '';
@@ -112,6 +117,15 @@ a.invslot-link:hover::after {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   display: block;
+}
+
+/* Slot accepting several items — js/item-cycle.js rotates which one is first */
+.invslot-cycle {
+  display: contents;
+}
+
+.invslot-cycle > .invslot:not(:first-child) {
+  display: none;
 }
 
 /* Arrow — drawn by the texture, hide the HTML element */
@@ -646,3 +660,11 @@ a.invslot-link:hover::after {
 .villager-preview-slot a.invslot-link:hover::after {
   background: rgba(255,255,255,.35);
 }
+
+/* Furniture page — same column widths in every category's table */
+.furniture-table {
+  table-layout: fixed;
+}
+.furniture-table th:nth-child(1) { width: 10%; }
+.furniture-table th:nth-child(2) { width: 30%; }
+.furniture-table th:nth-child(3) { width: 15%; }

@@ -466,3 +466,199 @@ bismuth_key:
     -"&8&oForged by a mighty dragon."
     - ""
     - "{tag_Legendary}{tag_key:-5}"
+
+
+# ── Furniture recipe ingredients ───────────────────────
+glass:
+  name: Glass
+  img: /img/icons/items/glass.png
+  tooltip: "&7A common block."
+water_bottle:
+  name: Water Bottle
+  img: /img/icons/items/water_bottle.png
+  tooltip: "&7A common item."
+sugar:
+  name: Sugar
+  img: /img/icons/items/sugar.png
+  tooltip: "&7A common item."
+egg:
+  name: Egg
+  img: /img/icons/items/egg.png
+  tooltip: "&7A common item."
+blue_egg:
+  name: Blue Egg
+  img: /img/icons/items/blue_egg.png
+  tooltip: "&7A common item."
+brown_egg:
+  name: Brown Egg
+  img: /img/icons/items/brown_egg.png
+  tooltip: "&7A common item."
+oak_planks:
+  name: Oak Planks
+  img: /img/icons/items/oak_planks.png
+  tooltip: "&7A common block."
+copper_ore:
+  name: Copper Ore
+  img: /img/icons/items/copper_ore.png
+  tooltip: "&7A common block."
+diamond_ore:
+  name: Diamond Ore
+  img: /img/icons/items/diamond_ore.png
+  tooltip: "&7A common block."
+emerald_ore:
+  name: Emerald Ore
+  img: /img/icons/items/emerald_ore.png
+  tooltip: "&7A common block."
+gold_ore:
+  name: Gold Ore
+  img: /img/icons/items/gold_ore.png
+  tooltip: "&7A common block."
+iron_ore:
+  name: Iron Ore
+  img: /img/icons/items/iron_ore.png
+  tooltip: "&7A common block."
+lapis_ore:
+  name: Lapis Lazuli Ore
+  img: /img/icons/items/lapis_ore.png
+  tooltip: "&7A common block."
+redstone_ore:
+  name: Redstone Ore
+  img: /img/icons/items/redstone_ore.png
+  tooltip: "&7A common block."
+stripped_spruce_wood:
+  name: Stripped Spruce Wood
+  img: /img/icons/items/stripped_spruce_wood.png
+  tooltip: "&7A common block."
+stripped_dark_oak_wood:
+  name: Stripped Dark Oak Wood
+  img: /img/icons/items/stripped_dark_oak_wood.png
+  tooltip: "&7A common block."
+netherite_block:
+  name: Block of Netherite
+  img: /img/icons/items/netherite_block.png
+  tooltip: "&7A common block."
+axolotl_bucket:
+  name: Bucket of Axolotl
+  img: /img/icons/items/furniture_axolotl_bucket.png
+  tooltip: "&7A common item."
+# Shows each listed item in turn, for recipes that accept any of them.
+any_egg:
+  name: Any Egg
+  cycle: [egg, blue_egg, brown_egg]
+
+# ── Furniture ──────────────────────────────────────────
+glass_bottle:
+  name: Glass Bottle
+  img: /img/icons/items/glass_bottle.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+glass_bottle_small:
+  name: Small Glass Bottle
+  img: /img/icons/items/glass_bottle_small.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+glass_bottle_liquid:
+  name: Filled Glass Bottle
+  img: /img/icons/items/glass_bottle_liquid.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+glass_bottle_small_liquid:
+  name: Small Filled Glass Bottle
+  img: /img/icons/items/glass_bottle_small_liquid.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+pumpkin_pie:
+  name: Pumpkin Pie
+  img: /img/icons/items/pumpkin_pie.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+pumpkin_pie_eaten:
+  name: Eaten Pumpkin Pie
+  img: /img/icons/items/pumpkin_pie_eaten.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+furniture_axolotl_bucket:
+  name: Axolotl Bucket
+  img: /img/icons/items/furniture_axolotl_bucket.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+furniture_book:
+  name: Book
+  img: /img/icons/items/furniture_book.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+book_open:
+  name: Open Book
+  img: /img/icons/items/book_open.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+bookstack_horizontal:
+  name: Horizontal Book Stack
+  img: /img/icons/items/bookstack_horizontal.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+bookstack_vertical:
+  name: Vertical Book Stack
+  img: /img/icons/items/bookstack_vertical.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+spruce_striped_bench:
+  name: Spruce Bench
+  img: /img/icons/items/spruce_striped_bench.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+grand_desk:
+  name: Grand Desk
+  img: /img/icons/items/grand_desk.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart:
+  name: Minecart
+  img: /img/icons/items/minecart.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_chest:
+  name: Chest Minecart
+  img: /img/icons/items/minecart_chest.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_coal:
+  name: Coal Minecart
+  img: /img/icons/items/minecart_coal.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_copper:
+  name: Copper Minecart
+  img: /img/icons/items/minecart_copper.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_iron:
+  name: Iron Minecart
+  img: /img/icons/items/minecart_iron.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_redstone:
+  name: Redstone Minecart
+  img: /img/icons/items/minecart_redstone.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_lapis:
+  name: Lapis Minecart
+  img: /img/icons/items/minecart_lapis.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_gold:
+  name: Gold Minecart
+  img: /img/icons/items/minecart_gold.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_emerald:
+  name: Emerald Minecart
+  img: /img/icons/items/minecart_emerald.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."
+minecart_diamond:
+  name: Diamond Minecart
+  img: /img/icons/items/minecart_diamond.png
+  link: /wiki/furniture/
+  tooltip: "&7A piece of furniture."

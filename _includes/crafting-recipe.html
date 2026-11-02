@@ -20,7 +20,16 @@
         {%- for slot in row -%}
           {%- if slot -%}
             {%- assign _slot_item = site.data.items[slot] -%}
-            {% include item-slot.html item=_slot_item %}
+            {%- if _slot_item.cycle -%}
+              <div class="invslot-cycle">
+                {%- for _cycle_id in _slot_item.cycle -%}
+                  {%- assign _cycle_item = site.data.items[_cycle_id] -%}
+                  {% include item-slot.html item=_cycle_item %}
+                {%- endfor -%}
+              </div>
+            {%- else -%}
+              {% include item-slot.html item=_slot_item %}
+            {%- endif -%}
           {%- else -%}
             <div class="invslot"><div class="invslot-item"></div></div>
           {%- endif -%}

@@ -24,6 +24,9 @@ history:
   - version: "Alpha"
     date: "Oct 27, 2026"
     changes: "<code>/playtime</code>Now shows current session's and weekly playtime."
+  - version: "Alpha"
+    date: "Nov 2, 2026"
+    changes: "Added <code>/recipes</code> which shows all custom crafting recipes."
 ---
 
 ## Overview
@@ -58,6 +61,7 @@ This page lists every command available to players.
 | `/nv`| Toggles permanent nightvision | [Quartz](/wiki/store-ranks#quartz) |
 | `/condense`| Condenses items in your inventory (Ingots become blocks). | [Jade](/wiki/store-ranks#jade) |
 | `/pantpocket`| Opens your Pant Pockets, an extra playervault. | [Pant Pockets](/wiki/enchantments/#epic) on your leggings |
+| `/recipes` | Opens a menu showing all custom [crafting recipes](/wiki/crafting/). |
 | `/salvage` | Opens the salvage menu to recycle unwanted enchantments. |
 | `/dustforge` | Opens the dustforge menu to craft enchantment shards or upgrading enchantment dust. |
 | `/vp claim` | Claims vote shards gained if a player voted while offline. |
