@@ -42,6 +42,13 @@ arcanium_block:
     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
+netherite_upgrade:
+  result: netherite_upgrade_smithing_template
+  shapeless: true
+  grid:
+    - [netherite_upgrade_smithing_template_base, netherite_upgrade_smithing_template_gem, ~]
+    - [~, ~, ~]
+    - [~, ~, ~]
 
 pyroclastic_sword:
   result: pyroclastic_sword

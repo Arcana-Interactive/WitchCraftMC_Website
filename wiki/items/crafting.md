@@ -51,6 +51,18 @@ Arcanium Ingots can be further condensed into an Arcanium Block!
 
 **Usage:** Arcanium Blocks can be placed down as a decorative block and as a beacon base block.
 
+---
+
+### Netherite Upgrade Template
+
+Combine a Netherite Upgrade Template Base with a Netherite Upgrade Template Gem to get a Netherite Upgrade Smithing Template. The recipe is shapeless, so the two pieces can go in any slots.
+
+{% include crafting-recipe.html id="netherite_upgrade" %}
+
+**Usage:** Used in a Smithing Table to upgrade diamond gear to netherite.
+
+---
+
 ### Pyroclastic Tools
 See the [Pyroclastic Tools](/wiki/pyroclastic/) Page for more information.
 

@@ -1,0 +1,130 @@
+From adf3bff8075f7bb1cbb989bedb83e4db21c20773 Mon Sep 17 00:00:00 2001
+From: Daniel3032 <DaDaniel3032@gmail.com>
+Date: Fri, 6 Nov 2026 04:39:33 +0100
+Subject: [PATCH] feat(wiki): add netherite upgrade template crafting recipe
+
+---
+ _data/items.yml                                   |  11 +++++++++++
+ _data/recipes.yml                                 |   7 +++++++
+ .../items/netherite_upgrade_smithing_template.png | Bin 0 -> 197 bytes
+ .../netherite_upgrade_smithing_template_base.png  | Bin 0 -> 214 bytes
+ .../netherite_upgrade_smithing_template_gem.png   | Bin 0 -> 167 bytes
+ wiki/items/crafting.md                            |  12 ++++++++++++
+ 6 files changed, 30 insertions(+)
+ create mode 100644 img/icons/items/netherite_upgrade_smithing_template.png
+ create mode 100644 img/icons/items/netherite_upgrade_smithing_template_base.png
+ create mode 100644 img/icons/items/netherite_upgrade_smithing_template_gem.png
+
+diff --git a/_data/items.yml b/_data/items.yml
+index 545ef7e..e8b5a38 100644
+--- a/_data/items.yml
++++ b/_data/items.yml
+@@ -285,6 +285,13 @@ arcanium_block:
+   tags:
+     - "{tag_epic}{tag_block:-70}"
+ 
++netherite_upgrade_smithing_template_base:
++  name: Netherite Upgrade Template Base
++  img: /img/icons/items/netherite_upgrade_smithing_template_base.png
++netherite_upgrade_smithing_template_gem:
++  name: Netherite Upgrade Template Gem
++  img: /img/icons/items/netherite_upgrade_smithing_template_gem.png
++
+ water_core:
+   name: Water Core
+   img: /img/icons/items/water_core.png
+@@ -517,6 +524,10 @@ netherite_block:
+   name: Block of Netherite
+   img: /img/icons/items/netherite_block.png
+   tooltip: "&7A common block."
++netherite_upgrade_smithing_template:
++  name: Netherite Upgrade Smithing Template
++  img: /img/icons/items/netherite_upgrade_smithing_template.png
++  tooltip: "&7A common item."
+ axolotl_bucket:
+   name: Bucket of Axolotl
+   img: /img/icons/items/furniture_axolotl_bucket.png
+diff --git a/_data/recipes.yml b/_data/recipes.yml
+index b748a9b..e108e9c 100644
+--- a/_data/recipes.yml
++++ b/_data/recipes.yml
+@@ -42,6 +42,13 @@ arcanium_block:
+     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
+     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
+     - [arcanium_ingot, arcanium_ingot, arcanium_ingot]
++netherite_upgrade:
++  result: netherite_upgrade_smithing_template
++  shapeless: true
++  grid:
++    - [netherite_upgrade_smithing_template_base, netherite_upgrade_smithing_template_gem, ~]
++    - [~, ~, ~]
++    - [~, ~, ~]
+ 
+ pyroclastic_sword:
+   result: pyroclastic_sword
+diff --git a/img/icons/items/netherite_upgrade_smithing_template.png b/img/icons/items/netherite_upgrade_smithing_template.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b9f15397c313fa113adbf5efa2e58347cdac271
+GIT binary patch
+literal 197
+zcmV;$06PDPP)<h;3K|Lk000e1NJLTq000mG000mO0{{R3C@l|D0000RP)t-s0001B
+z=;%wy$sn4zg+fAdGBRZ-C{Yy^G!71{i!o&Y0004WQchC<K<3zH00013Nkl<Zc-jTQ
+zhYbP&3;;1-K#2XPMc;xA03i4P9E8s<Xy-7nq%;hs@(LKBxgrdx>p7<|P}jrRVqove
+z+>3!t5)341!$4FDZ^#xP_^ws_2z=oO008^}+_4!b1ZB`y00000NkvXXu0mjfjJrOv
+
+literal 0
+HcmV?d00001
+
+diff --git a/img/icons/items/netherite_upgrade_smithing_template_base.png b/img/icons/items/netherite_upgrade_smithing_template_base.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..bd1c29670ed6fefa57639d47295c97fb2d673b72
+GIT binary patch
+literal 214
+zcmeAS@N?(olHy`uVBq!ia0y~yU=RRd4rT@h1`S>QU<L*T#^NA%Cx&(BWL`2bFh~dZ
+zgt#&=FeJQq;eGO?!mJ&wPEJKeMyVPafuf=&e0;0B4O1By7&uFU{DK+&LxDNd>?;fm
+z3?ZH_jv*3Lb9){67!)~}EiWAUAHPSF<6=s6kz4NBe}_&Q>|wHRV`Z428<hS@P>W&5
+zqK+QHr1A;j?%(?g?(WyFVz{qwljgnHz3ixw)0D$$GtKw@WZ0I;Y@4gMPLhFvfx*+&
+K&t;ucLK6TiH%Jr!
+
+literal 0
+HcmV?d00001
+
+diff --git a/img/icons/items/netherite_upgrade_smithing_template_gem.png b/img/icons/items/netherite_upgrade_smithing_template_gem.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..f16e2a7d4be0a6efc28458cc69911df9d1ad265a
+GIT binary patch
+literal 167
+zcmeAS@N?(olHy`uVBq!ia0y~yU=RRd4rT@h1`S>QU<L*T#^NA%Cx&(BWL`2bFh~dZ
+zgt#&=FeJQq;eGO?!mJ&wPEJKeMyVPafuf=&e0;0B4O1By7&uFU{DK+&LxDNd>?;fm
+z462?kjv*3LlM@!GCb&H}Hd^>ma%O<*j0-<_&iG`s85l2~?d8kBAi9=8OGNW`H3I_!
+NgQu&X%Q~loCIDXSGaLW_
+
+literal 0
+HcmV?d00001
+
+diff --git a/wiki/items/crafting.md b/wiki/items/crafting.md
+index 14a1450..d843db6 100644
+--- a/wiki/items/crafting.md
++++ b/wiki/items/crafting.md
+@@ -51,6 +51,18 @@ Arcanium Ingots can be further condensed into an Arcanium Block!
+ 
+ **Usage:** Arcanium Blocks can be placed down as a decorative block and as a beacon base block.
+ 
++---
++
++### Netherite Upgrade Template
++
++Combine a Netherite Upgrade Template Base with a Netherite Upgrade Template Gem to get a Netherite Upgrade Smithing Template. The recipe is shapeless, so the two pieces can go in any slots.
++
++{% include crafting-recipe.html id="netherite_upgrade" %}
++
++**Usage:** Used in a Smithing Table to upgrade diamond gear to netherite.
++
++---
++
+ ### Pyroclastic Tools
+ See the [Pyroclastic Tools](/wiki/pyroclastic/) Page for more information.
+ 
+-- 
+2.43.0
+
