@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: wiki-page
 title: Changelog & History
 description: "Server update history and patch notes."
@@ -8,18 +8,19 @@ categories: [Meta]
 see_also:
   - title: Wiki Home
     url: /wiki/
---- 
+---
 
 <div class="wiki-callout info">
   <span class="callout-icon"><i class="fas fa-info-circle"></i></span>
   <div>This page tracks major server updates. For real-time announcements, join the <a href="http://discord.gg/5gHJtxrMZS" target="_blank">Discord</a> and check <strong>#announcements</strong>.</div>
 </div>
--->
-<!--## How to Read This Page
+
+<!-- changelog:start -->
+
+## How to Read This Page
 
 Each entry follows: **Version / Season** · **Date** · **Type** (`New` · `Change` · `Fix` · `Season`) · **Summary**.
--->
----
+
 <!--
 ## Season 1
 
